@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Bash Hacks-2"
+date: 2021-04-04 12:00:00 -0400
+categories: bash tips
+---
+
+1. Open `/home/user/.bashrc` with a text editor,  
+  
+    - `+++` = command worked, `---` = command did not work 
+    - Obvisously you can change the symbols to anything you like.   
+
+2. Add this to your .bashrc  
+
+```
+PS1="\`if [ \$? = 0 ]; then echo \[\e[33m\]+++\[\e[0m\]; else echo \[\e[31m\]---\[\e[0m\]; fi\`[\u@\h:\w]\\$"  
+```
+
+Prompt changes color when depending on completion, It also shows present working directory, **pwd**, and **hostname**.   
+1. Open `/home/user/.bashrc` with a text editor,  
+
+2. Add this to your .bashrc  
+
+```
+PROMPT_COMMAND='PS1="\[\033[0;33m\][\!]\`if [[ \$? = "0" ]]; then echo "\\[\\033[32m\\]"; else echo "\\[\\033[31m\\]"; fi\`[\u.\h: \`if [[ `pwd|wc -c|tr -d " "` > 18 ]]; then echo "\\W"; else echo "\\w"; fi\`]\$\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"'
+```

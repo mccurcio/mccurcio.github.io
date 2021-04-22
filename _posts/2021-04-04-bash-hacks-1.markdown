@@ -1,0 +1,18 @@
+---
+layout: post
+title: "Bash Hacks-1"
+date: 2021-04-04 12:00:00 -0400
+categories: bash tips
+---
+
+For me, ;)
+
+- Makes the prompt much simpler. 
+
+```
+export PS1='\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\]\n\$ '
+```
+
+This makes the bash response very simple, just showing the `user`, `machine`, `Directory` logged and the command prompt **below**.
+
+

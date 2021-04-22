@@ -1,0 +1,68 @@
+---
+title: "What is Bioinformatics?"
+author: "mcc"
+date: '2020-05-18'
+---
+
+This is a "Just Enough" version Of Bioinformatics?
+
+At the intersection between Applied Mathematics, Computer Science, and Biological Sciences is a subset of knowledge known as Bioinformatics. The term Bioinformatics was first coined by Paulien Hogeweg and Ben Hesper in 1970 to describe "the study of informatic processes in biotic systems."[^11] Coincidentally, the development of DNA and RNA sequencing was co-occurring. Ray Wu established DNA sequencing at Cornell University in 1970.[^12] RNA sequencing was developed by Walter Fiers and his coworkers at the University of Ghent, Belgium, in 1972.[^13]
+
+[^11]:Paulien Hogeweg, "The Roots of Bioinformatics in Theoretical Biology", PLoS Comput Biol. 2011 Mar; 7(3): e1002021, doi: 10.1371/journal.pcbi.1002021
+
+[^12]:https://web.archive.org/web/20090304121126/http://www.mbg.cornell.edu/faculty-staff/faculty/wu.cfm
+
+[^13]:Min Jou W, Haegeman G, Ysebaert M, Fiers W (May 1972). "Nucleotide sequence of the gene coding for the bacteriophage MS2 coat protein". Nature. 237 (5350): 82–8. Bibcode:1972Natur.237...82J. doi:10.1038/237082a0.
+
+Even though the term Data Science was coined in 1996,[^14] after the name Bioinformatics was envisioned, Bioinformatics is now considered an offshoot of the field of Data Science. What separates these two pursuits is the domain knowledge that each focus on. Data Science now takes on such topics as Business, Sales, Marketing *and includes* Science related topics. While Bioinformatics has grown to encompass such ideas as Genomics,[^15] Proteomics,[^16] Metabolomics,[^17] protein structure,[^18] Chemical Biology[^19] and even Systems Biology.[^110] 
+
+[^14]:https://www.forbes.com/sites/gilpress/2013/05/28/a-very-short-history-of-data-science/#76fa330155cf
+
+[^15]:https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics
+
+[^16]:https://www.ebi.ac.uk/training/online/course/proteomics-introduction-ebi-resources/what-proteomics
+
+[^17]:https://www.ebi.ac.uk/training/online/course/introduction-metabolomics/what-metabolomics
+
+[^18]:https://www.ncbi.nlm.nih.gov/books/NBK26830/
+
+[^19]:https://pubs.acs.org/journal/acbcct#
+
+[^110]:https://irp.nih.gov/catalyst/v19i6/systems-biology-as-defined-by-nih
+
+![Venn diagrams of Bioinformatics and Data Science](../data/10-images/Venn-diagram-original-768x432.png)
+
+[^112]
+
+[^112]:http://omgenomics.com/what-is-bioinformatics/
+
+![A broad overview of the different types of data that fall within the scope of bioinformatics.](../data/10-images/ebi.bioinfo_700px_696x522.jpg)
+
+[^111]
+
+[^111]:https://www.ebi.ac.uk/training/online/course/bioinformatics-terrified/what-bioinformatics-0
+
+Ultimately, Bioinformatics and Data Science imply a process as well topics. Roger Peng in his book, "The Art Of Data Science," discusses a useful checklist for the uninitiated into the realm of science report writing and scientific thinking.[^118]  Peng describes the "Epicycle of Analysis." 
+
+[^118]:Roger D. Peng and Elizabeth Matsui, The Art of Data Science, A Guide for Anyone Who Works with Data, Leanpub Books, http://leanpub.com/artofdatascience, 2015
+
+**The Epicycle of Analysis**
+
+1. Stating and refining the question,
+1. Exploring the data,
+1. Building formal statistical models,
+1. Interpreting the results,
+1. Communicating the results.
+
+This is also artful shown in the Harvard Data Science course taught by Blitzstein et al.[^114]
+
+[^114]:Joe Blitzstein, Hanspeter Pfister, Verena Kaynig-Fittkau, Harvard Data Science course CS109, http://cs109.github.io/2015/index.html 
+
+![The Data Science flowchart from Harvard CS109](../data/10-images/ds.process.png)
+
+[^114]
+
+One piece of this process is Reproducible Research.[^113] Reproducible Research and replication are linked but it goes beyond the ability of the work to be *independently verified*. The computer code and data must be provided. There locations explicitly spelled out such that other scientists may find and carry on the work and check all its calculations and methodology. Now that computers play such a large role procedurally the smallest error in a spreadsheet may plague the overall conclusion. 
+
+[^113]:Roger Peng, The Real Reason Reproducible Research is Important, https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/
+
