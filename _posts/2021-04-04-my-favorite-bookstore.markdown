@@ -5,13 +5,9 @@ date: 2021-04-04 12:00:00 -0400
 categories: books
 ---
 
+<img src="https://static.fsf.org/nosvn/logos/orgs/leanpub-logo.png" width="400" height="300" alt="Leanpub.com">
 
-![](https://static.fsf.org/nosvn/logos/orgs/leanpub-logo.png)
-
-
-## Leanpub.com
-
-I visit <a href="https://leanpub.com/" target="_blank">LeanPub.com</a> often and am so amazed *every time*. 
+I visit <a href="https://leanpub.com/" target="_blank">LeanPub.com</a> often and am amazed *every time*. 
 
 Not only are their some good reads mainly of the titles are **Free**. Great books from *Jeff Leek* or *Roger Peng* from Johns Hopkins Uni. for free. Jeff Leek and Roger Peng are Bioinformatics gurus and teach data science. Roger has a Stats/Science podcast too called <a href="https://simplystatistics.org/interviews/" target="_blank">Simplystatistics</a>.
 
