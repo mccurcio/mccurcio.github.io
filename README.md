@@ -1,4 +1,4 @@
-## https://mccircio.github.io
+## https://mccurcio.github.io
 
 ### 1 Adding posts/news pages
     
