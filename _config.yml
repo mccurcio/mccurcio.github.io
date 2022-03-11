@@ -14,22 +14,22 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Collaborative DS-Study-Group
-email: your-email@domain.com
-author: Chimpanzee-Junior
+title: Matthew Curcio - Data Scienist
+email: matt.curcio.ri@gmail.com
+author: Habilis-Junior
 description: > # this means to ignore newlines until "baseurl:"
-  This study group is to promote Teamwork, Collaboration and Presntation of ideas so that its members can grow skills important for Data Science.
+  See one, Do one, Write one!
 
 # Add your baseurl here (your repository) but DO NOT CHANGE THE LINE NUMBER without editing .circleci/circle_urls.sh
 baseurl: "" # the subpath of your site, e.g. /blog
 
 # This is mostly for testing
-url: "https://<username>.github.io" # the base hostname & protocol for your site
+url: "https://mccurcio.github.io" # the base hostname & protocol for your site
 
 # Social (First three Required)
-repo: "https://github.com/<username>/<repo>"
-github_user: "<username>"
-github_repo: "<repo>"
+repo: "https://github.com/mccurcio/<repo>"
+github_user: "mccurcio"
+github_repo: "mccurcio.github.io"
 github_branch: "master"
 
 # Optional
