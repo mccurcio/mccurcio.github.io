@@ -29,7 +29,7 @@ software written in Javascript used with your web browser.
 I will admit that this software has not cured me of keeping notes, pictures, etc, in every hiding place possible, but I am one step closer to storing it in one place.
 
 
-### Step #1
+### Step #1 - Download TW
 
 - **Download your own *Tiddlywiki* .html doc**: [Tiddlywiki.com](https://tiddlywiki.com/)
 
@@ -41,7 +41,7 @@ I will admit that this software has not cured me of keeping notes, pictures, etc
 
 ![](/assets/img/empty.tw.png)
 
-### Step #2
+### Step #2 - Open TW
 
 - Once you download *Tiddlywiki*, **click to open it in your browser**.
 
@@ -49,6 +49,40 @@ I will admit that this software has not cured me of keeping notes, pictures, etc
 
 ![](/assets/img/GettingStarted-titles.png)
 
-- The simplest way to start is by adding your own titles and sub-titles.
+The simplest way to start is by adding your:
 
-- It's that easy.
+ 1. Title of your new doc,
+ 2. Subtitle 
+
+ That both show on the right-hand side.
+
+### Step #3 - Write a Note
+
+After changing the Titles, you can start writing immediately.
+
+- To open your first Note ([Tiddler](https://tiddlywiki.com/static/Tiddlers.html)), use the **Grey Plus Sign** below your new titles. 
+
+This will open a blank tiddler.
+
+![](/assets/img/first-tiddler-note-page.png)
+
+>A Tiddler is the fundamental unit of information in a TiddlyWiki.
+>
+>[Tiddlers](https://tiddlywiki.com/static/Tiddlers.html)
+
+#### Step #4 - Write with Markdown/HTML/CSS.
+
+
+This New Tiddle window has 4 areas that are the most useful and (in my mind) the most useful parts are:
+
+1. The Note Title,
+1. The Tag Name,
+1. The Text Editor,
+1. The Control Buttons (trash can, x and the grey chekmark) on the top-left
+
+>I will add that Tiddlywiki uses its own variation of Markdown so to begin use the Editor tools to help you used to the chages.
+
+Once you have written you title, note, and chosen a good tag name, **use the Grey Checkmark to accept your Note**.
+
+*Obviously, the trash can will delete your note if you find that necesary.*
+
