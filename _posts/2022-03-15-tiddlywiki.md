@@ -6,19 +6,49 @@ tags: note
 
 ### What is Tiddlywiki?
 
-Tiddlywiki describes itself as 
+The *Tiddlywiki* website describes itself as 
 
 > a non-linear web notebook for capturing, organising and sharing complex information.
 >
->[tiddlywiki.com](https://tiddlywiki.com/)
+>[Tiddlywiki.com](https://tiddlywiki.com/)
 
-Tiddlywiki is software written in Javascript that is used with your web browser similar to  a personal wiki server. 
+Tiddlywiki is a:
 
-- More simply, it is a free product that can be used for note taking with features such as indexing, searching, saving small pictures or even PDF files together.
+1. note taking, 
+2. picture storing,
+3. document storing,
+4. journaling,
+5. search enabled,
+6. tag managed,
+7. information storing 
 
-When I came across Tiddlywiki, I was using multiple Word docs, multiple text files, multiple folders on my computer, Dropbox, thumb-drives and even GDrive to keep notes. 
+software written in Javascript used with your web browser. 
+
+- It is a free, and open-source product that can be stored on your own computer a thumb-drive or even Goggle's GDrive.
 
 I will admit that this software has not cured me of keeping notes, pictures, etc, in every hiding place possible, but I am one step closer to storing it in one place.
 
 
+### Step #1
 
+- **Download your own *Tiddlywiki* .html doc**: [Tiddlywiki.com](https://tiddlywiki.com/)
+
+![](/assets/img/tw-page.png)
+
+- Scroll down and to the **GettingStarted** box, & find your operating system and browser type.  
+
+*Each browser is different and this will ensure the little things work correctly.*
+
+![](/assets/img/empty.tw.png)
+
+### Step #2
+
+- Once you download *Tiddlywiki*, **click to open it in your browser**.
+
+- Your first *.html* page should show the configuration section called **'GettingStarted'**.
+
+![](/assets/img/GettingStarted-titles.png)
+
+- The simplest way to start is by adding your own titles and sub-titles.
+
+- It's that easy.

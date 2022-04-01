@@ -1,12 +1,11 @@
 ---
 layout: page
-title: The Collaborative DS Study Group
+title: Matt's DS Study Site
 permalink: /
 ---
 
-# Welcome To: 'Collaborative DS Study Group'
+# Welcome To My DS Study Site'
 
-This page will display more information about the group and its members.
 
 ## Purpose
 
@@ -14,5 +13,6 @@ The purpose of this group is to share ideas and present their work.
 
 <br>
 
-Would you like to request a change or contribute?
+## Comment?
+
 [Open an issue]({{ site.repo }}/issues)
