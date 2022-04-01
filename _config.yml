@@ -16,7 +16,7 @@
 
 title: Matthew Curcio - Data Scienist
 email: matt.curcio.ri@gmail.com
-author: Habilis-Junior
+author: Homo-Habilis-Junior
 description: > # this means to ignore newlines until "baseurl:"
   See one, Do one, Write one!
 
@@ -33,9 +33,9 @@ github_repo: "mccurcio.github.io"
 github_branch: "master"
 
 # Optional
-# twitter: vsoch
-# linkedin: vsochat
-# dockerhub: vanessa
+# twitter: x
+# linkedin: x
+# dockerhub: x
 
 # Should there be feedback buttons at the bottom of pages?
 feedback: false
