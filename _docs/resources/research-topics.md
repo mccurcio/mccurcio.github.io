@@ -24,7 +24,7 @@ categories: ideas
 
 ## Topic Ideas
 
-- Stories of open source contributions (lightning talks)
+- How to open source contributions
 - How to work with OSS
 - Overview of data types in Python
 - Overview of an interesting algorythm
@@ -52,7 +52,3 @@ categories: ideas
 - Dash
 - Django
 - Automating Reports and reporting
-
-**If that’s you, let’s chat!**
-
-- You can post in the **ds-study-group** channel in our **Real World Python** Slack workspace, or contact me directly.
