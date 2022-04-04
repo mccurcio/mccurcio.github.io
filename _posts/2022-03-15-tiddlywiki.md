@@ -38,7 +38,10 @@ I will admit that this software has not cured me of keeping notes, pictures, etc
 
 ![](/assets/img/tw-page.png)
 
-- Scroll down and to the **GettingStarted** box, & find your operating system and browser type then download an empty version.  
+- Scroll down and to the **GettingStarted** box
+1. Find your operating system 
+1. Find your browser type 
+1. Download an empty version.  
 
 *NOTE: Each browser is different and this will ensure the little things work correctly.*
 
@@ -46,38 +49,36 @@ I will admit that this software has not cured me of keeping notes, pictures, etc
 
 ## Step 2 - Open TW
 
-- Once downloaded, **Click the TW to open it in your browser**.
+Once downloaded, 
 
-- Your first note (or Tiddler) should show the *configuration page* called: **'GettingStarted'**.
+- Click the **TW** to open it in your browser.
 
->A **Tiddler** is a single note or piece of info. 
+- **'GettingStarted'** is the *Title configuration page*
+
 
 ![](/assets/img/GettingStarted-titles.png)
 
-- Add your **Title** & **Subtitle** 
+- Add your **Title** & **Subtitle**.   
 
- >Both show on the top-right-hand side.
+    - Both show on the top-right-hand side.   
 
- - Close the tiddler by using the **X**, 
+ - Close the tiddler by using the **X**. 
  
- - Then SAVE your .html document by pressing the RED checkmark
+ - Then **Save** By pressing the RED circled-checkmark.
 
 ## Step #3 - Write a Note
 
-After changing the titles, start writing immediately.
+Change the titles then you can *start writing immediately*.
 
-- Press the **Grey Plus Sign** below your titles, to start your first note ([Tiddler](https://tiddlywiki.com/static/Tiddlers.html)).
-
-![](/assets/img/first-tiddler-note-page.png)
+- Press the **Grey Plus Sign** below your titles, to OPEN your first note ([Tiddler](https://tiddlywiki.com/static/Tiddlers.html)).
 
 >A Tiddler is the fundamental unit of information in a TiddlyWiki.
 >
 >[Tiddlers](https://tiddlywiki.com/static/Tiddlers.html)
 
+![](/assets/img/first-tiddler-note-page.png)
 
-## Step #4 - Write In A Type Of Markdown
-
-This new Tiddler window has 4 areas that are the most useful and (in my mind) the most useful parts are:
+The `New Tiddler` window has 4 areas that are the most useful:
 
 1. The Title,
 1. The Tag Name,
@@ -86,14 +87,19 @@ This new Tiddler window has 4 areas that are the most useful and (in my mind) th
 
 ![](/assets/img/making-tw.png)
 
->NOTE: Tiddlywiki uses its own variation of Markdown so to begin use the Editor tools to help you used to the changes.
+>CAUTION: Tiddlywiki uses its own variation of Markdown so try the Editor tools to help you get used to the changes.
 
-Once you have written you title, note, and chosen a good tag name, 
+Add you title, note, and choose a good tag name and you are all set. 
 
-- Use the Grey Checkmark to accept your note.
+- Click the Grey Checkmark to accept your note.
 
-- Use the RED checkmark on the far-right and save your work.
+- Click RED checkmark on the far-right and save your work.
 
-> If you make a mistake, use the trash-can to delete it.
+>But if you make a mistake, use the trash-can to delete.
 
-**Those are the basics**. Now you are ready to dive in to learn more.
+**Those are the basics**. 
+
+Now you are ready to dive in.
+
+
+
