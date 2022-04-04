@@ -1,5 +1,5 @@
 ---
-title:  "Using Tiddywiki & GDrive for my notes"
+title:  "Using Tiddywiki"
 date:   2022-03-15 14:00:00
 tags: note 
 ---
@@ -47,28 +47,26 @@ I will admit that this software has not cured me of keeping notes, pictures, etc
 
 ![](/assets/img/empty.tw.png)
 
-## Step 2 - Open TW
+## Step 2 - Open Your Tiddlywiki
 
 Once downloaded, 
 
-- Click the **TW** to open it in your browser.
+- Click the **empty.html** file to open it in your browser.
 
 - **'GettingStarted'** is the *Title configuration page*
 
 
 ![](/assets/img/GettingStarted-titles.png)
 
-- Add your **Title** & **Subtitle**.   
-
-    - Both show on the top-right-hand side.   
-
+- Add your **Title** & **Subtitle**.
+    - Both show on the top-right-hand side.
+</br>   
  - Close the tiddler by using the **X**. 
- 
  - Then **Save** By pressing the RED circled-checkmark.
 
 ## Step #3 - Write a Note
 
-Change the titles then you can *start writing immediately*.
+Change the titles and you can *start writing immediately*.
 
 - Press the **Grey Plus Sign** below your titles, to OPEN your first note ([Tiddler](https://tiddlywiki.com/static/Tiddlers.html)).
 
