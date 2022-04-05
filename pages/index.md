@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Matt's DS Study Site
+title: Matt's D.S. Study Site
 permalink: /
 ---
 
-# Welcome To Matt's DS Study Site'
+# Welcome To Matt's Data Science Study Site
 
 
 ## Purpose
