@@ -1,5 +1,5 @@
 ---
-title:  "`GettingStarted` Tiddywiki"
+title:  "'GettingStarted' Tiddywiki"
 date:   2022-04-06 14:00:00
 tags: Note-Taking Tiddywiki
 ---
