@@ -1,6 +1,6 @@
 ---
-title:  "Using Tiddywiki"
-date:   2022-03-15 14:00:00
+title:  "`GettingStarted` Tiddywiki"
+date:   2022-04-06 14:00:00
 tags: note 
 ---
 
