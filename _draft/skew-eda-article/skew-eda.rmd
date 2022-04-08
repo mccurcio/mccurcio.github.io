@@ -1,7 +1,6 @@
 ---
 title: "Why Do EDA"
 author: "MCC"
-date: '2022-04-05'
 output: html_document
 ---
 
@@ -16,7 +15,12 @@ https://online.hbs.edu/blog/post/types-of-statistical-bias
 https://towardsdatascience.com/what-is-statistical-bias-and-why-is-it-so-important-in-data-science-80e02bf7a88d
 -->
 
-I was discussing Data Science with a Journalist the other day, and a question came up about why are Boxplots important. Boxplots and Histograms are the first tools taught with statistical software, but why? Many courses gloss over the "WHY."
+I was discussing Data Science with a Journalist the other day, and a question came up, Why are Boxplots important with respect to Exploratory Data Analysis? Boxplots and Histograms are the first tools taught when learning statistical software, but why? Many online-courses (I've seen) gloss over the "WHY."
+
+>For more on Exploratory Data Analysis, I recommend [Exploratory Data Analysis with R](https://leanpub.com/exdata) by Roger Peng, and it's FREE.
+>Even if you don't use R (yet) it has some nuggets.
+
+## What is wrong with your data?
 
 Since this discussion started with a journalist co-worker, I was reminded of the 5 W's of reporting:
 
@@ -51,34 +55,37 @@ In short, **Yes**.
    
 - And finally, **What** can be learned from the dataset?
 
-What do these examples of asking the five W's have in common? Bias.
-
-Commonly, one of the first topics discussed in statistics classes is the concept of bias.
+What do these examples of asking the five W's have in common? In my mind, they all dive deep into the story or (in this case) the data bias.
 
 >Bias - Inclined to one side; swelled on one side; an inclination; to give a particular direction to; to influence; to prejudice; to prepossess.
 >
 >Webster, 1913
 
-## What is wrong with your data?
+I believe the five W's are a good way to focus ones skepticism. The five W's give a roadmap that scientists can use too. 
 
-Even for a scientist, the five W's are a good means to focus your skepticism. In the world of scientific research, many people think about the simplest example to study. This is the reductionist approach. But what happens when political polls are asked of a number of people in one city or two cities. Can that poll be generalized to include everyone in that county, state and country?
+- Is there anything wrong with your data?
+- What is its source?
+- Who or what compiles your data?
+- Where and when was it generated?
+- As Data Scientists, can we understand where biases can be introduced?
 
-- What is wrong with the data?
-- Is there anything wrong with your study?
-- Is it possible to fix the study or data?
-- Can we as Data Scientists understand where biases are introduced?
+
+#### Why does a Data Science need to understand bias?
+
+In much of the world of scientific research, people study the simplest, smallest pieces. Cell biologists design experiments based a single cell type. This reductionist approach is common is science. 
+
+But what happens when people are studied? What happens when a political poll is asked of a number of people in *two cities*. Can that poll be generalized to include everyone in that county, state, and country?
 
 Exploratory Data Analysis is the first review of your data and information. 
 
-In my mind, EDA is a first attempt to investigate what is right and wrong with your dataset.
+EDA is a first attempt to investigate what is right and wrong with your dataset.
 
-In general there are five types types of statistical bias to avoid.
+There are two types of bias.
 
-1. Sampling Bias
-1. Bias in Assignment
-1. Omitted Variables
-1. Self-Serving Bias
-1. Experimenter Expectations
+1. Conscious Bias
+1. Unconscious Bias, also called implicit bias
+
+
 
 >In an unbiased random sample, every case in the population should have an equal likelihood of being part of the sample.
 >
@@ -86,15 +93,24 @@ In general there are five types types of statistical bias to avoid.
 
 #### Sampling Bias
 
-If we think of a political poll, the study should have about the same fraction (percent, proportion, ratio) of college educated vs non-college educated volunteers.
+If we think of a political poll, the study should have about the same fraction (percent, proportion, ratio) of college educated vs non-college educated volunteers. If the poll is carried out at a high school will we find the same percent of college-educated versus non-educated in a school of 13-18 year-olds and only several dozen teachers?
 
-In case-controlled surveys, for every patient (every case) with liver disease being examined there is a person that does not have liver disease examined. In a balanced study, there are as many positives (True or 1) as there are negatives (False or 0), for example in our case study.
+3 Ways to Avoid Sampling Bias: 
+
+1. Consider sample size. 
+    - Having a *"large"* pool could provide enough randomness in your study to smooth out problems. How much is *"large"*? Good question.  
+
+2. Define a target population.
+    - Make online surveys as short and accessible as possible.
+    - Follow up with non-responders.
+    - Avoid convenience sampling.
+
 
 ##### Bias in Assignment
 
 Assignment bias can also be called selection bias. 
 
-An example of this could be that you are a teacher. You ask for volunteers to check the spelling or grammar of several papers. Ask your yourself, will the teacher find the students with the average grammar or spelling skills? Probably not. In most studies the 'volunteers' are themselves chosen from select groups that have a similar ratio English majors as Chemistry majors as in the school population.
+Pretend you are a teacher. You ask for student volunteers to check the spelling or grammar of several papers. Ask your yourself, will this teacher find the students with an average grammar or spelling skills? Probably not. In most studies the 'volunteers' are themselves chosen from select groups that have a similar ratio English majors as Chemistry majors as in the school population.
 
 
 
