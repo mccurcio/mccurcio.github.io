@@ -1,0 +1,163 @@
+---
+title: "Boxplots Vs Histograms WRT Distributions"
+author: "mcc"
+date: '2022-04-06'
+output: html_document
+---
+
+I was discussing Data Science with a journalist recently, and a question came up;
+
+-   Why are Boxplots so important with respect to Exploratory Data Analysis?
+
+Boxplots and histograms are the first tools taught when learning statistical software, but why? **AND**, many online-courses (I've seen) gloss over the "*WHY*."
+
+In this article, I suggest using [Quantile-Quantile plots](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) and Histograms compared to Boxplots. Boxplots do not always tell the full story.
+
+[Quantile-Quantile plots](https://en.wikipedia.org/wiki/Q%E2%80%93Q_plot) are normally called Q-Q plots.
+
+> For more on Exploratory Data Analysis, I recommend [Exploratory Data Analysis with R](https://leanpub.com/exdata) by Roger Peng, and it's FREE. Even if you don't use R (yet) it has some nuggets.
+
+Boxplots, Histrograms, Strip-Charts and Q-Q plots are used to help a statistician visualize three items;
+
+## Skew, Outliers & Kurtosis
+
+1.  Skew
+    -   How symmetrical is *your* distribution.
+    -   Does the data look even on the left side as it does on the right.
+    -   First question shold be, Is the data skewed to the left or right or not all?
+    -   The way I learned skew was by thinking of a duck's bill.
+    
+https://towardsdatascience.com/top-3-methods-for-handling-skewed-data-1334e0debf45
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library("PearsonDS")
+
+#skew left
+moments <- c(mean = 5, variance = 1, skewness = 1.5, kurtosis = 5)
+data <- rpearson(100, moments = moments)
+
+hist(data, 
+     main="Postive Skew")
+boxplot(data, 
+        main="Postive Skew",
+        horizontal = T)
+
+#skew right
+moments <- c(mean = 9, variance = 1, skewness = -1.5, kurtosis = 5)
+data2 <- rpearson(100, moments = moments)
+
+hist(data2, 
+     main="Negative Skew")
+boxplot(data2, 
+        main="Negative Skew",
+        horizontal = T)
+```
+    
+    
+2.  Outliers
+    -   Outliers are outside the arms and whiskers of a boxplot.
+
+    -   
+
+    -   
+3.  Kurtosis
+
+Skewness is a measure of symmetry, or we could say the lack of symmetry. A distribution, or data set, is symmetric if it looks the same to the left and right of the center point.
+
+Kurtosis is a measure of whether the data are heavy-tailed or light-tailed relative to a normal distribution. That is, data sets with high kurtosis tend to have heavy tails, or outliers. Data sets with low kurtosis tend to have light tails, or lack of outliers. A uniform distribution would be the extreme case.
+
+## Why carry out an Exploratory Data Analysis?
+
+The major elements of Exploratory Data Analysis can be written out like a check list.
+
+1.  Formulate your question(s)
+
+2.  Check your data
+
+    -   Read in your data
+
+    -   Check the data for missing values this mean imputations
+
+    -   data structures, for example, numbers converted to strings, categorical data converted to strings, etc.
+
+    -   Use the Linux or MacOS command `less`
+
+    -   missing commas, or quotes for strings
+
+3.  Validate your data with at least one external source
+
+4.  Try the easy solution first
+
+5.  Challenge your solution
+
+6.  Repeat any and all if necessary
+
+Examination of numerical data is useful
+
+Are there outliers missing values Check Boxplots and Histograms
+
+For this article, we will focus on 'why use Boxplots and Histograms.'
+
+One
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Generate a dataset
+
+```{r}
+# Create data
+fish <- rpois(200, 5)
+guassian <- rnorm(200, mean=10, sd=15)
+penny_toss <- rbinom(0:200, 10, 0.33)
+
+print("fish")
+print(fish)
+print("guassian")
+print(guassian)
+print("penny_toss")
+print(penny_toss)
+```
+
+```{r}
+boxplot(fish, col=terrain.colors(4), main="Poisson Distribution", horizontal = T)
+boxplot(guassian, col=terrain.colors(4), main="Normal Distribution", horizontal = T)
+boxplot(penny_toss, col=terrain.colors(4), main="Binomial Distribution", horizontal = T)
+```
+
+Histograms
+
+```{r}
+hist(fish)
+hist(guassian)
+hist(penny_toss)
+```
+
+Square Values
+
+```{r}
+fish_skewed = (1/2)*(fish)^2
+guassian_skewed = (1/2)*(guassian)^2
+penny_toss_skewed = (1/2)*(penny_toss)^2
+
+boxplot(fish_skewed, main="Fish", horizontal = T)
+boxplot(guassian_skewed, main="Normal", horizontal = T)
+boxplot(penny_toss_skewed, main="Binomial", horizontal = T)
+```
+
+Histograms
+
+```{r}
+hist(fish_skewed, breaks=50, freq = F)
+hist(guassian_skewed, breaks=20, freq = F)
+hist(penny_toss_skewed, breaks=50, freq = F)
+```
+
+, xlim=c(0,1500), ylim=c(0,200)
+
+```{r}
+# Histogram Colored (blue and red)
+hist(fish_skewed, col=rgb(1,0,0,0.5), xlim=c(0,250), ylim=c(0,100), main="Overlapping Histogram", xlab="Variable")
+hist(penny_toss_skewed, col=rgb(0,0,1,0.5), add=T)
+box()
+```
