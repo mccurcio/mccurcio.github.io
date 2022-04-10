@@ -6,14 +6,14 @@ tags: Books Resources R
 
 
 - r4ds: https://r4ds.had.co.nz/
-- advanced_r: https://adv-r.hadley.nz/
-- ds_in_education_using_r: https://datascienceineducation.com/
+- Advanced_r: https://adv-r.hadley.nz/
+- DS_in_education_using_r: https://datascienceineducation.com/
 - epgs: https://engineering-shiny.org/
-- ggplot2: https://ggplot2-book.org/index.html
-- mastering_shiny: https://mastering-shiny.org/
-- modern_dive: https://moderndive.com/
-- r_packages: https://r-pkgs.org/
-- ros: https://avehtari.github.io/ROS-Examples/
+- GGplot2: https://ggplot2-book.org/index.html
+- Mastering_shiny: https://mastering-shiny.org/
+- Modern_dive: https://moderndive.com/
+- R_packages: https://r-pkgs.org/
+- Ros: https://avehtari.github.io/ROS-Examples/
 - tmwr: https://tmwr.org
 - tidytext: https://www.tidytextmining.com/
 - bookdown, blogdown, Rmarkdown: https://bookdown.org

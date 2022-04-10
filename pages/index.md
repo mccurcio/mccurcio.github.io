@@ -9,10 +9,10 @@ permalink: /
 
 ## Purpose
 
-The purpose of this group is to share ideas and present their work.
+The purpose of this site is to share my Data Science work and present my scientific ideas.
 
 <br>
 
-## Comment?
+## To Contact or Comment:
 
 [Open an issue]({{ site.repo }}/issues)

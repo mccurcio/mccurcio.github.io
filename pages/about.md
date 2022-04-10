@@ -5,10 +5,11 @@ permalink: /about/
 
 # About
 
-Greetings,
+Welcome,
 
-My name is Matthew Curcio and I am a Data Scientist.
+My name is Matthew Curcio and you have reached my Data Science 'docs' and posts.
 
-## Comments:
 
-- [Open an issue]({{ site.github_user }}/{{ site.github_repo }}).
+## Questions/Comments/Critiques and Conundrums:
+
+- [Have a Question?]({{ site.github_user }}/{{ site.github_repo }}).
