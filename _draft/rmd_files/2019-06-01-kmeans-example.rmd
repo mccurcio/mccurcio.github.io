@@ -1,0 +1,79 @@
+---
+title: "K-Means Clustering Example"
+author: "MCC"
+date: '2019-06-01'
+output: html_document
+---
+
+>[K-means is an unsupervised algorithm.] k-means clustering is a method of vector quantization, originally from signal processing, that aims to partition n observations into k clusters in which each observation belongs to the cluster with the nearest mean (cluster centers or cluster centroid). k-means clustering minimizes within-cluster variances (squared Euclidean distances), but not regular Euclidean distances, which would be the more difficult Weber problem: the mean optimizes squared errors, whereas only the geometric median minimizes Euclidean distances. For instance, better Euclidean solutions can be found using k-medians and k-medoids.
+>
+>The problem is computationally difficult (NP-hard). These are usually similar to the expectation-maximization algorithm for mixtures of Gaussian distributions via an iterative refinement approach employed by both k-means and Gaussian mixture modeling. They both use cluster centers to model the data; however, k-means clustering tends to find clusters of comparable spatial extent, while the Gaussian mixture model allows clusters to have different shapes.
+>
+>[Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)
+
+```{r}
+require(graphics)
+
+# Generate 2-dimensional data
+x <- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
+           matrix(rnorm(100, mean = 1, sd = 0.3), ncol = 2))
+colnames(x) <- c("x", "y")
+(cl <- kmeans(x, 2))
+```
+
+```{r}
+plot(x, 
+     col=cl$cluster,
+      main="K-means using random data separated into two clusters"
+     )
+points(cl$centers, col = 1:2, pch = 8, cex = 2) # Asterisk indicates centroid
+```
+
+This indicates that the first 6 points are in cluster #2 centered at x = 0.002265857 and y = 0.03744441.
+```{r}
+# sum of squares
+ss <- function(x) sum(scale(x, scale = FALSE)^2)
+
+## cluster centers "fitted" to each obs.:
+fitted.x <- fitted(cl);  head(fitted.x)
+```
+
+This calculation indicates that the clusters have similar squared-summed error between samples, within samples and total error.
+```{r}
+resid.x <- x - fitted(cl)
+
+## Equalities : ----------------------------------
+cbind(cl[c("betweenss", "tot.withinss", "totss")], # the same two columns
+         c(ss(fitted.x), ss(resid.x),    ss(x)))
+```
+
+```{r}
+stopifnot(all.equal(cl$ totss,        ss(x)),
+      all.equal(cl$ tot.withinss, ss(resid.x)),
+      ## these three are the same:
+      all.equal(cl$ betweenss,    ss(fitted.x)),
+      all.equal(cl$ betweenss, cl$totss - cl$tot.withinss),
+      ## and hence also
+      all.equal(ss(x), ss(fitted.x) + ss(resid.x))
+      )
+
+kmeans(x,1)$withinss # trivial one-cluster, (its W.SS == ss(x))
+```
+
+The set of data was then broken into 5 sets of clusters with different centroids.
+```{r}
+## random starts do help here with too many clusters
+## (and are often recommended anyway!):
+(cl <- kmeans(x, 5, nstart = 25))
+```
+
+
+```{r}
+plot(x, 
+     col = cl$cluster,
+     main="K-means clustering with 5 clusters of sizes 18, 27, 21, 11, 23"
+     )
+points(cl$centers, col = 1:5, pch = 8)
+```
+
+
