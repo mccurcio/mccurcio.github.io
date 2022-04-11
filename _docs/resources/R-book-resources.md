@@ -4,6 +4,7 @@ date:   2022-04-09 18:30:00
 tags: Books Resources R
 ---
 
+Free **Online** Books
 
 - r4ds: https://r4ds.had.co.nz/
 - Advanced_r: https://adv-r.hadley.nz/
@@ -18,4 +19,15 @@ tags: Books Resources R
 - tidytext: https://www.tidytextmining.com/
 - bookdown, blogdown, Rmarkdown: https://bookdown.org
 - Geocomputation with R: https://geocompr.robinlovelace.net/
+- Handling Strings With R: http://www.gastonsanchez.com/r4strings/
 
+ML
+
+- Interpretable Machine Learning: A Guide for Making Black Box Models Explainable: https://christophm.github.io/interpretable-ml-book/
+
+Misc. 
+
+- https://swirlstats.com/
+- https://www.computerworld.com/article/2497464/top-r-language-resources-to-improve-your-data-skills.html
+
+- SQL Cheat Sheet: https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240
