@@ -1,0 +1,44 @@
+---
+title: "Histogram of 10k {X2 / c} For Fragments of DNA(1000b)"
+author: "MCC"
+date: '2020-3-11'
+output: html_document
+---
+
+
+This simulation produces a DNA fragment 1000 bases long. It then calculates the Chi square value for each new fragment to produce X2 / c. It does this simulation 10k times and plots a histogram of the X2 / c values.
+
+```{r}
+GCContent <- function() {
+    # Produce 1000 bases of DNA
+    x = c("A", "C", "T", "G")
+    seq = sample(x, 1000, replace = TRUE)
+    # count GC content
+    count = 0
+    for (i in 1:999) {
+        if (seq[i] == "C" && seq[i + 1] == "G") {
+            count = count + 1
+        }
+    }
+    # Calc chi sq / c
+    cgnum <- (((count/1000) - 0.09)^2)/0.0657
+    # cat(cgnum)
+    return(cgnum)
+}
+
+# Initialize var
+chisims = vector(mode = "numeric", length = 10000)
+
+# Calculate 1000 x Chi^2/c
+for (i in 1:10000) {
+    chisims[i] <- GCContent()
+}
+
+# Plot of 10k chi square simulations
+
+hist(x = chisims, breaks = seq(0, 0.05, length.out = 100), freq = TRUE, xlim = c(0, 
+    0.05), xlab = "X^2 / c", main = "Histogram of 10k {X^2 / c}\nFor Fragments of DNA(1000b)")
+
+x = seq(from = 0, to = 0.05, by = 0.005)
+curve(dchisq(x, df = 1), 0, 0.05, add = TRUE)
+```
