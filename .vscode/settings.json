@@ -1,0 +1,7 @@
+{
+    "files.autoSave": "afterDelay",
+    "editor.cursorStyle": "underline",
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
+}

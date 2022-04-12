@@ -7,9 +7,13 @@ permalink: /about/
 
 Welcome,
 
-My name is Matthew Curcio and you have reached my Data Science 'docs' and posts.
+I am Scientist, Educator, Application and Sales Specialist.   
+
+I am inquistive and use the tools of Statistics, Data Science, R, and Python.  
+
+Find my work in the Posts and Documentation sections.
 
 
-## Questions/Comments/Critiques and Conundrums:
+## Contact me:
 
-- [Have a Question?]({{ site.github_user }}/{{ site.github_repo }}).
+- [Have a Question?]({{ site.github_user }}/{{ site.github_repo }})

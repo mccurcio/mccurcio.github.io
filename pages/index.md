@@ -4,15 +4,16 @@ title: Matt's D.S. Study Site
 permalink: /
 ---
 
-# Welcome To Matt's Data Science Study Site
+## Welcome To Matt's Data Science Study Site
 
 
-## Purpose
+### Purpose
 
 The purpose of this site is to share my Data Science work and present my scientific ideas.
 
 <br>
 
-## To Contact or Comment:
+### Contact me:
 
-[Open an issue]({{ site.repo }}/issues)
+- [Have a Question?]({{ site.github_user }}/{{ site.github_repo }})
+
