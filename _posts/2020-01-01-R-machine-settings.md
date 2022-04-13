@@ -3,4 +3,5 @@ tags: R
 layout: post
 ---
 
-{% include How-To-Find-R-Machine-Settings.html %}
+
+{% include_relative _includes/How-To-Find-R-Machine-Settings.html %}
