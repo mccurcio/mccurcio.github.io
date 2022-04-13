@@ -11,6 +11,14 @@ permalink: /
 
 The purpose of this site is to share my Data Science work and present my scientific ideas.
 
+
+Feel free to:
+
+- [Browse my Posts](https://mccurcio.github.io/archive/)
+- [Follow my Tags](https://mccurcio.github.io/tags/)  
+or   
+- [Read my documentation](https://mccurcio.github.io/docs/)
+
 <br>
 
 ### Contact me:

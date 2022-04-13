@@ -4,7 +4,7 @@ date:  2021-12-17 21:00:00
 tags: Python Enumerate
 ---
 
-### Enumerate
+### [Enumerate Tips](https://book.pythontips.com/en/latest/enumerate.html)
 
 Instead of doing:
 ```
@@ -14,7 +14,7 @@ for item in iterable:
     i += 1
 ```
 
-Do:
+**Do This**:
 ```
 for i, item in enumerate(iterable):
     print i, item

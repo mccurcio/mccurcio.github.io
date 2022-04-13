@@ -1,11 +1,9 @@
 ---
-title: "Bash Commands - Cut"
+title: "Bash - Cut"
 date:  2021-12-18 11:00:00
 tags: Bash Cut
 ---
 
-
-Cut Linux Commands
 
 ### Cut the 1st, 2nd, 3rd, 5th, 7th and following columns:
 
