@@ -1,6 +1,6 @@
 ---
-title:  "GettingStarted with Tiddywiki"
-date:   2022-04-06 14:00:00
+title: "GettingStarted with Tiddywiki"
+date: 2022-04-06 14:00:00
 tags: Note-Taking Tiddywiki
 ---
 

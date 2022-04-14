@@ -1,5 +1,5 @@
 ---
-title:  "Matt's Common Bash Aliases"
+title:  "Matt's Bash Aliases"
 date:   2021-01-01 11:00:00
 tags: Bash
 ---
@@ -10,6 +10,8 @@ tags: Bash
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+alias edit='gedit'
 
 alias up='cd ..'
 alias cd..='cd ..'
