@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>6 Neural Networks For Binary Classification | Binary Classification Using Six Machine Learning Techniques</title>
+  <meta name="description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="6 Neural Networks For Binary Classification | Binary Classification Using Six Machine Learning Techniques" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="6 Neural Networks For Binary Classification | Binary Classification Using Six Machine Learning Techniques" />
+  
+  <meta name="twitter:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+<meta name="author" content="Matthew C. Curcio" />
+
+
+<meta name="date" content="2020-03-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="logistic-regression-for-binary-classification.html"/>
+<link rel="next" href="support-vector-machines-for-binary-classification.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i>Who This Book Is For</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Introduction - What is Machine Learning?</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#machine-learning-is"><i class="fa fa-check"></i><b>2.1</b> Machine Learning Is?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#what-is-predictive-modeling"><i class="fa fa-check"></i><b>2.1.1</b> What is Predictive Modeling?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#supervised-learning"><i class="fa fa-check"></i><b>2.1.2</b> Supervised Learning</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#unsupervised-learning"><i class="fa fa-check"></i><b>2.1.3</b> Unsupervised Learning</a></li>
+<li class="chapter" data-level="2.1.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#five-challenges-in-predictive-modeling"><i class="fa fa-check"></i><b>2.1.4</b> Five Challenges In Predictive Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#research-description"><i class="fa fa-check"></i><b>2.2</b> Research Description</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#exploratory-data-analysis-eda"><i class="fa fa-check"></i><b>2.2.1</b> Exploratory Data Analysis (EDA)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#caret-library-for-r"><i class="fa fa-check"></i><b>2.2.2</b> Caret library for R</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#tuning-hyper-parameters"><i class="fa fa-check"></i><b>2.2.3</b> Tuning Hyper-parameters</a></li>
+<li class="chapter" data-level="2.2.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#k-fold-cross-validation-of-results"><i class="fa fa-check"></i><b>2.2.4</b> K-Fold Cross validation of results</a></li>
+<li class="chapter" data-level="2.2.5" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#train-command"><i class="fa fa-check"></i><b>2.2.5</b> Train command</a></li>
+<li class="chapter" data-level="2.2.6" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#analysis-of-results"><i class="fa fa-check"></i><b>2.2.6</b> Analysis of results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#four-step-analysis"><i class="fa fa-check"></i><b>3.1.1</b> Four-Step Analysis</a></li>
+<li class="chapter" data-level="3.1.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#useful-guides-for-exploratory-data-analysis"><i class="fa fa-check"></i><b>3.1.2</b> Useful Guides for Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="3.1.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#questions-during-eda"><i class="fa fa-check"></i><b>3.1.3</b> Questions During EDA</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-raw-data"><i class="fa fa-check"></i><b>3.2</b> Analysis of RAW data</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visually-inspect-raw-data-files"><i class="fa fa-check"></i><b>3.2.1</b> Visually inspect RAW data files</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#inspect-raw-dataframe-structure-str"><i class="fa fa-check"></i><b>3.2.2</b> Inspect RAW dataframe structure, <code>str()</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-head-tail"><i class="fa fa-check"></i><b>3.2.3</b> Check RAW data <code>head</code> &amp; <code>tail</code></a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-types"><i class="fa fa-check"></i><b>3.2.4</b> Check RAW data types</a></li>
+<li class="chapter" data-level="3.2.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-dataframe-dimensions"><i class="fa fa-check"></i><b>3.2.5</b> Check RAW dataframe dimensions</a></li>
+<li class="chapter" data-level="3.2.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-for-missing-values"><i class="fa fa-check"></i><b>3.2.6</b> Check RAW for missing values</a></li>
+<li class="chapter" data-level="3.2.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.2.7</b> Number of polypeptides per Class:</a></li>
+<li class="chapter" data-level="3.2.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#numerical-summary-of-raw-data"><i class="fa fa-check"></i><b>3.2.8</b> Numerical summary of RAW data</a></li>
+<li class="chapter" data-level="3.2.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-descriptive-statistics-using-raw-data"><i class="fa fa-check"></i><b>3.2.9</b> Visualize Descriptive Statistics using RAW Data</a></li>
+<li class="chapter" data-level="3.2.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-of-raw-data"><i class="fa fa-check"></i><b>3.2.10</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition of RAW Data</a></li>
+<li class="chapter" data-level="3.2.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#means-of-percent-amino-acid-composition-of-control-myoglobin-categories-raw-data"><i class="fa fa-check"></i><b>3.2.11</b> Means of percent amino acid composition of control &amp; myoglobin categories, RAW data</a></li>
+<li class="chapter" data-level="3.2.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-overall-amino-acid-composition-raw-data"><i class="fa fa-check"></i><b>3.2.12</b> Boxplots of grand-means of overall amino acid composition, RAW data</a></li>
+<li class="chapter" data-level="3.2.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-raw-data"><i class="fa fa-check"></i><b>3.2.13</b> Boxplots of amino acid compositions for control (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-only-raw-data"><i class="fa fa-check"></i><b>3.2.14</b> Boxplots of amino acid compositions for myoglobin (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-for-raw-data"><i class="fa fa-check"></i><b>3.2.15</b> Boxplots Of Length Of Polypeptides For RAW Data</a></li>
+<li class="chapter" data-level="3.2.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-coefficient-of-variance-for-raw-data"><i class="fa fa-check"></i><b>3.2.16</b> Plot Coefficient Of Variance For RAW Data</a></li>
+<li class="chapter" data-level="3.2.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-raw-data"><i class="fa fa-check"></i><b>3.2.17</b> Skewness of distributions, RAW data</a></li>
+<li class="chapter" data-level="3.2.18" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-raw-data"><i class="fa fa-check"></i><b>3.2.18</b> Determine coefficients of correlation, RAW data</a></li>
+<li class="chapter" data-level="3.2.19" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.19</b> Boruta Random Forest Test, RAW data</a></li>
+<li class="chapter" data-level="3.2.20" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-raw-data"><i class="fa fa-check"></i><b>3.2.20</b> Plot variable importance, RAW Data</a></li>
+<li class="chapter" data-level="3.2.21" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-raw-data"><i class="fa fa-check"></i><b>3.2.21</b> Variable importance scores, RAW Data</a></li>
+<li class="chapter" data-level="3.2.22" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-for-boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.22</b> Conclusion for Boruta random forest test, RAW Data</a></li>
+<li class="chapter" data-level="3.2.23" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusions-for-eda-raw-data"><i class="fa fa-check"></i><b>3.2.23</b> Conclusions For EDA, RAW data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-transformed-data"><i class="fa fa-check"></i><b>3.3</b> Analysis of TRANSFORMED data</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-dataframe-dimensions"><i class="fa fa-check"></i><b>3.3.1</b> Check Transformed dataframe dimensions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-for-missing-values"><i class="fa fa-check"></i><b>3.3.2</b> Check Transformed for missing values</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#count-transformed-data-for-the-number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.3.3</b> Count Transformed data for the number of polypeptides per class</a></li>
+<li class="chapter" data-level="3.3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-descriptive-statistics-transformed-data"><i class="fa fa-check"></i><b>3.3.4</b> Visualization Descriptive Statistics, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-sqrt-x_i-transformed-data"><i class="fa fa-check"></i><b>3.3.5</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition <span class="math inline">\(\sqrt x_i\)</span>, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#grouped-bar-chart-of-means-for-percent-amino-acid-composition-of-transformed-data-control-myoglobin-categories"><i class="fa fa-check"></i><b>3.3.6</b> Grouped bar chart of means for percent amino acid composition of Transformed Data; control &amp; myoglobin categories</a></li>
+<li class="chapter" data-level="3.3.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-the-overall-amino-acid-composition-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.7</b> Boxplots of grand-means of the overall amino acid composition of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.8</b> Boxplots of amino acid compositions for control (only) of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-of-square-root-transformed-dataonly-transformed-data"><i class="fa fa-check"></i><b>3.3.9</b> Boxplots of amino acid compositions for myoglobin of square-root transformed Data(only), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-of-transformed-data-myoglobin-control-combined"><i class="fa fa-check"></i><b>3.3.10</b> Boxplots Of Length Of Polypeptides Of Transformed Data; Myoglobin, Control &amp; Combined</a></li>
+<li class="chapter" data-level="3.3.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#coefficient-of-variance-cv-transformed-data"><i class="fa fa-check"></i><b>3.3.11</b> Coefficient of Variance (CV), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-of-coefficient-of-variance-cv"><i class="fa fa-check"></i><b>3.3.12</b> Plot of Coefficient Of Variance (CV)</a></li>
+<li class="chapter" data-level="3.3.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-transformed-data"><i class="fa fa-check"></i><b>3.3.13</b> Skewness of distributions, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-transformed-data"><i class="fa fa-check"></i><b>3.3.14</b> Determine coefficients of correlation, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta---dimensionality-reduction-transformed-data"><i class="fa fa-check"></i><b>3.3.15</b> Boruta - Dimensionality Reduction, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-transformed-data"><i class="fa fa-check"></i><b>3.3.16</b> Plot Variable Importance, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-transformed-data"><i class="fa fa-check"></i><b>3.3.17</b> Variable Importance Scores, TRANSFORMED data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-conclusion"><i class="fa fa-check"></i><b>3.4</b> EDA Conclusion</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-selection-extraction"><i class="fa fa-check"></i><b>3.4.1</b> Feature Selection &amp; Extraction</a></li>
+<li class="chapter" data-level="3.4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#information-block"><i class="fa fa-check"></i><b>3.4.2</b> Information Block**</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html"><i class="fa fa-check"></i><b>4</b> Principle Component Analysis of A Binary Classification System</a><ul>
+<li class="chapter" data-level="4.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#advantages-of-using-pca-include"><i class="fa fa-check"></i><b>4.1.1</b> Advantages Of Using PCA Include</a></li>
+<li class="chapter" data-level="4.1.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#disadvantages-of-pca-should-be-considered"><i class="fa fa-check"></i><b>4.1.2</b> Disadvantages Of PCA Should Be Considered</a></li>
+<li class="chapter" data-level="4.1.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#data-centering-scaling-normalization"><i class="fa fa-check"></i><b>4.1.3</b> Data centering / scaling / normalization</a></li>
+<li class="chapter" data-level="4.1.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#histograms-of-scaled-vs.-unscaled-data"><i class="fa fa-check"></i><b>4.1.4</b> Histograms of Scaled Vs. Unscaled data</a></li>
+<li class="chapter" data-level="4.1.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-the-covariance-matrix"><i class="fa fa-check"></i><b>4.1.5</b> Finding the Covariance Matrix</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-two-variables"><i class="fa fa-check"></i>Covariance of two variables</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-matrices"><i class="fa fa-check"></i>Covariance of matrices</a></li>
+<li class="chapter" data-level="4.1.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-pca-via-singular-value-decomposition"><i class="fa fa-check"></i><b>4.1.6</b> Finding PCA via singular value decomposition</a></li>
+<li class="chapter" data-level="4.1.7" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#example-of-two-dimensional-pca-using-random-data"><i class="fa fa-check"></i><b>4.1.7</b> Example of two-dimensional PCA using random data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#principle-component-analysis-using-norm_c_m_20aa"><i class="fa fa-check"></i><b>4.2</b> Principle component analysis using <code>norm_c_m_20aa</code></a><ul>
+<li class="chapter" data-level="4.2.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#screeplot-cumulative-proportion-of-variance-plot"><i class="fa fa-check"></i><b>4.2.1</b> Screeplot &amp; Cumulative Proportion of Variance plot</a></li>
+<li class="chapter" data-level="4.2.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#biplots"><i class="fa fa-check"></i><b>4.2.2</b> Biplots</a></li>
+<li class="chapter" data-level="4.2.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#obtain-anomalous-points-from-biplot-2-pc1-vs.-pc2"><i class="fa fa-check"></i><b>4.2.3</b> Obtain Anomalous Points From Biplot #2: PC1 Vs. PC2</a></li>
+<li class="chapter" data-level="4.2.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-1"><i class="fa fa-check"></i><b>4.2.4</b> Outliers from Principal Component-1</a></li>
+<li class="chapter" data-level="4.2.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-2"><i class="fa fa-check"></i><b>4.2.5</b> Outliers from Principal Component-2</a></li>
+<li class="chapter" data-level="4.2.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#list-of-all-outliers-union-and-sorted-found-using-the-ruleset-1-through-4"><i class="fa fa-check"></i><b>4.2.6</b> List of all outliers (union and sorted) found using the ruleset 1 through 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#pca-conclusion"><i class="fa fa-check"></i><b>4.3</b> PCA Conclusion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-derived-from-pc1-vs-pc2"><i class="fa fa-check"></i><b>4.3.1</b> Outliers derived from PC1 Vs PC2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html"><i class="fa fa-check"></i><b>5</b> Logistic Regression For Binary Classification</a><ul>
+<li class="chapter" data-level="5.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#introduction-2"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-training-using-20-features"><i class="fa fa-check"></i><b>5.2</b> Logit-20 Training Using 20 Features</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-summary-1"><i class="fa fa-check"></i><b>5.2.1</b> Logit-20 Summary #1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-training-using-9-features"><i class="fa fa-check"></i><b>5.3</b> Logit-9 Training Using 9 Features</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-summary"><i class="fa fa-check"></i><b>5.3.1</b> Logit-9 Summary</a></li>
+<li class="chapter" data-level="5.3.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-confusion-matrix"><i class="fa fa-check"></i><b>5.3.2</b> Logit-9 Confusion Matrix</a></li>
+<li class="chapter" data-level="5.3.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#obtain-list-of-false-positives-false-negatives-from-logit-9"><i class="fa fa-check"></i><b>5.3.3</b> Obtain List of False Positives &amp; False Negatives From Logit-9</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-conclusion"><i class="fa fa-check"></i><b>5.4</b> Logit Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html"><i class="fa fa-check"></i><b>6</b> Neural Networks For Binary Classification</a><ul>
+<li class="chapter" data-level="6.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-one-neuron-system"><i class="fa fa-check"></i><b>6.1.1</b> The One Neuron System</a></li>
+<li class="chapter" data-level="6.1.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-two-neuron-system"><i class="fa fa-check"></i><b>6.1.2</b> The Two Neuron System</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-experiment-for-binary-classification"><i class="fa fa-check"></i><b>6.2</b> Neural Network Experiment For Binary Classification</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#train-model-with-neural-networks"><i class="fa fa-check"></i><b>6.2.1</b> Train model with neural networks</a></li>
+<li class="chapter" data-level="6.2.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#confusion-matrix-and-statistics"><i class="fa fa-check"></i><b>6.2.2</b> Confusion Matrix and Statistics</a></li>
+<li class="chapter" data-level="6.2.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#obtain-list-of-false-positives-false-negatives"><i class="fa fa-check"></i><b>6.2.3</b> Obtain List of False Positives &amp; False Negatives</a></li>
+<li class="chapter" data-level="6.2.4" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#false-positive-false-negative-neural-network-set"><i class="fa fa-check"></i><b>6.2.4</b> False Positive &amp; False Negative Neural Network set</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-conclusion"><i class="fa fa-check"></i><b>6.3</b> Neural Network Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html"><i class="fa fa-check"></i><b>7</b> Support Vector Machines for Binary Classification</a><ul>
+<li class="chapter" data-level="7.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#introduction-4"><i class="fa fa-check"></i><b>7.1</b> Introduction</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#linearly-separable"><i class="fa fa-check"></i><b>7.1.1</b> Linearly Separable</a></li>
+<li class="chapter" data-level="7.1.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#understanding-the-hyperplane-equation"><i class="fa fa-check"></i><b>7.1.2</b> Understanding the hyperplane equation</a></li>
+<li class="chapter" data-level="7.1.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#soft-margins"><i class="fa fa-check"></i><b>7.1.3</b> Soft Margins</a></li>
+<li class="chapter" data-level="7.1.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#kernel-use"><i class="fa fa-check"></i><b>7.1.4</b> Kernel Use</a></li>
+<li class="chapter" data-level="7.1.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-intuition"><i class="fa fa-check"></i><b>7.1.5</b> SVM-Linear Intuition</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model"><i class="fa fa-check"></i><b>7.2</b> SVM-Linear Model</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-training"><i class="fa fa-check"></i><b>7.2.1</b> SVM-Linear Training</a></li>
+<li class="chapter" data-level="7.2.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model-summary"><i class="fa fa-check"></i><b>7.2.2</b> SVM-Linear Model Summary</a></li>
+<li class="chapter" data-level="7.2.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-predict-test_set"><i class="fa fa-check"></i><b>7.2.3</b> SVM-Linear Predict test_set</a></li>
+<li class="chapter" data-level="7.2.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-confusion-matrix"><i class="fa fa-check"></i><b>7.2.4</b> SVM-Linear Confusion Matrix</a></li>
+<li class="chapter" data-level="7.2.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.2.5</b> SVM-Linear Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-polynomial-model"><i class="fa fa-check"></i><b>7.3</b> SVM-Polynomial Model</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-training"><i class="fa fa-check"></i><b>7.3.1</b> SVM-Poly Training</a></li>
+<li class="chapter" data-level="7.3.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-model-summary"><i class="fa fa-check"></i><b>7.3.2</b> SVM-Poly Model Summary</a></li>
+<li class="chapter" data-level="7.3.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-predict-test_set"><i class="fa fa-check"></i><b>7.3.3</b> SVM-Poly Predict test_set</a></li>
+<li class="chapter" data-level="7.3.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-confusion-matrix"><i class="fa fa-check"></i><b>7.3.4</b> SVM-Poly Confusion Matrix</a></li>
+<li class="chapter" data-level="7.3.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.3.5</b> SVM-Poly Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model"><i class="fa fa-check"></i><b>7.4</b> SVM-RBF Model</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-training"><i class="fa fa-check"></i><b>7.4.1</b> SVM-RBF Training</a></li>
+<li class="chapter" data-level="7.4.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model-summary"><i class="fa fa-check"></i><b>7.4.2</b> SVM-RBF Model Summary</a></li>
+<li class="chapter" data-level="7.4.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-predict-test_set"><i class="fa fa-check"></i><b>7.4.3</b> SVM-RBF Predict test_set</a></li>
+<li class="chapter" data-level="7.4.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-confusion-matrix"><i class="fa fa-check"></i><b>7.4.4</b> SVM-RBF Confusion Matrix</a></li>
+<li class="chapter" data-level="7.4.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.4.5</b> SVM-RBF Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-conclusion"><i class="fa fa-check"></i><b>7.5</b> SVM Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>8</b> Results</a><ul>
+<li class="chapter" data-level="8.1" data-path="results.html"><a href="results.html#the-six-m.l-algorithms-consist-of"><i class="fa fa-check"></i><b>8.1</b> The Six M.L Algorithms consist of:</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="results.html"><a href="results.html#pca-anomalies-plot"><i class="fa fa-check"></i><b>8.1.1</b> PCA-Anomalies Plot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="results.html"><a href="results.html#logit-plot"><i class="fa fa-check"></i><b>8.1.2</b> Logit Plot</a></li>
+<li class="chapter" data-level="8.1.3" data-path="results.html"><a href="results.html#svm-linear-plot"><i class="fa fa-check"></i><b>8.1.3</b> SVM-Linear Plot</a></li>
+<li class="chapter" data-level="8.1.4" data-path="results.html"><a href="results.html#svm-polynomial-plot"><i class="fa fa-check"></i><b>8.1.4</b> SVM-Polynomial Plot</a></li>
+<li class="chapter" data-level="8.1.5" data-path="results.html"><a href="results.html#svm-radial-basis-function-plot"><i class="fa fa-check"></i><b>8.1.5</b> SVM-Radial Basis Function Plot</a></li>
+<li class="chapter" data-level="8.1.6" data-path="results.html"><a href="results.html#neural-network-function-plot"><i class="fa fa-check"></i><b>8.1.6</b> Neural Network Function Plot</a></li>
+<li class="chapter" data-level="8.1.7" data-path="results.html"><a href="results.html#statistical-learning-method-vs-total-number-of-fpfn"><i class="fa fa-check"></i><b>8.1.7</b> Statistical Learning Method Vs Total Number of FP/FN</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="results.html"><a href="results.html#comparison-of-machine-learning-accuracies"><i class="fa fa-check"></i><b>8.2</b> Comparison of Machine Learning Accuracies</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="results.html"><a href="results.html#stacking-algorithms---run-multiple-algorithms-in-one-call."><i class="fa fa-check"></i><b>8.2.1</b> Stacking Algorithms - Run multiple algorithms in one call.</a></li>
+<li class="chapter" data-level="8.2.2" data-path="results.html"><a href="results.html#plot-the-resamples-output-to-compare-the-models."><i class="fa fa-check"></i><b>8.2.2</b> Plot the resamples output to compare the models.</a></li>
+<li class="chapter" data-level="8.2.3" data-path="results.html"><a href="results.html#mean-accuracies-of-m.l.-techniques-n10"><i class="fa fa-check"></i><b>8.2.3</b> Mean Accuracies of M.L. Techniques, n=10</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>9</b> Conclusion</a></li>
+<li class="chapter" data-level="10" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html"><i class="fa fa-check"></i><b>10</b> Biplot1.annotated.png</a><ul>
+<li class="chapter" data-level="10.1" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-pca-anomalies"><i class="fa fa-check"></i><b>10.1</b> Comparison of PCA Anomalies</a></li>
+<li class="chapter" data-level="10.2" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-accuracy-measurements"><i class="fa fa-check"></i><b>10.2</b> Comparison of Accuracy Measurements</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Binary Classification Using Six Machine Learning Techniques</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="neural-networks-for-binary-classification" class="section level1">
+<h1><span class="header-section-number">6</span> Neural Networks For Binary Classification</h1>
+<blockquote>
+<p>“Machine learning is essentially a form of applied statistics with increased emphasis on the use of computers to statistically estimate complicated functions and a decreased emphasis on proving confidence intervals around these functions”</p>
+<p>– Ian Goodfellow, et al<a href="#fn60" class="footnote-ref" id="fnref60"><sup>60</sup></a></p>
+</blockquote>
+<div id="introduction-3" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<p>If we discuss Neural Networks (NN), we should first consider the system we hope to emulate. Let us start with a simple count of neuronal cells in various organisms along the earth’s phylogenetic tree. We might get a better idea of the type of “computing power” these living creatures possess. See table 6.1.</p>
+<div id="table-6.1-organisms-vs-number-of-neurons-in-each-wikipedia" class="section level4 unnumbered">
+<h4>Table 6.1: Organisms Vs Number of Neurons In Each (<a href="https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons">Wikipedia</a>)</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Organism</th>
+<th align="right">Common Name</th>
+<th align="right">Approximate Number of Neurons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">C. elegans</td>
+<td align="right">roundworm</td>
+<td align="right">302</td>
+</tr>
+<tr class="even">
+<td align="left">Chrysaora fuscescens</td>
+<td align="right">jellyfish</td>
+<td align="right">5,600</td>
+</tr>
+<tr class="odd">
+<td align="left">Apis linnaeus</td>
+<td align="right">honey bee</td>
+<td align="right">960,000</td>
+</tr>
+<tr class="even">
+<td align="left">Mus musculus</td>
+<td align="right">mouse</td>
+<td align="right">71,000,000</td>
+</tr>
+<tr class="odd">
+<td align="left">Felis silvestris</td>
+<td align="right">cat</td>
+<td align="right">760,000,000</td>
+</tr>
+<tr class="even">
+<td align="left">Canis lupus familiaris</td>
+<td align="right">dog</td>
+<td align="right">2,300,000,000</td>
+</tr>
+<tr class="odd">
+<td align="left">Homo sapien sapien</td>
+<td align="right">humans</td>
+<td align="right">100,000,000,000</td>
+</tr>
+</tbody>
+</table>
+<p>This table portrays a high-level overview of the computing power of neuronal clusters and brains produced throughout evolution. However, there is one missing number worth noting. The table above does not describe the connectivity between neurons. The connectivity of neurons varies greatly from lower to higher organisms. For example, some simple animals, such as the roundworm, have only “four to eight separate branches,” <a href="#fn61" class="footnote-ref" id="fnref61"><sup>61</sup></a> per nerve cell. While human neurons may have greater than 10,000 inter-connected synaptic junctions per neuron, thus resulting in a total of approximately 600 trillion synapses per human brain.<a href="#fn62" class="footnote-ref" id="fnref62"><sup>62</sup></a></p>
+<p>Although neurons have differing morphologies, neurons in the human brain are extremely diverse. Indeed, size and shape may not be the definitive way of classifying neurons but instead by what neurotransmitters the cells secrete. “Neurotransmitters can be classified as either excitatory or inhibitory.” <a href="#fn63" class="footnote-ref" id="fnref63"><sup>63</sup></a> Currently the <a href="http://isyslab.info/NeuroPep/home.jsp">NeuroPep</a> database “holds 5949 non-redundant neuropeptide entries originating from 493 organisms belonging to 65 neuropeptide families.” <a href="#fn64" class="footnote-ref" id="fnref64"><sup>64</sup></a></p>
+<p><img src="00-data/10-images/basicneurontypes.jpg" alt="Basic Neuron Types and S.E.M. Image" />
+<a href="#fn65" class="footnote-ref" id="fnref65"><sup>65</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/two.neuron.system.3.png" alt="Two Neuron System (Image From The Public Domain)" />
+<p class="caption">Two Neuron System (Image From The Public Domain)</p>
+</div>
+<p>Given an order of operation via:</p>
+<p><em>Dendrite(s) <span class="math inline">\(\Longrightarrow\)</span> Cell body <span class="math inline">\(\Longrightarrow\)</span> Fibrous Axon <span class="math inline">\(\Longrightarrow\)</span> Synaptic Junction or Synaptic Gap <span class="math inline">\(\Longrightarrow\)</span> Dendrite(s) … Ad infinitum.</em></p>
+<p>However, nature is more subtle and intricate than to have neurons in a series, only blinking on and off, firing or not. NN are often programmed to classify dangerous road objects, as is the case of Tesla cars. The goal of a Tesla auto-piloted car is to use all available sensors to correctly classify all the conceivable circumstances on the road. On the road, a Tesla automobile uses dozens of senors which the computer needs to evaluate and weigh the values of all these sensors to formulate a ‘decision.’ The altitude of the auto, derived from the GPS, may weigh less heavily than the speed of the vehicle or Lidar estimates on how close objects are. However, our goal of safe driving can be thwarted when an artificial intelligence system decides a truck is a sign and does not apply the brakes.<a href="#fn66" class="footnote-ref" id="fnref66"><sup>66</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/nn.black.box.png" alt="Goal of a Tesla Neural Networks is to generate the correct responses for its environment.&quot;" />
+<p class="caption">Goal of a Tesla Neural Networks is to generate the correct responses for its environment.&quot;</p>
+</div>
+</div>
+<div id="the-one-neuron-system" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> The One Neuron System</h3>
+<p>If we investigate a one neuron system, <em>our</em> neuron could be diagrammed in four sections.<a href="#fn67" class="footnote-ref" id="fnref67"><sup>67</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/one.neuron.schema.2.png" alt="One Neuron Schema" />
+<p class="caption">One Neuron Schema</p>
+</div>
+<p>If we investigate one neuron for a moment, we find two separate mathematical functions are being carried out by a single nerve cell.</p>
+<div id="summation-function" class="section level4">
+<h4><span class="header-section-number">6.1.1.1</span> Summation Function</h4>
+<p>The first segment is a summation function. It receives the real number values from, <span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_n\)</span>, all the branches of the dendritic trees, and multiplies them by a set of weights. These <span class="math inline">\(X\)</span> inputs are multiplied by a set of corresponding unique weights from <span class="math inline">\(w_1\)</span> to <span class="math inline">\(w_n\)</span>. An analogy I prefer is of small or large rivers joining giving a total current. The current moves through the branches giving a total signal or current of sodium ions. Interestingly the summation in each neuron, while dealing with the vectors of inputs and weights, is carrying out the <a href="https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length">dot product</a> of these vectors.</p>
+<p>Initially, the NN researchers used the Heaviside-Threshold Function, as shown in figure 5.4, <em>One Neuron System</em>. The benefits of step functions were their simplicity and high signal to noise ratio. While the detriments were, it is a discontinuous function, therefore not differentiable and a mathematical problem.</p>
+<p>Let us take into account the product, <span class="math inline">\(x_0 \cdot w_0\)</span>. If we assign <span class="math inline">\(x_0 = T\)</span> and <span class="math inline">\(w_0 = -1\)</span> this simply becomes a bias. This bias allows us the ability to shift our Activation Function and its inflection point in the positive or negative x-direction.</p>
+<p><span class="math display">\[\begin{equation} 
+\large \hat Y ~=~ X^T \cdot W - Bias ~~\equiv~~ \sum_{i=0}^n x_i w_i - T
+\end{equation}\]</span></p>
+</div>
+<div id="activation-functions" class="section level4">
+<h4><span class="header-section-number">6.1.1.2</span> Activation Functions</h4>
+<p>The second function is called an Activation Function. Once the Summation Function yields a value, its result is sent to the <em>Activation Function</em> or <em>Threshold Function</em>.</p>
+<p><span class="math display">\[\begin{equation} 
+\large {Z}^{(1)} = f \left( \sum_{i=0}^n x_i w_i - T\right) = \{0, 1\}
+\end{equation}\]</span></p>
+<p>The function displayed in figure #6.4, One Neuron Schema, is a step function. However this step function has a problem mathematically, namely it is a discontinuous and therefore not differentiable. This fact is important.</p>
+<p>Therefore several functions may be used in place of the step function. One is the hyperbolic tangent (<em>tanh</em>) function, the <em>sigmoidal</em> function, a <em>Hard Tanh</em>, a <em>reLU</em>, and <em>Softmax</em> Functions. These have certain advantages, namely they simplify the hyperbolic tangent function. Not only does the Hard Tanh and reLU simplify calculations it is useful for increasing the gain near the asymptotic limits of the sigmoidal and tanh functions. The derivatives of the sigmoidal and tanh functions are very small, near 0 and 1, while the reLU and Hard Tanh slopes are one or zero.</p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(2)} ~=~ tanh(x) = \frac{1 - e^{-{\alpha}}}{1 + e^{-{\alpha}}} ~~~:~~~ \large where ~~~ \large \alpha = \sum_{i=1}^n x_i w_i - T
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(3)} ~=~ sigmoid(x) ~=~ \frac{1}{1 + e^{-{\alpha}}}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(4)} ~=~ Hard ~ Tanh (x) ~=~ \large \left\{ \begin{array}{rcl} 1 &amp;  x &gt; 1 \\ x &amp; -1 \leq x \leq 1 \\ -1 &amp; x &lt; -1 \end{array}\right.
+\end{equation}\]</span></p>
+<p><img src="_main_files/figure-html/56-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Several alternative functions are useful for various reasons. The most common of which are Softmax and reLU functions.</p>
+<p>Rectified Linear Activation Unit, (ReLU):</p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(5)} ~=~ \large ReLU ~= \begin{cases} x \geq 0 ~~~~y = x\\ x &lt; 0 ~~~~y = 0 \end{cases}
+\end{equation}\]</span></p>
+</div>
+<div id="binary-output-or-probability" class="section level4">
+<h4><span class="header-section-number">6.1.1.3</span> Binary Output Or Probability</h4>
+<p>In the case of real neurons, the output is off or on, zero or one. However, in the case of our electronic model, it is advantageous to calculate a probability for greater interpretability.</p>
+<blockquote>
+<p>The Softmax function may appear like the Sigmoid function from above but it differs in major ways.<a href="#fn68" class="footnote-ref" id="fnref68"><sup>68</sup></a></p>
+<ul>
+<li>The softmax activation function returns the probability distribution over mutually exclusive output classes.</li>
+<li>The calculated probabilities will be in the range of 0 to 1.</li>
+<li>The sum of all the probabilities is equals to 1.</li>
+</ul>
+</blockquote>
+<p>Typically the Softmax Function is used in binary or multiple classification logistic regression models and in building the final output layer of NN.</p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(6)} ~=~ Softmax(x) = \frac {e^{\alpha_i}}{\sum_{i=1}^n e^{\alpha_i}}
+\end{equation}\]</span></p>
+<p><img src="_main_files/figure-html/57-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The benefit of these activation functions is that they are now differentiable. This fact becomes important for <em>Back-Propagation</em>, which is discussed later.</p>
+</div>
+</div>
+<div id="the-two-neuron-system" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> The Two Neuron System</h3>
+<p>Building up in complexity, let us could consider our first Neural Network by using <em>only</em> two neurons. In two neuron systems, let us first generalize a bit more by adding that <span class="math inline">\(X\)</span> is an array of all the inputs as is <span class="math inline">\(W_1\)</span> and <span class="math inline">\(W_2\)</span> is also an array of weights for each neuron. See figure #6.5.</p>
+<div class="figure">
+<img src="00-data/10-images/two.neuron.system.png" alt="An Ideal Two Neuron System" />
+<p class="caption">An Ideal Two Neuron System</p>
+</div>
+<div id="feed-forward-in-a-two-neuron-network" class="section level4">
+<h4><span class="header-section-number">6.1.2.1</span> Feed-Forward In A Two Neuron Network</h4>
+<p>In our two neuron network, we can now write out the mathematics for each step as it progresses in a “forward” (left to right) direction.</p>
+<p>Step #1: To move from <span class="math inline">\(X\)</span> to <span class="math inline">\(P_1\)</span>
+<span class="math display">\[\begin{equation} 
+  f^1( \overrightarrow{x}, \overrightarrow{w}) \equiv~~ P_1 = \left( X^T \cdot W_1 - T \right)
+\end{equation}\]</span></p>
+<p>Step #2: <span class="math inline">\(P_1\)</span> feeds forward to <span class="math inline">\(Y\)</span>
+<span class="math display">\[\begin{equation} 
+  f^2(P_1)  ~~\equiv~ \hat Y = \left( \frac{1}{1 + e^{- \alpha}} \right) ~~:~~ where ~~~ \alpha = P_1
+\end{equation}\]</span></p>
+<p>Step #3: <span class="math inline">\(Y\)</span> feeds forward to <span class="math inline">\(P_2\)</span>
+<span class="math display">\[\begin{equation}
+  f^3(\overrightarrow{y}, \overrightarrow{w}) ~~\equiv~ P_2 = \left( Y^T \cdot W_2 - T \right)
+\end{equation}\]</span></p>
+<p>Step #4: <span class="math inline">\(P_2\)</span> feeds forward to <span class="math inline">\(Z\)</span>
+<span class="math display">\[\begin{equation}
+  f^4(P_2) ~~\equiv~ \hat Z = \left( \frac{1}{1 + e^{- \large \alpha}} \right) ~~~:~~~ where ~~ \alpha = P_2
+\end{equation}\]</span></p>
+<p>Step #5: Our complicated function is simply a matter of chaining one result so that it may be used in the next step.</p>
+<p><span class="math display">\[\begin{equation}
+   \hat Z ~=~ f^4 \left( f^3 \left( f^2 \left( f^1 \left( X, W \right) \right) \right) \right)
+\end{equation}\]</span></p>
+<p>In our <strong>Feed-Forward Propagation</strong>, we can now take the values from any numerical system and produce zeros, ones, or probabilities. Remember, in this set of experiments, we are using the concentrations of the 20 amino acids to provide a categorical or binary output, belongs to a) Myoglobin protein family, or b) does not.</p>
+</div>
+<div id="error-back-propagation" class="section level4">
+<h4><span class="header-section-number">6.1.2.2</span> Error Back-propagation</h4>
+<p>Now that we have learned to calculate the output of our neurons using the Feed-Forward process, what if our final answer is incorrect? Can we build a feed back system to determine the weights needed to obtain our desired value of <span class="math inline">\(\hat z\)</span>? The short answer is yes. The process for determining the weights is known as Error Back-Propagation. Error Back-Propagation, also known as Back-Propagation, is crucial to understanding and tuning a neural network.</p>
+<p>Simply stated Back-Propagation is an optimization routine which iteratively calculates the errors that occur at each stage of a neural network. Starting from randomly seeded values for the initial weights, Back-Propagation uses the partial derivatives of the feed forward functions. The chain rule and gradient descent are also used to determine the weights (<span class="math inline">\(W_1 ~~and~~ W_2\)</span>) which are propagated through the network to find weights used in the summation step of a neuron.<a href="#fn69" class="footnote-ref" id="fnref69"><sup>69</sup></a></p>
+<p>This thumbnail sketch gives the building blocks to calculate <span class="math inline">\(W\)</span> which can be run until we reach a value that we desire. However the first time the back-propagation is carried out all the weights are chosen randomly. If the weights were set to the same number there would be no change throughout the system.</p>
+<p>In the two neuron system, our first step is to generate an error or performance (Perf) function to minimize. If we call <span class="math inline">\(d\)</span> our desired value, we can minimize the square error, a common choice.<a href="#fn70" class="footnote-ref" id="fnref70"><sup>70</sup></a></p>
+<p>Step #1: Performance (Perf)
+<span class="math display">\[\begin{equation}
+\mathbf{Perf} ~~=~~ c \cdot (d - \hat z)^2
+\end{equation}\]</span></p>
+<p>Step #2:
+<span class="math display">\[\begin{equation}
+\frac{d Z}{d x} ~~=~~ \frac{d \left \{ f^4 \left( f^3 \left( f^2 \left( f^1 \left( X, W \right) \right) \right) \right) \right \}}{dx}
+\end{equation}\]</span></p>
+<hr />
+<div class="figure">
+<img src="00-data/10-images/two.neuron.system.noframe.png" alt="An Ideal Two Neuron System" />
+<p class="caption">An Ideal Two Neuron System</p>
+</div>
+<p>Using the chain-rule, and figure 6.6, <em>Two Neuron System</em> as a guide, we can backwards to derive the formulas for error back-propagation. We find:</p>
+<p>Step #3: Neuron 2 <span class="math inline">\(\Rightarrow\)</span> 1
+<span class="math display">\[\begin{equation}
+  \frac{\delta Perf}{\delta w_1} ~=~ \frac{\delta Perf}{\delta z} \cdot \frac{\delta z}{\delta P_2} \cdot \frac{\delta P_2}{\delta y} \cdot \frac{\delta y}{\delta P_1} \cdot \frac{\delta P_2}{\delta w_1}
+\end{equation}\]</span></p>
+<p>Step #4: Performance
+<span class="math display">\[\begin{equation}
+  \frac{\delta Perf}{\delta z} ~~=~~ \frac{\delta \left\{ \frac{1}{2} \| \overrightarrow{d} - \overrightarrow{z} \|^2 \right\}} {\delta z} ~~=~~ d - z
+\end{equation}\]</span></p>
+<p>Step #5: Substitute <span class="math inline">\(P_2=\alpha\)</span>
+<span class="math display">\[\begin{equation}
+\frac{\delta z}{\delta P_2} ~~=~~ \frac{\delta~ ((1 + e^{-\alpha})^{-1})}{\delta \alpha} ~~=~~ e^{-\alpha} \cdot (1 + e^{-\alpha})^{-2}
+\end{equation}\]</span></p>
+<p>Step #6: Rearrange the right expression
+<span class="math display">\[\begin{equation}
+  \frac{ e^{-\alpha} }{ (1 + e^{-\alpha})^{-2} } ~~=~~ \frac{e^{-\alpha}}{1 + e^{-\alpha}} \cdot \frac{1}{1 + e^{-\alpha}}
+\end{equation}\]</span></p>
+<p>Step #7: Add 1 <em>and</em> subtract 1
+<span class="math display">\[\begin{equation}
+  = ~~ \frac{ (1+ e^{-\alpha}) -1 }{1 + e^{-\alpha}} \cdot \frac{1}{1 + e^{-\alpha}}
+\end{equation}\]</span></p>
+<p>Step #8: Rearrange to find
+<span class="math display">\[\begin{equation}
+ = ~~ \left( \frac{ 1+ e^{-\alpha} }{1 + e^{-\alpha}} ~-~ \frac{ 1 }{1 + e^{-\alpha}} \right)  \left( \frac{1}{1 + e^{-\alpha}} \right) ~~=~~ \left(1- \frac{1}{1 + e^{-\alpha}} \right) \left( \frac{1}{1 + e^{-\alpha}} \right)
+\end{equation}\]</span></p>
+<p>Step #9: Therefore we find
+<span class="math display">\[\begin{equation}
+\frac{\delta z}{\delta \alpha} ~~=~~ \frac{\delta~ ((1 + e^{-\alpha})^{-1})}{\delta \alpha} ~~=~~ \left(1- \frac{1}{1 + e^{-\alpha}} \right) \left( \frac{1}{1 + e^{-\alpha}} \right)
+\end{equation}\]</span></p>
+<p>Nevertheless, we need one more part to ascertain the weights. As the error back-propagation is computed this process does not reveal how much the weights need to be adjusted/changed to compute the next round of weights given their current errors. For this we require one last equation or concept.</p>
+<p>Once we compute the weights from our chain rule set of equations we must change the values in the direction proportional to the change in error. This is performed by using gradient descent.</p>
+<p>Step #10: Learning Rate
+<span class="math display">\[\begin{equation}
+\Delta W ~:~ W_{i+1} ~=~ W_i ~-~ \eta \cdot \frac{\delta Perf}{\delta W}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\eta\)</span> is the learning rate for the system. The key to the learning rate is that it must be sought and its range mapped for optimum efficiency. However smaller rates have the advantage of not overshooting the desired minimum/maximum. If the learning rate is too large the values of <span class="math inline">\(W\)</span> may jump wildly and not settle into a max/min. There is a fine balance that must be considered such that the weights are not trapped in a local minimum and wildly oscillate unable to converge.</p>
+<p>The last step of <em>error back-propagation</em> is simply setting up the derivatives mechanically and is not shown for brevity.</p>
+</div>
+</div>
+</div>
+<div id="neural-network-experiment-for-binary-classification" class="section level2">
+<h2><span class="header-section-number">6.2</span> Neural Network Experiment For Binary Classification</h2>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb83-1" data-line-number="1"><span class="co"># Load Libraries</span></a>
+<a class="sourceLine" id="cb83-2" data-line-number="2">Libraries &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;caret&quot;</span>, <span class="st">&quot;MASS&quot;</span>, <span class="st">&quot;nnet&quot;</span>, <span class="st">&quot;purrr&quot;</span>)</a>
+<a class="sourceLine" id="cb83-3" data-line-number="3"><span class="cf">for</span> (p <span class="cf">in</span> Libraries) {  </a>
+<a class="sourceLine" id="cb83-4" data-line-number="4">    <span class="kw">library</span>(p, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb83-5" data-line-number="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" data-line-number="1"><span class="co"># Load Data</span></a>
+<a class="sourceLine" id="cb84-2" data-line-number="2">c_m_TRANSFORMED &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb84-3" data-line-number="3">                            <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">Class =</span> <span class="kw">col_factor</span>(<span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;0&quot;</span>,<span class="st">&quot;1&quot;</span>)),</a>
+<a class="sourceLine" id="cb84-4" data-line-number="4">                                             <span class="dt">PID =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb84-5" data-line-number="5">                                             <span class="dt">TotalAA =</span> <span class="kw">col_skip</span>()))</a></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" data-line-number="1"><span class="co"># Create Training Data</span></a>
+<a class="sourceLine" id="cb85-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb85-3" data-line-number="3"><span class="co"># Stratified sampling</span></a>
+<a class="sourceLine" id="cb85-4" data-line-number="4">TrainingDataIndex &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_TRANSFORMED<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb85-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb85-6" data-line-number="6"><span class="co"># Create Training Data </span></a>
+<a class="sourceLine" id="cb85-7" data-line-number="7">trainingData &lt;-<span class="st"> </span>c_m_TRANSFORMED[ TrainingDataIndex, ]</a>
+<a class="sourceLine" id="cb85-8" data-line-number="8">testData     &lt;-<span class="st"> </span>c_m_TRANSFORMED[<span class="op">-</span>TrainingDataIndex, ]</a>
+<a class="sourceLine" id="cb85-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb85-10" data-line-number="10">TrainingParameters &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>, </a>
+<a class="sourceLine" id="cb85-11" data-line-number="11">                                   <span class="dt">number =</span> <span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb85-12" data-line-number="12">                                   <span class="dt">repeats =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb85-13" data-line-number="13">                                   <span class="dt">savePredictions =</span> <span class="st">&quot;final&quot;</span>) <span class="co"># Saves predictions</span></a>
+<a class="sourceLine" id="cb85-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb85-15" data-line-number="15">TuneSizeDecay &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">size =</span> <span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">18</span>, <span class="dv">20</span>), </a>
+<a class="sourceLine" id="cb85-16" data-line-number="16">                             <span class="dt">decay =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>))</a></code></pre></div>
+<div id="train-model-with-neural-networks" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Train model with neural networks</h3>
+</div>
+<div id="confusion-matrix-and-statistics" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Confusion Matrix and Statistics</h3>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" data-line-number="1">NNPredictions &lt;-<span class="st"> </span><span class="kw">predict</span>(NNModel, testData)</a>
+<a class="sourceLine" id="cb86-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb86-3" data-line-number="3"><span class="co"># Create confusion matrix</span></a>
+<a class="sourceLine" id="cb86-4" data-line-number="4">cmNN &lt;-<span class="kw">confusionMatrix</span>(NNPredictions, testData<span class="op">$</span>Class)</a>
+<a class="sourceLine" id="cb86-5" data-line-number="5"><span class="kw">print</span>(cmNN)</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 239   9
+##          1   4 215
+##                                           
+##                Accuracy : 0.9722          
+##                  95% CI : (0.9529, 0.9851)
+##     No Information Rate : 0.5203          
+##     P-Value [Acc &gt; NIR] : &lt;2e-16          
+##                                           
+##                   Kappa : 0.9442          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.2673          
+##                                           
+##             Sensitivity : 0.9835          
+##             Specificity : 0.9598          
+##          Pos Pred Value : 0.9637          
+##          Neg Pred Value : 0.9817          
+##              Prevalence : 0.5203          
+##          Detection Rate : 0.5118          
+##    Detection Prevalence : 0.5310          
+##       Balanced Accuracy : 0.9717          
+##                                           
+##        &#39;Positive&#39; Class : 0               
+## </code></pre>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" data-line-number="1">NNModel</a></code></pre></div>
+<pre><code>## Neural Network 
+## 
+## 1873 samples
+##   20 predictor
+##    2 classes: &#39;0&#39;, &#39;1&#39; 
+## 
+## Pre-processing: scaled (20), centered (20) 
+## Resampling: Cross-Validated (10 fold, repeated 5 times) 
+## Summary of sample sizes: 1685, 1686, 1686, 1686, 1686, 1685, ... 
+## Resampling results across tuning parameters:
+## 
+##   size  decay  Accuracy   Kappa    
+##   16    0.01   0.9675458  0.9349866
+##   16    0.10   0.9724570  0.9448152
+##   16    1.00   0.9609233  0.9216202
+##   18    0.01   0.9703226  0.9405495
+##   18    0.10   0.9708545  0.9416022
+##   18    1.00   0.9618830  0.9235428
+##   20    0.01   0.9703157  0.9405366
+##   20    0.10   0.9716003  0.9430995
+##   20    1.00   0.9612419  0.9222614
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final values used for the model were size = 16 and decay = 0.1.</code></pre>
+</div>
+<div id="obtain-list-of-false-positives-false-negatives" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Obtain List of False Positives &amp; False Negatives</h3>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1">fp_fn_NNModel &lt;-<span class="st"> </span>NNModel <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pluck</span>(<span class="st">&quot;pred&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(obs <span class="op">!=</span><span class="st"> </span>pred)</a>
+<a class="sourceLine" id="cb90-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb90-3" data-line-number="3"><span class="co"># Write/save .csv</span></a>
+<a class="sourceLine" id="cb90-4" data-line-number="4"><span class="kw">write.table</span>(fp_fn_NNModel,</a>
+<a class="sourceLine" id="cb90-5" data-line-number="5">            <span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/fp_fn_NN.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb90-6" data-line-number="6">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb90-7" data-line-number="7">            <span class="dt">na =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb90-8" data-line-number="8">            <span class="dt">col.names =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb90-9" data-line-number="9">            <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb90-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb90-11" data-line-number="11"><span class="kw">nrow</span>(fp_fn_NNModel) <span class="co">## </span><span class="al">NOTE</span><span class="co">: NOT UNIQUE NOR SORTED</span></a></code></pre></div>
+<pre><code>## [1] 258</code></pre>
+</div>
+<div id="false-positive-false-negative-neural-network-set" class="section level3">
+<h3><span class="header-section-number">6.2.4</span> False Positive &amp; False Negative Neural Network set</h3>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1">keep &lt;-<span class="st"> &quot;rowIndex&quot;</span></a>
+<a class="sourceLine" id="cb92-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb92-3" data-line-number="3">fp_fn_NN &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/03-ml_results/fp_fn_NN.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb92-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb92-5" data-line-number="5">NN_fp_fn_nums &lt;-<span class="st"> </span><span class="kw">sort</span>(<span class="kw">unique</span>(<span class="kw">unlist</span>(fp_fn_NN[, keep], <span class="dt">use.names =</span> <span class="ot">FALSE</span>)))</a>
+<a class="sourceLine" id="cb92-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb92-7" data-line-number="7"><span class="kw">length</span>(NN_fp_fn_nums)</a></code></pre></div>
+<pre><code>## [1] 81</code></pre>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1">NN_fp_fn_nums</a></code></pre></div>
+<pre><code>##  [1]    4    6   15   16   46   57   94   97  100  114  115  116  130  136  149  150  170  179
+## [19]  182  183  185  249  445  449  453  503  518  522  526  530  531  532  534  546  547  566
+## [37]  570  580  592  655  910  913  980 1033 1034 1035 1093 1094 1100 1101 1117 1121 1130 1190
+## [55] 1219 1226 1233 1264 1300 1471 1510 1522 1575 1576 1579 1585 1587 1594 1608 1618 1621 1693
+## [73] 1697 1734 1771 1773 1780 1789 1831 1833 1873</code></pre>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb96-1" data-line-number="1"><span class="kw">write_csv</span>(<span class="dt">x =</span> <span class="kw">as.data.frame</span>(NN_fp_fn_nums), </a>
+<a class="sourceLine" id="cb96-2" data-line-number="2">          <span class="dt">path =</span> <span class="st">&quot;./00-data/04-sort_unique_outliers/NN_nums.csv&quot;</span>)</a></code></pre></div>
+</div>
+</div>
+<div id="neural-network-conclusion" class="section level2">
+<h2><span class="header-section-number">6.3</span> Neural Network Conclusion</h2>
+<p>The Neural Network set included a total of 79 unique observations containing both FP and FN.</p>
+<p>Accuracy was the primary criteria used to select the optimal model. There were 20 models tested. The neural network was configured with 20 inputs (one for each amino acid), one hidden layer and one output. The hidden layer was tested with either 10, 12, 14, 16, 18, 20 neurons and a array of different decays (1, 0.1, 0.01, 0.001). The caret software has a tuning parameter named <code>tuneGrid</code> that allows users to <code>expand</code> a set of arrays to a matrix of combinations to be tested. Therefore 20 models were tested with the training data set and the best values were size = 20 and decay = 0.1.</p>
+<p>At this time, the author is not aware of any heuristic that gives the proper number of hidden layers and the proper number of neurons in each layer therefore one must search the experimental space for an optimized configuration. If a more thorough search of the experiemntal space was carried out using two or three hidden layers would be investigated. The poor showing of the Neural Network suggests that the data may have some additional decision boundary that is not yet represented by only 20 neurons.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="60">
+<li id="fn60"><p>Ian Goodfellow, Yoshua Bengio, Aaron Courville, ‘Deep Learning’, MIT Press, 2016, <a href="http://www.deeplearningbook.org" class="uri">http://www.deeplearningbook.org</a><a href="neural-networks-for-binary-classification.html#fnref60" class="footnote-back">↩</a></p></li>
+<li id="fn61"><p><a href="https://www.wormatlas.org/hermaphrodite/nervous/Neuroframeset.html" class="uri">https://www.wormatlas.org/hermaphrodite/nervous/Neuroframeset.html</a><a href="neural-networks-for-binary-classification.html#fnref61" class="footnote-back">↩</a></p></li>
+<li id="fn62"><p>Shepherd, G. M. (2004), The synaptic organization of the brain (5th ed.), Oxford University Press, New York.<a href="neural-networks-for-binary-classification.html#fnref62" class="footnote-back">↩</a></p></li>
+<li id="fn63"><p><a href="https://www.kenhub.com/en/library/anatomy/neurotransmitters" class="uri">https://www.kenhub.com/en/library/anatomy/neurotransmitters</a><a href="neural-networks-for-binary-classification.html#fnref63" class="footnote-back">↩</a></p></li>
+<li id="fn64"><p><a href="http://isyslab.info/NeuroPep/home.jsp" class="uri">http://isyslab.info/NeuroPep/home.jsp</a><a href="neural-networks-for-binary-classification.html#fnref64" class="footnote-back">↩</a></p></li>
+<li id="fn65"><p><a href="https://www.howstuffworks.com/" class="uri">https://www.howstuffworks.com/</a><a href="neural-networks-for-binary-classification.html#fnref65" class="footnote-back">↩</a></p></li>
+<li id="fn66"><p><a href="https://arstechnica.com/cars/2019/05/feds-autopilot-was-active-during-deadly-march-tesla-crash/" class="uri">https://arstechnica.com/cars/2019/05/feds-autopilot-was-active-during-deadly-march-tesla-crash/</a><a href="neural-networks-for-binary-classification.html#fnref66" class="footnote-back">↩</a></p></li>
+<li id="fn67"><p>Tom Mitchell, Machine Learning, McGraw-Hill, 1997, ISBN: 0070428077<a href="neural-networks-for-binary-classification.html#fnref67" class="footnote-back">↩</a></p></li>
+<li id="fn68"><p>Josh Patterson, Adam Gibson, Deep Learning; A Practitioner’s Approach, 2017, O’Rreilly<a href="neural-networks-for-binary-classification.html#fnref68" class="footnote-back">↩</a></p></li>
+<li id="fn69"><p>David Rumelhart, Geoffrey Hinton, &amp; Ronald Williams, Learning Representations By Back-Propagating Errors, Nature, 323, 533-536, Oct. 9, 1986<a href="neural-networks-for-binary-classification.html#fnref69" class="footnote-back">↩</a></p></li>
+<li id="fn70"><p>Ivan N. da Silva, Danilo H. Spatti, Rogerio A. Flauzino, Luisa H. B. Liboni, Silas F. dos Reis Alves, Artificial Neural Networks: A Practical Course, DOI 10.1007/978-3-319-43162-8, 2017<a href="neural-networks-for-binary-classification.html#fnref70" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="logistic-regression-for-binary-classification.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="support-vector-machines-for-binary-classification.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

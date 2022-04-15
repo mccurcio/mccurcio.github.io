@@ -6,37 +6,41 @@ tags: Note-Taking Tiddywiki
 
 ## A Tiddlywiki, What?
 
-> a *Tiddlywiki* non-linear web notebook for capturing, organising and sharing complex information.
+> A non-linear web notebook for capturing, organising and sharing complex information.
 >
 >[Tiddlywiki.com](https://tiddlywiki.com/)
 
 Briefly--
 
-Tiddlywiki (*TW*) is a:
+<abbr title="Tiddlywiki">TW</abbr>  is a:
 
-1. note taking, 
-2. picture storing,
-3. document storing,
-4. journaling,
-5. search enabled,
-6. tag managed,
+1. Note taking, 
+2. Picture storing,
+3. Document storing,
+4. Journaling,
+5. Search enabled,
+6. Tag managed,
 
 and an *information-storage-software* written in Javascript used with your web browser. 
 
 - It's a free, and open-source. 
+- It runs locally on a network.
+- It can be made private.
 
 I love it because it can be stored on a thumb drive or ON Google Drive and keeps everything together in one place not multiple markdown (*.md) files. 
 
-- It is my favorite note taking platform.
+**It is my favorite note taking platform.**
 
 I will admit that this software has not cured me of keeping notes, pictures, etc, in every hiding place possible, but I am one step closer to storing it in one place.
 
 
-##  Step 1 - Download A TW
+##  Step 1 - Download a <abbr title="Tiddlywiki">TW</abbr>
 
 - Download your own *Tiddlywiki* .html 'doc': [Tiddlywiki.com](https://tiddlywiki.com/)
 
 ![](/assets/img/tw-page.png)
+
+<br>
 
 - Scroll down and to the **GettingStarted** box
 1. Find your operating system 
@@ -47,7 +51,7 @@ I will admit that this software has not cured me of keeping notes, pictures, etc
 
 ![](/assets/img/empty.tw.png)
 
-## Step 2 - Open Your Tiddlywiki
+## Step 2 - Open your <abbr title="Tiddlywiki">TW</abbr>
 
 Once downloaded, 
 

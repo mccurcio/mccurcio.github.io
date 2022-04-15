@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>5 Logistic Regression For Binary Classification | Binary Classification Using Six Machine Learning Techniques</title>
+  <meta name="description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="5 Logistic Regression For Binary Classification | Binary Classification Using Six Machine Learning Techniques" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="5 Logistic Regression For Binary Classification | Binary Classification Using Six Machine Learning Techniques" />
+  
+  <meta name="twitter:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+<meta name="author" content="Matthew C. Curcio" />
+
+
+<meta name="date" content="2020-03-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="principle-component-analysis-of-a-binary-classification-system.html"/>
+<link rel="next" href="neural-networks-for-binary-classification.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i>Who This Book Is For</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Introduction - What is Machine Learning?</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#machine-learning-is"><i class="fa fa-check"></i><b>2.1</b> Machine Learning Is?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#what-is-predictive-modeling"><i class="fa fa-check"></i><b>2.1.1</b> What is Predictive Modeling?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#supervised-learning"><i class="fa fa-check"></i><b>2.1.2</b> Supervised Learning</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#unsupervised-learning"><i class="fa fa-check"></i><b>2.1.3</b> Unsupervised Learning</a></li>
+<li class="chapter" data-level="2.1.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#five-challenges-in-predictive-modeling"><i class="fa fa-check"></i><b>2.1.4</b> Five Challenges In Predictive Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#research-description"><i class="fa fa-check"></i><b>2.2</b> Research Description</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#exploratory-data-analysis-eda"><i class="fa fa-check"></i><b>2.2.1</b> Exploratory Data Analysis (EDA)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#caret-library-for-r"><i class="fa fa-check"></i><b>2.2.2</b> Caret library for R</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#tuning-hyper-parameters"><i class="fa fa-check"></i><b>2.2.3</b> Tuning Hyper-parameters</a></li>
+<li class="chapter" data-level="2.2.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#k-fold-cross-validation-of-results"><i class="fa fa-check"></i><b>2.2.4</b> K-Fold Cross validation of results</a></li>
+<li class="chapter" data-level="2.2.5" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#train-command"><i class="fa fa-check"></i><b>2.2.5</b> Train command</a></li>
+<li class="chapter" data-level="2.2.6" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#analysis-of-results"><i class="fa fa-check"></i><b>2.2.6</b> Analysis of results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#four-step-analysis"><i class="fa fa-check"></i><b>3.1.1</b> Four-Step Analysis</a></li>
+<li class="chapter" data-level="3.1.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#useful-guides-for-exploratory-data-analysis"><i class="fa fa-check"></i><b>3.1.2</b> Useful Guides for Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="3.1.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#questions-during-eda"><i class="fa fa-check"></i><b>3.1.3</b> Questions During EDA</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-raw-data"><i class="fa fa-check"></i><b>3.2</b> Analysis of RAW data</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visually-inspect-raw-data-files"><i class="fa fa-check"></i><b>3.2.1</b> Visually inspect RAW data files</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#inspect-raw-dataframe-structure-str"><i class="fa fa-check"></i><b>3.2.2</b> Inspect RAW dataframe structure, <code>str()</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-head-tail"><i class="fa fa-check"></i><b>3.2.3</b> Check RAW data <code>head</code> &amp; <code>tail</code></a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-types"><i class="fa fa-check"></i><b>3.2.4</b> Check RAW data types</a></li>
+<li class="chapter" data-level="3.2.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-dataframe-dimensions"><i class="fa fa-check"></i><b>3.2.5</b> Check RAW dataframe dimensions</a></li>
+<li class="chapter" data-level="3.2.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-for-missing-values"><i class="fa fa-check"></i><b>3.2.6</b> Check RAW for missing values</a></li>
+<li class="chapter" data-level="3.2.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.2.7</b> Number of polypeptides per Class:</a></li>
+<li class="chapter" data-level="3.2.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#numerical-summary-of-raw-data"><i class="fa fa-check"></i><b>3.2.8</b> Numerical summary of RAW data</a></li>
+<li class="chapter" data-level="3.2.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-descriptive-statistics-using-raw-data"><i class="fa fa-check"></i><b>3.2.9</b> Visualize Descriptive Statistics using RAW Data</a></li>
+<li class="chapter" data-level="3.2.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-of-raw-data"><i class="fa fa-check"></i><b>3.2.10</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition of RAW Data</a></li>
+<li class="chapter" data-level="3.2.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#means-of-percent-amino-acid-composition-of-control-myoglobin-categories-raw-data"><i class="fa fa-check"></i><b>3.2.11</b> Means of percent amino acid composition of control &amp; myoglobin categories, RAW data</a></li>
+<li class="chapter" data-level="3.2.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-overall-amino-acid-composition-raw-data"><i class="fa fa-check"></i><b>3.2.12</b> Boxplots of grand-means of overall amino acid composition, RAW data</a></li>
+<li class="chapter" data-level="3.2.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-raw-data"><i class="fa fa-check"></i><b>3.2.13</b> Boxplots of amino acid compositions for control (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-only-raw-data"><i class="fa fa-check"></i><b>3.2.14</b> Boxplots of amino acid compositions for myoglobin (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-for-raw-data"><i class="fa fa-check"></i><b>3.2.15</b> Boxplots Of Length Of Polypeptides For RAW Data</a></li>
+<li class="chapter" data-level="3.2.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-coefficient-of-variance-for-raw-data"><i class="fa fa-check"></i><b>3.2.16</b> Plot Coefficient Of Variance For RAW Data</a></li>
+<li class="chapter" data-level="3.2.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-raw-data"><i class="fa fa-check"></i><b>3.2.17</b> Skewness of distributions, RAW data</a></li>
+<li class="chapter" data-level="3.2.18" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-raw-data"><i class="fa fa-check"></i><b>3.2.18</b> Determine coefficients of correlation, RAW data</a></li>
+<li class="chapter" data-level="3.2.19" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.19</b> Boruta Random Forest Test, RAW data</a></li>
+<li class="chapter" data-level="3.2.20" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-raw-data"><i class="fa fa-check"></i><b>3.2.20</b> Plot variable importance, RAW Data</a></li>
+<li class="chapter" data-level="3.2.21" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-raw-data"><i class="fa fa-check"></i><b>3.2.21</b> Variable importance scores, RAW Data</a></li>
+<li class="chapter" data-level="3.2.22" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-for-boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.22</b> Conclusion for Boruta random forest test, RAW Data</a></li>
+<li class="chapter" data-level="3.2.23" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusions-for-eda-raw-data"><i class="fa fa-check"></i><b>3.2.23</b> Conclusions For EDA, RAW data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-transformed-data"><i class="fa fa-check"></i><b>3.3</b> Analysis of TRANSFORMED data</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-dataframe-dimensions"><i class="fa fa-check"></i><b>3.3.1</b> Check Transformed dataframe dimensions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-for-missing-values"><i class="fa fa-check"></i><b>3.3.2</b> Check Transformed for missing values</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#count-transformed-data-for-the-number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.3.3</b> Count Transformed data for the number of polypeptides per class</a></li>
+<li class="chapter" data-level="3.3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-descriptive-statistics-transformed-data"><i class="fa fa-check"></i><b>3.3.4</b> Visualization Descriptive Statistics, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-sqrt-x_i-transformed-data"><i class="fa fa-check"></i><b>3.3.5</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition <span class="math inline">\(\sqrt x_i\)</span>, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#grouped-bar-chart-of-means-for-percent-amino-acid-composition-of-transformed-data-control-myoglobin-categories"><i class="fa fa-check"></i><b>3.3.6</b> Grouped bar chart of means for percent amino acid composition of Transformed Data; control &amp; myoglobin categories</a></li>
+<li class="chapter" data-level="3.3.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-the-overall-amino-acid-composition-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.7</b> Boxplots of grand-means of the overall amino acid composition of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.8</b> Boxplots of amino acid compositions for control (only) of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-of-square-root-transformed-dataonly-transformed-data"><i class="fa fa-check"></i><b>3.3.9</b> Boxplots of amino acid compositions for myoglobin of square-root transformed Data(only), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-of-transformed-data-myoglobin-control-combined"><i class="fa fa-check"></i><b>3.3.10</b> Boxplots Of Length Of Polypeptides Of Transformed Data; Myoglobin, Control &amp; Combined</a></li>
+<li class="chapter" data-level="3.3.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#coefficient-of-variance-cv-transformed-data"><i class="fa fa-check"></i><b>3.3.11</b> Coefficient of Variance (CV), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-of-coefficient-of-variance-cv"><i class="fa fa-check"></i><b>3.3.12</b> Plot of Coefficient Of Variance (CV)</a></li>
+<li class="chapter" data-level="3.3.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-transformed-data"><i class="fa fa-check"></i><b>3.3.13</b> Skewness of distributions, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-transformed-data"><i class="fa fa-check"></i><b>3.3.14</b> Determine coefficients of correlation, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta---dimensionality-reduction-transformed-data"><i class="fa fa-check"></i><b>3.3.15</b> Boruta - Dimensionality Reduction, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-transformed-data"><i class="fa fa-check"></i><b>3.3.16</b> Plot Variable Importance, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-transformed-data"><i class="fa fa-check"></i><b>3.3.17</b> Variable Importance Scores, TRANSFORMED data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-conclusion"><i class="fa fa-check"></i><b>3.4</b> EDA Conclusion</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-selection-extraction"><i class="fa fa-check"></i><b>3.4.1</b> Feature Selection &amp; Extraction</a></li>
+<li class="chapter" data-level="3.4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#information-block"><i class="fa fa-check"></i><b>3.4.2</b> Information Block**</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html"><i class="fa fa-check"></i><b>4</b> Principle Component Analysis of A Binary Classification System</a><ul>
+<li class="chapter" data-level="4.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#advantages-of-using-pca-include"><i class="fa fa-check"></i><b>4.1.1</b> Advantages Of Using PCA Include</a></li>
+<li class="chapter" data-level="4.1.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#disadvantages-of-pca-should-be-considered"><i class="fa fa-check"></i><b>4.1.2</b> Disadvantages Of PCA Should Be Considered</a></li>
+<li class="chapter" data-level="4.1.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#data-centering-scaling-normalization"><i class="fa fa-check"></i><b>4.1.3</b> Data centering / scaling / normalization</a></li>
+<li class="chapter" data-level="4.1.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#histograms-of-scaled-vs.-unscaled-data"><i class="fa fa-check"></i><b>4.1.4</b> Histograms of Scaled Vs. Unscaled data</a></li>
+<li class="chapter" data-level="4.1.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-the-covariance-matrix"><i class="fa fa-check"></i><b>4.1.5</b> Finding the Covariance Matrix</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-two-variables"><i class="fa fa-check"></i>Covariance of two variables</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-matrices"><i class="fa fa-check"></i>Covariance of matrices</a></li>
+<li class="chapter" data-level="4.1.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-pca-via-singular-value-decomposition"><i class="fa fa-check"></i><b>4.1.6</b> Finding PCA via singular value decomposition</a></li>
+<li class="chapter" data-level="4.1.7" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#example-of-two-dimensional-pca-using-random-data"><i class="fa fa-check"></i><b>4.1.7</b> Example of two-dimensional PCA using random data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#principle-component-analysis-using-norm_c_m_20aa"><i class="fa fa-check"></i><b>4.2</b> Principle component analysis using <code>norm_c_m_20aa</code></a><ul>
+<li class="chapter" data-level="4.2.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#screeplot-cumulative-proportion-of-variance-plot"><i class="fa fa-check"></i><b>4.2.1</b> Screeplot &amp; Cumulative Proportion of Variance plot</a></li>
+<li class="chapter" data-level="4.2.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#biplots"><i class="fa fa-check"></i><b>4.2.2</b> Biplots</a></li>
+<li class="chapter" data-level="4.2.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#obtain-anomalous-points-from-biplot-2-pc1-vs.-pc2"><i class="fa fa-check"></i><b>4.2.3</b> Obtain Anomalous Points From Biplot #2: PC1 Vs. PC2</a></li>
+<li class="chapter" data-level="4.2.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-1"><i class="fa fa-check"></i><b>4.2.4</b> Outliers from Principal Component-1</a></li>
+<li class="chapter" data-level="4.2.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-2"><i class="fa fa-check"></i><b>4.2.5</b> Outliers from Principal Component-2</a></li>
+<li class="chapter" data-level="4.2.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#list-of-all-outliers-union-and-sorted-found-using-the-ruleset-1-through-4"><i class="fa fa-check"></i><b>4.2.6</b> List of all outliers (union and sorted) found using the ruleset 1 through 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#pca-conclusion"><i class="fa fa-check"></i><b>4.3</b> PCA Conclusion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-derived-from-pc1-vs-pc2"><i class="fa fa-check"></i><b>4.3.1</b> Outliers derived from PC1 Vs PC2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html"><i class="fa fa-check"></i><b>5</b> Logistic Regression For Binary Classification</a><ul>
+<li class="chapter" data-level="5.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#introduction-2"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-training-using-20-features"><i class="fa fa-check"></i><b>5.2</b> Logit-20 Training Using 20 Features</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-summary-1"><i class="fa fa-check"></i><b>5.2.1</b> Logit-20 Summary #1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-training-using-9-features"><i class="fa fa-check"></i><b>5.3</b> Logit-9 Training Using 9 Features</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-summary"><i class="fa fa-check"></i><b>5.3.1</b> Logit-9 Summary</a></li>
+<li class="chapter" data-level="5.3.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-confusion-matrix"><i class="fa fa-check"></i><b>5.3.2</b> Logit-9 Confusion Matrix</a></li>
+<li class="chapter" data-level="5.3.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#obtain-list-of-false-positives-false-negatives-from-logit-9"><i class="fa fa-check"></i><b>5.3.3</b> Obtain List of False Positives &amp; False Negatives From Logit-9</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-conclusion"><i class="fa fa-check"></i><b>5.4</b> Logit Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html"><i class="fa fa-check"></i><b>6</b> Neural Networks For Binary Classification</a><ul>
+<li class="chapter" data-level="6.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-one-neuron-system"><i class="fa fa-check"></i><b>6.1.1</b> The One Neuron System</a></li>
+<li class="chapter" data-level="6.1.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-two-neuron-system"><i class="fa fa-check"></i><b>6.1.2</b> The Two Neuron System</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-experiment-for-binary-classification"><i class="fa fa-check"></i><b>6.2</b> Neural Network Experiment For Binary Classification</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#train-model-with-neural-networks"><i class="fa fa-check"></i><b>6.2.1</b> Train model with neural networks</a></li>
+<li class="chapter" data-level="6.2.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#confusion-matrix-and-statistics"><i class="fa fa-check"></i><b>6.2.2</b> Confusion Matrix and Statistics</a></li>
+<li class="chapter" data-level="6.2.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#obtain-list-of-false-positives-false-negatives"><i class="fa fa-check"></i><b>6.2.3</b> Obtain List of False Positives &amp; False Negatives</a></li>
+<li class="chapter" data-level="6.2.4" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#false-positive-false-negative-neural-network-set"><i class="fa fa-check"></i><b>6.2.4</b> False Positive &amp; False Negative Neural Network set</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-conclusion"><i class="fa fa-check"></i><b>6.3</b> Neural Network Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html"><i class="fa fa-check"></i><b>7</b> Support Vector Machines for Binary Classification</a><ul>
+<li class="chapter" data-level="7.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#introduction-4"><i class="fa fa-check"></i><b>7.1</b> Introduction</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#linearly-separable"><i class="fa fa-check"></i><b>7.1.1</b> Linearly Separable</a></li>
+<li class="chapter" data-level="7.1.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#understanding-the-hyperplane-equation"><i class="fa fa-check"></i><b>7.1.2</b> Understanding the hyperplane equation</a></li>
+<li class="chapter" data-level="7.1.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#soft-margins"><i class="fa fa-check"></i><b>7.1.3</b> Soft Margins</a></li>
+<li class="chapter" data-level="7.1.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#kernel-use"><i class="fa fa-check"></i><b>7.1.4</b> Kernel Use</a></li>
+<li class="chapter" data-level="7.1.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-intuition"><i class="fa fa-check"></i><b>7.1.5</b> SVM-Linear Intuition</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model"><i class="fa fa-check"></i><b>7.2</b> SVM-Linear Model</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-training"><i class="fa fa-check"></i><b>7.2.1</b> SVM-Linear Training</a></li>
+<li class="chapter" data-level="7.2.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model-summary"><i class="fa fa-check"></i><b>7.2.2</b> SVM-Linear Model Summary</a></li>
+<li class="chapter" data-level="7.2.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-predict-test_set"><i class="fa fa-check"></i><b>7.2.3</b> SVM-Linear Predict test_set</a></li>
+<li class="chapter" data-level="7.2.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-confusion-matrix"><i class="fa fa-check"></i><b>7.2.4</b> SVM-Linear Confusion Matrix</a></li>
+<li class="chapter" data-level="7.2.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.2.5</b> SVM-Linear Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-polynomial-model"><i class="fa fa-check"></i><b>7.3</b> SVM-Polynomial Model</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-training"><i class="fa fa-check"></i><b>7.3.1</b> SVM-Poly Training</a></li>
+<li class="chapter" data-level="7.3.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-model-summary"><i class="fa fa-check"></i><b>7.3.2</b> SVM-Poly Model Summary</a></li>
+<li class="chapter" data-level="7.3.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-predict-test_set"><i class="fa fa-check"></i><b>7.3.3</b> SVM-Poly Predict test_set</a></li>
+<li class="chapter" data-level="7.3.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-confusion-matrix"><i class="fa fa-check"></i><b>7.3.4</b> SVM-Poly Confusion Matrix</a></li>
+<li class="chapter" data-level="7.3.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.3.5</b> SVM-Poly Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model"><i class="fa fa-check"></i><b>7.4</b> SVM-RBF Model</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-training"><i class="fa fa-check"></i><b>7.4.1</b> SVM-RBF Training</a></li>
+<li class="chapter" data-level="7.4.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model-summary"><i class="fa fa-check"></i><b>7.4.2</b> SVM-RBF Model Summary</a></li>
+<li class="chapter" data-level="7.4.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-predict-test_set"><i class="fa fa-check"></i><b>7.4.3</b> SVM-RBF Predict test_set</a></li>
+<li class="chapter" data-level="7.4.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-confusion-matrix"><i class="fa fa-check"></i><b>7.4.4</b> SVM-RBF Confusion Matrix</a></li>
+<li class="chapter" data-level="7.4.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.4.5</b> SVM-RBF Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-conclusion"><i class="fa fa-check"></i><b>7.5</b> SVM Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>8</b> Results</a><ul>
+<li class="chapter" data-level="8.1" data-path="results.html"><a href="results.html#the-six-m.l-algorithms-consist-of"><i class="fa fa-check"></i><b>8.1</b> The Six M.L Algorithms consist of:</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="results.html"><a href="results.html#pca-anomalies-plot"><i class="fa fa-check"></i><b>8.1.1</b> PCA-Anomalies Plot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="results.html"><a href="results.html#logit-plot"><i class="fa fa-check"></i><b>8.1.2</b> Logit Plot</a></li>
+<li class="chapter" data-level="8.1.3" data-path="results.html"><a href="results.html#svm-linear-plot"><i class="fa fa-check"></i><b>8.1.3</b> SVM-Linear Plot</a></li>
+<li class="chapter" data-level="8.1.4" data-path="results.html"><a href="results.html#svm-polynomial-plot"><i class="fa fa-check"></i><b>8.1.4</b> SVM-Polynomial Plot</a></li>
+<li class="chapter" data-level="8.1.5" data-path="results.html"><a href="results.html#svm-radial-basis-function-plot"><i class="fa fa-check"></i><b>8.1.5</b> SVM-Radial Basis Function Plot</a></li>
+<li class="chapter" data-level="8.1.6" data-path="results.html"><a href="results.html#neural-network-function-plot"><i class="fa fa-check"></i><b>8.1.6</b> Neural Network Function Plot</a></li>
+<li class="chapter" data-level="8.1.7" data-path="results.html"><a href="results.html#statistical-learning-method-vs-total-number-of-fpfn"><i class="fa fa-check"></i><b>8.1.7</b> Statistical Learning Method Vs Total Number of FP/FN</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="results.html"><a href="results.html#comparison-of-machine-learning-accuracies"><i class="fa fa-check"></i><b>8.2</b> Comparison of Machine Learning Accuracies</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="results.html"><a href="results.html#stacking-algorithms---run-multiple-algorithms-in-one-call."><i class="fa fa-check"></i><b>8.2.1</b> Stacking Algorithms - Run multiple algorithms in one call.</a></li>
+<li class="chapter" data-level="8.2.2" data-path="results.html"><a href="results.html#plot-the-resamples-output-to-compare-the-models."><i class="fa fa-check"></i><b>8.2.2</b> Plot the resamples output to compare the models.</a></li>
+<li class="chapter" data-level="8.2.3" data-path="results.html"><a href="results.html#mean-accuracies-of-m.l.-techniques-n10"><i class="fa fa-check"></i><b>8.2.3</b> Mean Accuracies of M.L. Techniques, n=10</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>9</b> Conclusion</a></li>
+<li class="chapter" data-level="10" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html"><i class="fa fa-check"></i><b>10</b> Biplot1.annotated.png</a><ul>
+<li class="chapter" data-level="10.1" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-pca-anomalies"><i class="fa fa-check"></i><b>10.1</b> Comparison of PCA Anomalies</a></li>
+<li class="chapter" data-level="10.2" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-accuracy-measurements"><i class="fa fa-check"></i><b>10.2</b> Comparison of Accuracy Measurements</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Binary Classification Using Six Machine Learning Techniques</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="logistic-regression-for-binary-classification" class="section level1">
+<h1><span class="header-section-number">5</span> Logistic Regression For Binary Classification</h1>
+<div id="introduction-2" class="section level2">
+<h2><span class="header-section-number">5.1</span> Introduction</h2>
+<p>For individuals who have studied cell biology or biochemistry, logistic regression may be familiar as dose-response curves, enzyme kinetic curves, sigmoidal curves, median lethal dose curve (LD-50) or even an exponential growth curve given limited resources.</p>
+<p>However, in the context of predictive modeling, Logistic Regression is used as a binary classifier that toggle between the logical values of zero or one.</p>
+<p>Logistic regression (Logit) derives its name from its similarity to linear regression, as we shall see below. The input/independent variable for Logit is the set of real numbers, (<span class="math inline">\(X ~ \in ~ \Re\)</span>). While, the output of a Logistic Regression is not represented by {0, 1}, (<span class="math inline">\(Y ~ \notin ~ \Re\)</span>),</p>
+<p><span class="math display">\[\begin{equation}
+f(x) = ~~ \left \{ \begin{matrix} 0 ~~for~~ x &lt; 0 \\ 1 ~~for~~ x \geq 0 \end{matrix} \right.
+\end{equation}\]</span></p>
+<p>Using Logistic Regression, we may calculate the presence or absence of a product or quality that we wish to model given a difficult situation where the transition is not clear.</p>
+<p>In the figure below, the function’s domain, <span class="math inline">\(X \in \{-\infty\)</span> to <span class="math inline">\(\infty\}\)</span>, whereby its range is {0, 1}. In the figure, the <em>decision boundary</em> is <span class="math inline">\(x ~=\)</span> 0, denoted by the <em>red dotted line</em>. At the inflection point the curves range changes from <em>zero</em>, absence, to <em>one</em>, the presence of quality or item.</p>
+<p><img src="_main_files/figure-html/42-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The logistic growth curve is commonly denoted by:</p>
+<p><span class="math display">\[\begin{equation}
+f(x) ~=~ \frac{M}{1 + Ae^{-r(x - x_0)}}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(M\)</span> is the curve’s maximum value, <span class="math inline">\(r\)</span> is the maximum growth rate (also called the Malthusian parameter <a href="#fn55" class="footnote-ref" id="fnref55"><sup>55</sup></a>), <span class="math inline">\(x_0\)</span> is the midpoint of the curve, <span class="math inline">\(A\)</span> is the number of times that the initial population must double to reach <span class="math inline">\(M\)</span>.<a href="#fn56" class="footnote-ref" id="fnref56"><sup>56</sup></a></p>
+<p>In the specific case of <em>Logistic Regression for Binary Classification</em> where we have a probability between 0 and 1, <span class="math inline">\(M\)</span>, and <span class="math inline">\(A\)</span> take on the value one.</p>
+<p><span class="math display">\[\begin{equation}
+f(x) ~=~ \frac{1}{1 + e^{-(WX+b)}}
+\end{equation}\]</span></p>
+<p>Since the logistic equation is exponential, it is easier to work with the formula in terms of its odds or <em>log-odds</em>. Odds are the probabilities of success over failure denoted as <span class="math inline">\(\Large \frac{p}{1-p}\)</span> and more importantly, in this situation, log-odds are <span class="math inline">\(ln \left (\frac{p}{1-p} \right )\)</span>.</p>
+<p>Simply by using log-odds, logistic regression may be more easily expressed as a set of linear equations in x.<a href="#fn57" class="footnote-ref" id="fnref57"><sup>57</sup></a> Hence we can now go from linear regression to logistic regression.</p>
+<p>Step #1:
+<span class="math display">\[\begin{equation}
+ln ~ \left ( \frac{Pr(y_i ~=~ 1|x_i)}{Pr(y_i ~=~ 0|x_i)} \right ) =~ \beta_0 + \beta_1 x_1 +~ ... ~+ \beta_{n} x_{n}
+\end{equation}\]</span></p>
+<p>Step #2:
+Substitute (<span class="math inline">\(p\)</span> for <span class="math inline">\(Pr(y_i ~=~ 1|x_i)\)</span>) and (<span class="math inline">\(1-p\)</span> for <span class="math inline">\(Pr(y_i ~=~ 0|x_i)\)</span>) and change notation to summation on the right hand side;</p>
+<p><span class="math display">\[\begin{equation}
+ln \left( \frac {p}{1-p} \right) =~ \sum_i^{k} \beta_i x_i
+\end{equation}\]</span></p>
+<p>Step #3:
+Eliminate the natural log by taking the exponent on both sides;</p>
+<p><span class="math display">\[\begin{equation}
+\frac {p}{1-p} =~ exp \left ( \sum_i^{k} \beta_i x_i \right )
+\end{equation}\]</span></p>
+<p>Step #4:
+Substitute <span class="math inline">\(u = \sum_i^{k} \beta_i x_i\)</span>;</p>
+<p><span class="math display">\[\begin{equation}
+\frac {p}{1-p} =~ e^u
+\end{equation}\]</span></p>
+<p>Step #5:
+Rearrange to solve for <span class="math inline">\(\large p\)</span>;</p>
+<p><span class="math display">\[\begin{equation}
+p(u) ~=~ \frac{e^u}{1 + e^u}
+\end{equation}\]</span></p>
+<p>Step #6:
+Incidentally, to find the probabilities, take the derivative of both sides using quotient rule;</p>
+<p><span class="math display">\[\begin{equation}
+p&#39;(u) ~=~ \frac {(e^u)(1 + e^u) - (e^u)(e^u)}{(1 + e^u)^2}
+\end{equation}\]</span></p>
+<p>Step #7:
+Simplify;</p>
+<p><span class="math display">\[\begin{equation}
+p&#39;(u) ~=~ \frac {e^u}{(1 + e^u)^2}
+\end{equation}\]</span></p>
+<p>Step #8:
+Separate out to produce two fractions;</p>
+<p><span class="math display">\[\begin{equation}
+p&#39;(u) ~=~ \left ( \frac {e^u}{1 + e^u} \right ) \cdot \left ( \frac{1}{1 + e^u} \right )
+\end{equation}\]</span></p>
+<p>Step #9:
+Substitute our previous success and failure variables back into place;</p>
+<p><span class="math display">\[\begin{equation}
+p&#39;(u) ~=~ p(u) \cdot ( 1 - p(u))
+\end{equation}\]</span></p>
+<p>Now we can calculate the probabilities as well as the values for any given x value.</p>
+<hr />
+</div>
+<div id="logit-20-training-using-20-features" class="section level2">
+<h2><span class="header-section-number">5.2</span> Logit-20 Training Using 20 Features</h2>
+<div class="sourceCode" id="cb66"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb66-1" data-line-number="1"><span class="co"># Load Libraries</span></a>
+<a class="sourceLine" id="cb66-2" data-line-number="2">Libraries &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;knitr&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;tidyverse&quot;</span>, <span class="st">&quot;caret&quot;</span>)</a>
+<a class="sourceLine" id="cb66-3" data-line-number="3"><span class="cf">for</span> (p <span class="cf">in</span> Libraries) { </a>
+<a class="sourceLine" id="cb66-4" data-line-number="4">    <span class="kw">library</span>(p, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb66-5" data-line-number="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb67-1" data-line-number="1"><span class="co"># Import relevant data</span></a>
+<a class="sourceLine" id="cb67-2" data-line-number="2">c_m_TRANSFORMED &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb67-3" data-line-number="3">                            <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">Class =</span> <span class="kw">col_factor</span>(<span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;0&quot;</span>, <span class="st">&quot;1&quot;</span>)),</a>
+<a class="sourceLine" id="cb67-4" data-line-number="4">                                             <span class="dt">PID =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb67-5" data-line-number="5">                                             <span class="dt">TotalAA =</span> <span class="kw">col_skip</span>()))</a></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb68-1" data-line-number="1"><span class="co"># Partition data into training and testing sets</span></a>
+<a class="sourceLine" id="cb68-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb68-3" data-line-number="3">index &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_TRANSFORMED<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb68-4" data-line-number="4">training_set<span class="fl">.1</span> &lt;-<span class="st"> </span>c_m_TRANSFORMED[index, ]</a></code></pre></div>
+<ul>
+<li><p>The <code>test.set.1</code> and <code>Class.test</code> data sets are not produced since the Logit run with 20 features was not deemed useful. The reason for its dismissal was that is contained extraneous features.</p></li>
+<li><p>The first training run is to determine if all 20 features (amino acids) are necessary for our logistic regression model.</p></li>
+</ul>
+<div class="sourceCode" id="cb69"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb69-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb69-2" data-line-number="2">start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()     <span class="co"># Start timer</span></a>
+<a class="sourceLine" id="cb69-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb69-4" data-line-number="4"><span class="co"># Create model, 10X fold CV repeated 5X</span></a>
+<a class="sourceLine" id="cb69-5" data-line-number="5">tcontrol &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</a>
+<a class="sourceLine" id="cb69-6" data-line-number="6">                         <span class="dt">number =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb69-7" data-line-number="7">                         <span class="dt">repeats =</span> <span class="dv">5</span>)</a>
+<a class="sourceLine" id="cb69-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb69-9" data-line-number="9">model_obj<span class="fl">.1</span> &lt;-<span class="st"> </span><span class="kw">train</span>(Class <span class="op">~</span><span class="st"> </span>.,</a>
+<a class="sourceLine" id="cb69-10" data-line-number="10">                     <span class="dt">data =</span> training_set<span class="fl">.1</span>,</a>
+<a class="sourceLine" id="cb69-11" data-line-number="11">                     <span class="dt">trControl =</span> tcontrol,</a>
+<a class="sourceLine" id="cb69-12" data-line-number="12">                     <span class="dt">method =</span> <span class="st">&quot;glm&quot;</span>,</a>
+<a class="sourceLine" id="cb69-13" data-line-number="13">                     <span class="dt">family =</span> <span class="st">&quot;binomial&quot;</span>)</a>
+<a class="sourceLine" id="cb69-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb69-15" data-line-number="15">end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()      <span class="co"># End timer</span></a>
+<a class="sourceLine" id="cb69-16" data-line-number="16">end_time <span class="op">-</span><span class="st"> </span>start_time       <span class="co"># Display time</span></a></code></pre></div>
+<pre><code>## Time difference of 5.241524 secs</code></pre>
+<div id="logit-20-summary-1" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Logit-20 Summary #1</h3>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb71-1" data-line-number="1"><span class="kw">summary</span>(model_obj<span class="fl">.1</span>)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## NULL
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -5.9372  -0.2835  -0.0194   0.0516   3.6884  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)   8.0525     9.2156   0.874 0.382234    
+## A             5.0438     9.6899   0.521 0.602699    
+## C           -14.2228     2.6949  -5.278 1.31e-07 ***
+## D           -36.2676     8.0845  -4.486 7.25e-06 ***
+## E            27.6016    11.1292   2.480 0.013135 *  
+## F             5.6174     5.2654   1.067 0.286034    
+## G           -22.1970    10.3043  -2.154 0.031229 *  
+## H            90.1101    12.1105   7.441 1.00e-13 ***
+## I            -5.9795     4.3945  -1.361 0.173610    
+## K            -2.8961     9.8468  -0.294 0.768669    
+## L            -3.7417     9.2217  -0.406 0.684926    
+## M            -0.1427    12.0747  -0.012 0.990570    
+## N             3.3478     9.6749   0.346 0.729319    
+## P           -39.7466    11.1010  -3.580 0.000343 ***
+## Q            -5.6804    11.2516  -0.505 0.613664    
+## R           -83.6045    11.8104  -7.079 1.45e-12 ***
+## S            -9.9745    10.0872  -0.989 0.322750    
+## T           -36.5980     9.2791  -3.944 8.01e-05 ***
+## V            16.3411     9.7859   1.670 0.094946 .  
+## W             9.0169    13.8870   0.649 0.516141    
+## Y           -31.9282    11.1167  -2.872 0.004078 ** 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 2593.68  on 1872  degrees of freedom
+## Residual deviance:  657.72  on 1852  degrees of freedom
+## AIC: 699.72
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+<p>The Akaike information criterion (AIC)<a href="#fn58" class="footnote-ref" id="fnref58"><sup>58</sup></a> for model #1 is 699.72. This will be used later to compare the models generated to rate their ability to utilize the features best.
+- The list of probabilities for the estimates leaves us with only <strong>9 important features</strong> to try re-modeling, R, H, P, C, E, Y, T, D, G.</p>
+</div>
+</div>
+<div id="logit-9-training-using-9-features" class="section level2">
+<h2><span class="header-section-number">5.3</span> Logit-9 Training Using 9 Features</h2>
+<ul>
+<li>This test uses <strong>ONLY</strong> 9 features: (R, H, P, C, E, Y, T, D, G)</li>
+</ul>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb73-1" data-line-number="1"><span class="co"># Data import &amp; handling</span></a>
+<a class="sourceLine" id="cb73-2" data-line-number="2">c_m_9aa &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb73-3" data-line-number="3">                    <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">Class =</span> <span class="kw">col_factor</span>(<span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;0&quot;</span>, <span class="st">&quot;1&quot;</span>)),</a>
+<a class="sourceLine" id="cb73-4" data-line-number="4">                                     <span class="dt">A =</span> <span class="kw">col_skip</span>(), <span class="dt">F =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb73-5" data-line-number="5">                                     <span class="dt">I =</span> <span class="kw">col_skip</span>(), <span class="dt">K =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb73-6" data-line-number="6">                                     <span class="dt">L =</span> <span class="kw">col_skip</span>(), <span class="dt">M =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb73-7" data-line-number="7">                                     <span class="dt">N =</span> <span class="kw">col_skip</span>(), <span class="dt">PID =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb73-8" data-line-number="8">                                     <span class="dt">Q =</span> <span class="kw">col_skip</span>(), <span class="dt">V =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb73-9" data-line-number="9">                                     <span class="dt">S =</span> <span class="kw">col_skip</span>(), <span class="dt">TotalAA =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb73-10" data-line-number="10">                                     <span class="dt">W =</span> <span class="kw">col_skip</span>()))</a></code></pre></div>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb74-1" data-line-number="1"><span class="co"># Partition data into training and testing sets</span></a>
+<a class="sourceLine" id="cb74-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb74-3" data-line-number="3">index &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_9aa<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb74-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb74-5" data-line-number="5">training_set<span class="fl">.2</span> &lt;-<span class="st"> </span>c_m_9aa[ index, ]</a>
+<a class="sourceLine" id="cb74-6" data-line-number="6">test_set<span class="fl">.2</span>     &lt;-<span class="st"> </span>c_m_9aa[<span class="op">-</span>index, ]</a>
+<a class="sourceLine" id="cb74-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb74-8" data-line-number="8">Class_test<span class="fl">.2</span> &lt;-<span class="st"> </span><span class="kw">as.factor</span>(test_set<span class="fl">.2</span><span class="op">$</span>Class)</a></code></pre></div>
+<div class="sourceCode" id="cb75"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb75-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb75-2" data-line-number="2">start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()          <span class="co"># Start timer</span></a>
+<a class="sourceLine" id="cb75-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb75-4" data-line-number="4"><span class="co"># Create model, 10X fold CV repeated 5X</span></a>
+<a class="sourceLine" id="cb75-5" data-line-number="5">fitControl &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</a>
+<a class="sourceLine" id="cb75-6" data-line-number="6">                           <span class="dt">number =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb75-7" data-line-number="7">                           <span class="dt">repeats =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb75-8" data-line-number="8">                           <span class="dt">savePredictions =</span> <span class="st">&quot;final&quot;</span>) <span class="co"># IMPORTANT: Saves predictions</span></a>
+<a class="sourceLine" id="cb75-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb75-10" data-line-number="10">model_obj<span class="fl">.2</span> &lt;-<span class="st"> </span><span class="kw">train</span>(Class <span class="op">~</span><span class="st"> </span>.,</a>
+<a class="sourceLine" id="cb75-11" data-line-number="11">                     <span class="dt">data =</span> training_set<span class="fl">.2</span>,</a>
+<a class="sourceLine" id="cb75-12" data-line-number="12">                     <span class="dt">trControl =</span> fitControl,</a>
+<a class="sourceLine" id="cb75-13" data-line-number="13">                     <span class="dt">method =</span> <span class="st">&quot;glm&quot;</span>,</a>
+<a class="sourceLine" id="cb75-14" data-line-number="14">                     <span class="dt">family =</span> <span class="st">&quot;binomial&quot;</span>)</a>
+<a class="sourceLine" id="cb75-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb75-16" data-line-number="16">end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()           <span class="co"># End timer</span></a>
+<a class="sourceLine" id="cb75-17" data-line-number="17">end_time <span class="op">-</span><span class="st"> </span>start_time            <span class="co"># Display time</span></a></code></pre></div>
+<pre><code>## Time difference of 3.936663 secs</code></pre>
+<div id="logit-9-summary" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Logit-9 Summary</h3>
+<div class="sourceCode" id="cb77"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb77-1" data-line-number="1"><span class="kw">summary</span>(model_obj<span class="fl">.2</span>)</a></code></pre></div>
+<pre><code>## 
+## Call:
+## NULL
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -6.2083  -0.2984  -0.0204   0.0601   3.5666  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept)    8.306      1.007   8.245  &lt; 2e-16 ***
+## C            -14.755      1.908  -7.733 1.05e-14 ***
+## D            -31.411      4.949  -6.347 2.20e-10 ***
+## E             21.932      5.092   4.307 1.66e-05 ***
+## G            -23.259      5.071  -4.587 4.49e-06 ***
+## H             94.580      8.431  11.218  &lt; 2e-16 ***
+## P            -29.394      6.264  -4.692 2.70e-06 ***
+## R            -82.809      6.363 -13.015  &lt; 2e-16 ***
+## T            -40.915      5.624  -7.275 3.45e-13 ***
+## Y            -37.860      6.291  -6.018 1.77e-09 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 2593.68  on 1872  degrees of freedom
+## Residual deviance:  688.96  on 1863  degrees of freedom
+## AIC: 708.96
+## 
+## Number of Fisher Scoring iterations: 8</code></pre>
+</div>
+<div id="logit-9-confusion-matrix" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Logit-9 Confusion Matrix</h3>
+<div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" data-line-number="1">Predicted_test_vals &lt;-<span class="st"> </span><span class="kw">predict</span>(model_obj<span class="fl">.2</span>, test_set<span class="fl">.2</span>[, <span class="dv">-1</span>])</a>
+<a class="sourceLine" id="cb79-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb79-3" data-line-number="3"><span class="kw">confusionMatrix</span>(Predicted_test_vals, Class_test<span class="fl">.2</span>, <span class="dt">positive =</span> <span class="st">&quot;1&quot;</span>)</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 235  18
+##          1   8 206
+##                                           
+##                Accuracy : 0.9443          
+##                  95% CI : (0.9195, 0.9633)
+##     No Information Rate : 0.5203          
+##     P-Value [Acc &gt; NIR] : &lt; 2e-16         
+##                                           
+##                   Kappa : 0.8883          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.07756         
+##                                           
+##             Sensitivity : 0.9196          
+##             Specificity : 0.9671          
+##          Pos Pred Value : 0.9626          
+##          Neg Pred Value : 0.9289          
+##              Prevalence : 0.4797          
+##          Detection Rate : 0.4411          
+##    Detection Prevalence : 0.4582          
+##       Balanced Accuracy : 0.9434          
+##                                           
+##        &#39;Positive&#39; Class : 1               
+## </code></pre>
+<ul>
+<li>The Akaike information criterion (AIC) for model #2 is 708.96. This will be used later to compare the models generated to rate their ability to utilize the features best.</li>
+<li>The number of unique false-positives and false-negatives is 26.</li>
+</ul>
+</div>
+<div id="obtain-list-of-false-positives-false-negatives-from-logit-9" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Obtain List of False Positives &amp; False Negatives From Logit-9</h3>
+<div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" data-line-number="1">fp_fn_logit &lt;-<span class="st"> </span>model_obj<span class="fl">.2</span> <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pluck</span>(<span class="st">&quot;pred&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(obs <span class="op">!=</span><span class="st"> </span>pred)</a>
+<a class="sourceLine" id="cb81-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb81-3" data-line-number="3"><span class="co"># Write CSV in R</span></a>
+<a class="sourceLine" id="cb81-4" data-line-number="4"><span class="kw">write.table</span>(fp_fn_logit,</a>
+<a class="sourceLine" id="cb81-5" data-line-number="5">            <span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/fp_fn_logit.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb81-6" data-line-number="6">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb81-7" data-line-number="7">            <span class="dt">na =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb81-8" data-line-number="8">            <span class="dt">col.names =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb81-9" data-line-number="9">            <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb81-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb81-11" data-line-number="11"><span class="kw">nrow</span>(fp_fn_logit) <span class="co">## </span><span class="al">NOTE</span><span class="co">: NOT UNIQUE NOR SORTED</span></a></code></pre></div>
+<pre><code>## [1] 536</code></pre>
+<ul>
+<li>The logistic regression second test produced 536 protein samples, which are either false-positives or false-negatives. The list of 536 proteins may have duplicates. Therefore they are NOT UNIQUE NOR SORTED.</li>
+</ul>
+</div>
+</div>
+<div id="logit-conclusion" class="section level2">
+<h2><span class="header-section-number">5.4</span> Logit Conclusion</h2>
+<p>Logit is easy to implement and understand and can be used for feature selection.</p>
+<p>Considering the table Logit Models, below, it is clear that model #2 with nine features best describes the better of the two models.</p>
+<p>Akaike Information Criterion <a href="#fn59" class="footnote-ref" id="fnref59"><sup>59</sup></a></p>
+<p><span class="math display">\[\begin{equation}
+AIC ~=~ 2 K ~-~ 2ln (\widehat{L})
+\end{equation}\]</span></p>
+<p>Where <span class="math inline">\(ln (\widehat{L})\)</span> is the log-likelihood estimate, <span class="math inline">\(K\)</span> is the number of parameters.</p>
+<div id="two-logit-models" class="section level4 unnumbered">
+<h4>Two Logit Models</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Model #</th>
+<th align="center">Features</th>
+<th align="center">AIC</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">20</td>
+<td align="center">699.72</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">9</td>
+<td align="center">708.96</td>
+</tr>
+</tbody>
+</table>
+<p>Logit is a common machine learning method. It is easy to understand and explain. This supervised binary classification method is very useful for determining the importance of the features which can be applied. As we saw in Model#1, there were 11 features that had probabilities of the estimates used above the 5% threshold cut-off. In Model#2, only nine features were used to describe the model, and the AIC increased by 9.24.</p>
+<p>The nine features which best described the logistic regression model were R, H, P, C, E, Y, T, D, G. If we compare this to the Boruta test carried out in the EDA, we find the overlap interesting.</p>
+</div>
+<div id="comparison-of-boruta-vs-logit-order-of-importance" class="section level4 unnumbered">
+<h4>Comparison of Boruta Vs Logit: Order of Importance</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Test</th>
+<th align="left">1</th>
+<th align="left">2</th>
+<th align="left">3</th>
+<th align="left">4</th>
+<th align="left">5</th>
+<th align="left">6</th>
+<th align="left">7</th>
+<th align="left">8</th>
+<th align="left">9</th>
+<th align="left">10</th>
+<th align="left">11</th>
+<th align="left">12</th>
+<th align="left">13</th>
+<th align="left">14</th>
+<th align="left">15</th>
+<th align="left">16</th>
+<th align="left">17</th>
+<th align="left">18</th>
+<th align="left">19</th>
+<th align="left">20</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Boruta</td>
+<td align="left">R</td>
+<td align="left">H</td>
+<td align="left">P</td>
+<td align="left">K</td>
+<td align="left">C</td>
+<td align="left">E</td>
+<td align="left">Y</td>
+<td align="left">T</td>
+<td align="left">S</td>
+<td align="left">A</td>
+<td align="left">V</td>
+<td align="left">U</td>
+<td align="left">I</td>
+<td align="left">F</td>
+<td align="left">D</td>
+<td align="left">G</td>
+<td align="left">N</td>
+<td align="left">L</td>
+<td align="left">M</td>
+<td align="left">Q</td>
+</tr>
+<tr class="even">
+<td align="center">Logit-9</td>
+<td align="left">R</td>
+<td align="left">H</td>
+<td align="left">P</td>
+<td align="left">.</td>
+<td align="left">C</td>
+<td align="left">E</td>
+<td align="left">Y</td>
+<td align="left">T</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">D</td>
+<td align="left">G</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">.</td>
+<td align="left">.</td>
+</tr>
+</tbody>
+</table>
+<p>The first 7 out of 8 amino acid features are seen in the proper order, as described by the Boruta Random Forest model. This is confirmation that Logit can pick up the importance of features similar to Boruta.</p>
+<p>Logit produced 536 proteins, which are false-negatives or false-positives. It should be noted that the 536 are NOT UNIQUE NOR SORTED. The number of unique FN/FP from the confusion matrix is 26. These proteins will be investigated further in the Outliers chapter, which compares these FN/FP proteins to the PCA outliers.</p>
+<p>The two tests for Logit (using 20 then 9 features) is interesting. This shows that Logit is an alternatvie way of choosing the importance of features. As can be seen in the table “<em>Comparison of Boruta Vs Logit: Order of Importance</em>” it was seen that the first seven features lined up very closely with the Boruta Random Forest feature order of importance.</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="55">
+<li id="fn55"><p><a href="https://en.wikipedia.org/wiki/Malthusian_growth_model" class="uri">https://en.wikipedia.org/wiki/Malthusian_growth_model</a><a href="logistic-regression-for-binary-classification.html#fnref55" class="footnote-back">↩</a></p></li>
+<li id="fn56"><p><a href="https://en.wikipedia.org/wiki/Logistic_function" class="uri">https://en.wikipedia.org/wiki/Logistic_function</a><a href="logistic-regression-for-binary-classification.html#fnref56" class="footnote-back">↩</a></p></li>
+<li id="fn57"><p><a href="http://juangabrielgomila.com/en/logistic-regression-derivation/" class="uri">http://juangabrielgomila.com/en/logistic-regression-derivation/</a><a href="logistic-regression-for-binary-classification.html#fnref57" class="footnote-back">↩</a></p></li>
+<li id="fn58"><p><a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" class="uri">https://en.wikipedia.org/wiki/Akaike_information_criterion</a><a href="logistic-regression-for-binary-classification.html#fnref58" class="footnote-back">↩</a></p></li>
+<li id="fn59"><p><a href="https://en.wikipedia.org/wiki/Akaike_information_criterion" class="uri">https://en.wikipedia.org/wiki/Akaike_information_criterion</a><a href="logistic-regression-for-binary-classification.html#fnref59" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="principle-component-analysis-of-a-binary-classification-system.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="neural-networks-for-binary-classification.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4 Principle Component Analysis of A Binary Classification System | Binary Classification Using Six Machine Learning Techniques</title>
+  <meta name="description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4 Principle Component Analysis of A Binary Classification System | Binary Classification Using Six Machine Learning Techniques" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4 Principle Component Analysis of A Binary Classification System | Binary Classification Using Six Machine Learning Techniques" />
+  
+  <meta name="twitter:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+<meta name="author" content="Matthew C. Curcio" />
+
+
+<meta name="date" content="2020-03-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="exploratory-data-analysis.html"/>
+<link rel="next" href="logistic-regression-for-binary-classification.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i>Who This Book Is For</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Introduction - What is Machine Learning?</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#machine-learning-is"><i class="fa fa-check"></i><b>2.1</b> Machine Learning Is?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#what-is-predictive-modeling"><i class="fa fa-check"></i><b>2.1.1</b> What is Predictive Modeling?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#supervised-learning"><i class="fa fa-check"></i><b>2.1.2</b> Supervised Learning</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#unsupervised-learning"><i class="fa fa-check"></i><b>2.1.3</b> Unsupervised Learning</a></li>
+<li class="chapter" data-level="2.1.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#five-challenges-in-predictive-modeling"><i class="fa fa-check"></i><b>2.1.4</b> Five Challenges In Predictive Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#research-description"><i class="fa fa-check"></i><b>2.2</b> Research Description</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#exploratory-data-analysis-eda"><i class="fa fa-check"></i><b>2.2.1</b> Exploratory Data Analysis (EDA)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#caret-library-for-r"><i class="fa fa-check"></i><b>2.2.2</b> Caret library for R</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#tuning-hyper-parameters"><i class="fa fa-check"></i><b>2.2.3</b> Tuning Hyper-parameters</a></li>
+<li class="chapter" data-level="2.2.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#k-fold-cross-validation-of-results"><i class="fa fa-check"></i><b>2.2.4</b> K-Fold Cross validation of results</a></li>
+<li class="chapter" data-level="2.2.5" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#train-command"><i class="fa fa-check"></i><b>2.2.5</b> Train command</a></li>
+<li class="chapter" data-level="2.2.6" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#analysis-of-results"><i class="fa fa-check"></i><b>2.2.6</b> Analysis of results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#four-step-analysis"><i class="fa fa-check"></i><b>3.1.1</b> Four-Step Analysis</a></li>
+<li class="chapter" data-level="3.1.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#useful-guides-for-exploratory-data-analysis"><i class="fa fa-check"></i><b>3.1.2</b> Useful Guides for Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="3.1.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#questions-during-eda"><i class="fa fa-check"></i><b>3.1.3</b> Questions During EDA</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-raw-data"><i class="fa fa-check"></i><b>3.2</b> Analysis of RAW data</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visually-inspect-raw-data-files"><i class="fa fa-check"></i><b>3.2.1</b> Visually inspect RAW data files</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#inspect-raw-dataframe-structure-str"><i class="fa fa-check"></i><b>3.2.2</b> Inspect RAW dataframe structure, <code>str()</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-head-tail"><i class="fa fa-check"></i><b>3.2.3</b> Check RAW data <code>head</code> &amp; <code>tail</code></a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-types"><i class="fa fa-check"></i><b>3.2.4</b> Check RAW data types</a></li>
+<li class="chapter" data-level="3.2.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-dataframe-dimensions"><i class="fa fa-check"></i><b>3.2.5</b> Check RAW dataframe dimensions</a></li>
+<li class="chapter" data-level="3.2.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-for-missing-values"><i class="fa fa-check"></i><b>3.2.6</b> Check RAW for missing values</a></li>
+<li class="chapter" data-level="3.2.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.2.7</b> Number of polypeptides per Class:</a></li>
+<li class="chapter" data-level="3.2.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#numerical-summary-of-raw-data"><i class="fa fa-check"></i><b>3.2.8</b> Numerical summary of RAW data</a></li>
+<li class="chapter" data-level="3.2.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-descriptive-statistics-using-raw-data"><i class="fa fa-check"></i><b>3.2.9</b> Visualize Descriptive Statistics using RAW Data</a></li>
+<li class="chapter" data-level="3.2.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-of-raw-data"><i class="fa fa-check"></i><b>3.2.10</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition of RAW Data</a></li>
+<li class="chapter" data-level="3.2.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#means-of-percent-amino-acid-composition-of-control-myoglobin-categories-raw-data"><i class="fa fa-check"></i><b>3.2.11</b> Means of percent amino acid composition of control &amp; myoglobin categories, RAW data</a></li>
+<li class="chapter" data-level="3.2.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-overall-amino-acid-composition-raw-data"><i class="fa fa-check"></i><b>3.2.12</b> Boxplots of grand-means of overall amino acid composition, RAW data</a></li>
+<li class="chapter" data-level="3.2.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-raw-data"><i class="fa fa-check"></i><b>3.2.13</b> Boxplots of amino acid compositions for control (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-only-raw-data"><i class="fa fa-check"></i><b>3.2.14</b> Boxplots of amino acid compositions for myoglobin (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-for-raw-data"><i class="fa fa-check"></i><b>3.2.15</b> Boxplots Of Length Of Polypeptides For RAW Data</a></li>
+<li class="chapter" data-level="3.2.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-coefficient-of-variance-for-raw-data"><i class="fa fa-check"></i><b>3.2.16</b> Plot Coefficient Of Variance For RAW Data</a></li>
+<li class="chapter" data-level="3.2.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-raw-data"><i class="fa fa-check"></i><b>3.2.17</b> Skewness of distributions, RAW data</a></li>
+<li class="chapter" data-level="3.2.18" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-raw-data"><i class="fa fa-check"></i><b>3.2.18</b> Determine coefficients of correlation, RAW data</a></li>
+<li class="chapter" data-level="3.2.19" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.19</b> Boruta Random Forest Test, RAW data</a></li>
+<li class="chapter" data-level="3.2.20" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-raw-data"><i class="fa fa-check"></i><b>3.2.20</b> Plot variable importance, RAW Data</a></li>
+<li class="chapter" data-level="3.2.21" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-raw-data"><i class="fa fa-check"></i><b>3.2.21</b> Variable importance scores, RAW Data</a></li>
+<li class="chapter" data-level="3.2.22" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-for-boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.22</b> Conclusion for Boruta random forest test, RAW Data</a></li>
+<li class="chapter" data-level="3.2.23" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusions-for-eda-raw-data"><i class="fa fa-check"></i><b>3.2.23</b> Conclusions For EDA, RAW data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-transformed-data"><i class="fa fa-check"></i><b>3.3</b> Analysis of TRANSFORMED data</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-dataframe-dimensions"><i class="fa fa-check"></i><b>3.3.1</b> Check Transformed dataframe dimensions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-for-missing-values"><i class="fa fa-check"></i><b>3.3.2</b> Check Transformed for missing values</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#count-transformed-data-for-the-number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.3.3</b> Count Transformed data for the number of polypeptides per class</a></li>
+<li class="chapter" data-level="3.3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-descriptive-statistics-transformed-data"><i class="fa fa-check"></i><b>3.3.4</b> Visualization Descriptive Statistics, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-sqrt-x_i-transformed-data"><i class="fa fa-check"></i><b>3.3.5</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition <span class="math inline">\(\sqrt x_i\)</span>, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#grouped-bar-chart-of-means-for-percent-amino-acid-composition-of-transformed-data-control-myoglobin-categories"><i class="fa fa-check"></i><b>3.3.6</b> Grouped bar chart of means for percent amino acid composition of Transformed Data; control &amp; myoglobin categories</a></li>
+<li class="chapter" data-level="3.3.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-the-overall-amino-acid-composition-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.7</b> Boxplots of grand-means of the overall amino acid composition of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.8</b> Boxplots of amino acid compositions for control (only) of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-of-square-root-transformed-dataonly-transformed-data"><i class="fa fa-check"></i><b>3.3.9</b> Boxplots of amino acid compositions for myoglobin of square-root transformed Data(only), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-of-transformed-data-myoglobin-control-combined"><i class="fa fa-check"></i><b>3.3.10</b> Boxplots Of Length Of Polypeptides Of Transformed Data; Myoglobin, Control &amp; Combined</a></li>
+<li class="chapter" data-level="3.3.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#coefficient-of-variance-cv-transformed-data"><i class="fa fa-check"></i><b>3.3.11</b> Coefficient of Variance (CV), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-of-coefficient-of-variance-cv"><i class="fa fa-check"></i><b>3.3.12</b> Plot of Coefficient Of Variance (CV)</a></li>
+<li class="chapter" data-level="3.3.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-transformed-data"><i class="fa fa-check"></i><b>3.3.13</b> Skewness of distributions, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-transformed-data"><i class="fa fa-check"></i><b>3.3.14</b> Determine coefficients of correlation, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta---dimensionality-reduction-transformed-data"><i class="fa fa-check"></i><b>3.3.15</b> Boruta - Dimensionality Reduction, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-transformed-data"><i class="fa fa-check"></i><b>3.3.16</b> Plot Variable Importance, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-transformed-data"><i class="fa fa-check"></i><b>3.3.17</b> Variable Importance Scores, TRANSFORMED data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-conclusion"><i class="fa fa-check"></i><b>3.4</b> EDA Conclusion</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-selection-extraction"><i class="fa fa-check"></i><b>3.4.1</b> Feature Selection &amp; Extraction</a></li>
+<li class="chapter" data-level="3.4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#information-block"><i class="fa fa-check"></i><b>3.4.2</b> Information Block**</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html"><i class="fa fa-check"></i><b>4</b> Principle Component Analysis of A Binary Classification System</a><ul>
+<li class="chapter" data-level="4.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#advantages-of-using-pca-include"><i class="fa fa-check"></i><b>4.1.1</b> Advantages Of Using PCA Include</a></li>
+<li class="chapter" data-level="4.1.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#disadvantages-of-pca-should-be-considered"><i class="fa fa-check"></i><b>4.1.2</b> Disadvantages Of PCA Should Be Considered</a></li>
+<li class="chapter" data-level="4.1.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#data-centering-scaling-normalization"><i class="fa fa-check"></i><b>4.1.3</b> Data centering / scaling / normalization</a></li>
+<li class="chapter" data-level="4.1.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#histograms-of-scaled-vs.-unscaled-data"><i class="fa fa-check"></i><b>4.1.4</b> Histograms of Scaled Vs. Unscaled data</a></li>
+<li class="chapter" data-level="4.1.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-the-covariance-matrix"><i class="fa fa-check"></i><b>4.1.5</b> Finding the Covariance Matrix</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-two-variables"><i class="fa fa-check"></i>Covariance of two variables</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-matrices"><i class="fa fa-check"></i>Covariance of matrices</a></li>
+<li class="chapter" data-level="4.1.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-pca-via-singular-value-decomposition"><i class="fa fa-check"></i><b>4.1.6</b> Finding PCA via singular value decomposition</a></li>
+<li class="chapter" data-level="4.1.7" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#example-of-two-dimensional-pca-using-random-data"><i class="fa fa-check"></i><b>4.1.7</b> Example of two-dimensional PCA using random data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#principle-component-analysis-using-norm_c_m_20aa"><i class="fa fa-check"></i><b>4.2</b> Principle component analysis using <code>norm_c_m_20aa</code></a><ul>
+<li class="chapter" data-level="4.2.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#screeplot-cumulative-proportion-of-variance-plot"><i class="fa fa-check"></i><b>4.2.1</b> Screeplot &amp; Cumulative Proportion of Variance plot</a></li>
+<li class="chapter" data-level="4.2.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#biplots"><i class="fa fa-check"></i><b>4.2.2</b> Biplots</a></li>
+<li class="chapter" data-level="4.2.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#obtain-anomalous-points-from-biplot-2-pc1-vs.-pc2"><i class="fa fa-check"></i><b>4.2.3</b> Obtain Anomalous Points From Biplot #2: PC1 Vs. PC2</a></li>
+<li class="chapter" data-level="4.2.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-1"><i class="fa fa-check"></i><b>4.2.4</b> Outliers from Principal Component-1</a></li>
+<li class="chapter" data-level="4.2.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-2"><i class="fa fa-check"></i><b>4.2.5</b> Outliers from Principal Component-2</a></li>
+<li class="chapter" data-level="4.2.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#list-of-all-outliers-union-and-sorted-found-using-the-ruleset-1-through-4"><i class="fa fa-check"></i><b>4.2.6</b> List of all outliers (union and sorted) found using the ruleset 1 through 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#pca-conclusion"><i class="fa fa-check"></i><b>4.3</b> PCA Conclusion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-derived-from-pc1-vs-pc2"><i class="fa fa-check"></i><b>4.3.1</b> Outliers derived from PC1 Vs PC2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html"><i class="fa fa-check"></i><b>5</b> Logistic Regression For Binary Classification</a><ul>
+<li class="chapter" data-level="5.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#introduction-2"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-training-using-20-features"><i class="fa fa-check"></i><b>5.2</b> Logit-20 Training Using 20 Features</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-summary-1"><i class="fa fa-check"></i><b>5.2.1</b> Logit-20 Summary #1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-training-using-9-features"><i class="fa fa-check"></i><b>5.3</b> Logit-9 Training Using 9 Features</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-summary"><i class="fa fa-check"></i><b>5.3.1</b> Logit-9 Summary</a></li>
+<li class="chapter" data-level="5.3.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-confusion-matrix"><i class="fa fa-check"></i><b>5.3.2</b> Logit-9 Confusion Matrix</a></li>
+<li class="chapter" data-level="5.3.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#obtain-list-of-false-positives-false-negatives-from-logit-9"><i class="fa fa-check"></i><b>5.3.3</b> Obtain List of False Positives &amp; False Negatives From Logit-9</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-conclusion"><i class="fa fa-check"></i><b>5.4</b> Logit Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html"><i class="fa fa-check"></i><b>6</b> Neural Networks For Binary Classification</a><ul>
+<li class="chapter" data-level="6.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-one-neuron-system"><i class="fa fa-check"></i><b>6.1.1</b> The One Neuron System</a></li>
+<li class="chapter" data-level="6.1.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-two-neuron-system"><i class="fa fa-check"></i><b>6.1.2</b> The Two Neuron System</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-experiment-for-binary-classification"><i class="fa fa-check"></i><b>6.2</b> Neural Network Experiment For Binary Classification</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#train-model-with-neural-networks"><i class="fa fa-check"></i><b>6.2.1</b> Train model with neural networks</a></li>
+<li class="chapter" data-level="6.2.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#confusion-matrix-and-statistics"><i class="fa fa-check"></i><b>6.2.2</b> Confusion Matrix and Statistics</a></li>
+<li class="chapter" data-level="6.2.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#obtain-list-of-false-positives-false-negatives"><i class="fa fa-check"></i><b>6.2.3</b> Obtain List of False Positives &amp; False Negatives</a></li>
+<li class="chapter" data-level="6.2.4" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#false-positive-false-negative-neural-network-set"><i class="fa fa-check"></i><b>6.2.4</b> False Positive &amp; False Negative Neural Network set</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-conclusion"><i class="fa fa-check"></i><b>6.3</b> Neural Network Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html"><i class="fa fa-check"></i><b>7</b> Support Vector Machines for Binary Classification</a><ul>
+<li class="chapter" data-level="7.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#introduction-4"><i class="fa fa-check"></i><b>7.1</b> Introduction</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#linearly-separable"><i class="fa fa-check"></i><b>7.1.1</b> Linearly Separable</a></li>
+<li class="chapter" data-level="7.1.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#understanding-the-hyperplane-equation"><i class="fa fa-check"></i><b>7.1.2</b> Understanding the hyperplane equation</a></li>
+<li class="chapter" data-level="7.1.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#soft-margins"><i class="fa fa-check"></i><b>7.1.3</b> Soft Margins</a></li>
+<li class="chapter" data-level="7.1.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#kernel-use"><i class="fa fa-check"></i><b>7.1.4</b> Kernel Use</a></li>
+<li class="chapter" data-level="7.1.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-intuition"><i class="fa fa-check"></i><b>7.1.5</b> SVM-Linear Intuition</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model"><i class="fa fa-check"></i><b>7.2</b> SVM-Linear Model</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-training"><i class="fa fa-check"></i><b>7.2.1</b> SVM-Linear Training</a></li>
+<li class="chapter" data-level="7.2.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model-summary"><i class="fa fa-check"></i><b>7.2.2</b> SVM-Linear Model Summary</a></li>
+<li class="chapter" data-level="7.2.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-predict-test_set"><i class="fa fa-check"></i><b>7.2.3</b> SVM-Linear Predict test_set</a></li>
+<li class="chapter" data-level="7.2.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-confusion-matrix"><i class="fa fa-check"></i><b>7.2.4</b> SVM-Linear Confusion Matrix</a></li>
+<li class="chapter" data-level="7.2.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.2.5</b> SVM-Linear Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-polynomial-model"><i class="fa fa-check"></i><b>7.3</b> SVM-Polynomial Model</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-training"><i class="fa fa-check"></i><b>7.3.1</b> SVM-Poly Training</a></li>
+<li class="chapter" data-level="7.3.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-model-summary"><i class="fa fa-check"></i><b>7.3.2</b> SVM-Poly Model Summary</a></li>
+<li class="chapter" data-level="7.3.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-predict-test_set"><i class="fa fa-check"></i><b>7.3.3</b> SVM-Poly Predict test_set</a></li>
+<li class="chapter" data-level="7.3.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-confusion-matrix"><i class="fa fa-check"></i><b>7.3.4</b> SVM-Poly Confusion Matrix</a></li>
+<li class="chapter" data-level="7.3.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.3.5</b> SVM-Poly Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model"><i class="fa fa-check"></i><b>7.4</b> SVM-RBF Model</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-training"><i class="fa fa-check"></i><b>7.4.1</b> SVM-RBF Training</a></li>
+<li class="chapter" data-level="7.4.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model-summary"><i class="fa fa-check"></i><b>7.4.2</b> SVM-RBF Model Summary</a></li>
+<li class="chapter" data-level="7.4.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-predict-test_set"><i class="fa fa-check"></i><b>7.4.3</b> SVM-RBF Predict test_set</a></li>
+<li class="chapter" data-level="7.4.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-confusion-matrix"><i class="fa fa-check"></i><b>7.4.4</b> SVM-RBF Confusion Matrix</a></li>
+<li class="chapter" data-level="7.4.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.4.5</b> SVM-RBF Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-conclusion"><i class="fa fa-check"></i><b>7.5</b> SVM Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>8</b> Results</a><ul>
+<li class="chapter" data-level="8.1" data-path="results.html"><a href="results.html#the-six-m.l-algorithms-consist-of"><i class="fa fa-check"></i><b>8.1</b> The Six M.L Algorithms consist of:</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="results.html"><a href="results.html#pca-anomalies-plot"><i class="fa fa-check"></i><b>8.1.1</b> PCA-Anomalies Plot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="results.html"><a href="results.html#logit-plot"><i class="fa fa-check"></i><b>8.1.2</b> Logit Plot</a></li>
+<li class="chapter" data-level="8.1.3" data-path="results.html"><a href="results.html#svm-linear-plot"><i class="fa fa-check"></i><b>8.1.3</b> SVM-Linear Plot</a></li>
+<li class="chapter" data-level="8.1.4" data-path="results.html"><a href="results.html#svm-polynomial-plot"><i class="fa fa-check"></i><b>8.1.4</b> SVM-Polynomial Plot</a></li>
+<li class="chapter" data-level="8.1.5" data-path="results.html"><a href="results.html#svm-radial-basis-function-plot"><i class="fa fa-check"></i><b>8.1.5</b> SVM-Radial Basis Function Plot</a></li>
+<li class="chapter" data-level="8.1.6" data-path="results.html"><a href="results.html#neural-network-function-plot"><i class="fa fa-check"></i><b>8.1.6</b> Neural Network Function Plot</a></li>
+<li class="chapter" data-level="8.1.7" data-path="results.html"><a href="results.html#statistical-learning-method-vs-total-number-of-fpfn"><i class="fa fa-check"></i><b>8.1.7</b> Statistical Learning Method Vs Total Number of FP/FN</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="results.html"><a href="results.html#comparison-of-machine-learning-accuracies"><i class="fa fa-check"></i><b>8.2</b> Comparison of Machine Learning Accuracies</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="results.html"><a href="results.html#stacking-algorithms---run-multiple-algorithms-in-one-call."><i class="fa fa-check"></i><b>8.2.1</b> Stacking Algorithms - Run multiple algorithms in one call.</a></li>
+<li class="chapter" data-level="8.2.2" data-path="results.html"><a href="results.html#plot-the-resamples-output-to-compare-the-models."><i class="fa fa-check"></i><b>8.2.2</b> Plot the resamples output to compare the models.</a></li>
+<li class="chapter" data-level="8.2.3" data-path="results.html"><a href="results.html#mean-accuracies-of-m.l.-techniques-n10"><i class="fa fa-check"></i><b>8.2.3</b> Mean Accuracies of M.L. Techniques, n=10</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>9</b> Conclusion</a></li>
+<li class="chapter" data-level="10" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html"><i class="fa fa-check"></i><b>10</b> Biplot1.annotated.png</a><ul>
+<li class="chapter" data-level="10.1" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-pca-anomalies"><i class="fa fa-check"></i><b>10.1</b> Comparison of PCA Anomalies</a></li>
+<li class="chapter" data-level="10.2" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-accuracy-measurements"><i class="fa fa-check"></i><b>10.2</b> Comparison of Accuracy Measurements</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Binary Classification Using Six Machine Learning Techniques</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="principle-component-analysis-of-a-binary-classification-system" class="section level1">
+<h1><span class="header-section-number">4</span> Principle Component Analysis of A Binary Classification System</h1>
+<div id="introduction-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Introduction</h2>
+<p>This chapter describes the use and functional understanding of Principle Component Analysis (PCA). PCA is very popular and commonly used during the early phases of model development to provide information on variance. In particular, PCA is a transformative process that orders and maximizes variances found within a dataset.</p>
+<blockquote>
+<p>The primary goal of principal components analysis is to reveal the hidden structure in a dataset. In so doing, we may be able to; <a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a></p>
+<ol style="list-style-type: decimal">
+<li><p>identify how different variables work together to create the dynamics of the system,</p></li>
+<li><p>reduce the dimensionality of the data,</p></li>
+<li><p>decrease redundancy in the data,</p></li>
+<li><p>filter some of the noise in the data,</p></li>
+<li><p>compress the data,</p></li>
+<li><p>prepare the data for further analysis using other techniques.</p></li>
+</ol>
+</blockquote>
+<div id="advantages-of-using-pca-include" class="section level3">
+<h3><span class="header-section-number">4.1.1</span> Advantages Of Using PCA Include</h3>
+<ol style="list-style-type: decimal">
+<li><p>PCA preserves the global structure among the data points,</p></li>
+<li><p>It is efficiently applied to large data sets,</p></li>
+<li><p>PCA may provide information on the importance of features found in the original datasets.</p></li>
+</ol>
+</div>
+<div id="disadvantages-of-pca-should-be-considered" class="section level3">
+<h3><span class="header-section-number">4.1.2</span> Disadvantages Of PCA Should Be Considered</h3>
+<ol style="list-style-type: decimal">
+<li><p>PCA can easily suffer from scale complications,</p></li>
+<li><p>Similarly to the point above, PCA is susceptible to significant outliers. If the number of samples is small or when values have many potential outliers, this can influence scaling and relative point placement,</p></li>
+<li><p>Intuitive understanding can be tricky.</p></li>
+</ol>
+</div>
+<div id="data-centering-scaling-normalization" class="section level3">
+<h3><span class="header-section-number">4.1.3</span> Data centering / scaling / normalization</h3>
+<p>It is common for the first step when carrying out a PCA is to center, scale, normalize the data. This is important due the fact that PCA is sensitive to the scale of the features. If the features are quite different frome each other, i.e. different by one or more orders of magnitude then scaling is crucial.</p>
+<p>While determining the variance of your dataset, it should be clear that the order of magnitude of your data features matters significantly. The reasons for this should be clear that if one axis is in 1,000’s while the second axis is between 1 and 10, the larger scale will have a higher variance distorting the results.</p>
+<p>What do the center and scale arguments do in the <code>prcomp</code> command?</p>
+<p>There are four common methods for scaling data:</p>
+<table>
+<colgroup>
+<col width="22%" />
+<col width="77%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Method</th>
+<th align="center">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Centering</td>
+<td align="center"><span class="math inline">\(f(x) ~=~ \large x - \bar x\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Scaling [0, 1]</td>
+<td align="center"><span class="math inline">\(f(x) ~=~ \Large \frac {x - min(x)} {max(x) - min(x)}\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Scaling [a, b]</td>
+<td align="center"><span class="math inline">\(f(x) ~=~ \large (b - a)* \Large \frac {x - min(x)} {max(x) - min(x)} + a\)</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="center"></td>
+</tr>
+<tr class="odd">
+<td align="left">Normalizing</td>
+<td align="center"><span class="math inline">\(f(x) ~=~ \Large \frac {x - mean(x)} {\sigma_x}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="histograms-of-scaled-vs.-unscaled-data" class="section level3">
+<h3><span class="header-section-number">4.1.4</span> Histograms of Scaled Vs. Unscaled data</h3>
+<p>Investigating the differences between the amino acid Phenylalanine (F) before and after 2 scaling methods.
+<img src="_main_files/figure-html/32-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Investigating the plots above, the main idea to recognize is that the data has not been fundamentally changed, simply ‘shifted and stretched’ or more accurately transformed. It appears that any visible changes of the distributions can be accounted for by differing binnings.</p>
+<p>Although the differences are between all three histograms are minor, any transformation <em>would</em> be sufficient to use. However, I chose to use the <em>Normalized</em> dataset.</p>
+</div>
+<div id="finding-the-covariance-matrix" class="section level3">
+<h3><span class="header-section-number">4.1.5</span> Finding the Covariance Matrix</h3>
+<p>The first step for calculating PCA is to determine the Covariance matrix. Covariance provides a measure of how strongly variables change together.<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a> <a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a></p>
+</div>
+<div id="covariance-of-two-variables" class="section level3 unnumbered">
+<h3>Covariance of two variables</h3>
+<p>Remember, this simplified formula is to determine covariance for a two-dimensional system.</p>
+<p><span class="math display">\[\begin{equation}
+cov(x, y) ~=~ \frac{1}{N} \sum_{i=1}^N (x_i - \bar x) (y_i - \bar y)
+\end{equation}\]</span></p>
+<p>Where <span class="math inline">\(N\)</span> is the number of observations, <span class="math inline">\(\bar x\)</span> is the mean of the independent variable, <span class="math inline">\(\bar y\)</span> is the mean of the dependent variable.</p>
+</div>
+<div id="covariance-of-matrices" class="section level3 unnumbered">
+<h3>Covariance of matrices</h3>
+<p>When dealing with a many feature variables one needs to determine the covariance of matrices, <span class="math inline">\(\large M\)</span> using linear algebra. <a href="#fn46" class="footnote-ref" id="fnref46"><sup>46</sup></a></p>
+<ol style="list-style-type: decimal">
+<li>Find the column means of the matrix, <span class="math inline">\(M_{means}\)</span>.</li>
+<li>Find the difference matrix, <span class="math inline">\(D ~=~ M - M_{means}\)</span>.</li>
+<li>Finally calculate the covariance matrix:</li>
+</ol>
+<p><span class="math display">\[\begin{equation}
+cov ~ (M) ~=~ \left( \frac{1}{N-1} \right) ~ D^T \cdot D, ~~~ where ~~~~~ D = M - M_{means}
+\end{equation}\]</span></p>
+<p>Where <span class="math inline">\(D^T\)</span> is the transpose of the difference matrix, <span class="math inline">\(N\)</span> is the number of observations or rows in this case.</p>
+</div>
+<div id="finding-pca-via-singular-value-decomposition" class="section level3">
+<h3><span class="header-section-number">4.1.6</span> Finding PCA via singular value decomposition</h3>
+<p>The procedure below is an outline, not the full computation of PCA.</p>
+<p>This procedure for PCA relies on the fact that it is similar to the singular value decomposition (SVD) used when determining eigenvectors and eigenvalues. <a href="#fn47" class="footnote-ref" id="fnref47"><sup>47</sup></a></p>
+<blockquote>
+<p>Singular value decomposition says that every n x p matrix can be written as the product of three matrices: <span class="math inline">\(A = U \Sigma V^T\)</span> where:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(U\)</span> is an orthogonal n x n matrix.</li>
+<li><span class="math inline">\(\Sigma\)</span> is a diagonal n x p matrix. In practice, the diagonal elements are ordered so that <span class="math inline">\(\Sigma_{ii} ~\geqq~ \Sigma_{jj}\)</span> for all i &lt; j.</li>
+<li><span class="math inline">\(V\)</span> is an orthogonal p x p matrix, and <span class="math inline">\(V^T\)</span> represents a matrix transpose.</li>
+</ol>
+<p>The SVD represents the essential geometry of a linear transformation. It tells us that every linear transformation is a composition of three fundamental actions. Reading the equation from right to left:</p>
+<ol style="list-style-type: decimal">
+<li>The matrix <span class="math inline">\(V\)</span> represents a rotation or reflection of vectors in the p-dimensional domain.</li>
+<li>The matrix <span class="math inline">\(\Sigma\)</span> represents a linear dilation or contraction along each of the p coordinate directions. If n <span class="math inline">\(\neq\)</span> p, this step also canonically embeds (or projects) the p-dimensional domain into (or onto) the n-dimensional range.</li>
+<li>The matrix <span class="math inline">\(U\)</span> represents a rotation or reflection of vectors in the n-dimensional range.</li>
+</ol>
+</blockquote>
+<p>The intuition for understanding PCA is reasonably straightforward. Consider the 2-dimensional data cloud of points or observations in a hypothetical experiment, as seen in the figure on the left. Variances along both the x and y dimensions are calculated. However, given the data shown, there is a rotation of that x-y plane, which will present the data showing its most significant variance. This variance will reside on an axis analogous to points on an Ordinary Least Squares (OLS) line. This axis is called the <em>first principle component</em> followed by the second principal component and so on.</p>
+<p>Unlike an OLS calculation, PCA will determine not only the first and most significant variance of your data set, but it will, through the rotation and transform your dataset via linear algebra, calculating N variances within your dataset, where N is equal to the number of features in the dataset. The second principal component will be calculated only along a coordinate axis, which is perpendicular (orthogonal or orthonormal) to the first. Each subsequent principal component will then be calculated along axes which are orthogonal to each other. A further benefit of using PCA is that the variances it reports will be ranked in order from highest to lowest. <a href="#fn48" class="footnote-ref" id="fnref48"><sup>48</sup></a></p>
+</div>
+<div id="example-of-two-dimensional-pca-using-random-data" class="section level3">
+<h3><span class="header-section-number">4.1.7</span> Example of two-dimensional PCA using random data</h3>
+<p><img src="_main_files/figure-html/34-1.png" width="672" /></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Graphic</th>
+<th align="center">Range (Green lines)</th>
+<th align="center">Differences</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Raw Data (Left)</td>
+<td align="center">1 &lt;= x &lt;= 4</td>
+<td align="center">3 units</td>
+</tr>
+<tr class="even">
+<td align="left">Transformed Data (Right)</td>
+<td align="center">-2.45 &lt;= x &lt;= 2.77</td>
+<td align="center">5.22 units</td>
+</tr>
+</tbody>
+</table>
+<p>If we investigate the figures above we find that the range of the samples is (1 &lt;= x &lt;= 4),
+while the range for the transformed data is (-2.45 &lt;= x &lt;= 2.76). The differences between the two ranges are 3 and 5.21 units, respectively. The rotation should be no surprise since the PCA is essentially a maximization of variance.</p>
+<p>Many R-packages will carry out the steps for PCA all behind the ‘scenes’ but giving no greater understanding for beginners. For example, <code>stats::prcomp</code> <a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a>, <code>stats::princomp</code> <a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a> are most commonly used. However, there are dozens of similar packages. A keyword search for <em>PCA</em> at R-cran <a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a> provides 78 matches, as of November 2019.</p>
+</div>
+</div>
+<div id="principle-component-analysis-using-norm_c_m_20aa" class="section level2">
+<h2><span class="header-section-number">4.2</span> Principle component analysis using <code>norm_c_m_20aa</code></h2>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb57-1" data-line-number="1">start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>() <span class="co"># Start timer</span></a>
+<a class="sourceLine" id="cb57-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb57-3" data-line-number="3">c_m_<span class="dv">20</span>_PCA &lt;-<span class="st"> </span><span class="kw">prcomp</span>(norm_c_m_20aa)</a>
+<a class="sourceLine" id="cb57-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb57-5" data-line-number="5"><span class="kw">Sys.time</span>() <span class="op">-</span><span class="st"> </span>start_time <span class="co"># End timer &amp; display time difference</span></a></code></pre></div>
+<pre><code>## Time difference of 0.02533388 secs</code></pre>
+<div id="screeplot-cumulative-proportion-of-variance-plot" class="section level3">
+<h3><span class="header-section-number">4.2.1</span> Screeplot &amp; Cumulative Proportion of Variance plot</h3>
+<p>Two plots are commonly used to determine the number of principal components that a researcher would generally accept as useful. The eigenvalues derived from PCA are proportional to the variances which they represent, and depending on the strategy used to calculate them, the eigenvalues are equal to the variances of the components.</p>
+<p>The first of the two plots which I which is the scree plot. <a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> The scree plot is a ranked list of the eigenvalues plotted against its principal components. An eigenvalue score of one is thought to provide a comparable amount of information as a single variable un-transformed by PCA.</p>
+<p>The second plot describes the cumulative proportion of variance versus the principal component. This graphic shows how much each principal component represents the entire cumulative variances or total squared error.</p>
+<p><span class="math display">\[\begin{equation}
+Cumlative ~ Proportion ~of ~Variance ~=~ \frac{\sigma_i^2}{\sum_{i=1}^N \sigma_i^2}
+\end{equation}\]</span></p>
+<p>Here again, there are several criteria regarding how best to use the information from the is plot. The first of which is Cattell’s heuristic. Cattell advises using the principal component that is above the elbow of the curve. The second heuristic is keeping the total number of factors that best explains 80%-95% of the variance. There is no hard-fast rule at this time; a set of researchers only uses the first three factors or none at all.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a> A second suggestion is to use the Kaiser rule, which states it is sufficient to use Principal Components, which have an eigenvalue greater than or equal to one. <a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a></p>
+<p><img src="_main_files/figure-html/36-1.png" width="672" style="display: block; margin: auto;" /></p>
+<hr />
+<p><img src="_main_files/figure-html/37-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>If we investigate the ‘cumulative proportion of variance’ plot, we see an arbitrary line on the Y-axis, which denotes the 90% mark. At this point, the plot suggests that a researcher could use the most significant 12 of the variances from the PCA.</p>
+</div>
+<div id="biplots" class="section level3">
+<h3><span class="header-section-number">4.2.2</span> Biplots</h3>
+<div id="biplot-1-pc1-vs.-pc2-with-class-by-color-labels" class="section level4">
+<h4><span class="header-section-number">4.2.2.1</span> Biplot 1: PC1 Vs. PC2 with ‘Class’ by color labels</h4>
+<ul>
+<li><p>Black indicates control protein set, Class = 0</p></li>
+<li><p>Blue indicates myoglobin protein set, Class = 1</p></li>
+</ul>
+<p>The first two principal components describe 46.95% of the variance.</p>
+</div>
+<div id="biplot-2-determination-of-4-rule-set-for-outliers" class="section level4">
+<h4><span class="header-section-number">4.2.2.2</span> Biplot 2: Determination Of 4 Rule Set For Outliers</h4>
+<p><img src="_main_files/figure-html/310-1.png" width="576" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="obtain-anomalous-points-from-biplot-2-pc1-vs.-pc2" class="section level3">
+<h3><span class="header-section-number">4.2.3</span> Obtain Anomalous Points From Biplot #2: PC1 Vs. PC2</h3>
+<p>Anomalous data points are data that is greater than the absolute value of 3 sigma, Anomalous Point &gt; <span class="math inline">\(| 3 \sigma |\)</span>.</p>
+<p>I have chosen to analyze the PCA biplot of the first and second principal components. The first and second components were used because they describe nearly 50% of the variance (46.95%).</p>
+</div>
+<div id="outliers-from-principal-component-1" class="section level3">
+<h3><span class="header-section-number">4.2.4</span> Outliers from Principal Component-1</h3>
+<p>Rule Set Given PC1:</p>
+<ol style="list-style-type: decimal">
+<li><p>Outlier_1: c_m_20_PCA$x[, 1] &gt; 3 standard deviations</p></li>
+<li><p>Outlier_2: c_m_20_PCA$x[, 1] &lt; -3 standard deviations</p></li>
+</ol>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" data-line-number="1">outliers_PC1 &lt;-<span class="st"> </span><span class="kw">which</span>((c_m_<span class="dv">20</span>_PCA<span class="op">$</span>x[, <span class="dv">1</span>] <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) <span class="op">|</span><span class="st"> </span>(c_m_<span class="dv">20</span>_PCA<span class="op">$</span>x[, <span class="dv">1</span>] <span class="op">&lt;</span><span class="st"> </span><span class="dv">-3</span>))</a>
+<a class="sourceLine" id="cb59-2" data-line-number="2"><span class="kw">length</span>(outliers_PC1)</a></code></pre></div>
+<pre><code>## [1] 285</code></pre>
+</div>
+<div id="outliers-from-principal-component-2" class="section level3">
+<h3><span class="header-section-number">4.2.5</span> Outliers from Principal Component-2</h3>
+<p>Rule Set Given PC2:</p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Outlier_3: c_m_20_PCA$x[, 2] &gt; 3 standard deviations</p></li>
+<li><p>Outlier_4: c_m_20_PCA$x[, 2] &lt; -3 standard deviations</p></li>
+</ol>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" data-line-number="1">outliers_PC2 &lt;-<span class="st"> </span><span class="kw">which</span>((c_m_<span class="dv">20</span>_PCA<span class="op">$</span>x[, <span class="dv">2</span>] <span class="op">&gt;</span><span class="st"> </span><span class="dv">3</span>) <span class="op">|</span><span class="st"> </span>(c_m_<span class="dv">20</span>_PCA<span class="op">$</span>x[, <span class="dv">2</span>] <span class="op">&lt;</span><span class="st"> </span><span class="dv">-3</span>))</a>
+<a class="sourceLine" id="cb61-2" data-line-number="2"><span class="kw">length</span>(outliers_PC2)</a></code></pre></div>
+<pre><code>## [1] 177</code></pre>
+</div>
+<div id="list-of-all-outliers-union-and-sorted-found-using-the-ruleset-1-through-4" class="section level3">
+<h3><span class="header-section-number">4.2.6</span> List of all outliers (union and sorted) found using the ruleset 1 through 4</h3>
+<ul>
+<li>The list of total outliers is derived by taking the <code>union</code> of <code>outliers_PC1</code> and <code>outliers_PC2</code> and then using <code>sort.</code></li>
+</ul>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" data-line-number="1">total_pca_<span class="dv">1</span>_<span class="dv">2</span>_outliers &lt;-<span class="st"> </span><span class="kw">union</span>(outliers_PC1, outliers_PC2)</a>
+<a class="sourceLine" id="cb63-2" data-line-number="2">total_pca_<span class="dv">1</span>_<span class="dv">2</span>_outliers &lt;-<span class="st"> </span><span class="kw">sort</span>(total_pca_<span class="dv">1</span>_<span class="dv">2</span>_outliers)</a>
+<a class="sourceLine" id="cb63-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb63-4" data-line-number="4"><span class="kw">length</span>(total_pca_<span class="dv">1</span>_<span class="dv">2</span>_outliers)</a></code></pre></div>
+<pre><code>## [1] 461</code></pre>
+<div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb65-1" data-line-number="1"><span class="co"># Write out to Outliers folder</span></a>
+<a class="sourceLine" id="cb65-2" data-line-number="2"><span class="kw">write.table</span>(total_pca_<span class="dv">1</span>_<span class="dv">2</span>_outliers,</a>
+<a class="sourceLine" id="cb65-3" data-line-number="3"><span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/pca_outliers.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb65-4" data-line-number="4"><span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb65-5" data-line-number="5"><span class="dt">na =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb65-6" data-line-number="6"><span class="dt">col.names =</span> <span class="st">&quot;rowNum&quot;</span>,</a>
+<a class="sourceLine" id="cb65-7" data-line-number="7"><span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a></code></pre></div>
+<p>It is important to remember and understand that this list of “total_pca_1_2_outliers” includes BOTH negative and positive controls. The groupings are as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Group</th>
+<th align="right">Range of Groups</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Controls</td>
+<td align="right">1, …, 1216</td>
+</tr>
+<tr class="even">
+<td align="left">Positive (Myoglobin)</td>
+<td align="right">1217, …, 2341</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="pca-conclusion" class="section level2">
+<h2><span class="header-section-number">4.3</span> PCA Conclusion</h2>
+<p>Principal Component Analysis is very popular and an excellent choice to include during Exploratory Data. Analysis. One objective for using PCA is to filter noise from the dataset used and, in turn, increase any signal or to sufficiently delineate observations from each other. In fact, in the figure below, there are five colored groups outside the main body of observations that are marked at ‘outliers.’ The number of outliers obtained from PCA is 461 proteins. The premise of this experiment is to determine if PCA is an excellent representative measure for proteins that are categorized is false-positive, and false-negatives in the five subsequent machine learning model approach. It will be interesting to see if anyone of these groups will be present in the group of false-positives and false-negatives in any of the machine learning models.</p>
+<div id="outliers-derived-from-pc1-vs-pc2" class="section level3">
+<h3><span class="header-section-number">4.3.1</span> Outliers derived from PC1 Vs PC2</h3>
+<p>The table and the figure below show a subset of outliers produced when the first and second principal component is graphed. My interest lies in finding if any one of the lettered groups (A-E) are part of the false-positives and false-negatives from each of the machine learning models. Each of the five groups is rich is a small number of amino acids. We hope that this information will shine a light on how the different machine models work. It is also expected that this will give help in constructing a model that is more interpretable for the more difficult opaque machine learning models, such as Random Forest, Neural Networks, and possibly Support Vector Machine using the Radial Basis Function.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Group</th>
+<th align="center">Increased concentration of amino acid</th>
+<th align="center">Example observations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">A</td>
+<td align="center">H, L, K</td>
+<td align="center">1478</td>
+</tr>
+<tr class="even">
+<td align="center">B</td>
+<td align="center">E, K</td>
+<td align="center">1934, 1870, 2100</td>
+</tr>
+<tr class="odd">
+<td align="center">C</td>
+<td align="center">V, I, F, Y</td>
+<td align="center">182, 1752, 2156</td>
+</tr>
+<tr class="even">
+<td align="center">D</td>
+<td align="center">C, S</td>
+<td align="center">1360, 2240</td>
+</tr>
+<tr class="odd">
+<td align="center">E</td>
+<td align="center">G, D, Q</td>
+<td align="center">664, 2304</td>
+</tr>
+</tbody>
+</table>
+<p><img src="00-data/10-images/Biplot1.annotated.png" width="55%" style="display: block; margin: auto;" /></p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="43">
+<li id="fn43"><p>Emily Mankin, Principal Components Analysis: A How-To Manual for R, <a href="http://people.tamu.edu/~alawing/materials/ESSM689/pca.pdf" class="uri">http://people.tamu.edu/~alawing/materials/ESSM689/pca.pdf</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref43" class="footnote-back">↩</a></p></li>
+<li id="fn44"><p><a href="http://mathworld.wolfram.com/Covariance.html" class="uri">http://mathworld.wolfram.com/Covariance.html</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref44" class="footnote-back">↩</a></p></li>
+<li id="fn45"><p>Trevor Hastie, Robert Tibshirani, Jerome Friedman, ‘The Elements of Statistical Learning; Data Mining, Inference, and Prediction,’ Second Edition, Springer, <a href="DOI:10.1007/978-0-387-84858-7" class="uri">DOI:10.1007/978-0-387-84858-7</a>, 2009<a href="principle-component-analysis-of-a-binary-classification-system.html#fnref45" class="footnote-back">↩</a></p></li>
+<li id="fn46"><p><a href="http://mathworld.wolfram.com/Covariance.html" class="uri">http://mathworld.wolfram.com/Covariance.html</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref46" class="footnote-back">↩</a></p></li>
+<li id="fn47"><p><a href="https://blogs.sas.com/content/iml/2017/08/28/singular-value-decomposition-svd-sas.html" class="uri">https://blogs.sas.com/content/iml/2017/08/28/singular-value-decomposition-svd-sas.html</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref47" class="footnote-back">↩</a></p></li>
+<li id="fn48"><p>Brian Everitt, Torsten Hothorn, An Introduction to Applied Multivariate Analysis with R, Springer, <a href="DOI:10.1007/978-1-4419-9650-3" class="uri">DOI:10.1007/978-1-4419-9650-3</a>, 2011<a href="principle-component-analysis-of-a-binary-classification-system.html#fnref48" class="footnote-back">↩</a></p></li>
+<li id="fn49"><p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/prcomp.html" class="uri">https://stat.ethz.ch/R-manual/R-devel/library/stats/html/prcomp.html</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref49" class="footnote-back">↩</a></p></li>
+<li id="fn50"><p><a href="https://stat.ethz.ch/R-manual/R-devel/library/stats/html/princomp.html" class="uri">https://stat.ethz.ch/R-manual/R-devel/library/stats/html/princomp.html</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref50" class="footnote-back">↩</a></p></li>
+<li id="fn51"><p><a href="https://cran.r-project.org/web/packages/available_packages_by_name.html" class="uri">https://cran.r-project.org/web/packages/available_packages_by_name.html</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref51" class="footnote-back">↩</a></p></li>
+<li id="fn52"><p>Raymond Cattell, “The scree test for the number of factors.” Multivariate Behavioral Research. 1 (2): 245–76. <a href="DOI:10.1207/s15327906mbr0102_10" class="uri">DOI:10.1207/s15327906mbr0102_10</a>, 1966<a href="principle-component-analysis-of-a-binary-classification-system.html#fnref52" class="footnote-back">↩</a></p></li>
+<li id="fn53"><p>Nicole Radzill, Ph.D., personal communication.<a href="principle-component-analysis-of-a-binary-classification-system.html#fnref53" class="footnote-back">↩</a></p></li>
+<li id="fn54"><p><a href="https://stats.stackexchange.com/questions/253535/the-advantages-and-disadvantages-of-using-kaiser-rule-to-select-the-number-of-pr" class="uri">https://stats.stackexchange.com/questions/253535/the-advantages-and-disadvantages-of-using-kaiser-rule-to-select-the-number-of-pr</a><a href="principle-component-analysis-of-a-binary-classification-system.html#fnref54" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="exploratory-data-analysis.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="logistic-regression-for-binary-classification.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

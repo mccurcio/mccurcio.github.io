@@ -1,4 +1,6 @@
 
+---
+
 <blockquote>
 <p>[K-means is an unsupervised algorithm.] k-means clustering is a
 method of vector quantization, originally from signal processing, that
@@ -28,26 +30,7 @@ x &lt;- rbind(matrix(rnorm(100, sd = 0.3), ncol = 2),
 colnames(x) &lt;- c(&quot;x&quot;, &quot;y&quot;)
 (cl &lt;- kmeans(x, 2))</code></pre>
 
-<pre><code>## K-means clustering with 2 clusters of sizes 52, 48
-## 
-## Cluster means:
-##            x           y
-## 1 0.99443235  1.00800301
-## 2 0.04298836 -0.05387672
-## 
-## Clustering vector:
-##   [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2
-##  [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-##  [75] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-## 
-## Within cluster sum of squares by cluster:
-## [1] 7.503374 7.629485
-##  (between_SS / total_SS =  77.0 %)
-## 
-## Available components:
-## 
-## [1] &quot;cluster&quot;      &quot;centers&quot;      &quot;totss&quot;        &quot;withinss&quot;     &quot;tot.withinss&quot;
-## [6] &quot;betweenss&quot;    &quot;size&quot;         &quot;iter&quot;         &quot;ifault&quot;</code></pre>
+
 <pre class="r"><code>plot(x, 
      col=cl$cluster,
       main=&quot;K-means using random data separated into two clusters&quot;

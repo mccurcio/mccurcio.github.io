@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7 Support Vector Machines for Binary Classification | Binary Classification Using Six Machine Learning Techniques</title>
+  <meta name="description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  <meta name="generator" content="bookdown 0.18 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7 Support Vector Machines for Binary Classification | Binary Classification Using Six Machine Learning Techniques" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7 Support Vector Machines for Binary Classification | Binary Classification Using Six Machine Learning Techniques" />
+  
+  <meta name="twitter:description" content="Binary classification using six machine learning techniques (PCA, Logit, SVM-Linear, SVM-Polynomial, SVM-RBF, Neural Network) are tested for accuracy and False Positives/False Negatives using myoglobin &amp; control set. “Binary Classification Using Six Machine Learning Techniques, Tested Against Accuracy And False Positives/False Negatives Using Myoglobin Proteins Vs. Control Set”" />
+  
+
+<meta name="author" content="Matthew C. Curcio" />
+
+
+<meta name="date" content="2020-03-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="neural-networks-for-binary-classification.html"/>
+<link rel="next" href="results.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+
+
+<style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Preface</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#welcome"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#who-this-book-is-for"><i class="fa fa-check"></i>Who This Book Is For</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgments"><i class="fa fa-check"></i>Acknowledgments</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dedication"><i class="fa fa-check"></i>Dedication</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#about-the-author"><i class="fa fa-check"></i>About the Author</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html"><i class="fa fa-check"></i><b>2</b> Introduction - What is Machine Learning?</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#machine-learning-is"><i class="fa fa-check"></i><b>2.1</b> Machine Learning Is?</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#what-is-predictive-modeling"><i class="fa fa-check"></i><b>2.1.1</b> What is Predictive Modeling?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#supervised-learning"><i class="fa fa-check"></i><b>2.1.2</b> Supervised Learning</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#unsupervised-learning"><i class="fa fa-check"></i><b>2.1.3</b> Unsupervised Learning</a></li>
+<li class="chapter" data-level="2.1.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#five-challenges-in-predictive-modeling"><i class="fa fa-check"></i><b>2.1.4</b> Five Challenges In Predictive Modeling</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#research-description"><i class="fa fa-check"></i><b>2.2</b> Research Description</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#exploratory-data-analysis-eda"><i class="fa fa-check"></i><b>2.2.1</b> Exploratory Data Analysis (EDA)</a></li>
+<li class="chapter" data-level="2.2.2" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#caret-library-for-r"><i class="fa fa-check"></i><b>2.2.2</b> Caret library for R</a></li>
+<li class="chapter" data-level="2.2.3" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#tuning-hyper-parameters"><i class="fa fa-check"></i><b>2.2.3</b> Tuning Hyper-parameters</a></li>
+<li class="chapter" data-level="2.2.4" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#k-fold-cross-validation-of-results"><i class="fa fa-check"></i><b>2.2.4</b> K-Fold Cross validation of results</a></li>
+<li class="chapter" data-level="2.2.5" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#train-command"><i class="fa fa-check"></i><b>2.2.5</b> Train command</a></li>
+<li class="chapter" data-level="2.2.6" data-path="introduction-what-is-machine-learning.html"><a href="introduction-what-is-machine-learning.html#analysis-of-results"><i class="fa fa-check"></i><b>2.2.6</b> Analysis of results</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis</a><ul>
+<li class="chapter" data-level="3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#introduction"><i class="fa fa-check"></i><b>3.1</b> Introduction</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#four-step-analysis"><i class="fa fa-check"></i><b>3.1.1</b> Four-Step Analysis</a></li>
+<li class="chapter" data-level="3.1.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#useful-guides-for-exploratory-data-analysis"><i class="fa fa-check"></i><b>3.1.2</b> Useful Guides for Exploratory Data Analysis</a></li>
+<li class="chapter" data-level="3.1.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#questions-during-eda"><i class="fa fa-check"></i><b>3.1.3</b> Questions During EDA</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-raw-data"><i class="fa fa-check"></i><b>3.2</b> Analysis of RAW data</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visually-inspect-raw-data-files"><i class="fa fa-check"></i><b>3.2.1</b> Visually inspect RAW data files</a></li>
+<li class="chapter" data-level="3.2.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#inspect-raw-dataframe-structure-str"><i class="fa fa-check"></i><b>3.2.2</b> Inspect RAW dataframe structure, <code>str()</code></a></li>
+<li class="chapter" data-level="3.2.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-head-tail"><i class="fa fa-check"></i><b>3.2.3</b> Check RAW data <code>head</code> &amp; <code>tail</code></a></li>
+<li class="chapter" data-level="3.2.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-data-types"><i class="fa fa-check"></i><b>3.2.4</b> Check RAW data types</a></li>
+<li class="chapter" data-level="3.2.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-dataframe-dimensions"><i class="fa fa-check"></i><b>3.2.5</b> Check RAW dataframe dimensions</a></li>
+<li class="chapter" data-level="3.2.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-raw-for-missing-values"><i class="fa fa-check"></i><b>3.2.6</b> Check RAW for missing values</a></li>
+<li class="chapter" data-level="3.2.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.2.7</b> Number of polypeptides per Class:</a></li>
+<li class="chapter" data-level="3.2.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#numerical-summary-of-raw-data"><i class="fa fa-check"></i><b>3.2.8</b> Numerical summary of RAW data</a></li>
+<li class="chapter" data-level="3.2.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualize-descriptive-statistics-using-raw-data"><i class="fa fa-check"></i><b>3.2.9</b> Visualize Descriptive Statistics using RAW Data</a></li>
+<li class="chapter" data-level="3.2.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-of-raw-data"><i class="fa fa-check"></i><b>3.2.10</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition of RAW Data</a></li>
+<li class="chapter" data-level="3.2.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#means-of-percent-amino-acid-composition-of-control-myoglobin-categories-raw-data"><i class="fa fa-check"></i><b>3.2.11</b> Means of percent amino acid composition of control &amp; myoglobin categories, RAW data</a></li>
+<li class="chapter" data-level="3.2.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-overall-amino-acid-composition-raw-data"><i class="fa fa-check"></i><b>3.2.12</b> Boxplots of grand-means of overall amino acid composition, RAW data</a></li>
+<li class="chapter" data-level="3.2.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-raw-data"><i class="fa fa-check"></i><b>3.2.13</b> Boxplots of amino acid compositions for control (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-only-raw-data"><i class="fa fa-check"></i><b>3.2.14</b> Boxplots of amino acid compositions for myoglobin (only), RAW data</a></li>
+<li class="chapter" data-level="3.2.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-for-raw-data"><i class="fa fa-check"></i><b>3.2.15</b> Boxplots Of Length Of Polypeptides For RAW Data</a></li>
+<li class="chapter" data-level="3.2.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-coefficient-of-variance-for-raw-data"><i class="fa fa-check"></i><b>3.2.16</b> Plot Coefficient Of Variance For RAW Data</a></li>
+<li class="chapter" data-level="3.2.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-raw-data"><i class="fa fa-check"></i><b>3.2.17</b> Skewness of distributions, RAW data</a></li>
+<li class="chapter" data-level="3.2.18" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-raw-data"><i class="fa fa-check"></i><b>3.2.18</b> Determine coefficients of correlation, RAW data</a></li>
+<li class="chapter" data-level="3.2.19" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.19</b> Boruta Random Forest Test, RAW data</a></li>
+<li class="chapter" data-level="3.2.20" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-raw-data"><i class="fa fa-check"></i><b>3.2.20</b> Plot variable importance, RAW Data</a></li>
+<li class="chapter" data-level="3.2.21" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-raw-data"><i class="fa fa-check"></i><b>3.2.21</b> Variable importance scores, RAW Data</a></li>
+<li class="chapter" data-level="3.2.22" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusion-for-boruta-random-forest-test-raw-data"><i class="fa fa-check"></i><b>3.2.22</b> Conclusion for Boruta random forest test, RAW Data</a></li>
+<li class="chapter" data-level="3.2.23" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#conclusions-for-eda-raw-data"><i class="fa fa-check"></i><b>3.2.23</b> Conclusions For EDA, RAW data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#analysis-of-transformed-data"><i class="fa fa-check"></i><b>3.3</b> Analysis of TRANSFORMED data</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-dataframe-dimensions"><i class="fa fa-check"></i><b>3.3.1</b> Check Transformed dataframe dimensions</a></li>
+<li class="chapter" data-level="3.3.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#check-transformed-for-missing-values"><i class="fa fa-check"></i><b>3.3.2</b> Check Transformed for missing values</a></li>
+<li class="chapter" data-level="3.3.3" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#count-transformed-data-for-the-number-of-polypeptides-per-class"><i class="fa fa-check"></i><b>3.3.3</b> Count Transformed data for the number of polypeptides per class</a></li>
+<li class="chapter" data-level="3.3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#visualization-descriptive-statistics-transformed-data"><i class="fa fa-check"></i><b>3.3.4</b> Visualization Descriptive Statistics, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.5" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-sqrt-x_i-transformed-data"><i class="fa fa-check"></i><b>3.3.5</b> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition <span class="math inline">\(\sqrt x_i\)</span>, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.6" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#grouped-bar-chart-of-means-for-percent-amino-acid-composition-of-transformed-data-control-myoglobin-categories"><i class="fa fa-check"></i><b>3.3.6</b> Grouped bar chart of means for percent amino acid composition of Transformed Data; control &amp; myoglobin categories</a></li>
+<li class="chapter" data-level="3.3.7" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-grand-means-of-the-overall-amino-acid-composition-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.7</b> Boxplots of grand-means of the overall amino acid composition of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.8" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-control-only-of-square-root-transformed-data"><i class="fa fa-check"></i><b>3.3.8</b> Boxplots of amino acid compositions for control (only) of square-root transformed data</a></li>
+<li class="chapter" data-level="3.3.9" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-amino-acid-compositions-for-myoglobin-of-square-root-transformed-dataonly-transformed-data"><i class="fa fa-check"></i><b>3.3.9</b> Boxplots of amino acid compositions for myoglobin of square-root transformed Data(only), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.10" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boxplots-of-length-of-polypeptides-of-transformed-data-myoglobin-control-combined"><i class="fa fa-check"></i><b>3.3.10</b> Boxplots Of Length Of Polypeptides Of Transformed Data; Myoglobin, Control &amp; Combined</a></li>
+<li class="chapter" data-level="3.3.11" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#coefficient-of-variance-cv-transformed-data"><i class="fa fa-check"></i><b>3.3.11</b> Coefficient of Variance (CV), TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.12" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-of-coefficient-of-variance-cv"><i class="fa fa-check"></i><b>3.3.12</b> Plot of Coefficient Of Variance (CV)</a></li>
+<li class="chapter" data-level="3.3.13" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#skewness-of-distributions-transformed-data"><i class="fa fa-check"></i><b>3.3.13</b> Skewness of distributions, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.14" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#determine-coefficients-of-correlation-transformed-data"><i class="fa fa-check"></i><b>3.3.14</b> Determine coefficients of correlation, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.15" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#boruta---dimensionality-reduction-transformed-data"><i class="fa fa-check"></i><b>3.3.15</b> Boruta - Dimensionality Reduction, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.16" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#plot-variable-importance-transformed-data"><i class="fa fa-check"></i><b>3.3.16</b> Plot Variable Importance, TRANSFORMED data</a></li>
+<li class="chapter" data-level="3.3.17" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#variable-importance-scores-transformed-data"><i class="fa fa-check"></i><b>3.3.17</b> Variable Importance Scores, TRANSFORMED data</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#eda-conclusion"><i class="fa fa-check"></i><b>3.4</b> EDA Conclusion</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#feature-selection-extraction"><i class="fa fa-check"></i><b>3.4.1</b> Feature Selection &amp; Extraction</a></li>
+<li class="chapter" data-level="3.4.2" data-path="exploratory-data-analysis.html"><a href="exploratory-data-analysis.html#information-block"><i class="fa fa-check"></i><b>3.4.2</b> Information Block**</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html"><i class="fa fa-check"></i><b>4</b> Principle Component Analysis of A Binary Classification System</a><ul>
+<li class="chapter" data-level="4.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#introduction-1"><i class="fa fa-check"></i><b>4.1</b> Introduction</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#advantages-of-using-pca-include"><i class="fa fa-check"></i><b>4.1.1</b> Advantages Of Using PCA Include</a></li>
+<li class="chapter" data-level="4.1.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#disadvantages-of-pca-should-be-considered"><i class="fa fa-check"></i><b>4.1.2</b> Disadvantages Of PCA Should Be Considered</a></li>
+<li class="chapter" data-level="4.1.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#data-centering-scaling-normalization"><i class="fa fa-check"></i><b>4.1.3</b> Data centering / scaling / normalization</a></li>
+<li class="chapter" data-level="4.1.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#histograms-of-scaled-vs.-unscaled-data"><i class="fa fa-check"></i><b>4.1.4</b> Histograms of Scaled Vs. Unscaled data</a></li>
+<li class="chapter" data-level="4.1.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-the-covariance-matrix"><i class="fa fa-check"></i><b>4.1.5</b> Finding the Covariance Matrix</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-two-variables"><i class="fa fa-check"></i>Covariance of two variables</a></li>
+<li class="chapter" data-level="" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#covariance-of-matrices"><i class="fa fa-check"></i>Covariance of matrices</a></li>
+<li class="chapter" data-level="4.1.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#finding-pca-via-singular-value-decomposition"><i class="fa fa-check"></i><b>4.1.6</b> Finding PCA via singular value decomposition</a></li>
+<li class="chapter" data-level="4.1.7" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#example-of-two-dimensional-pca-using-random-data"><i class="fa fa-check"></i><b>4.1.7</b> Example of two-dimensional PCA using random data</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#principle-component-analysis-using-norm_c_m_20aa"><i class="fa fa-check"></i><b>4.2</b> Principle component analysis using <code>norm_c_m_20aa</code></a><ul>
+<li class="chapter" data-level="4.2.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#screeplot-cumulative-proportion-of-variance-plot"><i class="fa fa-check"></i><b>4.2.1</b> Screeplot &amp; Cumulative Proportion of Variance plot</a></li>
+<li class="chapter" data-level="4.2.2" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#biplots"><i class="fa fa-check"></i><b>4.2.2</b> Biplots</a></li>
+<li class="chapter" data-level="4.2.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#obtain-anomalous-points-from-biplot-2-pc1-vs.-pc2"><i class="fa fa-check"></i><b>4.2.3</b> Obtain Anomalous Points From Biplot #2: PC1 Vs. PC2</a></li>
+<li class="chapter" data-level="4.2.4" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-1"><i class="fa fa-check"></i><b>4.2.4</b> Outliers from Principal Component-1</a></li>
+<li class="chapter" data-level="4.2.5" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-from-principal-component-2"><i class="fa fa-check"></i><b>4.2.5</b> Outliers from Principal Component-2</a></li>
+<li class="chapter" data-level="4.2.6" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#list-of-all-outliers-union-and-sorted-found-using-the-ruleset-1-through-4"><i class="fa fa-check"></i><b>4.2.6</b> List of all outliers (union and sorted) found using the ruleset 1 through 4</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#pca-conclusion"><i class="fa fa-check"></i><b>4.3</b> PCA Conclusion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="principle-component-analysis-of-a-binary-classification-system.html"><a href="principle-component-analysis-of-a-binary-classification-system.html#outliers-derived-from-pc1-vs-pc2"><i class="fa fa-check"></i><b>4.3.1</b> Outliers derived from PC1 Vs PC2</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html"><i class="fa fa-check"></i><b>5</b> Logistic Regression For Binary Classification</a><ul>
+<li class="chapter" data-level="5.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#introduction-2"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
+<li class="chapter" data-level="5.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-training-using-20-features"><i class="fa fa-check"></i><b>5.2</b> Logit-20 Training Using 20 Features</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-20-summary-1"><i class="fa fa-check"></i><b>5.2.1</b> Logit-20 Summary #1</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-training-using-9-features"><i class="fa fa-check"></i><b>5.3</b> Logit-9 Training Using 9 Features</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-summary"><i class="fa fa-check"></i><b>5.3.1</b> Logit-9 Summary</a></li>
+<li class="chapter" data-level="5.3.2" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-9-confusion-matrix"><i class="fa fa-check"></i><b>5.3.2</b> Logit-9 Confusion Matrix</a></li>
+<li class="chapter" data-level="5.3.3" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#obtain-list-of-false-positives-false-negatives-from-logit-9"><i class="fa fa-check"></i><b>5.3.3</b> Obtain List of False Positives &amp; False Negatives From Logit-9</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="logistic-regression-for-binary-classification.html"><a href="logistic-regression-for-binary-classification.html#logit-conclusion"><i class="fa fa-check"></i><b>5.4</b> Logit Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html"><i class="fa fa-check"></i><b>6</b> Neural Networks For Binary Classification</a><ul>
+<li class="chapter" data-level="6.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#introduction-3"><i class="fa fa-check"></i><b>6.1</b> Introduction</a><ul>
+<li class="chapter" data-level="6.1.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-one-neuron-system"><i class="fa fa-check"></i><b>6.1.1</b> The One Neuron System</a></li>
+<li class="chapter" data-level="6.1.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#the-two-neuron-system"><i class="fa fa-check"></i><b>6.1.2</b> The Two Neuron System</a></li>
+</ul></li>
+<li class="chapter" data-level="6.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-experiment-for-binary-classification"><i class="fa fa-check"></i><b>6.2</b> Neural Network Experiment For Binary Classification</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#train-model-with-neural-networks"><i class="fa fa-check"></i><b>6.2.1</b> Train model with neural networks</a></li>
+<li class="chapter" data-level="6.2.2" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#confusion-matrix-and-statistics"><i class="fa fa-check"></i><b>6.2.2</b> Confusion Matrix and Statistics</a></li>
+<li class="chapter" data-level="6.2.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#obtain-list-of-false-positives-false-negatives"><i class="fa fa-check"></i><b>6.2.3</b> Obtain List of False Positives &amp; False Negatives</a></li>
+<li class="chapter" data-level="6.2.4" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#false-positive-false-negative-neural-network-set"><i class="fa fa-check"></i><b>6.2.4</b> False Positive &amp; False Negative Neural Network set</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="neural-networks-for-binary-classification.html"><a href="neural-networks-for-binary-classification.html#neural-network-conclusion"><i class="fa fa-check"></i><b>6.3</b> Neural Network Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html"><i class="fa fa-check"></i><b>7</b> Support Vector Machines for Binary Classification</a><ul>
+<li class="chapter" data-level="7.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#introduction-4"><i class="fa fa-check"></i><b>7.1</b> Introduction</a><ul>
+<li class="chapter" data-level="7.1.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#linearly-separable"><i class="fa fa-check"></i><b>7.1.1</b> Linearly Separable</a></li>
+<li class="chapter" data-level="7.1.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#understanding-the-hyperplane-equation"><i class="fa fa-check"></i><b>7.1.2</b> Understanding the hyperplane equation</a></li>
+<li class="chapter" data-level="7.1.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#soft-margins"><i class="fa fa-check"></i><b>7.1.3</b> Soft Margins</a></li>
+<li class="chapter" data-level="7.1.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#kernel-use"><i class="fa fa-check"></i><b>7.1.4</b> Kernel Use</a></li>
+<li class="chapter" data-level="7.1.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-intuition"><i class="fa fa-check"></i><b>7.1.5</b> SVM-Linear Intuition</a></li>
+</ul></li>
+<li class="chapter" data-level="7.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model"><i class="fa fa-check"></i><b>7.2</b> SVM-Linear Model</a><ul>
+<li class="chapter" data-level="7.2.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-training"><i class="fa fa-check"></i><b>7.2.1</b> SVM-Linear Training</a></li>
+<li class="chapter" data-level="7.2.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-model-summary"><i class="fa fa-check"></i><b>7.2.2</b> SVM-Linear Model Summary</a></li>
+<li class="chapter" data-level="7.2.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-predict-test_set"><i class="fa fa-check"></i><b>7.2.3</b> SVM-Linear Predict test_set</a></li>
+<li class="chapter" data-level="7.2.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-confusion-matrix"><i class="fa fa-check"></i><b>7.2.4</b> SVM-Linear Confusion Matrix</a></li>
+<li class="chapter" data-level="7.2.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-linear-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.2.5</b> SVM-Linear Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-polynomial-model"><i class="fa fa-check"></i><b>7.3</b> SVM-Polynomial Model</a><ul>
+<li class="chapter" data-level="7.3.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-training"><i class="fa fa-check"></i><b>7.3.1</b> SVM-Poly Training</a></li>
+<li class="chapter" data-level="7.3.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-model-summary"><i class="fa fa-check"></i><b>7.3.2</b> SVM-Poly Model Summary</a></li>
+<li class="chapter" data-level="7.3.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-predict-test_set"><i class="fa fa-check"></i><b>7.3.3</b> SVM-Poly Predict test_set</a></li>
+<li class="chapter" data-level="7.3.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-confusion-matrix"><i class="fa fa-check"></i><b>7.3.4</b> SVM-Poly Confusion Matrix</a></li>
+<li class="chapter" data-level="7.3.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-poly-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.3.5</b> SVM-Poly Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model"><i class="fa fa-check"></i><b>7.4</b> SVM-RBF Model</a><ul>
+<li class="chapter" data-level="7.4.1" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-training"><i class="fa fa-check"></i><b>7.4.1</b> SVM-RBF Training</a></li>
+<li class="chapter" data-level="7.4.2" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-model-summary"><i class="fa fa-check"></i><b>7.4.2</b> SVM-RBF Model Summary</a></li>
+<li class="chapter" data-level="7.4.3" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-predict-test_set"><i class="fa fa-check"></i><b>7.4.3</b> SVM-RBF Predict test_set</a></li>
+<li class="chapter" data-level="7.4.4" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-confusion-matrix"><i class="fa fa-check"></i><b>7.4.4</b> SVM-RBF Confusion Matrix</a></li>
+<li class="chapter" data-level="7.4.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-rbf-obtain-false-positives-false-negatives"><i class="fa fa-check"></i><b>7.4.5</b> SVM-RBF Obtain False Positives &amp; False Negatives</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="support-vector-machines-for-binary-classification.html"><a href="support-vector-machines-for-binary-classification.html#svm-conclusion"><i class="fa fa-check"></i><b>7.5</b> SVM Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="results.html"><a href="results.html"><i class="fa fa-check"></i><b>8</b> Results</a><ul>
+<li class="chapter" data-level="8.1" data-path="results.html"><a href="results.html#the-six-m.l-algorithms-consist-of"><i class="fa fa-check"></i><b>8.1</b> The Six M.L Algorithms consist of:</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="results.html"><a href="results.html#pca-anomalies-plot"><i class="fa fa-check"></i><b>8.1.1</b> PCA-Anomalies Plot</a></li>
+<li class="chapter" data-level="8.1.2" data-path="results.html"><a href="results.html#logit-plot"><i class="fa fa-check"></i><b>8.1.2</b> Logit Plot</a></li>
+<li class="chapter" data-level="8.1.3" data-path="results.html"><a href="results.html#svm-linear-plot"><i class="fa fa-check"></i><b>8.1.3</b> SVM-Linear Plot</a></li>
+<li class="chapter" data-level="8.1.4" data-path="results.html"><a href="results.html#svm-polynomial-plot"><i class="fa fa-check"></i><b>8.1.4</b> SVM-Polynomial Plot</a></li>
+<li class="chapter" data-level="8.1.5" data-path="results.html"><a href="results.html#svm-radial-basis-function-plot"><i class="fa fa-check"></i><b>8.1.5</b> SVM-Radial Basis Function Plot</a></li>
+<li class="chapter" data-level="8.1.6" data-path="results.html"><a href="results.html#neural-network-function-plot"><i class="fa fa-check"></i><b>8.1.6</b> Neural Network Function Plot</a></li>
+<li class="chapter" data-level="8.1.7" data-path="results.html"><a href="results.html#statistical-learning-method-vs-total-number-of-fpfn"><i class="fa fa-check"></i><b>8.1.7</b> Statistical Learning Method Vs Total Number of FP/FN</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="results.html"><a href="results.html#comparison-of-machine-learning-accuracies"><i class="fa fa-check"></i><b>8.2</b> Comparison of Machine Learning Accuracies</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="results.html"><a href="results.html#stacking-algorithms---run-multiple-algorithms-in-one-call."><i class="fa fa-check"></i><b>8.2.1</b> Stacking Algorithms - Run multiple algorithms in one call.</a></li>
+<li class="chapter" data-level="8.2.2" data-path="results.html"><a href="results.html#plot-the-resamples-output-to-compare-the-models."><i class="fa fa-check"></i><b>8.2.2</b> Plot the resamples output to compare the models.</a></li>
+<li class="chapter" data-level="8.2.3" data-path="results.html"><a href="results.html#mean-accuracies-of-m.l.-techniques-n10"><i class="fa fa-check"></i><b>8.2.3</b> Mean Accuracies of M.L. Techniques, n=10</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="conclusion.html"><a href="conclusion.html"><i class="fa fa-check"></i><b>9</b> Conclusion</a></li>
+<li class="chapter" data-level="10" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html"><i class="fa fa-check"></i><b>10</b> Biplot1.annotated.png</a><ul>
+<li class="chapter" data-level="10.1" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-pca-anomalies"><i class="fa fa-check"></i><b>10.1</b> Comparison of PCA Anomalies</a></li>
+<li class="chapter" data-level="10.2" data-path="biplot1-annotated-png.html"><a href="biplot1-annotated-png.html#comparison-of-accuracy-measurements"><i class="fa fa-check"></i><b>10.2</b> Comparison of Accuracy Measurements</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Binary Classification Using Six Machine Learning Techniques</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="support-vector-machines-for-binary-classification" class="section level1">
+<h1><span class="header-section-number">7</span> Support Vector Machines for Binary Classification</h1>
+<blockquote>
+<p>“Support Vector Machines should be in the tool bag of every civilized person.”</p>
+<p>Patrick Henry Winston <a href="#fn71" class="footnote-ref" id="fnref71"><sup>71</sup></a></p>
+</blockquote>
+<div id="introduction-4" class="section level2">
+<h2><span class="header-section-number">7.1</span> Introduction</h2>
+<p>Support Vector Machine (SVM) learning is a supervised learning technique that may be used as a binary classification system or to find a regression formula. Support vector machines are a “maximum margin classifier. SVM finds the separating hyperplane with the maximum margin to its closest data points.” <a href="#fn72" class="footnote-ref" id="fnref72"><sup>72</sup></a></p>
+<p>Although there are many mathematical approaches to solving SVM, many of which include kernels, let us first describe the Linear SVM used for binary classification. Consider a situation where we need to distinguish between two circumstances, or classes.</p>
+<p>In an imaginary biochemistry laboratory, researchers discover a novel enzyme found in different tissues throughout the human body. Biochemists purify the enzyme from several cadavers and several different tissue types. Literature suggests that this newly found enzyme has two isozymes, 1) Alpha has a high reaction rate and 2) Beta has a lower reaction rate. It now seems like a simple task to learn which isozymes you possess. Carry out kinetic enzyme analysis on the purified samples then attempt to classify them.</p>
+<p>Once you have carried out the kinetic analysis you then determine the Michaelis–Menten constant, <span class="math inline">\(K_M\)</span>. The <span class="math inline">\(K_M\)</span> constant is plotted on a single axis and produces the graphic below.</p>
+<div class="figure" style="text-align: center"><span id="fig:62"></span>
+<img src="_main_files/figure-html/62-1.png" alt="Is linearly separable data." width="672" />
+<p class="caption">
+Figure 7.1: Is linearly separable data.
+</p>
+</div>
+<div id="linearly-separable" class="section level3">
+<h3><span class="header-section-number">7.1.1</span> Linearly Separable</h3>
+<p>In test #1, we can see the two isozymes can easily separated by activity alone. Figure 1 demonstrates that the data is <em>linearly separable.</em> The dataset is linearly separable if a single straight line can partition the data. In more general terms, “if the classes are linearly separable, it can be shown that the algorithm converges to a separating hyperplane.” <a href="#fn73" class="footnote-ref" id="fnref73"><sup>73</sup></a> As Cortes and Vapnik indicate the hyperplane is the decision boundary of any high dimension feature space, considering a hyperplane has one less dimension than its n-dimensional space.</p>
+<p>Incidentally, in Patrick Winston’s lecture on SVM, he calls SVM the “widest street approach.” <a href="#fn74" class="footnote-ref" id="fnref74"><sup>74</sup></a> Why does Professor Winston use this term? There are many possible streets which can be traced but the <em>goal</em> is to find the <em>widest street</em>. Many streets may be drawn in our example, but requiring the <em>widest street</em> leads to one. In fact, “an optimal hyperplane is here defined as the linear decision function with maximal margin between the vectors of the two classes.” <a href="#fn75" class="footnote-ref" id="fnref75"><sup>75</sup></a></p>
+<p><img src="00-data/10-images/vapnick_svm_paper_diagram.png" alt="Vapnick SVM Diagram" />
+<a href="#fn76" class="footnote-ref" id="fnref76"><sup>76</sup></a></p>
+<p>Adding the prosaic phrase <em>widest street</em> smartly leads to the idea that a widest decision boundary also has the greatest ability to generalize.</p>
+<p><img src="00-data/10-images/p-values_schematic.jpg" alt="P Values Schematic" />
+<a href="#fn77" class="footnote-ref" id="fnref77"><sup>77</sup></a></p>
+<p>However in real life, linearly separabale data is rarely the case. Most often the activities are mixed as shown in test #2.</p>
+<div class="figure" style="text-align: center"><span id="fig:65"></span>
+<img src="_main_files/figure-html/65-1.png" alt="Is not linearly separable data." width="672" />
+<p class="caption">
+Figure 7.2: Is not linearly separable data.
+</p>
+</div>
+</div>
+<div id="understanding-the-hyperplane-equation" class="section level3">
+<h3><span class="header-section-number">7.1.2</span> Understanding the hyperplane equation</h3>
+<p>If we were trying to find:</p>
+<p><span class="math display">\[\begin{equation}
+\frac{1}{2} \widehat W (X_{\oplus} ~-~ X_{\ominus})
+\end{equation}\]</span></p>
+<p>Where <span class="math inline">\(\widehat W ~= \left ( \frac{x_1}{||x||}, ~ \frac{x_2}{||x||} \right )\)</span> and <span class="math inline">\(X_{\oplus}\)</span> and <span class="math inline">\(X_{\ominus}\)</span> represent data points that are labeled either positive or negative.</p>
+<p>Suppose that <span class="math inline">\(X_{\oplus}\)</span> and <span class="math inline">\(X_{\ominus}\)</span> are equidistant from the decision boundary:</p>
+<div style="page-break-after: always;"></div>
+<p>Where <span class="math inline">\(a\)</span> represents the region above the hyperplane;</p>
+<p><span class="math display">\[\begin{equation}
+W^T X_{\oplus} + b = a
+\end{equation}\]</span></p>
+<p>and where <span class="math inline">\(-a\)</span> represents the region below the hyperplane or decision boundary.</p>
+<p><span class="math display">\[\begin{equation}
+W^T X_{\ominus} + b = -a
+\end{equation}\]</span></p>
+<p>Subtracting the two equations:</p>
+<p><span class="math display">\[\begin{equation}
+W^T (X_{\oplus} ~-~ X_{\ominus}) = 2a
+\end{equation}\]</span></p>
+<p>Divide by the norm of w:</p>
+<p><span class="math display">\[\begin{equation}
+\widehat W^T (X_{\oplus} ~-~ X_{\ominus}) = \frac{2a}{||W||}
+\end{equation}\]</span></p>
+<p><img src="00-data/10-images/SVM_optimize_2.png" alt="Diagram Derivation of SVM" />
+<a href="#fn78" class="footnote-ref" id="fnref78"><sup>78</sup></a></p>
+</div>
+<div id="soft-margins" class="section level3">
+<h3><span class="header-section-number">7.1.3</span> Soft Margins</h3>
+<p>In the case above, the activities overlap hence determining which isozyme is Alpha or Gamma is more difficult. In 1995, C. Cortes and V. Vapnik introduced the mathematics and ideas for “Soft Margins” or non-separable training data.<a href="#fn79" class="footnote-ref" id="fnref79"><sup>79</sup></a></p>
+<p>The same is true of an n-dimensional system.</p>
+<p>The first mention of an SVM like system is by Vapnik and Lerner in 1963, where the two described an implementation of a non-linear generalization called a Generalized Portrait algorithm.<a href="#fn80" class="footnote-ref" id="fnref80"><sup>80</sup></a> As research has progressed, the types and complexity of SVM implementations have grown to encompass many circumstances. The ability of SVM to deal with different problems and handle different decision boundary shapes has made SVM a potent tool.</p>
+</div>
+<div id="kernel-use" class="section level3">
+<h3><span class="header-section-number">7.1.4</span> Kernel Use</h3>
+<p>For example, this experiment has chosen to investigate three possible decision boundary shapes for the two-class protein data. The three mathematical constructs which will be tested are:</p>
+<ol style="list-style-type: decimal">
+<li>Linear hyperplane (also known as “plain-vanilla”),</li>
+<li>Curvilinear or polynomial hyperplane and,</li>
+<li>A radial basis function hyperplane,</li>
+<li>Sigmoidal.</li>
+</ol>
+<div id="linear-kx-y-wt-x-b" class="section level4">
+<h4><span class="header-section-number">7.1.4.1</span> Linear: <span class="math inline">\(K(x, ~y) ~=~ w^T x + b\)</span></h4>
+<ul>
+<li>The linear kernel does not transform the data at all.</li>
+</ul>
+<p>Three common SVM kernel formulae investigated are:</p>
+</div>
+<div id="polynomial-kx_i-y-gamma-x_it-x_j-rlarge-d-gamma-0" class="section level4">
+<h4><span class="header-section-number">7.1.4.2</span> Polynomial: <span class="math inline">\(K(x_i, ~y) ~=~ ( \gamma ~x_i^T ~x_j ~+~ r)^{\Large d}, ~~ \gamma &gt; 0\)</span></h4>
+<ul>
+<li>The polynomial kernel has a straightforward non-linear transform of the data.</li>
+<li>Such that <span class="math inline">\(~\gamma, ~r\)</span>, and <span class="math inline">\(d\)</span> are kernel parameters.</li>
+</ul>
+</div>
+<div id="radial-basis-function-rbf-kx_i-x_j-exp---gamma-parallel-x_it---x_j-parallel-2-gamma-0" class="section level4">
+<h4><span class="header-section-number">7.1.4.3</span> Radial Basis Function (RBF): <span class="math inline">\(K(x_i, x_j) ~=~ exp ( - {\gamma} \parallel x_i^T - x_j \parallel ^2 ), ~~ \gamma &gt;0\)</span></h4>
+<ul>
+<li>The Gaussian RBF kernel which performs well on many data and is a good default</li>
+</ul>
+</div>
+<div id="sigmoidal-kx-y-tanh-gamma-xt-y-r-gamma-0" class="section level4">
+<h4><span class="header-section-number">7.1.4.4</span> Sigmoidal: <span class="math inline">\(K(x, y) ~=~ {\tanh} (\gamma~ x^T ~ y ~+~ r ), ~~ \gamma &gt;0\)</span></h4>
+<ul>
+<li>Incidentally, The sigmoid kernel produces an SVM analogous to the activation function similar to a [perceptron] with a sigmoid activation function.<a href="#fn81" class="footnote-ref" id="fnref81"><sup>81</sup></a></li>
+</ul>
+<p><strong>It is essential to note</strong>, at this time, there are no reliable rules for which kernel, i.e., boundary shape, to use with any given data set.</p>
+<p>Plots of 4 common SVM boundary shapes:
+<img src="_main_files/figure-html/67-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="svm-linear-intuition" class="section level3">
+<h3><span class="header-section-number">7.1.5</span> SVM-Linear Intuition</h3>
+<p>The simplest form of SVM utilizes a hyperplane as a separating element between the positive and control protein observations. This type of implementation is denoted as SVM-Linear (svm-lin) in this report. Here the mathematics is more easily described and can even be shown with a simple 2-dimensional graphic.</p>
+<p><img src="00-data/10-images/vapnick_svm_paper_diagram.png" alt="vapnick_svm_paper_diagram.png" />
+<a href="#fn82" class="footnote-ref" id="fnref82"><sup>82</sup></a></p>
+<p>Given a set of labeled pairs of data:</p>
+<p><span class="math display">\[\begin{equation}
+\{(X_1, ~y),~ ...,~ (X_m, ~y)\},~~~ y \in \{1, ~-1\}, ~~~ where ~X^{m~x~n} \in \Re
+\end{equation}\]</span></p>
+<p>For mathematical convenience, the labels are a set of values 1 or -1.</p>
+<p>Therefore, we may write.</p>
+<p><span class="math display">\[\begin{equation}
+f(x_i) = \left\{ \begin{array}{cc} x \geq 0; ~y = 1 \\ x &lt; 0; ~y = -1 \end{array} \right.
+\end{equation}\]</span></p>
+<p>This is no different than is currently done in beginner level algebra. As is shown in the example below, the same is true for higher-dimensional problems.</p>
+<p>Will be described and calculated in more detail in this report. However, there are alternative implementations of SVM.</p>
+<p>In this experiment, three implementations of SVM have been used. The three are denoted as SVM-Linear (svm-lin), SVM-Polynomial (svm-poly), and SVM-Radial Basis Function (svm-rbf).</p>
+<p>The switches in the R/caret software are easy such that one can use a number of kernels by changing the name of method..</p>
+<p>with differing amounts of hyperparameters to modify. The intuition for the svm-poly and svm-rbf is also fairly straightforward. Instead of using a linear hyperplane to bisect the hi-dimensional space, which describes the decision boundary, the mathematics for a polynomial curvilinear function or a radial basis function may be utilized.</p>
+<p>Yet another measurable difference that was investigated in this experiment was the use of a kernel transformation. It is conceivable to envision a hyperplane with no transformations utilized. Alternatively, the kernel transformations of original data can be used to increase the ability of the function to differentiate between positively and negatively labeled samples. A mathematical treatment can be found by Christopher Burges.<a href="#fn83" class="footnote-ref" id="fnref83"><sup>83</sup></a></p>
+<p>As the usage of SVM grew, different issues presented problems for defining and coding the decision boundary were found. In the simplest case, the data points that sit along the support vector are nicely and neatly on the positive or the negative side. This is known as a hard margin which delineates the decision boundary. In reality, the decision boundary may include positive or negative datapoints that sporadically cross the boundary. In the circumstance where the decision boundary has similar points on either side, a penalty may be enlisted to deter the mathematics from choosing a boundary that includes too many misfit datapoints. In 1995, Support Vector Machines were described by Vladimir Vapnik and Corinna Cortes while at Bell Labs dealt with the soft-margin that occurs in the above situation.<a href="#fn84" class="footnote-ref" id="fnref84"><sup>84</sup></a></p>
+<p>SVM is a non-parametric approach to regression and classification models.</p>
+<p>What is Non-parametric?</p>
+<p>For that matter, what is parametric learning and models. Just as we have learned that machine learning models can be supervised, unsupervised, or even semi-supervised another characteristic between machine learning models is whether they are parametric or not.</p>
+<p>In Webster’s dictionary <a href="#fn85" class="footnote-ref" id="fnref85"><sup>85</sup></a> states a <em>parameter</em> is</p>
+<blockquote>
+<ol style="list-style-type: lower-alpha">
+<li><p>Estimation of values which enter into the equation representing the chosen relation</p></li>
+<li><p>“[An] independent variable through functions of which other functions may be expressed”, Frank Yates, a 20th-century statistician</p></li>
+</ol>
+</blockquote>
+<p>Another excellent explanation of this idea includes;</p>
+<blockquote>
+<p>Does the model have a fixed number of parameters, or does the number of parameters grow with the amount of training data? The former is called a parametric model, and the latter is called a non-parametric model. Parametric models have the advantage of often being faster to use, but the disadvantage of making stronger assumptions about the nature of the data distributions. Non-parametric models are more flexible, but often computationally intractable for large datasets.<a href="#fn86" class="footnote-ref" id="fnref86"><sup>86</sup></a></p>
+</blockquote>
+<p>Since Support Vector Machines are best described as a system where increasing the amount of training data, the numbers of parameters may grow as well. Therefore SVM is a non-parametric technique. Considering this idea in more detail, the estimation of the decision boundary does not entirely rely on the estimation of independent values (i.e., the values of the parameters). SVM is fascinating because the decision boundary may only rely on a small number of data points, otherwise known as support vectors.</p>
+<p>In short, one guiding idea of SVM is a geometric one. In a binary-class learning system, the metric for the concept of the “best” classification function can be realized geometrically<a href="#fn87" class="footnote-ref" id="fnref87"><sup>87</sup></a> by using a line or a plane (more precisely called a hyperplane when discussing multi-dimensional datasets) to separate the two labeled groups. The hyperplane that separates the labeled sets is also known as a decision boundary.</p>
+<p>This decision boundary can be described as having a hard or soft margin. As one might suspect, there are instances where the delineation between the labels is pronounced when this occurs decision boundary produces a hard margin. Alternatively, when the demarcation between the labeled groups is not so well defined by a straight and rigid line, the decision boundary provided is a soft margin. In either case, researchers have built up mathematics to deal with hard and soft margins. As an aside, the use of penalization is one method for coping with data points that impinge on the boundary hyperplane.</p>
+<p>By introducing a “soft margin” instead of a hard boundary, we can add a slack variable xi to account for the amount of a violation by the classifier, which later can be minimized.</p>
+<p>In short, one guiding idea of SVM is a geometric one. In a binary-class learning system, the metric for the concept of the “best” classification function can be realized geometrically<a href="#fn88" class="footnote-ref" id="fnref88"><sup>88</sup></a> by using a line or a plane (more precisely called a hyperplane when discussing multi-dimensional datasets) to separate the two labeled groups. The hyperplane that separates the labeled sets is also known as a decision boundary.</p>
+<div id="big-o-notation-620" class="section level4">
+<h4><span class="header-section-number">7.1.5.1</span> Big O notation <a href="#fn89" class="footnote-ref" id="fnref89"><sup>89</sup></a></h4>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Algorithm</th>
+<th align="center">Training</th>
+<th align="center">Prediction</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">SVM (Kernel)</td>
+<td align="center">O<span class="math inline">\((n^2 p + n^3)\)</span></td>
+<td align="center">O<span class="math inline">\((n_s v_p)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Where <em>p</em> is the number of features, <em>n_s v_p</em> is the number of support vectors</p>
+<p>There are three properties that make SVMs attractive for data scientists:<a href="#fn90" class="footnote-ref" id="fnref90"><sup>90</sup></a></p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li><p>SVMs construct a maximum margin separator—a decision boundary with the largest possible distance to example points. This helps them generalize well.</p></li>
+<li><p>SVMs create a linear separating hyperplane, but they have the ability to embed the data into a higher-dimensional space, using the so-called kernel trick. Often, data that are not linearly separable in the original input space are easily separable in the higher- dimensional space. The high-dimensional linear separator is actually nonlinear in the original space. This means the hypothesis space is greatly expanded over methods that use strictly linear representations.</p></li>
+<li><p>SVMs are a nonparametric method—they retain training examples and potentially need to store them all. On the other hand, in practice they often end up retaining only a small fraction of the number of examples—sometimes as few as a small constant times the number of dimensions. Thus SVMs combine the advantages of nonparametric and parametric models: they have the flexibility to represent complex functions, but they are resistant to overfitting.</p></li>
+</ol>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="svm-linear-model" class="section level2">
+<h2><span class="header-section-number">7.2</span> SVM-Linear Model</h2>
+<div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb97-1" data-line-number="1"><span class="co"># Import data &amp; data handling</span></a>
+<a class="sourceLine" id="cb97-2" data-line-number="2">c_m_TRANSFORMED &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb97-3" data-line-number="3">                            <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">Class =</span> <span class="kw">col_factor</span>(<span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;0&quot;</span>, <span class="st">&quot;1&quot;</span>)),</a>
+<a class="sourceLine" id="cb97-4" data-line-number="4">                                             <span class="dt">PID =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb97-5" data-line-number="5">                                             <span class="dt">TotalAA =</span> <span class="kw">col_skip</span>()))</a></code></pre></div>
+<p>Partition data into training and testing sets</p>
+<div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb98-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb98-2" data-line-number="2">index &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_TRANSFORMED<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb98-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb98-4" data-line-number="4">training_set &lt;-<span class="st"> </span>c_m_TRANSFORMED[ index,]</a>
+<a class="sourceLine" id="cb98-5" data-line-number="5">test_set     &lt;-<span class="st"> </span>c_m_TRANSFORMED[<span class="op">-</span>index,]</a>
+<a class="sourceLine" id="cb98-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb98-7" data-line-number="7">Class_test &lt;-<span class="st"> </span><span class="kw">as.factor</span>(test_set<span class="op">$</span>Class)</a></code></pre></div>
+<div id="svm-linear-training" class="section level3">
+<h3><span class="header-section-number">7.2.1</span> SVM-Linear Training</h3>
+<div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb99-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb99-2" data-line-number="2">start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>() <span class="co"># Start timer</span></a>
+<a class="sourceLine" id="cb99-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb99-4" data-line-number="4"><span class="co"># tuneGrid = svmLinearGrid</span></a>
+<a class="sourceLine" id="cb99-5" data-line-number="5">svmLinearGrid &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">C =</span> <span class="kw">c</span>(<span class="dv">2</span><span class="op">^</span>(<span class="fl">4.5</span>), <span class="dv">2</span><span class="op">^</span><span class="dv">5</span>, <span class="dv">2</span><span class="op">^</span>(<span class="fl">5.5</span>)))</a>
+<a class="sourceLine" id="cb99-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb99-7" data-line-number="7"><span class="co"># Create model, 10X fold CV repeated 5X</span></a>
+<a class="sourceLine" id="cb99-8" data-line-number="8">tcontrol &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</a>
+<a class="sourceLine" id="cb99-9" data-line-number="9">                         <span class="dt">number =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb99-10" data-line-number="10">                         <span class="dt">repeats =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb99-11" data-line-number="11">                         <span class="dt">savePredictions =</span> <span class="st">&quot;final&quot;</span>) <span class="co"># Saves predictions</span></a>
+<a class="sourceLine" id="cb99-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb99-13" data-line-number="13">lin_model_obj &lt;-<span class="st"> </span><span class="kw">train</span>(Class <span class="op">~</span><span class="st"> </span>.,</a>
+<a class="sourceLine" id="cb99-14" data-line-number="14">                       <span class="dt">data =</span> training_set,</a>
+<a class="sourceLine" id="cb99-15" data-line-number="15">                       <span class="dt">method =</span> <span class="st">&quot;svmLinear&quot;</span>,</a>
+<a class="sourceLine" id="cb99-16" data-line-number="16">                       <span class="dt">trControl =</span> tcontrol,</a>
+<a class="sourceLine" id="cb99-17" data-line-number="17">                       <span class="dt">tuneGrid =</span> svmLinearGrid)</a>
+<a class="sourceLine" id="cb99-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb99-19" data-line-number="19">end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()   <span class="co"># End timer</span></a>
+<a class="sourceLine" id="cb99-20" data-line-number="20">end_time <span class="op">-</span><span class="st"> </span>start_time    <span class="co"># Display time</span></a></code></pre></div>
+<pre><code>## Time difference of 4.094683 mins</code></pre>
+</div>
+<div id="svm-linear-model-summary" class="section level3">
+<h3><span class="header-section-number">7.2.2</span> SVM-Linear Model Summary</h3>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb101-1" data-line-number="1">lin_model_obj</a></code></pre></div>
+<pre><code>## Support Vector Machines with Linear Kernel 
+## 
+## 1873 samples
+##   20 predictor
+##    2 classes: &#39;0&#39;, &#39;1&#39; 
+## 
+## No pre-processing
+## Resampling: Cross-Validated (10 fold, repeated 5 times) 
+## Summary of sample sizes: 1685, 1686, 1686, 1686, 1686, 1685, ... 
+## Resampling results across tuning parameters:
+## 
+##   C         Accuracy   Kappa    
+##   22.62742  0.9482199  0.8961196
+##   32.00000  0.9484338  0.8965504
+##   45.25483  0.9485402  0.8967687
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final value used for the model was C = 45.25483.</code></pre>
+</div>
+<div id="svm-linear-predict-test_set" class="section level3">
+<h3><span class="header-section-number">7.2.3</span> SVM-Linear Predict test_set</h3>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb103-1" data-line-number="1">Predicted_test_vals &lt;-<span class="st"> </span><span class="kw">predict</span>(lin_model_obj, test_set[, <span class="dv">-1</span>])</a>
+<a class="sourceLine" id="cb103-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb103-3" data-line-number="3"><span class="kw">summary</span>(Predicted_test_vals)</a></code></pre></div>
+<pre><code>##   0   1 
+## 250 217</code></pre>
+</div>
+<div id="svm-linear-confusion-matrix" class="section level3">
+<h3><span class="header-section-number">7.2.4</span> SVM-Linear Confusion Matrix</h3>
+<div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" data-line-number="1"><span class="kw">confusionMatrix</span>(Predicted_test_vals, Class_test, <span class="dt">positive =</span> <span class="st">&quot;1&quot;</span>)</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 234  16
+##          1   9 208
+##                                          
+##                Accuracy : 0.9465         
+##                  95% CI : (0.922, 0.9651)
+##     No Information Rate : 0.5203         
+##     P-Value [Acc &gt; NIR] : &lt;2e-16         
+##                                          
+##                   Kappa : 0.8926         
+##                                          
+##  Mcnemar&#39;s Test P-Value : 0.2301         
+##                                          
+##             Sensitivity : 0.9286         
+##             Specificity : 0.9630         
+##          Pos Pred Value : 0.9585         
+##          Neg Pred Value : 0.9360         
+##              Prevalence : 0.4797         
+##          Detection Rate : 0.4454         
+##    Detection Prevalence : 0.4647         
+##       Balanced Accuracy : 0.9458         
+##                                          
+##        &#39;Positive&#39; Class : 1              
+## </code></pre>
+</div>
+<div id="svm-linear-obtain-false-positives-false-negatives" class="section level3">
+<h3><span class="header-section-number">7.2.5</span> SVM-Linear Obtain False Positives &amp; False Negatives</h3>
+<div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb107-1" data-line-number="1">fp_fn_svm_linear &lt;-<span class="st"> </span>lin_model_obj <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pluck</span>(<span class="st">&quot;pred&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(obs <span class="op">!=</span><span class="st"> </span>pred)</a>
+<a class="sourceLine" id="cb107-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb107-3" data-line-number="3"><span class="co"># Write out to Outliers folder</span></a>
+<a class="sourceLine" id="cb107-4" data-line-number="4"><span class="kw">write.table</span>(fp_fn_svm_linear,</a>
+<a class="sourceLine" id="cb107-5" data-line-number="5">            <span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/fp_fn_svm_linear.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb107-6" data-line-number="6">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb107-7" data-line-number="7">            <span class="dt">na =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb107-8" data-line-number="8">            <span class="dt">col.names =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb107-9" data-line-number="9">            <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb107-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb107-11" data-line-number="11"><span class="kw">nrow</span>(fp_fn_svm_linear)</a></code></pre></div>
+<pre><code>## [1] 482</code></pre>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb109-1" data-line-number="1"><span class="kw">head</span>(fp_fn_svm_linear)</a></code></pre></div>
+<pre><code>##          C pred obs rowIndex    Resample
+## 1 45.25483    0   1     1223 Fold01.Rep1
+## 2 45.25483    0   1     1873 Fold03.Rep1
+## 3 45.25483    0   1     1101 Fold05.Rep1
+## 4 45.25483    0   1     1618 Fold04.Rep1
+## 5 45.25483    0   1     1866 Fold01.Rep1
+## 6 45.25483    0   1     1831 Fold05.Rep1</code></pre>
+<hr />
+</div>
+</div>
+<div id="svm-polynomial-model" class="section level2">
+<h2><span class="header-section-number">7.3</span> SVM-Polynomial Model</h2>
+<p>Partition data into training and testing sets</p>
+<div class="sourceCode" id="cb111"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb111-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb111-2" data-line-number="2">index &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_TRANSFORMED<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb111-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb111-4" data-line-number="4">training_set &lt;-<span class="st"> </span>c_m_TRANSFORMED[ index,]</a>
+<a class="sourceLine" id="cb111-5" data-line-number="5">test_set     &lt;-<span class="st"> </span>c_m_TRANSFORMED[<span class="op">-</span>index,]</a>
+<a class="sourceLine" id="cb111-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb111-7" data-line-number="7">Class_test &lt;-<span class="st"> </span><span class="kw">as.factor</span>(test_set<span class="op">$</span>Class)</a></code></pre></div>
+<div id="svm-poly-training" class="section level3">
+<h3><span class="header-section-number">7.3.1</span> SVM-Poly Training</h3>
+<div class="sourceCode" id="cb112"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb112-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb112-2" data-line-number="2">start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>() <span class="co"># Start timer</span></a>
+<a class="sourceLine" id="cb112-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb112-4" data-line-number="4"><span class="co"># Create model, 10X fold CV repeated 5X</span></a>
+<a class="sourceLine" id="cb112-5" data-line-number="5">tcontrol &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</a>
+<a class="sourceLine" id="cb112-6" data-line-number="6">                         <span class="dt">number =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb112-7" data-line-number="7">                         <span class="dt">repeats =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb112-8" data-line-number="8">                         <span class="dt">savePredictions =</span> <span class="st">&quot;final&quot;</span>) <span class="co"># Saves predictions</span></a>
+<a class="sourceLine" id="cb112-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb112-10" data-line-number="10">poly_model_obj &lt;-<span class="st"> </span><span class="kw">train</span>(Class <span class="op">~</span><span class="st"> </span>.,</a>
+<a class="sourceLine" id="cb112-11" data-line-number="11">                        <span class="dt">data =</span> training_set,</a>
+<a class="sourceLine" id="cb112-12" data-line-number="12">                        <span class="dt">method =</span> <span class="st">&quot;svmPoly&quot;</span>,</a>
+<a class="sourceLine" id="cb112-13" data-line-number="13">                        <span class="dt">trControl=</span> tcontrol)</a>
+<a class="sourceLine" id="cb112-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb112-15" data-line-number="15">end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()   <span class="co"># End timer</span></a>
+<a class="sourceLine" id="cb112-16" data-line-number="16">end_time <span class="op">-</span><span class="st"> </span>start_time    <span class="co"># Display time</span></a></code></pre></div>
+<pre><code>## Time difference of 6.494653 mins</code></pre>
+</div>
+<div id="svm-poly-model-summary" class="section level3">
+<h3><span class="header-section-number">7.3.2</span> SVM-Poly Model Summary</h3>
+<div class="sourceCode" id="cb114"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb114-1" data-line-number="1">poly_model_obj</a></code></pre></div>
+<pre><code>## Support Vector Machines with Polynomial Kernel 
+## 
+## 1873 samples
+##   20 predictor
+##    2 classes: &#39;0&#39;, &#39;1&#39; 
+## 
+## No pre-processing
+## Resampling: Cross-Validated (10 fold, repeated 5 times) 
+## Summary of sample sizes: 1685, 1686, 1686, 1686, 1686, 1685, ... 
+## Resampling results across tuning parameters:
+## 
+##   degree  scale  C     Accuracy   Kappa    
+##   1       0.001  0.25  0.8927921  0.7837449
+##   1       0.001  0.50  0.8931101  0.7842397
+##   1       0.001  1.00  0.8995164  0.7972922
+##   1       0.010  0.25  0.9069985  0.8125193
+##   1       0.010  0.50  0.9182148  0.8352852
+##   1       0.010  1.00  0.9243031  0.8476521
+##   1       0.100  0.25  0.9266532  0.8524643
+##   1       0.100  0.50  0.9326311  0.8645594
+##   1       0.100  1.00  0.9340187  0.8674061
+##   2       0.001  0.25  0.8935368  0.7851036
+##   2       0.001  0.50  0.8997298  0.7977161
+##   2       0.001  1.00  0.9046473  0.8077461
+##   2       0.010  0.25  0.9208824  0.8406987
+##   2       0.010  0.50  0.9316686  0.8625657
+##   2       0.010  1.00  0.9356167  0.8705585
+##   2       0.100  0.25  0.9672198  0.9342616
+##   2       0.100  0.50  0.9670042  0.9338334
+##   2       0.100  1.00  0.9649755  0.9297728
+##   3       0.001  0.25  0.8969559  0.7920424
+##   3       0.001  0.50  0.9014433  0.8012428
+##   3       0.001  1.00  0.9110610  0.8207620
+##   3       0.010  0.25  0.9339083  0.8670639
+##   3       0.010  0.50  0.9365781  0.8724848
+##   3       0.010  1.00  0.9464057  0.8923335
+##   3       0.100  0.25  0.9688252  0.9375066
+##   3       0.100  0.50  0.9704278  0.9407533
+##   3       0.100  1.00  0.9690403  0.9379858
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final values used for the model were degree = 3, scale = 0.1 and C = 0.5.</code></pre>
+</div>
+<div id="svm-poly-predict-test_set" class="section level3">
+<h3><span class="header-section-number">7.3.3</span> SVM-Poly Predict test_set</h3>
+<div class="sourceCode" id="cb116"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb116-1" data-line-number="1">Predicted_test_vals &lt;-<span class="st"> </span><span class="kw">predict</span>(poly_model_obj, test_set[, <span class="dv">-1</span>])</a>
+<a class="sourceLine" id="cb116-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb116-3" data-line-number="3"><span class="kw">summary</span>(Predicted_test_vals)</a></code></pre></div>
+<pre><code>##   0   1 
+## 246 221</code></pre>
+</div>
+<div id="svm-poly-confusion-matrix" class="section level3">
+<h3><span class="header-section-number">7.3.4</span> SVM-Poly Confusion Matrix</h3>
+<div class="sourceCode" id="cb118"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb118-1" data-line-number="1"><span class="kw">confusionMatrix</span>(Predicted_test_vals, Class_test, <span class="dt">positive =</span> <span class="st">&quot;1&quot;</span>)</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 238   8
+##          1   5 216
+##                                           
+##                Accuracy : 0.9722          
+##                  95% CI : (0.9529, 0.9851)
+##     No Information Rate : 0.5203          
+##     P-Value [Acc &gt; NIR] : &lt;2e-16          
+##                                           
+##                   Kappa : 0.9442          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.5791          
+##                                           
+##             Sensitivity : 0.9643          
+##             Specificity : 0.9794          
+##          Pos Pred Value : 0.9774          
+##          Neg Pred Value : 0.9675          
+##              Prevalence : 0.4797          
+##          Detection Rate : 0.4625          
+##    Detection Prevalence : 0.4732          
+##       Balanced Accuracy : 0.9719          
+##                                           
+##        &#39;Positive&#39; Class : 1               
+## </code></pre>
+</div>
+<div id="svm-poly-obtain-false-positives-false-negatives" class="section level3">
+<h3><span class="header-section-number">7.3.5</span> SVM-Poly Obtain False Positives &amp; False Negatives</h3>
+<div class="sourceCode" id="cb120"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb120-1" data-line-number="1">fp_fn_svm_poly &lt;-<span class="st"> </span>poly_model_obj <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pluck</span>(<span class="st">&quot;pred&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(obs <span class="op">!=</span><span class="st"> </span>pred)</a>
+<a class="sourceLine" id="cb120-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb120-3" data-line-number="3"><span class="co"># Write CSV in R</span></a>
+<a class="sourceLine" id="cb120-4" data-line-number="4"><span class="kw">write.table</span>(fp_fn_svm_poly, </a>
+<a class="sourceLine" id="cb120-5" data-line-number="5">            <span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/fp_fn_svm_poly.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb120-6" data-line-number="6">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb120-7" data-line-number="7">            <span class="dt">na =</span> <span class="st">&quot;&quot;</span>, </a>
+<a class="sourceLine" id="cb120-8" data-line-number="8">            <span class="dt">col.names =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb120-9" data-line-number="9">            <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb120-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb120-11" data-line-number="11"><span class="kw">nrow</span>(fp_fn_svm_poly)</a></code></pre></div>
+<pre><code>## [1] 277</code></pre>
+<div class="sourceCode" id="cb122"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb122-1" data-line-number="1"><span class="kw">head</span>(fp_fn_svm_poly)</a></code></pre></div>
+<pre><code>##   degree scale   C pred obs rowIndex    Resample
+## 1      3   0.1 0.5    0   1     1576 Fold01.Rep2
+## 2      3   0.1 0.5    1   0      182 Fold09.Rep4
+## 3      3   0.1 0.5    1   0      445 Fold06.Rep5
+## 4      3   0.1 0.5    1   0      531 Fold09.Rep4
+## 5      3   0.1 0.5    1   0      115 Fold05.Rep2
+## 6      3   0.1 0.5    0   1     1780 Fold02.Rep2</code></pre>
+</div>
+</div>
+<div id="svm-rbf-model" class="section level2">
+<h2><span class="header-section-number">7.4</span> SVM-RBF Model</h2>
+<p>Import data &amp; data handling</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb124-1" data-line-number="1">c_m_TRANSFORMED &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb124-2" data-line-number="2">                            <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">Class =</span> <span class="kw">col_factor</span>(<span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;0&quot;</span>,<span class="st">&quot;1&quot;</span>)), </a>
+<a class="sourceLine" id="cb124-3" data-line-number="3">                                             <span class="dt">PID =</span> <span class="kw">col_skip</span>(), <span class="dt">TotalAA =</span> <span class="kw">col_skip</span>()))</a>
+<a class="sourceLine" id="cb124-4" data-line-number="4"><span class="co">#View(c_m_TRANSFORMED)</span></a></code></pre></div>
+<p>Partition data into training and testing sets</p>
+<div class="sourceCode" id="cb125"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb125-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb125-2" data-line-number="2">index &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_TRANSFORMED<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb125-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb125-4" data-line-number="4">training_set &lt;-<span class="st"> </span>c_m_TRANSFORMED[ index,]</a>
+<a class="sourceLine" id="cb125-5" data-line-number="5">test_set     &lt;-<span class="st"> </span>c_m_TRANSFORMED[<span class="op">-</span>index,]</a>
+<a class="sourceLine" id="cb125-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb125-7" data-line-number="7">Class_test &lt;-<span class="st"> </span><span class="kw">as.factor</span>(test_set<span class="op">$</span>Class)</a></code></pre></div>
+<div id="svm-rbf-training" class="section level3">
+<h3><span class="header-section-number">7.4.1</span> SVM-RBF Training</h3>
+<div class="sourceCode" id="cb126"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb126-1" data-line-number="1"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb126-2" data-line-number="2">start_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>() <span class="co"># Start timer</span></a>
+<a class="sourceLine" id="cb126-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb126-4" data-line-number="4"><span class="co"># Create tuneGrid: Cost</span></a>
+<a class="sourceLine" id="cb126-5" data-line-number="5">tune.Grid =<span class="st"> </span><span class="kw">data.frame</span>(<span class="kw">expand.grid</span>(<span class="dt">C =</span> <span class="dv">2</span><span class="op">^</span>(<span class="kw">seq</span>(<span class="op">-</span><span class="dv">5</span>, <span class="dv">15</span>, <span class="dv">2</span>))))</a>
+<a class="sourceLine" id="cb126-6" data-line-number="6">                                          </a>
+<a class="sourceLine" id="cb126-7" data-line-number="7"><span class="co"># Create: 10X fold CV repeated 5X</span></a>
+<a class="sourceLine" id="cb126-8" data-line-number="8">tcontrol &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>,</a>
+<a class="sourceLine" id="cb126-9" data-line-number="9">                         <span class="dt">number =</span> <span class="dv">10</span>,</a>
+<a class="sourceLine" id="cb126-10" data-line-number="10">                         <span class="dt">repeats =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb126-11" data-line-number="11">                         <span class="dt">savePredictions =</span> <span class="st">&quot;final&quot;</span>) <span class="co"># Save predictions</span></a>
+<a class="sourceLine" id="cb126-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb126-13" data-line-number="13">rbf_model_obj &lt;-<span class="st"> </span><span class="kw">train</span>(Class <span class="op">~</span><span class="st"> </span>.,</a>
+<a class="sourceLine" id="cb126-14" data-line-number="14">                   <span class="dt">data =</span> training_set,</a>
+<a class="sourceLine" id="cb126-15" data-line-number="15">                   <span class="dt">method =</span> <span class="st">&quot;svmRadialCost&quot;</span>,</a>
+<a class="sourceLine" id="cb126-16" data-line-number="16">                   <span class="dt">tuneGrid =</span> tune.Grid,</a>
+<a class="sourceLine" id="cb126-17" data-line-number="17">                   <span class="dt">trControl=</span> tcontrol)</a>
+<a class="sourceLine" id="cb126-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb126-19" data-line-number="19">end_time &lt;-<span class="st"> </span><span class="kw">Sys.time</span>()   <span class="co"># End timer</span></a>
+<a class="sourceLine" id="cb126-20" data-line-number="20">end_time <span class="op">-</span><span class="st"> </span>start_time    <span class="co"># Display time</span></a></code></pre></div>
+<pre><code>## Time difference of 2.423723 mins</code></pre>
+</div>
+<div id="svm-rbf-model-summary" class="section level3">
+<h3><span class="header-section-number">7.4.2</span> SVM-RBF Model Summary</h3>
+<div class="sourceCode" id="cb128"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb128-1" data-line-number="1">rbf_model_obj</a></code></pre></div>
+<pre><code>## Support Vector Machines with Radial Basis Function Kernel 
+## 
+## 1873 samples
+##   20 predictor
+##    2 classes: &#39;0&#39;, &#39;1&#39; 
+## 
+## No pre-processing
+## Resampling: Cross-Validated (10 fold, repeated 5 times) 
+## Summary of sample sizes: 1685, 1686, 1686, 1686, 1686, 1685, ... 
+## Resampling results across tuning parameters:
+## 
+##   C           Accuracy   Kappa    
+##   3.1250e-02  0.9144721  0.8278653
+##   1.2500e-01  0.9511031  0.9018251
+##   5.0000e-01  0.9704221  0.9406791
+##   2.0000e+00  0.9699937  0.9398269
+##   8.0000e+00  0.9740562  0.9480186
+##   3.2000e+01  0.9720247  0.9439679
+##   1.2800e+02  0.9711714  0.9422795
+##   5.1200e+02  0.9715980  0.9431324
+##   2.0480e+03  0.9714916  0.9429197
+##   8.1920e+03  0.9715980  0.9431330
+##   3.2768e+04  0.9714916  0.9429209
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final value used for the model was C = 8.</code></pre>
+</div>
+<div id="svm-rbf-predict-test_set" class="section level3">
+<h3><span class="header-section-number">7.4.3</span> SVM-RBF Predict test_set</h3>
+<div class="sourceCode" id="cb130"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb130-1" data-line-number="1">Predicted_test_vals &lt;-<span class="st"> </span><span class="kw">predict</span>(rbf_model_obj, test_set[, <span class="dv">-1</span>])</a>
+<a class="sourceLine" id="cb130-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb130-3" data-line-number="3"><span class="kw">summary</span>(Predicted_test_vals)</a></code></pre></div>
+<pre><code>##   0   1 
+## 245 222</code></pre>
+</div>
+<div id="svm-rbf-confusion-matrix" class="section level3">
+<h3><span class="header-section-number">7.4.4</span> SVM-RBF Confusion Matrix</h3>
+<div class="sourceCode" id="cb132"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb132-1" data-line-number="1"><span class="kw">confusionMatrix</span>(Predicted_test_vals, Class_test, <span class="dt">positive =</span> <span class="st">&quot;1&quot;</span>)</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 238   7
+##          1   5 217
+##                                           
+##                Accuracy : 0.9743          
+##                  95% CI : (0.9555, 0.9867)
+##     No Information Rate : 0.5203          
+##     P-Value [Acc &gt; NIR] : &lt;2e-16          
+##                                           
+##                   Kappa : 0.9485          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.7728          
+##                                           
+##             Sensitivity : 0.9688          
+##             Specificity : 0.9794          
+##          Pos Pred Value : 0.9775          
+##          Neg Pred Value : 0.9714          
+##              Prevalence : 0.4797          
+##          Detection Rate : 0.4647          
+##    Detection Prevalence : 0.4754          
+##       Balanced Accuracy : 0.9741          
+##                                           
+##        &#39;Positive&#39; Class : 1               
+## </code></pre>
+</div>
+<div id="svm-rbf-obtain-false-positives-false-negatives" class="section level3">
+<h3><span class="header-section-number">7.4.5</span> SVM-RBF Obtain False Positives &amp; False Negatives</h3>
+<div class="sourceCode" id="cb134"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb134-1" data-line-number="1">fp_fn_svmRadialCost &lt;-<span class="st"> </span>rbf_model_obj <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pluck</span>(<span class="st">&quot;pred&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(obs <span class="op">!=</span><span class="st"> </span>pred)</a>
+<a class="sourceLine" id="cb134-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb134-3" data-line-number="3"><span class="co"># Write CSV in R</span></a>
+<a class="sourceLine" id="cb134-4" data-line-number="4"><span class="kw">write.table</span>(fp_fn_svmRadialCost, </a>
+<a class="sourceLine" id="cb134-5" data-line-number="5">            <span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/fp_fn_svmRbf.csv&quot;</span>, </a>
+<a class="sourceLine" id="cb134-6" data-line-number="6">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>, </a>
+<a class="sourceLine" id="cb134-7" data-line-number="7">            <span class="dt">na =</span> <span class="st">&quot;&quot;</span>, </a>
+<a class="sourceLine" id="cb134-8" data-line-number="8">            <span class="dt">col.names =</span> <span class="ot">TRUE</span>, </a>
+<a class="sourceLine" id="cb134-9" data-line-number="9">            <span class="dt">sep=</span><span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb134-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb134-11" data-line-number="11"><span class="kw">nrow</span>(fp_fn_svmRadialCost)</a></code></pre></div>
+<pre><code>## [1] 243</code></pre>
+<div class="sourceCode" id="cb136"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb136-1" data-line-number="1"><span class="kw">head</span>(fp_fn_svmRadialCost)</a></code></pre></div>
+<pre><code>##   C pred obs rowIndex    Resample
+## 1 8    1   0      522 Fold01.Rep1
+## 2 8    0   1     1579 Fold07.Rep1
+## 3 8    0   1     1585 Fold02.Rep1
+## 4 8    0   1     1587 Fold07.Rep1
+## 5 8    1   0      141 Fold07.Rep3
+## 6 8    1   0       94 Fold03.Rep1</code></pre>
+</div>
+</div>
+<div id="svm-conclusion" class="section level2">
+<h2><span class="header-section-number">7.5</span> SVM Conclusion</h2>
+<p>SVM has shown that it is very versatile. Using the same amino acid dataset and by changing the type of function used to build the decision boundary one can get results in the high 90%. Even the linear SVM with no kernel transformation is able to find a hyperplane that with no more tuning than choosing a large enough range for the cost function.</p>
+<p>It was seen that using a range for the cost starting at <span class="math inline">\(2^5\)</span> and progressing toward <span class="math inline">\(2^{-15}\)</span>, stepping by one log, a wide range can be tested. Once the cost function range is narrowed a finer tuning can be carried out using one-quarter or one-half log steps. This further narrowing of the cost function may not need to be done since the one log steps seems anecdotally sufficient. This is an easy and powerful tool.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="71">
+<li id="fn71"><p>Patrick Henry Winston, 6.034 Artificial Intelligence, Fall 2010, Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="http://ocw.mit.edu/6-034F10" class="uri">http://ocw.mit.edu/6-034F10</a><a href="support-vector-machines-for-binary-classification.html#fnref71" class="footnote-back">↩</a></p></li>
+<li id="fn72"><p>Nika Haghtalab &amp; Thorsten Joachims, CS4780/5780 - Machine Learning for Intelligent Systems, Fall 2019, Cornell University, Department of Computer Science, <a href="https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote09.html" class="uri">https://www.cs.cornell.edu/courses/cs4780/2018fa/lectures/lecturenote09.html</a><a href="support-vector-machines-for-binary-classification.html#fnref72" class="footnote-back">↩</a></p></li>
+<li id="fn73"><p>Trevor Hastie, Robert Tibshirani, Jerome Friedman, The Elements of Statistical Learning; Data Mining, Inference, and Prediction, <a href="https://web.stanford.edu/~hastie/ElemStatLearn/" class="uri">https://web.stanford.edu/~hastie/ElemStatLearn/</a>, 2017<a href="support-vector-machines-for-binary-classification.html#fnref73" class="footnote-back">↩</a></p></li>
+<li id="fn74"><p>Patrick Winston, 6.034 Artificial Intelligence, Fall 2010, Massachusetts Institute of Technology: MIT OpenCourseWare, <a href="http://ocw.mit.edu/6-034F10" class="uri">http://ocw.mit.edu/6-034F10</a><a href="support-vector-machines-for-binary-classification.html#fnref74" class="footnote-back">↩</a></p></li>
+<li id="fn75"><p>C. Cortes, V. Vapnik, Machine Learning, 20, 273-297, 1995<a href="support-vector-machines-for-binary-classification.html#fnref75" class="footnote-back">↩</a></p></li>
+<li id="fn76"><p>C. Cortes, V. Vapnik, Machine Learning, 20, 273-297, 1995<a href="support-vector-machines-for-binary-classification.html#fnref76" class="footnote-back">↩</a></p></li>
+<li id="fn77"><p>Allison Horst, University of California, Santa Barbara, <a href="https://github.com/allisonhorst/stats-illustrations" class="uri">https://github.com/allisonhorst/stats-illustrations</a><a href="support-vector-machines-for-binary-classification.html#fnref77" class="footnote-back">↩</a></p></li>
+<li id="fn78"><p>Trevor Hastie, Robert Tibshirani, Jerome Friedman, The Elements of Statistical Learning; Data Mining, Inference, and Prediction, <a href="https://web.stanford.edu/~hastie/ElemStatLearn/" class="uri">https://web.stanford.edu/~hastie/ElemStatLearn/</a>, 2017<a href="support-vector-machines-for-binary-classification.html#fnref78" class="footnote-back">↩</a></p></li>
+<li id="fn79"><p>C.Cortes, V.Vapnik, Machine Learning, 20, 273-297, 1995<a href="support-vector-machines-for-binary-classification.html#fnref79" class="footnote-back">↩</a></p></li>
+<li id="fn80"><p>V. Vapnik and A. Lerner, 1963. Pattern recognition using generalized portrait method. Automation and Remote Control, 24, 774–780<a href="support-vector-machines-for-binary-classification.html#fnref80" class="footnote-back">↩</a></p></li>
+<li id="fn81"><p>(<a href="https://data-flair.training/blogs/svm-kernel-functions/" class="uri">https://data-flair.training/blogs/svm-kernel-functions/</a>)<a href="support-vector-machines-for-binary-classification.html#fnref81" class="footnote-back">↩</a></p></li>
+<li id="fn82"><p>Vladimir Vapnik &amp; Corinna Cortes, Machine Learning, 20, 273-297, 1995<a href="support-vector-machines-for-binary-classification.html#fnref82" class="footnote-back">↩</a></p></li>
+<li id="fn83"><p>Christopher Burges, Tutorial on Support Vector Machines for Pattern Recognition, D.M. &amp; Knowl. Dis., 2, 121-167, 1998<a href="support-vector-machines-for-binary-classification.html#fnref83" class="footnote-back">↩</a></p></li>
+<li id="fn84"><p>Vladimir Vapnik &amp; Corinna Cortes, Machine Learning, 20, 273-297, 1995<a href="support-vector-machines-for-binary-classification.html#fnref84" class="footnote-back">↩</a></p></li>
+<li id="fn85"><p>Webster’s third new international dictionary, ISBN 0-87779-201-1, 1986<a href="support-vector-machines-for-binary-classification.html#fnref85" class="footnote-back">↩</a></p></li>
+<li id="fn86"><p>Kevin P. Murphy, Machine Learning, A Probabilistic Perspective, MIT Press, ISBN 978-0-262-01802-9, 2012<a href="support-vector-machines-for-binary-classification.html#fnref86" class="footnote-back">↩</a></p></li>
+<li id="fn87"><p>Xindong Wu, et al., Top 10 algorithms in data mining, Knowl Inf Syst, 14:1–37, <a href="DOI:10.1007/s10115-007-0114-2" class="uri">DOI:10.1007/s10115-007-0114-2</a>, 2008<a href="support-vector-machines-for-binary-classification.html#fnref87" class="footnote-back">↩</a></p></li>
+<li id="fn88"><p>Xindong Wu, et al., Top 10 algorithms in data mining, Knowl Inf Syst, 14:1–37, <a href="DOI:10.1007/s10115-007-0114-2" class="uri">DOI:10.1007/s10115-007-0114-2</a>, 2008<a href="support-vector-machines-for-binary-classification.html#fnref88" class="footnote-back">↩</a></p></li>
+<li id="fn89"><p>Alexandros Karatzoglou, David Meyer, Kurt Hornik, ‘Support Vector Machines in R’, Journal of Statistical Software, April 2006, Volume 15, Issue 9.<a href="support-vector-machines-for-binary-classification.html#fnref89" class="footnote-back">↩</a></p></li>
+<li id="fn90"><p>Stuart Russell and Peter Norvig, Artificial Intelligence, A Modern Approach, Third Edition, Pearson, ISBN-13: 978-0-13-604259-4, 2010<a href="support-vector-machines-for-binary-classification.html#fnref90" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="neural-networks-for-binary-classification.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="results.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
