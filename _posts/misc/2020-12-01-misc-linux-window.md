@@ -1,5 +1,6 @@
 ---
 title: "Find Window Position in Linux"
+date: 2019-01-31
 tags: Linux Bash
 ----
 
@@ -9,7 +10,9 @@ mcc29th November 2021 at 9:09pm
 
 In Bash
 
-`xwininfo`
+```
+xwininfo
+```
 
 xwininfo: Please select the window about which you would like information by clicking the mouse in that window.
 

@@ -1,7 +1,7 @@
 ---
 title:  "Looking For Topic & Ideas"
 date:   2022-03-10 13:30:00
-categories: ideas
+categories: Ideas
 ---
 
 ## Need Inspiration & Ideas

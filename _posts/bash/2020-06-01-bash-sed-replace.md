@@ -1,5 +1,6 @@
 ---
-title: "Using Sed to Replace"
+title: "Bash - Using Sed to Replace"
+date: 2019-01-31
 tags: Bash Sed
 ---
 

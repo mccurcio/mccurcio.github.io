@@ -1,10 +1,12 @@
 ---
 title: "Python - Strings"
 date:  2021-12-17 21:00:00
-tags: Python Strings re
+tags: Python 
 ---
 
 ### Convert repeated spaces to one space: 
+
+#### Regex
 
 - The snippet below clears out the repeated spaces in a text and replaces it with single space. 
 

@@ -1,7 +1,7 @@
 ---
 title: "R - Probability Functions"
 date:  2021-12-17 21:00:00
-tags: R Probability-Functions
+tags: R Statistics
 ---
 
 | Prefix                       |
