@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Articles
+title: Posts
 permalink: /archive/
 ---
 # Posts Archive

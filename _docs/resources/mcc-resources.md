@@ -1,8 +1,7 @@
 ---
 title:  "Data Science Resources"
 date:   2022-03-10 17:30:00
-categories: ideas
-tags: ideas
+tags: Data_
 ---
 
 

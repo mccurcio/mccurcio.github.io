@@ -7,13 +7,14 @@ permalink: /about/
 
 Welcome,
 
-I am Scientist, Educator, Application and Sales Specialist.   
+I am a Scientist, an Educator, an Application and a Sales Specialist.   
 
-I am inquistive and use the tools of Statistics, Data Science, R, and Python.  
+I am inquistive and now use the tools of Statistics, Data Science, R, and Python.  
 
-Find my work in the Posts and Documentation sections.
+Find a portion of my work in the Posts and Documentation sections. I am in the process of migrating my material.
 
 
-## Contact me:
+## Have a Question?
 
-- [Have a Question?]({{ site.github_user }}/{{ site.github_repo }})
+- <a href="mailto:matt.curcio.ri@gmail.com?subject=Greetings from a new friend">Send An Email</a>
+

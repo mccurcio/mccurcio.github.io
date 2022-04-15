@@ -23,4 +23,4 @@ For site changes, see the <a href="https://github.com/{{ site.github_user }}/{{ 
    <hr>
 {% endfor %}
 
-Want to see more? See the <a href="{{ site.baseurl }}/archive/">News Archive</a>.
+Want to see more? See the <a href="{{ site.baseurl }}/archive/">Posts Archive</a>.
