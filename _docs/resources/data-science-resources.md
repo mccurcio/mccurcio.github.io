@@ -14,9 +14,11 @@ tags: Data_Science
   <h3 align="center">Data Science Practitioner's Reading List</h3>
 </p>
 
-**Greetings**,  
-<br>
-This list includes material that I have *used and would recommend*. Whenever possible, I prefer to list **FREE** material.<br><br>
+**Greetings**,   
+This list includes material that I have *used and would recommend*.   
+Whenever possible, I prefer to list **FREE** material.     
+Enjoy
+
 *Matthew Curcio*
 
 ---
@@ -43,7 +45,7 @@ This list includes material that I have *used and would recommend*. Whenever pos
 
 - :star: [Using R for Data Management, Statistical Analysis, and Graphics](https://www.amazon.com/Using-Management-Statistical-Analysis-Graphics/dp/1439827559), by N. Horton, et al
 
-- [Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
+
 
 ## Advanced Applied Math
 
@@ -243,4 +245,26 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 ## Online Courses:
 
 - :star: [Python for Everybody, 'Py4E'](https://www.freecodecamp.org/) I enjoy Dr. Chuck's youtube lectures. This is a 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), FREE Course follows his FREE Book Online 📗
+
+
+
+
+
+<!-- Superflous links, books, etc -->
+
+<!--
+
+[Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
+
+
+
+
+
+
+-->
+
+
+
+
+
 

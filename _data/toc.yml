@@ -8,10 +8,9 @@
   links:
     - title: "Data Science Resources"
       url: "docs/resources/data-science-resources.md"
-    - links: 
-    - title: "Possible paper topics"
+    - title: "Possible Paper Topics"
       url: "docs/resources/research-topics"
-    - title: Presentations
+    - title: "Talks & Presentations"
       url: "docs/resources/presentations.md"
 
 
