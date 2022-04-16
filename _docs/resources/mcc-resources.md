@@ -120,6 +120,8 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
   
 - [Cosmicpython](https://www.cosmicpython.com/#buy_the_book)
 
+- https://jupyter4edu.github.io/jupyter-edu-book/  *FREE* Book Online 📗
+
 ## Bash :goat:
 
 - :star: [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
@@ -127,6 +129,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 ## SQL - Under Construction
 
 - [PostgreSQL Notes for Professionals](https://goalkicker.com/) :Free: Goalkicker has many books. Although I would call them reference type material.
+
 - SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
 
   
