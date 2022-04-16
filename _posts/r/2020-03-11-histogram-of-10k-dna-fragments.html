@@ -1,10 +1,11 @@
 
 ---
 
-<p>This simulation produces a DNA fragment 1000 bases long. It then
-calculates the Chi square value for each new fragment to produce X2 /
-c. It does this simulation 10k times and plots a histogram of the X2 / c
+<p>This simulation produces a DNA fragments of 1000 bases long. It then
+calculates the Chi-square value for each new fragment to produce X^2 /
+c. It does this simulation 10k times and plots a histogram of the X^2 / c
 values.</p>
+
 <pre class="r"><code>GCContent &lt;- function() {
     # Produce 1000 bases of DNA
     x = c(&quot;A&quot;, &quot;C&quot;, &quot;T&quot;, &quot;G&quot;)

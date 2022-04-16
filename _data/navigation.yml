@@ -1,6 +1,6 @@
-- title: About
+- title: "About Matt"
   url: about
 - title: Documentation
   url: docs
-- title: Posts
-  url: archive
+- title: Presentations
+  url: "docs/resources/mcc-presentations"

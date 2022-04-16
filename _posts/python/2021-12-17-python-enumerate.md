@@ -8,14 +8,15 @@ tags: Python Enumerate
 
 Instead of doing:
 ```
+list = ["a", "b", "c"]
 i = 0 
-for item in iterable: 
+for item in list: 
     print i, item 
     i += 1
 ```
 
-**Do This**:
+**Do This:**
 ```
-for i, item in enumerate(iterable):
+for i, item in enumerate(list):
     print i, item
 ```

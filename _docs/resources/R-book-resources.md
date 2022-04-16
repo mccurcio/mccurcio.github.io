@@ -4,7 +4,7 @@ date:   2022-04-09 18:30:00
 tags: Books Resources R
 ---
 
-Free **Online** Books
+### Free R Books & Material
 
 - [R4ds](https://r4ds.had.co.nz/)
 - [Advanced_r](https://adv-r.hadley.nz/)

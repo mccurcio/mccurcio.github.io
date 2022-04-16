@@ -1,7 +1,7 @@
 ---
 title:  "Data Science Resources"
 date:   2022-03-10 17:30:00
-tags: Data_
+tags: Data_Science
 ---
 
 
@@ -14,13 +14,14 @@ tags: Data_
   <h3 align="center">Data Science Practitioner's Reading List</h3>
 </p>
 
-**Greetings**,<br>
+**Greetings**,  
+<br>
 This list includes material that I have *used and would recommend*. Whenever possible, I prefer to list **FREE** material.<br><br>
 *Matthew Curcio*
 
 ---
 
-## Great Intro Materials.
+## Great Intro Materials
 
 - [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
 

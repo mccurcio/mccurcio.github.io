@@ -1,16 +1,17 @@
-- title: About Me
-  url: "about"
-- title: Posts
+- title: "Posts by date"
   url: "archive"
+- title: "Posts by tags"
+  url: "tags"
 
 - title: Documentation
   url: docs
   links:
-    - title: Resources
-      url: "docs/resources/mcc-resources"
+    - title: "Data Science Resources"
+      url: "docs/resources/data-science-resources.md"
     - links: 
-    - title: Ideas
+    - title: "Possible paper topics"
       url: "docs/resources/research-topics"
+    - title: Presentations
+      url: "docs/resources/presentations.md"
 
-- title: Tags
-  url: "tags"
+

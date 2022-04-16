@@ -14,11 +14,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Matthew Curcio
-email: matt.curcio.ri@gmail.com
-author: Homo-Habilis-Junior
-description: > # this means to ignore newlines until "baseurl:"
-  See one, Do one, Write one!
+title: "Matthew Curcio"
+email: "matt.curcio.ri@gmail.com"
+author: "Homo-Habilis-Junior"
+description: > 
+ "See one, Do one, Write one!"
 
 # Add your baseurl here (your repository) but DO NOT CHANGE THE LINE NUMBER without editing .circleci/circle_urls.sh
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -65,7 +65,7 @@ fixedNav: 'true' # true or false
 
 permalink: /:year/:title/
 markdown: kramdown
-exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
+exclude: [_site, CHANGELOG.md, LICENSE, COPYRIGHT, vendor]
 
 # Collections
 collections:
