@@ -38,7 +38,7 @@ github_branch: "master"
 # dockerhub: x
 
 # Should there be feedback buttons at the bottom of pages?
-feedback: false
+feedback: true
 
 # Link to a privacy policy in footer, uncomment and define if wanted
 # privacy: https://domain.com/privacy
