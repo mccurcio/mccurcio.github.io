@@ -98,6 +98,11 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Text Mining with R](https://www.tidytextmining.com/), *FREE* Book Online* 📗
 
+- [Improving your R Skills](https://www.computerworld.com/article/2497464/top-r-language-resources-to-improve-your-data-skills.html)
+
+- Swirl is an excellent beginner tool for learning R: (https://swirlstats.com/)
+
+
 ## Python :snake:
   
 - :star: I enjoy Dr. Chuck's youtube lectures [Coursera Python for Everybody](https://www.coursera.org/specializations/python) 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), *FREE* Book Online 📗
@@ -116,6 +121,8 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
   
 - [Cosmicpython](https://www.cosmicpython.com/#buy_the_book)
 
+- https://jupyter4edu.github.io/jupyter-edu-book/  *FREE* Book Online 📗
+
 ## Bash :goat:
 
 - :star: [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
@@ -123,6 +130,9 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 ## SQL - Under Construction
 
 - [PostgreSQL Notes for Professionals](https://goalkicker.com/) :Free: Goalkicker has many books. Although I would call them reference type material.
+
+- SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
+
   
 ## Markdown :arrow_down_small:
 
@@ -145,6 +155,8 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - [Introduction to Data Science: Data Analysis and Prediction Algorithms with R by Rafael Irizarry](https://rafalab.github.io/dsbook/), *FREE*
 
 - :star: A [Course in Machine Learning](http://ciml.info/dl/v0_9/ciml-v0_9-all.pdf) by [Hal Daumé III](https://users.umiacs.umd.edu/~hal/) This is a **great illustrative book** for beginners.  *FREE*
+
+- Interpretable Machine Learning: A Guide for Making Black Box Models Explainable: (https://christophm.github.io/interpretable-ml-book/) *FREE*
 
 - :star: Machine Learning, Tom M. Mitchell, ISBN: 0070428077, Very Good
 
