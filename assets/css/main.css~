@@ -638,7 +638,7 @@ mark,
 
 .figure-caption {
     font-size: 90%;
-    color: #555
+    color: #888
 }
 
 code {

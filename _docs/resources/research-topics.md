@@ -1,7 +1,7 @@
 ---
 title:  "Looking For Topic & Ideas"
 date:   2022-03-10 13:30:00
-categories: Ideas
+tags: Ideas
 ---
 
 ## Need Inspiration & Ideas
@@ -22,6 +22,8 @@ categories: Ideas
 1. willing to do some homework to pull together demos and/or visuals
 
 
+---
+
 ## Topic Ideas
 
 - How to open source contributions
@@ -36,7 +38,6 @@ categories: Ideas
 - Python - Setting up your enviroment (versions for window, linux or that other OS)
   - working with Conda or 
   - venv
-- Building a simple game (Hangman, tic-tac-toe, or something similar)
 - Documenting your work - the PEP-8 way
 - Exploring `<insert your favorite library>`
 - Git, github, and source control (how to make your repo look professional)
