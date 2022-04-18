@@ -1,7 +1,7 @@
 ---
 title:  "Data Science Resources"
 date:   2022-03-10 17:30:00
-tags: Data_
+tags: Data_Science
 ---
 
 
@@ -14,13 +14,16 @@ tags: Data_
   <h3 align="center">Data Science Practitioner's Reading List</h3>
 </p>
 
-**Greetings**,<br>
-This list includes material that I have *used and would recommend*. Whenever possible, I prefer to list **FREE** material.<br><br>
+**Greetings**,   
+This list includes material that I have *used and would recommend*.   
+Whenever possible, I prefer to list **FREE** material.     
+Enjoy
+
 *Matthew Curcio*
 
 ---
 
-## Great Intro Materials.
+## Great Intro Materials
 
 - [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
 
@@ -42,7 +45,7 @@ This list includes material that I have *used and would recommend*. Whenever pos
 
 - :star: [Using R for Data Management, Statistical Analysis, and Graphics](https://www.amazon.com/Using-Management-Statistical-Analysis-Graphics/dp/1439827559), by N. Horton, et al
 
-- [Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
+
 
 ## Advanced Applied Math
 
@@ -97,6 +100,11 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Text Mining with R](https://www.tidytextmining.com/), *FREE* Book Online* 📗
 
+- [Improving your R Skills](https://www.computerworld.com/article/2497464/top-r-language-resources-to-improve-your-data-skills.html)
+
+- Swirl is an excellent beginner tool for learning R: (https://swirlstats.com/)
+
+
 ## Python :snake:
   
 - :star: I enjoy Dr. Chuck's youtube lectures [Coursera Python for Everybody](https://www.coursera.org/specializations/python) 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), *FREE* Book Online 📗
@@ -115,6 +123,8 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
   
 - [Cosmicpython](https://www.cosmicpython.com/#buy_the_book)
 
+- https://jupyter4edu.github.io/jupyter-edu-book/  *FREE* Book Online 📗
+
 ## Bash :goat:
 
 - :star: [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
@@ -122,6 +132,9 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 ## SQL - Under Construction
 
 - [PostgreSQL Notes for Professionals](https://goalkicker.com/) :Free: Goalkicker has many books. Although I would call them reference type material.
+
+- SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
+
   
 ## Markdown :arrow_down_small:
 
@@ -144,6 +157,8 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - [Introduction to Data Science: Data Analysis and Prediction Algorithms with R by Rafael Irizarry](https://rafalab.github.io/dsbook/), *FREE*
 
 - :star: A [Course in Machine Learning](http://ciml.info/dl/v0_9/ciml-v0_9-all.pdf) by [Hal Daumé III](https://users.umiacs.umd.edu/~hal/) This is a **great illustrative book** for beginners.  *FREE*
+
+- Interpretable Machine Learning: A Guide for Making Black Box Models Explainable: (https://christophm.github.io/interpretable-ml-book/) *FREE*
 
 - :star: Machine Learning, Tom M. Mitchell, ISBN: 0070428077, Very Good
 
@@ -230,4 +245,26 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 ## Online Courses:
 
 - :star: [Python for Everybody, 'Py4E'](https://www.freecodecamp.org/) I enjoy Dr. Chuck's youtube lectures. This is a 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), FREE Course follows his FREE Book Online 📗
+
+
+
+
+
+<!-- Superflous links, books, etc -->
+
+<!--
+
+[Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
+
+
+
+
+
+
+-->
+
+
+
+
+
 

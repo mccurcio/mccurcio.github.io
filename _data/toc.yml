@@ -1,15 +1,16 @@
 - title: "Posts by date"
   url: "archive"
-
-- title: "Posts by tag"
+- title: "Posts by tags"
   url: "tags"
-
+  
 - title: Documentation
   url: docs
   links:
-    - title: Resources
-      url: "docs/resources/mcc-resources"
-    - links: 
-    - title: Ideas
+    - title: "Data Science Resources"
+      url: "docs/resources/data-science-resources.md"
+    - title: "Possible Paper Topics"
       url: "docs/resources/research-topics"
+    - title: "Talks & Presentations"
+      url: "docs/resources/presentations.md"
+
 
