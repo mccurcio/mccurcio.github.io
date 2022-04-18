@@ -15,7 +15,7 @@ Welcome,
 
 Find a portion of my work in the Posts and Documentation sections. 
 
-I am in the process of migrating my materialfrom several locations, one of which is [Matt's GitHub](https://github.com/mccurcio).
+I am in the process of migrating and reorganizing my material from several locations.
 
 Feel free to:
 

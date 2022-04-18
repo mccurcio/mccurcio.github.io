@@ -1,13 +1,16 @@
 ## https://mccurcio.github.io
 
-### 1 Adding posts/news pages
+
+This site uses the [Jekyll-Ruby](https://jekyllrb.com/) static site generator.
+
+### 1. Adding posts/news pages
     
 - To add pages, save to the **_posts** directory.  
 - Prepend **yyyy-mm-dd** followed by your name/title.   
  
 **2022-03-10-title.md**
 
-### 2 Add YML-Frontmatter YML to page
+### 2. Add YML-Frontmatter YML to page
 
 ```yml
 ---
@@ -21,12 +24,12 @@ badges:
 ---
 ```    
  
-#### 3.4 Badges
+### 3. Badges
 
 For news posts, you are able to tag the post with a "warning" or "alert." 
 Therefore you may put badges in the Frontmatter section.
   
-#### 3.5 Buttons with the tne message text
+### 4. Buttons with the tne message text
 
 Here is a code basic example for buttons, where you may want to vary the `.btn-<tag>` to get different classes.
 
@@ -39,7 +42,7 @@ Here is a code basic example for buttons, where you may want to vary the `.btn-<
 <button class="btn btn-warning">.btn-warning</button>
 ```
 
-### 3. Serve your site locally
+### 5. Serve your site locally
 
 - Open **bash shell**:
 
