@@ -1,0 +1,401 @@
+
+<div id="neural-networks-for-binary-classification" class="section level1">
+<h1><span class="header-section-number">6</span> Neural Networks For Binary Classification</h1>
+<blockquote>
+<p>“Machine learning is essentially a form of applied statistics with increased emphasis on the use of computers to statistically estimate complicated functions and a decreased emphasis on proving confidence intervals around these functions”</p>
+<p>– Ian Goodfellow, et al<a href="#fn60" class="footnote-ref" id="fnref60"><sup>60</sup></a></p>
+</blockquote>
+<div id="introduction-3" class="section level2">
+<h2><span class="header-section-number">6.1</span> Introduction</h2>
+<p>If we discuss Neural Networks (NN), we should first consider the system we hope to emulate. Let us start with a simple count of neuronal cells in various organisms along the earth’s phylogenetic tree. We might get a better idea of the type of “computing power” these living creatures possess. See table 6.1.</p>
+<div id="table-6.1-organisms-vs-number-of-neurons-in-each-wikipedia" class="section level4 unnumbered">
+<h4>Table 6.1: Organisms Vs Number of Neurons In Each (<a href="https://en.wikipedia.org/wiki/List_of_animals_by_number_of_neurons">Wikipedia</a>)</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Organism</th>
+<th align="right">Common Name</th>
+<th align="right">Approximate Number of Neurons</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">C. elegans</td>
+<td align="right">roundworm</td>
+<td align="right">302</td>
+</tr>
+<tr class="even">
+<td align="left">Chrysaora fuscescens</td>
+<td align="right">jellyfish</td>
+<td align="right">5,600</td>
+</tr>
+<tr class="odd">
+<td align="left">Apis linnaeus</td>
+<td align="right">honey bee</td>
+<td align="right">960,000</td>
+</tr>
+<tr class="even">
+<td align="left">Mus musculus</td>
+<td align="right">mouse</td>
+<td align="right">71,000,000</td>
+</tr>
+<tr class="odd">
+<td align="left">Felis silvestris</td>
+<td align="right">cat</td>
+<td align="right">760,000,000</td>
+</tr>
+<tr class="even">
+<td align="left">Canis lupus familiaris</td>
+<td align="right">dog</td>
+<td align="right">2,300,000,000</td>
+</tr>
+<tr class="odd">
+<td align="left">Homo sapien sapien</td>
+<td align="right">humans</td>
+<td align="right">100,000,000,000</td>
+</tr>
+</tbody>
+</table>
+<p>This table portrays a high-level overview of the computing power of neuronal clusters and brains produced throughout evolution. However, there is one missing number worth noting. The table above does not describe the connectivity between neurons. The connectivity of neurons varies greatly from lower to higher organisms. For example, some simple animals, such as the roundworm, have only “four to eight separate branches,” <a href="#fn61" class="footnote-ref" id="fnref61"><sup>61</sup></a> per nerve cell. While human neurons may have greater than 10,000 inter-connected synaptic junctions per neuron, thus resulting in a total of approximately 600 trillion synapses per human brain.<a href="#fn62" class="footnote-ref" id="fnref62"><sup>62</sup></a></p>
+<p>Although neurons have differing morphologies, neurons in the human brain are extremely diverse. Indeed, size and shape may not be the definitive way of classifying neurons but instead by what neurotransmitters the cells secrete. “Neurotransmitters can be classified as either excitatory or inhibitory.” <a href="#fn63" class="footnote-ref" id="fnref63"><sup>63</sup></a> Currently the <a href="http://isyslab.info/NeuroPep/home.jsp">NeuroPep</a> database “holds 5949 non-redundant neuropeptide entries originating from 493 organisms belonging to 65 neuropeptide families.” <a href="#fn64" class="footnote-ref" id="fnref64"><sup>64</sup></a></p>
+<p><img src="00-data/10-images/basicneurontypes.jpg" alt="Basic Neuron Types and S.E.M. Image" />
+<a href="#fn65" class="footnote-ref" id="fnref65"><sup>65</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/two.neuron.system.3.png" alt="Two Neuron System (Image From The Public Domain)" />
+<p class="caption">Two Neuron System (Image From The Public Domain)</p>
+</div>
+<p>Given an order of operation via:</p>
+<p><em>Dendrite(s) <span class="math inline">\(\Longrightarrow\)</span> Cell body <span class="math inline">\(\Longrightarrow\)</span> Fibrous Axon <span class="math inline">\(\Longrightarrow\)</span> Synaptic Junction or Synaptic Gap <span class="math inline">\(\Longrightarrow\)</span> Dendrite(s) … Ad infinitum.</em></p>
+<p>However, nature is more subtle and intricate than to have neurons in a series, only blinking on and off, firing or not. NN are often programmed to classify dangerous road objects, as is the case of Tesla cars. The goal of a Tesla auto-piloted car is to use all available sensors to correctly classify all the conceivable circumstances on the road. On the road, a Tesla automobile uses dozens of senors which the computer needs to evaluate and weigh the values of all these sensors to formulate a ‘decision.’ The altitude of the auto, derived from the GPS, may weigh less heavily than the speed of the vehicle or Lidar estimates on how close objects are. However, our goal of safe driving can be thwarted when an artificial intelligence system decides a truck is a sign and does not apply the brakes.<a href="#fn66" class="footnote-ref" id="fnref66"><sup>66</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/nn.black.box.png" alt="Goal of a Tesla Neural Networks is to generate the correct responses for its environment.&quot;" />
+<p class="caption">Goal of a Tesla Neural Networks is to generate the correct responses for its environment.&quot;</p>
+</div>
+</div>
+<div id="the-one-neuron-system" class="section level3">
+<h3><span class="header-section-number">6.1.1</span> The One Neuron System</h3>
+<p>If we investigate a one neuron system, <em>our</em> neuron could be diagrammed in four sections.<a href="#fn67" class="footnote-ref" id="fnref67"><sup>67</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/one.neuron.schema.2.png" alt="One Neuron Schema" />
+<p class="caption">One Neuron Schema</p>
+</div>
+<p>If we investigate one neuron for a moment, we find two separate mathematical functions are being carried out by a single nerve cell.</p>
+<div id="summation-function" class="section level4">
+<h4><span class="header-section-number">6.1.1.1</span> Summation Function</h4>
+<p>The first segment is a summation function. It receives the real number values from, <span class="math inline">\(x_1\)</span> to <span class="math inline">\(x_n\)</span>, all the branches of the dendritic trees, and multiplies them by a set of weights. These <span class="math inline">\(X\)</span> inputs are multiplied by a set of corresponding unique weights from <span class="math inline">\(w_1\)</span> to <span class="math inline">\(w_n\)</span>. An analogy I prefer is of small or large rivers joining giving a total current. The current moves through the branches giving a total signal or current of sodium ions. Interestingly the summation in each neuron, while dealing with the vectors of inputs and weights, is carrying out the <a href="https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length">dot product</a> of these vectors.</p>
+<p>Initially, the NN researchers used the Heaviside-Threshold Function, as shown in figure 5.4, <em>One Neuron System</em>. The benefits of step functions were their simplicity and high signal to noise ratio. While the detriments were, it is a discontinuous function, therefore not differentiable and a mathematical problem.</p>
+<p>Let us take into account the product, <span class="math inline">\(x_0 \cdot w_0\)</span>. If we assign <span class="math inline">\(x_0 = T\)</span> and <span class="math inline">\(w_0 = -1\)</span> this simply becomes a bias. This bias allows us the ability to shift our Activation Function and its inflection point in the positive or negative x-direction.</p>
+<p><span class="math display">\[\begin{equation} 
+\large \hat Y ~=~ X^T \cdot W - Bias ~~\equiv~~ \sum_{i=0}^n x_i w_i - T
+\end{equation}\]</span></p>
+</div>
+<div id="activation-functions" class="section level4">
+<h4><span class="header-section-number">6.1.1.2</span> Activation Functions</h4>
+<p>The second function is called an Activation Function. Once the Summation Function yields a value, its result is sent to the <em>Activation Function</em> or <em>Threshold Function</em>.</p>
+<p><span class="math display">\[\begin{equation} 
+\large {Z}^{(1)} = f \left( \sum_{i=0}^n x_i w_i - T\right) = \{0, 1\}
+\end{equation}\]</span></p>
+<p>The function displayed in figure #6.4, One Neuron Schema, is a step function. However this step function has a problem mathematically, namely it is a discontinuous and therefore not differentiable. This fact is important.</p>
+<p>Therefore several functions may be used in place of the step function. One is the hyperbolic tangent (<em>tanh</em>) function, the <em>sigmoidal</em> function, a <em>Hard Tanh</em>, a <em>reLU</em>, and <em>Softmax</em> Functions. These have certain advantages, namely they simplify the hyperbolic tangent function. Not only does the Hard Tanh and reLU simplify calculations it is useful for increasing the gain near the asymptotic limits of the sigmoidal and tanh functions. The derivatives of the sigmoidal and tanh functions are very small, near 0 and 1, while the reLU and Hard Tanh slopes are one or zero.</p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(2)} ~=~ tanh(x) = \frac{1 - e^{-{\alpha}}}{1 + e^{-{\alpha}}} ~~~:~~~ \large where ~~~ \large \alpha = \sum_{i=1}^n x_i w_i - T
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(3)} ~=~ sigmoid(x) ~=~ \frac{1}{1 + e^{-{\alpha}}}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(4)} ~=~ Hard ~ Tanh (x) ~=~ \large \left\{ \begin{array}{rcl} 1 &amp;  x &gt; 1 \\ x &amp; -1 \leq x \leq 1 \\ -1 &amp; x &lt; -1 \end{array}\right.
+\end{equation}\]</span></p>
+<p><img src="_main_files/figure-html/56-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Several alternative functions are useful for various reasons. The most common of which are Softmax and reLU functions.</p>
+<p>Rectified Linear Activation Unit, (ReLU):</p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(5)} ~=~ \large ReLU ~= \begin{cases} x \geq 0 ~~~~y = x\\ x &lt; 0 ~~~~y = 0 \end{cases}
+\end{equation}\]</span></p>
+</div>
+<div id="binary-output-or-probability" class="section level4">
+<h4><span class="header-section-number">6.1.1.3</span> Binary Output Or Probability</h4>
+<p>In the case of real neurons, the output is off or on, zero or one. However, in the case of our electronic model, it is advantageous to calculate a probability for greater interpretability.</p>
+<blockquote>
+<p>The Softmax function may appear like the Sigmoid function from above but it differs in major ways.<a href="#fn68" class="footnote-ref" id="fnref68"><sup>68</sup></a></p>
+<ul>
+<li>The softmax activation function returns the probability distribution over mutually exclusive output classes.</li>
+<li>The calculated probabilities will be in the range of 0 to 1.</li>
+<li>The sum of all the probabilities is equals to 1.</li>
+</ul>
+</blockquote>
+<p>Typically the Softmax Function is used in binary or multiple classification logistic regression models and in building the final output layer of NN.</p>
+<p><span class="math display">\[\begin{equation} 
+\large Z^{(6)} ~=~ Softmax(x) = \frac {e^{\alpha_i}}{\sum_{i=1}^n e^{\alpha_i}}
+\end{equation}\]</span></p>
+<p><img src="_main_files/figure-html/57-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The benefit of these activation functions is that they are now differentiable. This fact becomes important for <em>Back-Propagation</em>, which is discussed later.</p>
+</div>
+</div>
+<div id="the-two-neuron-system" class="section level3">
+<h3><span class="header-section-number">6.1.2</span> The Two Neuron System</h3>
+<p>Building up in complexity, let us could consider our first Neural Network by using <em>only</em> two neurons. In two neuron systems, let us first generalize a bit more by adding that <span class="math inline">\(X\)</span> is an array of all the inputs as is <span class="math inline">\(W_1\)</span> and <span class="math inline">\(W_2\)</span> is also an array of weights for each neuron. See figure #6.5.</p>
+<div class="figure">
+<img src="00-data/10-images/two.neuron.system.png" alt="An Ideal Two Neuron System" />
+<p class="caption">An Ideal Two Neuron System</p>
+</div>
+<div id="feed-forward-in-a-two-neuron-network" class="section level4">
+<h4><span class="header-section-number">6.1.2.1</span> Feed-Forward In A Two Neuron Network</h4>
+<p>In our two neuron network, we can now write out the mathematics for each step as it progresses in a “forward” (left to right) direction.</p>
+<p>Step #1: To move from <span class="math inline">\(X\)</span> to <span class="math inline">\(P_1\)</span>
+<span class="math display">\[\begin{equation} 
+  f^1( \overrightarrow{x}, \overrightarrow{w}) \equiv~~ P_1 = \left( X^T \cdot W_1 - T \right)
+\end{equation}\]</span></p>
+<p>Step #2: <span class="math inline">\(P_1\)</span> feeds forward to <span class="math inline">\(Y\)</span>
+<span class="math display">\[\begin{equation} 
+  f^2(P_1)  ~~\equiv~ \hat Y = \left( \frac{1}{1 + e^{- \alpha}} \right) ~~:~~ where ~~~ \alpha = P_1
+\end{equation}\]</span></p>
+<p>Step #3: <span class="math inline">\(Y\)</span> feeds forward to <span class="math inline">\(P_2\)</span>
+<span class="math display">\[\begin{equation}
+  f^3(\overrightarrow{y}, \overrightarrow{w}) ~~\equiv~ P_2 = \left( Y^T \cdot W_2 - T \right)
+\end{equation}\]</span></p>
+<p>Step #4: <span class="math inline">\(P_2\)</span> feeds forward to <span class="math inline">\(Z\)</span>
+<span class="math display">\[\begin{equation}
+  f^4(P_2) ~~\equiv~ \hat Z = \left( \frac{1}{1 + e^{- \large \alpha}} \right) ~~~:~~~ where ~~ \alpha = P_2
+\end{equation}\]</span></p>
+<p>Step #5: Our complicated function is simply a matter of chaining one result so that it may be used in the next step.</p>
+<p><span class="math display">\[\begin{equation}
+   \hat Z ~=~ f^4 \left( f^3 \left( f^2 \left( f^1 \left( X, W \right) \right) \right) \right)
+\end{equation}\]</span></p>
+<p>In our <strong>Feed-Forward Propagation</strong>, we can now take the values from any numerical system and produce zeros, ones, or probabilities. Remember, in this set of experiments, we are using the concentrations of the 20 amino acids to provide a categorical or binary output, belongs to a) Myoglobin protein family, or b) does not.</p>
+</div>
+<div id="error-back-propagation" class="section level4">
+<h4><span class="header-section-number">6.1.2.2</span> Error Back-propagation</h4>
+<p>Now that we have learned to calculate the output of our neurons using the Feed-Forward process, what if our final answer is incorrect? Can we build a feed back system to determine the weights needed to obtain our desired value of <span class="math inline">\(\hat z\)</span>? The short answer is yes. The process for determining the weights is known as Error Back-Propagation. Error Back-Propagation, also known as Back-Propagation, is crucial to understanding and tuning a neural network.</p>
+<p>Simply stated Back-Propagation is an optimization routine which iteratively calculates the errors that occur at each stage of a neural network. Starting from randomly seeded values for the initial weights, Back-Propagation uses the partial derivatives of the feed forward functions. The chain rule and gradient descent are also used to determine the weights (<span class="math inline">\(W_1 ~~and~~ W_2\)</span>) which are propagated through the network to find weights used in the summation step of a neuron.<a href="#fn69" class="footnote-ref" id="fnref69"><sup>69</sup></a></p>
+<p>This thumbnail sketch gives the building blocks to calculate <span class="math inline">\(W\)</span> which can be run until we reach a value that we desire. However the first time the back-propagation is carried out all the weights are chosen randomly. If the weights were set to the same number there would be no change throughout the system.</p>
+<p>In the two neuron system, our first step is to generate an error or performance (Perf) function to minimize. If we call <span class="math inline">\(d\)</span> our desired value, we can minimize the square error, a common choice.<a href="#fn70" class="footnote-ref" id="fnref70"><sup>70</sup></a></p>
+<p>Step #1: Performance (Perf)
+<span class="math display">\[\begin{equation}
+\mathbf{Perf} ~~=~~ c \cdot (d - \hat z)^2
+\end{equation}\]</span></p>
+<p>Step #2:
+<span class="math display">\[\begin{equation}
+\frac{d Z}{d x} ~~=~~ \frac{d \left \{ f^4 \left( f^3 \left( f^2 \left( f^1 \left( X, W \right) \right) \right) \right) \right \}}{dx}
+\end{equation}\]</span></p>
+<hr />
+<div class="figure">
+<img src="00-data/10-images/two.neuron.system.noframe.png" alt="An Ideal Two Neuron System" />
+<p class="caption">An Ideal Two Neuron System</p>
+</div>
+<p>Using the chain-rule, and figure 6.6, <em>Two Neuron System</em> as a guide, we can backwards to derive the formulas for error back-propagation. We find:</p>
+<p>Step #3: Neuron 2 <span class="math inline">\(\Rightarrow\)</span> 1
+<span class="math display">\[\begin{equation}
+  \frac{\delta Perf}{\delta w_1} ~=~ \frac{\delta Perf}{\delta z} \cdot \frac{\delta z}{\delta P_2} \cdot \frac{\delta P_2}{\delta y} \cdot \frac{\delta y}{\delta P_1} \cdot \frac{\delta P_2}{\delta w_1}
+\end{equation}\]</span></p>
+<p>Step #4: Performance
+<span class="math display">\[\begin{equation}
+  \frac{\delta Perf}{\delta z} ~~=~~ \frac{\delta \left\{ \frac{1}{2} \| \overrightarrow{d} - \overrightarrow{z} \|^2 \right\}} {\delta z} ~~=~~ d - z
+\end{equation}\]</span></p>
+<p>Step #5: Substitute <span class="math inline">\(P_2=\alpha\)</span>
+<span class="math display">\[\begin{equation}
+\frac{\delta z}{\delta P_2} ~~=~~ \frac{\delta~ ((1 + e^{-\alpha})^{-1})}{\delta \alpha} ~~=~~ e^{-\alpha} \cdot (1 + e^{-\alpha})^{-2}
+\end{equation}\]</span></p>
+<p>Step #6: Rearrange the right expression
+<span class="math display">\[\begin{equation}
+  \frac{ e^{-\alpha} }{ (1 + e^{-\alpha})^{-2} } ~~=~~ \frac{e^{-\alpha}}{1 + e^{-\alpha}} \cdot \frac{1}{1 + e^{-\alpha}}
+\end{equation}\]</span></p>
+<p>Step #7: Add 1 <em>and</em> subtract 1
+<span class="math display">\[\begin{equation}
+  = ~~ \frac{ (1+ e^{-\alpha}) -1 }{1 + e^{-\alpha}} \cdot \frac{1}{1 + e^{-\alpha}}
+\end{equation}\]</span></p>
+<p>Step #8: Rearrange to find
+<span class="math display">\[\begin{equation}
+ = ~~ \left( \frac{ 1+ e^{-\alpha} }{1 + e^{-\alpha}} ~-~ \frac{ 1 }{1 + e^{-\alpha}} \right)  \left( \frac{1}{1 + e^{-\alpha}} \right) ~~=~~ \left(1- \frac{1}{1 + e^{-\alpha}} \right) \left( \frac{1}{1 + e^{-\alpha}} \right)
+\end{equation}\]</span></p>
+<p>Step #9: Therefore we find
+<span class="math display">\[\begin{equation}
+\frac{\delta z}{\delta \alpha} ~~=~~ \frac{\delta~ ((1 + e^{-\alpha})^{-1})}{\delta \alpha} ~~=~~ \left(1- \frac{1}{1 + e^{-\alpha}} \right) \left( \frac{1}{1 + e^{-\alpha}} \right)
+\end{equation}\]</span></p>
+<p>Nevertheless, we need one more part to ascertain the weights. As the error back-propagation is computed this process does not reveal how much the weights need to be adjusted/changed to compute the next round of weights given their current errors. For this we require one last equation or concept.</p>
+<p>Once we compute the weights from our chain rule set of equations we must change the values in the direction proportional to the change in error. This is performed by using gradient descent.</p>
+<p>Step #10: Learning Rate
+<span class="math display">\[\begin{equation}
+\Delta W ~:~ W_{i+1} ~=~ W_i ~-~ \eta \cdot \frac{\delta Perf}{\delta W}
+\end{equation}\]</span></p>
+<p>where <span class="math inline">\(\eta\)</span> is the learning rate for the system. The key to the learning rate is that it must be sought and its range mapped for optimum efficiency. However smaller rates have the advantage of not overshooting the desired minimum/maximum. If the learning rate is too large the values of <span class="math inline">\(W\)</span> may jump wildly and not settle into a max/min. There is a fine balance that must be considered such that the weights are not trapped in a local minimum and wildly oscillate unable to converge.</p>
+<p>The last step of <em>error back-propagation</em> is simply setting up the derivatives mechanically and is not shown for brevity.</p>
+</div>
+</div>
+</div>
+<div id="neural-network-experiment-for-binary-classification" class="section level2">
+<h2><span class="header-section-number">6.2</span> Neural Network Experiment For Binary Classification</h2>
+<div class="sourceCode" id="cb83"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb83-1" data-line-number="1"><span class="co"># Load Libraries</span></a>
+<a class="sourceLine" id="cb83-2" data-line-number="2">Libraries &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;dplyr&quot;</span>, <span class="st">&quot;readr&quot;</span>, <span class="st">&quot;caret&quot;</span>, <span class="st">&quot;MASS&quot;</span>, <span class="st">&quot;nnet&quot;</span>, <span class="st">&quot;purrr&quot;</span>)</a>
+<a class="sourceLine" id="cb83-3" data-line-number="3"><span class="cf">for</span> (p <span class="cf">in</span> Libraries) {  </a>
+<a class="sourceLine" id="cb83-4" data-line-number="4">    <span class="kw">library</span>(p, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb83-5" data-line-number="5">}</a></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb84-1" data-line-number="1"><span class="co"># Load Data</span></a>
+<a class="sourceLine" id="cb84-2" data-line-number="2">c_m_TRANSFORMED &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb84-3" data-line-number="3">                            <span class="dt">col_types =</span> <span class="kw">cols</span>(<span class="dt">Class =</span> <span class="kw">col_factor</span>(<span class="dt">levels =</span> <span class="kw">c</span>(<span class="st">&quot;0&quot;</span>,<span class="st">&quot;1&quot;</span>)),</a>
+<a class="sourceLine" id="cb84-4" data-line-number="4">                                             <span class="dt">PID =</span> <span class="kw">col_skip</span>(),</a>
+<a class="sourceLine" id="cb84-5" data-line-number="5">                                             <span class="dt">TotalAA =</span> <span class="kw">col_skip</span>()))</a></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb85-1" data-line-number="1"><span class="co"># Create Training Data</span></a>
+<a class="sourceLine" id="cb85-2" data-line-number="2"><span class="kw">set.seed</span>(<span class="dv">1000</span>)</a>
+<a class="sourceLine" id="cb85-3" data-line-number="3"><span class="co"># Stratified sampling</span></a>
+<a class="sourceLine" id="cb85-4" data-line-number="4">TrainingDataIndex &lt;-<span class="st"> </span><span class="kw">createDataPartition</span>(c_m_TRANSFORMED<span class="op">$</span>Class, <span class="dt">p =</span> <span class="fl">0.8</span>, <span class="dt">list =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb85-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb85-6" data-line-number="6"><span class="co"># Create Training Data </span></a>
+<a class="sourceLine" id="cb85-7" data-line-number="7">trainingData &lt;-<span class="st"> </span>c_m_TRANSFORMED[ TrainingDataIndex, ]</a>
+<a class="sourceLine" id="cb85-8" data-line-number="8">testData     &lt;-<span class="st"> </span>c_m_TRANSFORMED[<span class="op">-</span>TrainingDataIndex, ]</a>
+<a class="sourceLine" id="cb85-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb85-10" data-line-number="10">TrainingParameters &lt;-<span class="st"> </span><span class="kw">trainControl</span>(<span class="dt">method =</span> <span class="st">&quot;repeatedcv&quot;</span>, </a>
+<a class="sourceLine" id="cb85-11" data-line-number="11">                                   <span class="dt">number =</span> <span class="dv">10</span>, </a>
+<a class="sourceLine" id="cb85-12" data-line-number="12">                                   <span class="dt">repeats =</span> <span class="dv">5</span>,</a>
+<a class="sourceLine" id="cb85-13" data-line-number="13">                                   <span class="dt">savePredictions =</span> <span class="st">&quot;final&quot;</span>) <span class="co"># Saves predictions</span></a>
+<a class="sourceLine" id="cb85-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb85-15" data-line-number="15">TuneSizeDecay &lt;-<span class="st"> </span><span class="kw">expand.grid</span>(<span class="dt">size =</span> <span class="kw">c</span>(<span class="dv">16</span>, <span class="dv">18</span>, <span class="dv">20</span>), </a>
+<a class="sourceLine" id="cb85-16" data-line-number="16">                             <span class="dt">decay =</span> <span class="kw">c</span>(<span class="dv">1</span>, <span class="fl">0.1</span>, <span class="fl">0.01</span>))</a></code></pre></div>
+<div id="train-model-with-neural-networks" class="section level3">
+<h3><span class="header-section-number">6.2.1</span> Train model with neural networks</h3>
+</div>
+<div id="confusion-matrix-and-statistics" class="section level3">
+<h3><span class="header-section-number">6.2.2</span> Confusion Matrix and Statistics</h3>
+<div class="sourceCode" id="cb86"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb86-1" data-line-number="1">NNPredictions &lt;-<span class="st"> </span><span class="kw">predict</span>(NNModel, testData)</a>
+<a class="sourceLine" id="cb86-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb86-3" data-line-number="3"><span class="co"># Create confusion matrix</span></a>
+<a class="sourceLine" id="cb86-4" data-line-number="4">cmNN &lt;-<span class="kw">confusionMatrix</span>(NNPredictions, testData<span class="op">$</span>Class)</a>
+<a class="sourceLine" id="cb86-5" data-line-number="5"><span class="kw">print</span>(cmNN)</a></code></pre></div>
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction   0   1
+##          0 239   9
+##          1   4 215
+##                                           
+##                Accuracy : 0.9722          
+##                  95% CI : (0.9529, 0.9851)
+##     No Information Rate : 0.5203          
+##     P-Value [Acc &gt; NIR] : &lt;2e-16          
+##                                           
+##                   Kappa : 0.9442          
+##                                           
+##  Mcnemar&#39;s Test P-Value : 0.2673          
+##                                           
+##             Sensitivity : 0.9835          
+##             Specificity : 0.9598          
+##          Pos Pred Value : 0.9637          
+##          Neg Pred Value : 0.9817          
+##              Prevalence : 0.5203          
+##          Detection Rate : 0.5118          
+##    Detection Prevalence : 0.5310          
+##       Balanced Accuracy : 0.9717          
+##                                           
+##        &#39;Positive&#39; Class : 0               
+## </code></pre>
+<div class="sourceCode" id="cb88"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb88-1" data-line-number="1">NNModel</a></code></pre></div>
+<pre><code>## Neural Network 
+## 
+## 1873 samples
+##   20 predictor
+##    2 classes: &#39;0&#39;, &#39;1&#39; 
+## 
+## Pre-processing: scaled (20), centered (20) 
+## Resampling: Cross-Validated (10 fold, repeated 5 times) 
+## Summary of sample sizes: 1685, 1686, 1686, 1686, 1686, 1685, ... 
+## Resampling results across tuning parameters:
+## 
+##   size  decay  Accuracy   Kappa    
+##   16    0.01   0.9675458  0.9349866
+##   16    0.10   0.9724570  0.9448152
+##   16    1.00   0.9609233  0.9216202
+##   18    0.01   0.9703226  0.9405495
+##   18    0.10   0.9708545  0.9416022
+##   18    1.00   0.9618830  0.9235428
+##   20    0.01   0.9703157  0.9405366
+##   20    0.10   0.9716003  0.9430995
+##   20    1.00   0.9612419  0.9222614
+## 
+## Accuracy was used to select the optimal model using the largest value.
+## The final values used for the model were size = 16 and decay = 0.1.</code></pre>
+</div>
+<div id="obtain-list-of-false-positives-false-negatives" class="section level3">
+<h3><span class="header-section-number">6.2.3</span> Obtain List of False Positives &amp; False Negatives</h3>
+<div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb90-1" data-line-number="1">fp_fn_NNModel &lt;-<span class="st"> </span>NNModel <span class="op">%&gt;%</span><span class="st"> </span><span class="kw">pluck</span>(<span class="st">&quot;pred&quot;</span>) <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw">filter</span>(obs <span class="op">!=</span><span class="st"> </span>pred)</a>
+<a class="sourceLine" id="cb90-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb90-3" data-line-number="3"><span class="co"># Write/save .csv</span></a>
+<a class="sourceLine" id="cb90-4" data-line-number="4"><span class="kw">write.table</span>(fp_fn_NNModel,</a>
+<a class="sourceLine" id="cb90-5" data-line-number="5">            <span class="dt">file =</span> <span class="st">&quot;./00-data/03-ml_results/fp_fn_NN.csv&quot;</span>,</a>
+<a class="sourceLine" id="cb90-6" data-line-number="6">            <span class="dt">row.names =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb90-7" data-line-number="7">            <span class="dt">na =</span> <span class="st">&quot;&quot;</span>,</a>
+<a class="sourceLine" id="cb90-8" data-line-number="8">            <span class="dt">col.names =</span> <span class="ot">TRUE</span>,</a>
+<a class="sourceLine" id="cb90-9" data-line-number="9">            <span class="dt">sep =</span> <span class="st">&quot;,&quot;</span>)</a>
+<a class="sourceLine" id="cb90-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb90-11" data-line-number="11"><span class="kw">nrow</span>(fp_fn_NNModel) <span class="co">## </span><span class="al">NOTE</span><span class="co">: NOT UNIQUE NOR SORTED</span></a></code></pre></div>
+<pre><code>## [1] 258</code></pre>
+</div>
+<div id="false-positive-false-negative-neural-network-set" class="section level3">
+<h3><span class="header-section-number">6.2.4</span> False Positive &amp; False Negative Neural Network set</h3>
+<div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb92-1" data-line-number="1">keep &lt;-<span class="st"> &quot;rowIndex&quot;</span></a>
+<a class="sourceLine" id="cb92-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb92-3" data-line-number="3">fp_fn_NN &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/03-ml_results/fp_fn_NN.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb92-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb92-5" data-line-number="5">NN_fp_fn_nums &lt;-<span class="st"> </span><span class="kw">sort</span>(<span class="kw">unique</span>(<span class="kw">unlist</span>(fp_fn_NN[, keep], <span class="dt">use.names =</span> <span class="ot">FALSE</span>)))</a>
+<a class="sourceLine" id="cb92-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb92-7" data-line-number="7"><span class="kw">length</span>(NN_fp_fn_nums)</a></code></pre></div>
+<pre><code>## [1] 81</code></pre>
+<div class="sourceCode" id="cb94"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb94-1" data-line-number="1">NN_fp_fn_nums</a></code></pre></div>
+<pre><code>##  [1]    4    6   15   16   46   57   94   97  100  114  115  116  130  136  149  150  170  179
+## [19]  182  183  185  249  445  449  453  503  518  522  526  530  531  532  534  546  547  566
+## [37]  570  580  592  655  910  913  980 1033 1034 1035 1093 1094 1100 1101 1117 1121 1130 1190
+## [55] 1219 1226 1233 1264 1300 1471 1510 1522 1575 1576 1579 1585 1587 1594 1608 1618 1621 1693
+## [73] 1697 1734 1771 1773 1780 1789 1831 1833 1873</code></pre>
+<div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb96-1" data-line-number="1"><span class="kw">write_csv</span>(<span class="dt">x =</span> <span class="kw">as.data.frame</span>(NN_fp_fn_nums), </a>
+<a class="sourceLine" id="cb96-2" data-line-number="2">          <span class="dt">path =</span> <span class="st">&quot;./00-data/04-sort_unique_outliers/NN_nums.csv&quot;</span>)</a></code></pre></div>
+</div>
+</div>
+<div id="neural-network-conclusion" class="section level2">
+<h2><span class="header-section-number">6.3</span> Neural Network Conclusion</h2>
+<p>The Neural Network set included a total of 79 unique observations containing both FP and FN.</p>
+<p>Accuracy was the primary criteria used to select the optimal model. There were 20 models tested. The neural network was configured with 20 inputs (one for each amino acid), one hidden layer and one output. The hidden layer was tested with either 10, 12, 14, 16, 18, 20 neurons and a array of different decays (1, 0.1, 0.01, 0.001). The caret software has a tuning parameter named <code>tuneGrid</code> that allows users to <code>expand</code> a set of arrays to a matrix of combinations to be tested. Therefore 20 models were tested with the training data set and the best values were size = 20 and decay = 0.1.</p>
+<p>At this time, the author is not aware of any heuristic that gives the proper number of hidden layers and the proper number of neurons in each layer therefore one must search the experimental space for an optimized configuration. If a more thorough search of the experiemntal space was carried out using two or three hidden layers would be investigated. The poor showing of the Neural Network suggests that the data may have some additional decision boundary that is not yet represented by only 20 neurons.</p>
+
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="60">
+<li id="fn60"><p>Ian Goodfellow, Yoshua Bengio, Aaron Courville, ‘Deep Learning’, MIT Press, 2016, <a href="http://www.deeplearningbook.org" class="uri">http://www.deeplearningbook.org</a><a href="neural-networks-for-binary-classification.html#fnref60" class="footnote-back">↩</a></p></li>
+<li id="fn61"><p><a href="https://www.wormatlas.org/hermaphrodite/nervous/Neuroframeset.html" class="uri">https://www.wormatlas.org/hermaphrodite/nervous/Neuroframeset.html</a><a href="neural-networks-for-binary-classification.html#fnref61" class="footnote-back">↩</a></p></li>
+<li id="fn62"><p>Shepherd, G. M. (2004), The synaptic organization of the brain (5th ed.), Oxford University Press, New York.<a href="neural-networks-for-binary-classification.html#fnref62" class="footnote-back">↩</a></p></li>
+<li id="fn63"><p><a href="https://www.kenhub.com/en/library/anatomy/neurotransmitters" class="uri">https://www.kenhub.com/en/library/anatomy/neurotransmitters</a><a href="neural-networks-for-binary-classification.html#fnref63" class="footnote-back">↩</a></p></li>
+<li id="fn64"><p><a href="http://isyslab.info/NeuroPep/home.jsp" class="uri">http://isyslab.info/NeuroPep/home.jsp</a><a href="neural-networks-for-binary-classification.html#fnref64" class="footnote-back">↩</a></p></li>
+<li id="fn65"><p><a href="https://www.howstuffworks.com/" class="uri">https://www.howstuffworks.com/</a><a href="neural-networks-for-binary-classification.html#fnref65" class="footnote-back">↩</a></p></li>
+<li id="fn66"><p><a href="https://arstechnica.com/cars/2019/05/feds-autopilot-was-active-during-deadly-march-tesla-crash/" class="uri">https://arstechnica.com/cars/2019/05/feds-autopilot-was-active-during-deadly-march-tesla-crash/</a><a href="neural-networks-for-binary-classification.html#fnref66" class="footnote-back">↩</a></p></li>
+<li id="fn67"><p>Tom Mitchell, Machine Learning, McGraw-Hill, 1997, ISBN: 0070428077<a href="neural-networks-for-binary-classification.html#fnref67" class="footnote-back">↩</a></p></li>
+<li id="fn68"><p>Josh Patterson, Adam Gibson, Deep Learning; A Practitioner’s Approach, 2017, O’Rreilly<a href="neural-networks-for-binary-classification.html#fnref68" class="footnote-back">↩</a></p></li>
+<li id="fn69"><p>David Rumelhart, Geoffrey Hinton, &amp; Ronald Williams, Learning Representations By Back-Propagating Errors, Nature, 323, 533-536, Oct. 9, 1986<a href="neural-networks-for-binary-classification.html#fnref69" class="footnote-back">↩</a></p></li>
+<li id="fn70"><p>Ivan N. da Silva, Danilo H. Spatti, Rogerio A. Flauzino, Luisa H. B. Liboni, Silas F. dos Reis Alves, Artificial Neural Networks: A Practical Course, DOI 10.1007/978-3-319-43162-8, 2017<a href="neural-networks-for-binary-classification.html#fnref70" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+
+</html>
+
+
