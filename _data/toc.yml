@@ -2,15 +2,16 @@
   url: "archive"
 - title: "Posts by tags"
   url: "tags"
-  
+
 - title: Documentation
   url: docs
   links:
     - title: "Data Science Resources"
-      url: "docs/resources/data-science-resources.md"
-    - title: "Possible Paper Topics"
+      url: "docs/resources/data-science-resources"
+    - title: "Matt's Presentations"
+      url: "docs/resources/mcc-presentations"
+    - title: "Possible Research Topics"
       url: "docs/resources/research-topics"
-    - title: "Talks & Presentations"
-      url: "docs/resources/presentations.md"
-
+    - title: "R Book Resources"
+      url: "docs/resources/r-book-resources"
 
