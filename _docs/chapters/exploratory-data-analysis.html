@@ -1,9 +1,10 @@
-<h1><span class="header-section-number">3</span> Exploratory Data Analysis</h1>
+<h1>Exploratory Data Analysis</h1>
+
 <blockquote>
 <p>“Exploratory data analysis (EDA) is an approach to analyzing data sets to summarize their main characteristics, often with visual methods.” <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a></p>
 </blockquote>
 <div id="introduction" class="section level2">
-<h2><span class="header-section-number">3.1</span> Introduction</h2>
+<h2>Introduction</h2>
 <p>The experiment described herein involves taking groups of proteins from the Uniprot.org database and comparing how well different machine learning techniques do at separating the positive from the negative control grouping. In this circumstance, proteins from the myoglobin family are analyzed against randomly chosen human proteins, which are not related to hemoglobin or myoglobin.</p>
 <p>This work is to characterize the <em>anomalous points</em> derived from PCA and compare them to the false-positives and false-negatives generated from each of six machine learning approaches produces. For the sake of this paper <em>anomalous points</em> are defined as values greater than the absolute value of three times the standard deviation from of the first and second principal components.</p>
 <p><span class="math display">\[\begin{equation}
@@ -19,7 +20,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 <li>Neural Network.</li>
 </ol>
 <div id="four-step-analysis" class="section level3">
-<h3><span class="header-section-number">3.1.1</span> Four-Step Analysis</h3>
+<h3>Four-Step Analysis</h3>
 <p>At this stage, data is inspected in a careful and structured way. Hence, I have chosen a four-step process:</p>
 <ol style="list-style-type: decimal">
 <li>Hypothesize,</li>
@@ -29,7 +30,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 </ol>
 </div>
 <div id="useful-guides-for-exploratory-data-analysis" class="section level3">
-<h3><span class="header-section-number">3.1.2</span> Useful Guides for Exploratory Data Analysis</h3>
+<h3>Useful Guides for Exploratory Data Analysis</h3>
 <p>The summarization of the amino acid dataset is based on a hybrid set of guidelines;</p>
 <ol style="list-style-type: decimal">
 <li>NIST Handbook of Statistics,<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a></li>
@@ -38,7 +39,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 </ol>
 </div>
 <div id="questions-during-eda" class="section level3">
-<h3><span class="header-section-number">3.1.3</span> Questions During EDA</h3>
+<h3>Questions During EDA</h3>
 <p>Although exploratory data analysis does not always have a formal hypothesis testing portion, I do, however, pose several questions concerning the structure, quality, and types of data.</p>
 <ol style="list-style-type: decimal">
 <li><p>Do the independent variables of this study have large skewed distributions?</p>
@@ -58,7 +59,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 </div>
 </div>
 <div id="analysis-of-raw-data" class="section level2">
-<h2><span class="header-section-number">3.2</span> Analysis of RAW data</h2>
+<h2>Analysis of RAW data</h2>
 <p>Raw data is considered: <code>./00-data/02-aac_dpc_values/c_m_RAW_AAC.csv</code></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># Import libraries, NO &quot;doMC&quot;, </span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">library</span>(easypackages)</a>
@@ -67,14 +68,14 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 <a class="sourceLine" id="cb2-2" data-line-number="2">c_m_RAW_AAC &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_RAW_AAC.csv&quot;</span>)</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3">Class &lt;-<span class="st"> </span><span class="kw">as.factor</span>(c_m_RAW_AAC<span class="op">$</span>Class)</a></code></pre></div>
 <div id="visually-inspect-raw-data-files" class="section level3">
-<h3><span class="header-section-number">3.2.1</span> Visually inspect RAW data files</h3>
+<h3>Visually inspect RAW data files</h3>
 <ol style="list-style-type: decimal">
 <li>Use the command-line interface followed by the command <code>less.</code></li>
 <li>Check for binary instead of ASCII and bad Unicode.</li>
 </ol>
 </div>
 <div id="inspect-raw-dataframe-structure-str" class="section level3">
-<h3><span class="header-section-number">3.2.2</span> Inspect RAW dataframe structure, <code>str()</code></h3>
+<h3>Inspect RAW dataframe structure, <code>str()</code></h3>
 <pre><code>## Classes &#39;spec_tbl_df&#39;, &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;: 2340 obs. of  23 variables:
 ##  $ Class  : num  0 0 0 0 0 0 0 0 0 0 ...
 ##  $ TotalAA: num  226 221 624 1014 699 ...
@@ -127,7 +128,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 ##   .. )</code></pre>
 </div>
 <div id="check-raw-data-head-tail" class="section level3">
-<h3><span class="header-section-number">3.2.3</span> Check RAW data <code>head</code> &amp; <code>tail</code></h3>
+<h3>Check RAW data <code>head</code> &amp; <code>tail</code></h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">head</span>(c_m_RAW_AAC, <span class="dt">n =</span> <span class="dv">2</span>)</a></code></pre></div>
 <pre><code>## # A tibble: 2 x 23
 ##   Class TotalAA PID       A     C       D      E       F      G     H       I     K      L
@@ -146,7 +147,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 ## #   V &lt;dbl&gt;, W &lt;dbl&gt;, Y &lt;dbl&gt;</code></pre>
 </div>
 <div id="check-raw-data-types" class="section level3">
-<h3><span class="header-section-number">3.2.4</span> Check RAW data types</h3>
+<h3>Check RAW data types</h3>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">is.data.frame</span>(c_m_RAW_AAC)</a></code></pre></div>
 <pre><code>## [1] TRUE</code></pre>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">class</span>(c_m_RAW_AAC<span class="op">$</span>Class) <span class="co"># Col 1</span></a></code></pre></div>
@@ -159,12 +160,12 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 <pre><code>## [1] &quot;numeric&quot;</code></pre>
 </div>
 <div id="check-raw-dataframe-dimensions" class="section level3">
-<h3><span class="header-section-number">3.2.5</span> Check RAW dataframe dimensions</h3>
+<h3>Check RAW dataframe dimensions</h3>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">dim</span>(c_m_RAW_AAC)</a></code></pre></div>
 <pre><code>## [1] 2340   23</code></pre>
 </div>
 <div id="check-raw-for-missing-values" class="section level3">
-<h3><span class="header-section-number">3.2.6</span> Check RAW for missing values</h3>
+<h3>Check RAW for missing values</h3>
 <ul>
 <li><strong>No missing values found.</strong></li>
 </ul>
@@ -174,7 +175,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 <a class="sourceLine" id="cb22-2" data-line-number="2"><span class="co"># c_m_RAW_AAC[rowSums(is.na(c_m_RAW_AAC)) != 0,] # Show rows where NA&#39;s is not zero</span></a></code></pre></div>
 </div>
 <div id="number-of-polypeptides-per-class" class="section level3">
-<h3><span class="header-section-number">3.2.7</span> Number of polypeptides per Class:</h3>
+<h3>Number of polypeptides per Class:</h3>
 <ul>
 <li>Class 0 = Control,</li>
 <li>Class 1 = Myoglobin</li>
@@ -184,7 +185,7 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 ## 1216 1124</code></pre>
 </div>
 <div id="numerical-summary-of-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.8</span> Numerical summary of RAW data</h3>
+<h3>Numerical summary of RAW data</h3>
 <pre><code>##      Class           TotalAA           PID                  A                 C           
 ##  Min.   :0.0000   Min.   :   2.0   Length:2340        Min.   :0.00000   Min.   :0.000000  
 ##  1st Qu.:0.0000   1st Qu.: 109.8   Class :character   1st Qu.:0.05108   1st Qu.:0.000000  
@@ -222,14 +223,14 @@ Anomalous ~Points &gt; | 3 \sigma | ~~~where~~~ \sigma = \sqrt{ \frac{1}{n-1} \s
 ##  Max.   :0.20000   Max.   :0.133333   Max.   :0.14286</code></pre>
 </div>
 <div id="visualize-descriptive-statistics-using-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.9</span> Visualize Descriptive Statistics using RAW Data</h3>
+<h3>Visualize Descriptive Statistics using RAW Data</h3>
 <p>Formulas for mean:
 <span class="math display">\[\begin{equation} 
 E[X] = \sum_{i=1}^n x_i p_i ~~; ~~~~~~ \bar x = \frac {1}{n} \sum_{i=1}^n x_i
 \end{equation}\]</span></p>
 </div>
 <div id="scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-of-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.10</span> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition of RAW Data</h3>
+<h3>Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition of RAW Data</h3>
 <ul>
 <li>This Scatter-plot shows the means for each feature (column-means) in the dataset. The means represent the ungrouped or total of all proteins (where n = 2340) versus AA type.</li>
 </ul>
@@ -245,28 +246,28 @@ E[X] = \sum_{i=1}^n x_i p_i ~~; ~~~~~~ \bar x = \frac {1}{n} \sum_{i=1}^n x_i
 <a class="sourceLine" id="cb25-9" data-line-number="9">        <span class="dt">beside =</span> T)</a></code></pre></div>
 </div>
 <div id="means-of-percent-amino-acid-composition-of-control-myoglobin-categories-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.11</span> Means of percent amino acid composition of control &amp; myoglobin categories, RAW data</h3>
+<h3>Means of percent amino acid composition of control &amp; myoglobin categories, RAW data</h3>
 <p><img src="_main_files/figure-html/215-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-grand-means-of-overall-amino-acid-composition-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.12</span> Boxplots of grand-means of overall amino acid composition, RAW data</h3>
+<h3>Boxplots of grand-means of overall amino acid composition, RAW data</h3>
 <p><img src="_main_files/figure-html/216-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-amino-acid-compositions-for-control-only-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.13</span> Boxplots of amino acid compositions for control (only), RAW data</h3>
+<h3>Boxplots of amino acid compositions for control (only), RAW data</h3>
 <p><img src="_main_files/figure-html/217-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-amino-acid-compositions-for-myoglobin-only-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.14</span> Boxplots of amino acid compositions for myoglobin (only), RAW data</h3>
+<h3>Boxplots of amino acid compositions for myoglobin (only), RAW data</h3>
 <p><img src="_main_files/figure-html/218-1.png" width="672" /></p>
 <p><img src="_main_files/figure-html/219-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-length-of-polypeptides-for-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.15</span> Boxplots Of Length Of Polypeptides For RAW Data</h3>
+<h3>Boxplots Of Length Of Polypeptides For RAW Data</h3>
 <p><img src="_main_files/figure-html/220-1.png" width="672" /></p>
 </div>
 <div id="plot-coefficient-of-variance-for-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.16</span> Plot Coefficient Of Variance For RAW Data</h3>
+<h3>Plot Coefficient Of Variance For RAW Data</h3>
 <p>Standard deviations are sensitive to scale. Therefore I compare the normalized standard deviations. This normalized standard deviation is more commonly called the coefficient of variation (CV).</p>
 <p><span class="math display">\[\begin{equation} 
 CV = \frac {\sigma (x)} {E [|x|]} ~~~ where ~~~ \sigma(x) \equiv \sqrt{ E[x - \mu]^2 }
@@ -284,7 +285,7 @@ CV ~~=~~ \frac{1}{\bar x} \cdot \sqrt{ \frac{1}{n-1} \sum^n_{i=1} (x_i - \bar x)
 ## 0.9461276 0.8461615</code></pre>
 </div>
 <div id="skewness-of-distributions-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.17</span> Skewness of distributions, RAW data</h3>
+<h3><Skewness of distributions, RAW data</h3>
 <p><span class="math display">\[\begin{equation} 
 Skewness ~= E\left[ \left( \frac{X - \mu}{\sigma(x)} \right)^3 \right] ~~~~ where ~~~~ \sigma(x) \equiv \sqrt{ E[x - \mu]^2 }
 \end{equation}\]</span></p>
@@ -302,7 +303,7 @@ Skewness ~= \frac { \frac{1}{n} \sum^n_{i=1} (x_i - \bar x)^3 } { \left( \sqrt{ 
 ##  1.241930812  1.448521897 -0.006075043  1.338971930  1.831047440  1.694362388</code></pre>
 </div>
 <div id="determine-coefficients-of-correlation-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.18</span> Determine coefficients of correlation, RAW data</h3>
+<h3>Determine coefficients of correlation, RAW data</h3>
 <p>An easily interpretable test is a correlation 2D-plot for investigating multicollinearity or feature reduction. Fewer attributes “means decreased computational time and complexity. Secondly, if two predictors are highly correlated, this implies that they measure the same underlying information. Removing one should not compromise the performance of the model and might lead to a more parsimonious and interpretable model. Third, some models can be crippled by predictors with degenerate distributions.” <a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
 <p>Pearson’s correlation coefficient:
 <span class="math display">\[\begin{equation} 
@@ -336,7 +337,7 @@ r_{xy} = \frac {\sum^n_{i=1} (x_i - \bar x)(y_1 - \bar y)} { {\sqrt {\sum^n_{i=1
 </ol>
 </div>
 <div id="boruta-random-forest-test-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.19</span> Boruta Random Forest Test, RAW data</h3>
+<h3>Boruta Random Forest Test, RAW data</h3>
 <blockquote>
 <p>It finds relevant features by comparing original attributes’ importance with importance achievable at random, estimated using their permuted copies (shadows).</p>
 <p>Miron Kursa <a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a></p>
@@ -360,11 +361,11 @@ r_{xy} = \frac {\sum^n_{i=1} (x_i - \bar x)(y_1 - \bar y)} { {\sqrt {\sum^n_{i=1
 <div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">names</span>(boruta_output)</a></code></pre></div>
 </div>
 <div id="plot-variable-importance-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.20</span> Plot variable importance, RAW Data</h3>
+<h3>Plot variable importance, RAW Data</h3>
 <p><img src="_main_files/figure-html/230-1.png" width="672" /></p>
 </div>
 <div id="variable-importance-scores-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.21</span> Variable importance scores, RAW Data</h3>
+<h3>Variable importance scores, RAW Data</h3>
 <table class="table table-striped table-hover" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
@@ -603,13 +604,13 @@ Confirmed
 </table>
 </div>
 <div id="conclusion-for-boruta-random-forest-test-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.22</span> Conclusion for Boruta random forest test, RAW Data</h3>
+<h3>Conclusion for Boruta random forest test, RAW Data</h3>
 <ul>
 <li>All features are essential. None should be dropped.</li>
 </ul>
 </div>
 <div id="conclusions-for-eda-raw-data" class="section level3">
-<h3><span class="header-section-number">3.2.23</span> Conclusions For EDA, RAW data</h3>
+<h3>Conclusions For EDA, RAW data</h3>
 <p>Three amino acids (C, F, I) from the single amino acid percent composition were deemed problematic due to their skewness were greater than 2.0. This suggests that a transformation should be carried out to rectify this issue.</p>
 <table>
 <thead>
@@ -637,7 +638,7 @@ Confirmed
 </div>
 </div>
 <div id="analysis-of-transformed-data" class="section level2">
-<h2><span class="header-section-number">3.3</span> Analysis of TRANSFORMED data</h2>
+<h2>Analysis of TRANSFORMED data</h2>
 <p><strong>This EDA section is a reevaluation square root transformed, <code>c_m_RAW_ACC.csv</code> data set, hence called <code>c_m_TRANSFORMED.csv.</code> </strong></p>
 <p>The <span class="math inline">\(\sqrt x_i\)</span> <em>Transformed</em> data is derived from <code>c_m_RAW_ACC.csv</code> where the amino acids C, F, I were transformed using a square root function. This transformation was done to reduce the skewness of these samples and avoid modeling problems arising from high skewness, as seen below.</p>
 <table>
@@ -670,12 +671,12 @@ Confirmed
 <a class="sourceLine" id="cb36-2" data-line-number="2">c_m_TRANSFORMED &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;./00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv&quot;</span>)</a>
 <a class="sourceLine" id="cb36-3" data-line-number="3">Class &lt;-<span class="st"> </span><span class="kw">as.factor</span>(c_m_TRANSFORMED<span class="op">$</span>Class)</a></code></pre></div>
 <div id="check-transformed-dataframe-dimensions" class="section level3">
-<h3><span class="header-section-number">3.3.1</span> Check Transformed dataframe dimensions</h3>
+<h3>Check Transformed dataframe dimensions</h3>
 <div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="kw">dim</span>(c_m_TRANSFORMED)</a></code></pre></div>
 <pre><code>## [1] 2340   23</code></pre>
 </div>
 <div id="check-transformed-for-missing-values" class="section level3">
-<h3><span class="header-section-number">3.3.2</span> Check Transformed for missing values</h3>
+<h3>Check Transformed for missing values</h3>
 <div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1"><span class="kw">apply</span>(<span class="kw">is.na</span>(c_m_TRANSFORMED), <span class="dv">2</span>, which)</a></code></pre></div>
 <pre><code>## integer(0)</code></pre>
 <ul>
@@ -683,7 +684,7 @@ Confirmed
 </ul>
 </div>
 <div id="count-transformed-data-for-the-number-of-polypeptides-per-class" class="section level3">
-<h3><span class="header-section-number">3.3.3</span> Count Transformed data for the number of polypeptides per class</h3>
+<h3>Count Transformed data for the number of polypeptides per class</h3>
 <p>Number of polypeptides per Class:</p>
 <ul>
 <li>Class 0 = Control,</li>
@@ -694,14 +695,14 @@ Confirmed
 ## 1216 1124</code></pre>
 </div>
 <div id="visualization-descriptive-statistics-transformed-data" class="section level3">
-<h3><span class="header-section-number">3.3.4</span> Visualization Descriptive Statistics, TRANSFORMED data</h3>
+<h3>Visualization Descriptive Statistics, TRANSFORMED data</h3>
 <p>Formulas for mean:
 <span class="math display">\[\begin{equation} 
 E[X] = \sum_{i=1}^n x_i p_i ~~; ~~~~~~ \bar x = \frac {1}{n} \sum_{i=1}^n x_i
 \end{equation}\]</span></p>
 </div>
 <div id="scatter-plot-of-means-of-myoglobin-control-amino-acid-composition-sqrt-x_i-transformed-data" class="section level3">
-<h3><span class="header-section-number">3.3.5</span> Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition <span class="math inline">\(\sqrt x_i\)</span>, TRANSFORMED data</h3>
+<h3>Scatter plot of means of <em>Myoglobin-Control</em> amino acid composition <span class="math inline">\(\sqrt x_i\)</span>, TRANSFORMED data</h3>
 <ul>
 <li>This plot shows the means for each feature (column-means) in the dataset. The means represent the ungrouped or total of all proteins (where n=2340) versus AA type.</li>
 </ul>
@@ -718,23 +719,23 @@ E[X] = \sum_{i=1}^n x_i p_i ~~; ~~~~~~ \bar x = \frac {1}{n} \sum_{i=1}^n x_i
 <a class="sourceLine" id="cb42-10" data-line-number="10">        <span class="dt">beside =</span> T)</a></code></pre></div>
 </div>
 <div id="grouped-bar-chart-of-means-for-percent-amino-acid-composition-of-transformed-data-control-myoglobin-categories" class="section level3">
-<h3><span class="header-section-number">3.3.6</span> Grouped bar chart of means for percent amino acid composition of Transformed Data; control &amp; myoglobin categories</h3>
+<h3>Grouped bar chart of means for percent amino acid composition of Transformed Data; control &amp; myoglobin categories</h3>
 <p><img src="_main_files/figure-html/240-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-grand-means-of-the-overall-amino-acid-composition-of-square-root-transformed-data" class="section level3">
-<h3><span class="header-section-number">3.3.7</span> Boxplots of grand-means of the overall amino acid composition of square-root transformed data</h3>
+<h3>Boxplots of grand-means of the overall amino acid composition of square-root transformed data</h3>
 <p><img src="_main_files/figure-html/241-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-amino-acid-compositions-for-control-only-of-square-root-transformed-data" class="section level3">
-<h3><span class="header-section-number">3.3.8</span> Boxplots of amino acid compositions for control (only) of square-root transformed data</h3>
+<h3>Boxplots of amino acid compositions for control (only) of square-root transformed data</h3>
 <p><img src="_main_files/figure-html/242-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-amino-acid-compositions-for-myoglobin-of-square-root-transformed-dataonly-transformed-data" class="section level3">
-<h3><span class="header-section-number">3.3.9</span> Boxplots of amino acid compositions for myoglobin of square-root transformed Data(only), TRANSFORMED data</h3>
+<h3>BBoxplots of amino acid compositions for myoglobin of square-root transformed Data(only), TRANSFORMED data</h3>
 <p><img src="_main_files/figure-html/243-1.png" width="672" /></p>
 </div>
 <div id="boxplots-of-length-of-polypeptides-of-transformed-data-myoglobin-control-combined" class="section level3">
-<h3><span class="header-section-number">3.3.10</span> Boxplots Of Length Of Polypeptides Of Transformed Data; Myoglobin, Control &amp; Combined</h3>
+<h3>Boxplots Of Length Of Polypeptides Of Transformed Data; Myoglobin, Control &amp; Combined</h3>
 <p><img src="_main_files/figure-html/244-1.png" width="672" /></p>
 </div>
 <div id="coefficient-of-variance-cv-transformed-data" class="section level3">

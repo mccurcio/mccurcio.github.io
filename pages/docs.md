@@ -4,17 +4,13 @@ title: Documentation
 permalink: /docs/
 ---
 
-# Documentation
-
-Welcome to my Documentation pages! 
-
-This page is under construction and re-organization.
+# Welcome to my Data Science article resources 
 
 <div class="section-index">
     <hr class="panel-line">
     {% for post in site.docs  %}        
     <div class="entry">
-    <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
-    <p>{{ post.description }}</p>
+    <a href="{{ post.url | prepend: site.baseurl }}">&#149; {{ post.title }}</a>
+    <!-- <p>{{ post.description }}</p> -->
     </div>{% endfor %}
 </div>

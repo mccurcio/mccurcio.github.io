@@ -1,34 +1,34 @@
-- title: Documentation
+- title: Docs
   url: docs
   links:
-    - title: "Matt's Presentations"
+    - title: "&#8226; Matt's Presentations"
       url: "docs/resources/mcc-presentations"
 
-    - title: "What Is Machine-learning"
+    - title: "&#8226; What Is Machine-learning"
       url: "docs/chapters/introduction-what-is-machine-learning"
 
-    - title: "Learning EDA"
+    - title: "&#8226; Learning EDA"
       url: "docs/chapters/exploratory-data-analysis"
 
-    - title: "Learning Logit"
+    - title: "&#8226; Learning Logit"
       url: "docs/chapters/logistic-regression-for-binary-classification"
 
-    - title: "Learning Principle Component Analysis"
+    - title: "&#8226; Learning Principle Component Analysis"
       url: "docs/chapters/principle-component-analysis-of-a-binary-classification-system"
 
-    - title: "Learning Support Vector Machines"
+    - title: "&#8226; Learning Support Vector Machines"
       url: "docs/chapters/support-vector-machines-for-binary-classification"
 
-    - title: "Learning Neural Networks"
+    - title: "&#8226; Learning Neural Networks"
       url: "docs/chapters/neural-networks-for-binary-classification"
 
-    - title: "My Data Science Resources"
+    - title: "&#8226; My Data Science Resources"
       url: "docs/resources/data-science-resources"
 
-    - title: "Possible Paper Topics"
+    - title: "&#8226; Possible Paper Topics"
       url: "docs/resources/research-topics"
 
-- title: "Info-Archive by title"
+- title: "Posts by date & title"
   url: "archive"
-- title: "Info-Archive by tags"
+- title: "Posts by tags"
   url: "tags"

@@ -3,7 +3,7 @@ title: About
 permalink: /about/
 ---
 
-## About
+# About Matt
 
 Welcome,
 

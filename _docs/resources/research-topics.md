@@ -6,8 +6,7 @@ tags: Ideas
 
 ## Need Inspiration & Ideas
 
-- This list is meant to inspire you !
-- If there's a topic you'd like to see on this list, please add it along with your name. 
+- This list is meant to inspire you!
 
 *A good presenter does **NOT** have to be:*
 
@@ -21,32 +20,26 @@ tags: Ideas
 1. enthusiastic about the topic, and helping others
 1. willing to do some homework to pull together demos and/or visuals
 
-
 ---
 
-## Topic Ideas
+## Ideas
 
 - [Who, what, where, when, why and how] - Talking DS to a Journalist
 - Python - Setting up your enviroment (versions for window, linux or that other OS)
   - working with Conda or 
   - venv
-<<<<<<< HEAD
-=======
-- Home automation with Python/Raspberry PI Zero
->>>>>>> c18e58fe7334b5e8da9845dbe62cbe043f989c39
 - Documenting your work - the PEP-8 way
 - Exploring `<insert your favorite library>`
 - Git, github, and source control (how to make your repo look professional)
 - How to OOP with Python
 - Talking to databases
-- Logistic Regression
 - Exploratory Data Analysis Examples/ Reporting
 - How to compare/run multiple ML models.
 - Flask 
 - Dash
 - Django
 - Automating Reports and reporting
-- R-library(usethis)
+- R-library: [Usethis](https://usethis.r-lib.org/)
 
 - How to open source contributions
 - How to work with OSS

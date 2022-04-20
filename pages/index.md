@@ -4,43 +4,32 @@ title: Matt's D.S. Study Site
 permalink: /
 ---
 
-## Welcome 
+# Welcome to my Data Science study site 
 
-- I am a Scientist and an Educator, and I can bridge multiple disciplines.   
+**My goals for this site are to**:
 
-- I am inquisitive and now use the tools of Statistics, Data Science, R, and Python. 
+1. Present my Articles, Presentations, and Posts on Data Science, *Obiviously* 
+2. Share my posts that include code snippets I have used, and my coding help and notes
+   - I got inspiration from of Chris Albon's [website](https://chrisalbon.com), Thanks Chris 👏
+3. Spur discussion and interactivity. 
+   - Thanks to [VSoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme 👏
 
-### This is my Data Science Study Site
+**Feel free to browse my**:
 
-![](/assets/img/left-arrow-red2.jpg) On the left, you will find a list of my work and articles I am rewriting. 
+- ⬅️ Articles
+- [Posts by title](https://mccurcio.github.io/archive/)
+- [Posts by tags](https://mccurcio.github.io/tags/)
 
-I have several goals for this site.
+I am in the process of migrating and rewriting my older material.  
 
-1. This site is meant to store my coding information and snippets. I call it my Info-Archive
-
-Feel free to browse my:
-
-- [Info-Archive by title](https://mccurcio.github.io/archive/)
-- [Info-Archive by tags](https://mccurcio.github.io/tags/)
-
->Please note that I am migrating and condensing my work right now. 
-
-As an aside, I am a huge fan of Chris Albon's work and [website](https://chrisalbon.com). On his site, he has collected his code snippets in Python. 
-
-2. I am in the process of rewriting the material I wrote when teaching myself Data Science and Analytics. It is very formal (like me at times), and I strive to make the work more appealing to my friends and fellow students.
+*Oddly, I used writing to teach myself. My writing is a little formal (like myself at times), BUT I am striving to make it appealing*. 😉
 
 
 
-Feel free to:
 
-- [Browse my Posts](https://mccurcio.github.io/archive/)
-- [Follow my Tags](https://mccurcio.github.io/tags/)  
-or   
-- [Read my documentation](https://mccurcio.github.io/docs/)
-
-<br>
-
-### Have a Question?
+## Have a Question?
 
 - <a href="mailto:matt.curcio.ri@gmail.com?subject=A question from the web">Send An Email</a>
+- Or interact via GitHub issues, on the right.
 
+*I look foward to meeting*.
