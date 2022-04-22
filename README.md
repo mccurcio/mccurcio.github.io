@@ -1,14 +1,13 @@
 ## https://mccurcio.github.io
 
 
-This site uses the [Jekyll-Ruby](https://jekyllrb.com/) static site generator.
+- This site uses the [Jekyll-Ruby](https://jekyllrb.com/) static site generator.  
+- The theme in [Docsy-Jekyll](https://vsoch.github.io/docsy-jekyll/),  Thanks to [vsoch](https://github.com/vsoch).  
 
 ### 1. Adding posts/news pages
     
 - To add pages, save to the **_posts** directory.  
-- Prepend **yyyy-mm-dd** followed by your name/title.   
- 
-**2022-03-10-title.md**
+- Use Format: **2022-03-10-title.md**  
 
 ### 2. Add YML-Frontmatter YML to page
 
