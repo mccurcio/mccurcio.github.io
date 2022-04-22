@@ -1,0 +1,14 @@
+I")<hr />
+
+<p>Find a specific file name in large directories</p>
+
+<p>Find text inside a list of files and output the filename when a match occurs. Recurse and case-insensitive:
+-i - Ignore case distinctions
+-r - Recursive
+-l - Suppress normal output; instead print the name of each input file from which output would normally have been printed. The scanning will stop on the first match.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep Documentation
+
+grep -irl foo*
+</code></pre></div></div>
+:ET

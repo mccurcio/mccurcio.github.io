@@ -1,0 +1,14 @@
+I"¼<hr />
+
+<p>Scripting</p>
+
+<p>Rename All files in directory to Lowercase</p>
+
+<p>An elegant way to rename all files in a directory to lowercase</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in `ls -1`; do mv $i "${i,,}" ; done
+</code></pre></div></div>
+
+<p>Explanation: There is a lower/upper case modification build-in bash using for, for looping files through directory.</p>
+
+:ET

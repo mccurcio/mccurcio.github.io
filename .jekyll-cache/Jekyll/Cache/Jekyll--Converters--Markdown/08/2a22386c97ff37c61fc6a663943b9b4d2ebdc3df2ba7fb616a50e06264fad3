@@ -1,0 +1,15 @@
+I",<h3 id="enumerate-tips"><a href="https://book.pythontips.com/en/latest/enumerate.html">Enumerate Tips</a></h3>
+
+<p>Instead of doing:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list = ["a", "b", "c"]
+i = 0 
+for item in list: 
+    print i, item 
+    i += 1
+</code></pre></div></div>
+
+<p><strong>Do This:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i, item in enumerate(list):
+    print i, item
+</code></pre></div></div>
+:ET

@@ -1,0 +1,137 @@
+I"�<h2 id="a-tiddlywiki-what">A Tiddlywiki, What?</h2>
+
+<blockquote>
+  <p>A non-linear web notebook for capturing, organising and sharing complex information.</p>
+
+  <p><a href="https://tiddlywiki.com/">Tiddlywiki.com</a></p>
+</blockquote>
+
+<p>Briefly–</p>
+
+<p><abbr title="Tiddlywiki">TW</abbr>  is a:</p>
+
+<ol>
+  <li>Note taking,</li>
+  <li>Picture storing,</li>
+  <li>Document storing,</li>
+  <li>Journaling,</li>
+  <li>Search enabled,</li>
+  <li>Tag managed,</li>
+</ol>
+
+<p>and an <em>information-storage-software</em> written in Javascript used with your web browser.</p>
+
+<ul>
+  <li>It’s a free, and open-source.</li>
+  <li>It runs locally on a network.</li>
+  <li>It can be made private.</li>
+</ul>
+
+<p>I love it because it can be stored on a thumb drive or ON Google Drive and keeps everything together in one place not multiple markdown (*.md) files.</p>
+
+<p><strong>It is my favorite note taking platform.</strong></p>
+
+<p>I will admit that this software has not cured me of keeping notes, pictures, etc, in every hiding place possible, but I am one step closer to storing it in one place.</p>
+
+<h2 id="step-1---download-a-tw">Step 1 - Download a <abbr title="Tiddlywiki">TW</abbr></h2>
+
+<ul>
+  <li>Download your own <em>Tiddlywiki</em> .html ‘doc’: <a href="https://tiddlywiki.com/">Tiddlywiki.com</a></li>
+</ul>
+
+<p><img src="/assets/img/tw-page.png" alt="" /></p>
+
+<p><br /></p>
+
+<ul>
+  <li>Scroll down and to the <strong>GettingStarted</strong> box
+    <ol>
+      <li>Find your operating system</li>
+      <li>Find your browser type</li>
+      <li>Download an empty version.</li>
+    </ol>
+  </li>
+</ul>
+
+<p><em>NOTE: Each browser is different and this will ensure the little things work correctly.</em></p>
+
+<p><img src="/assets/img/empty.tw.png" alt="" /></p>
+
+<h2 id="step-2---open-your-tw">Step 2 - Open your <abbr title="Tiddlywiki">TW</abbr></h2>
+
+<p>Once downloaded,</p>
+
+<ul>
+  <li>
+    <p>Click the <strong>empty.html</strong> file to open it in your browser.</p>
+  </li>
+  <li>
+    <p><strong>‘GettingStarted’</strong> is the <em>Title configuration page</em></p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/GettingStarted-titles.png" alt="" /></p>
+
+<ul>
+  <li>Add your <strong>Title</strong> &amp; <strong>Subtitle</strong>.
+    <ul>
+      <li>Both show on the top-right-hand side.
+&lt;/br&gt;</li>
+    </ul>
+  </li>
+  <li>Close the tiddler by using the <strong>X</strong>.</li>
+  <li>Then <strong>Save</strong> By pressing the RED circled-checkmark.</li>
+</ul>
+
+<h2 id="step-3---write-a-note">Step #3 - Write a Note</h2>
+
+<p>Change the titles and you can <em>start writing immediately</em>.</p>
+
+<ul>
+  <li>Press the <strong>Grey Plus Sign</strong> below your titles, to OPEN your first note (<a href="https://tiddlywiki.com/static/Tiddlers.html">Tiddler</a>).</li>
+</ul>
+
+<blockquote>
+  <p>A Tiddler is the fundamental unit of information in a TiddlyWiki.</p>
+
+  <p><a href="https://tiddlywiki.com/static/Tiddlers.html">Tiddlers</a></p>
+</blockquote>
+
+<p><img src="/assets/img/first-tiddler-note-page.png" alt="" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">New Tiddler</code> window has 4 areas that are the most useful:</p>
+
+<ol>
+  <li>The Title,</li>
+  <li>The Tag Name,</li>
+  <li>The Text Editor,</li>
+  <li>The Control Buttons (trash-can, x and the chekmark)</li>
+</ol>
+
+<p><img src="/assets/img/making-tw.png" alt="" /></p>
+
+<blockquote>
+  <p>CAUTION: Tiddlywiki uses its own variation of Markdown so try the Editor tools to help you get used to the changes.</p>
+</blockquote>
+
+<p>Add you title, note, and choose a good tag name and you are all set.</p>
+
+<ul>
+  <li>
+    <p>Click the Grey Checkmark to accept your note.</p>
+  </li>
+  <li>
+    <p>Click RED checkmark on the far-right and save your work.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>But if you make a mistake, use the trash-can to delete.</p>
+</blockquote>
+
+<p><strong>Those are the basics</strong>.</p>
+
+<p>Now you are ready to dive in.</p>
+
+<p>Next time <strong>Part #2</strong></p>
+:ET

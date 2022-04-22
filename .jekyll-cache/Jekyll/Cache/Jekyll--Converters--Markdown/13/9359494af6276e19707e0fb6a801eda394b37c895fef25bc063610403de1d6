@@ -1,0 +1,26 @@
+I"4<hr />
+
+<p>uniq</p>
+
+<ol>
+  <li>Find and then remove duplicate elements - In uniq -d is used to find duplicates and -u is used to find unique records.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uniq -d movies.csv
+</code></pre></div></div>
+
+<ol>
+  <li>Remove duplicate records - In uniq -d is used to find duplicates and -u is used to find unique records.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uniq -u movies.csv &gt; uniq_movie.csv
+</code></pre></div></div>
+
+<ol>
+  <li>Crosscheck the new file for duplicates</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>uniq -d uniq_movie.csv
+</code></pre></div></div>
+
+:ET

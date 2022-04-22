@@ -1,0 +1,22 @@
+I"—<hr />
+
+<p>Check For Anagrams</p>
+
+<p>This has to be the easiest way ever to check for anagram.</p>
+
+<p>This ditti imports the <code class="language-plaintext highlighter-rouge">collections</code> library and uses sets.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from collections import Counter
+def is_anagram(word1, word2):
+    """Checks whether the words are anagrams.
+    word1: string
+    word2: string
+    returns: boolean
+    """
+    return Counter(str1) == Counter(str2) 
+</code></pre></div></div>
+
+<p><a href="https">collections Man Page</a></p>
+
+<p><a href="https">Counter Man Page</a></p>
+:ET

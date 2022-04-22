@@ -1,0 +1,329 @@
+I"��
+<div id="introduction---what-is-machine-learning" class="section level1">
+<h1>Introduction - What is Machine Learning?</h1>
+<p>At the intersection between Applied Mathematics, Computer Science, and Biological Sciences is a subset of knowledge known as Bioinformatics. Some find Bioinformatics and its cousin Data Science difficult to define. However, the most ubiquitous pictograph of Bioinformatics and Data Science may say a thousand words even if we cannot. See Figure 1. What separates these two pursuits is the domain knowledge that each focus on. Where Data Science may focus on understanding buying habits of individuals, Bioinformatics tends to focus on the understanding of DNA and its relevance to disease. It is now common to find new fields emerging such as the study of chemistry using applied mathematics and computers which beget the field of Chemo-informatics.<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> <a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> Today, since hospitals are warehouses of modern medical records and knowledge they make career paths such as Healthcare-Informatics possible.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a></p>
+<div class="figure">
+<img src="00-data/10-images/Venn-diagram-original-768x432.png" alt="Venn Diagrams of Bioinformatics And Data Science" />
+<p class="caption">Venn Diagrams of Bioinformatics And Data Science</p>
+</div>
+<p><a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></p>
+<p>Generally speaking, Bioinformatics derives its knowledge from various items. To start our data may consist of numbers, text and even pictures as input. Numerical values may be from scientific sensors or instrumentation, such as Next Generation<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> DNA sequence data.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> Text data is sourced from articles/books or even databases of scientific articles like PubMed which show the inter-connectivity of thought and research.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> Graphics and pictures include graphical forms, such as relationship data that appears in genomic or proteomic or metabolic databases.<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+<p>However, Bioinformatics and Data Science imply a process as well. One piece of this process is Reproducible Research.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> Reproducible Research and replication are linked but it goes beyond the ability of the work to be <em>independently verified</em>. The computer code and data must be provided. There locations explicitly spelled out such that other scientists may find and carry on the work and check all its calculations and methodology. Now that computers play such a large role procedurally the smallest error in a spreadsheet may plague the overall conclusion. Such is the case of the University of Mass. at Amherst found errors in a Harvard research paper.<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a></p>
+<div id="machine-learning-is" class="section level2">
+<h2><span class="header-section-number">2.1</span> Machine Learning Is?</h2>
+<blockquote>
+<p>“Machine learning is essentially a form of applied statistics with increased emphasis on the use of computers to statistically estimate complicated functions and a decreased emphasis on proving confidence intervals around these functions”</p>
+<p>— Ian Goodfellow, et al<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a></p>
+</blockquote>
+<div id="what-is-predictive-modeling" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> What is Predictive Modeling?</h3>
+<p>Although what this paper discusses is Predictive Modeling, it is under the umbrella of Machine Learning. The term ‘Predictive Modeling’ should bring to mind work in the computer science field, also called Machine Learning (ML), Artificial Intelligence (AI), Data Mining, Knowledge discovery in databases (KDD), and possibly even encompassing Big Data as well.</p>
+<blockquote>
+<p>“Indeed, these associations are appropriate, and the methods implied by these terms are an integral piece of the predictive modeling process. But predictive modeling encompasses much more than the tools and techniques for uncovering patterns within data. The practice of predictive modeling defines the process of developing a model in a way that we can understand and quantify the model’s prediction accuracy on future, yet-to-be-seen data.”</p>
+<p>Max Kuhn<a href="#fn12" class="footnote-ref" id="fnref12"><sup>12</sup></a></p>
+</blockquote>
+<p>As an aside, I use <code>Predictive Modeling</code> and <code>Machine Learning</code> interchangeably in this document.</p>
+<p>In the booklet entitled “The Elements of Data Analytic Style,” <a href="#fn13" class="footnote-ref" id="fnref13"><sup>13</sup></a> there is an useful checklist for the uninitiated into the realm of science report writing and, indeed, scientific thinking. A shorter, more succinct listing of the steps, which I prefer, and is described by Roger Peng in his book, The Art Of Data Science. The book lists what he describes as the “Epicycle of Analysis.” <a href="#fn14" class="footnote-ref" id="fnref14"><sup>14</sup></a></p>
+<p><strong>The Epicycle of Analysis</strong></p>
+<ol style="list-style-type: decimal">
+<li>Stating and refining the question,</li>
+<li>Exploring the data,</li>
+<li>Building formal statistical models,</li>
+<li>Interpreting the results,</li>
+<li>Communicating the results.</li>
+</ol>
+<div style="page-break-after: always;"></div>
+<p><strong>Predictive Modeling</strong></p>
+<p>In general, there are three types of Predictive Modeling or Machine Learning approaches;</p>
+<ol style="list-style-type: decimal">
+<li>Supervised,</li>
+<li>Unsupervised,</li>
+<li>Reinforcement.</li>
+</ol>
+<p>Due to the fact this paper only uses Supervised &amp; Unsupervised learning and for the sake of this brevity, I discuss only the first two types of Predictive Models.</p>
+</div>
+<div id="supervised-learning" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Supervised Learning</h3>
+<p>In supervised learning, data consists of observations <span class="math inline">\(x_i\)</span> (where <span class="math inline">\(X\)</span> may be a matrix of <span class="math inline">\(\Re\)</span> values) AND a corresponding label, <span class="math inline">\(y_i\)</span>. The label <span class="math inline">\(y\)</span> maybe anyone of <span class="math inline">\(C\)</span> classes. In our case of a binary classifier, we have {‘Is myoglobin’, ‘Is control’}.</p>
+<p><strong>Data set</strong>:</p>
+<ul>
+<li><p><span class="math inline">\((X_1, y_1), (X_2 , y_2), ~. . ., ~(X_N , y_N);\)</span></p></li>
+<li><p><span class="math inline">\(y \in \{1, ..., ~C\}\)</span>, where <span class="math inline">\(C\)</span> is the number of classes</p></li>
+</ul>
+<p>A machine learning algorithm determines a pattern from the input information and groups this with its necessary title or classification.</p>
+<p>One example might be that we require a machine that separates red widgets from blue widgets. One predictive algorithm is called a K-Nearest Neighbor (K-NN) algorithm. K-NN looks at an unknown object and then proceeds to calculate the distance (most commonly, the euclidean distance) to the <span class="math inline">\(K\)</span> nearest neighbors. If we consider the figure below and choose <span class="math inline">\(K\)</span> = 3, we would find a circumstance as shown. In the dark solid black on the K-Nearest-Neighbor figure, we find that the green widget is nearest to two red widgets and one blue widget. In the voting process, the K-NN algorithm (2 reds vs. 1 blue) means that the consignment of our unknown green object is red.</p>
+<p>For the K-NN algorithm to function, the data optimally most be complete with a set of features and a label of each item. Without the corresponding label, a data scientist would need different criteria to track the widgets.</p>
+<p>Five of the six algorithms that this report investigates are supervised. Logit, support vector machines, and the neural network that I have chosen require labels for the classification process.</p>
+<div class="figure">
+<img src="00-data/10-images/K-Nearest-Neighbor.50.png" alt="Example of K-Nearest-Neighbor" />
+<p class="caption">Example of K-Nearest-Neighbor</p>
+</div>
+<p><a href="#fn15" class="footnote-ref" id="fnref15"><sup>15</sup></a></p>
+<div id="what-is-a-shallow-learner" class="section level4 unnumbered">
+<h4>What is a shallow learner?</h4>
+<p>Let us investigate the K-NN algorithm and figure 2.2 (K-Nearest-Neighbor) a little further. If we change our value of <span class="math inline">\(K\)</span> to 5, then we see a different result. By using <span class="math inline">\(K = 5\)</span>, we consider the out dashed-black line. This more considerable <span class="math inline">\(K\)</span> value contains three blue widgets and two red widgets. If we ask to vote on our choice, we find that 3 blue beats the 2 red, and we assign the unknown a BLUE widget. This assignment is the opposite of the inner circle.</p>
+<p>If a researcher were to use K-NN, then the algorithm would have to test many possible <span class="math inline">\(K\)</span> values and compare the results, then choose the <span class="math inline">\(K\)</span> with the highest accuracy. However, this is where K-NN falters. The K-NN algorithm needs to keep all data points used for its initial training (accuracy testing). Any new unknowns could be conceivably tested against any or all the previous data points. The K-NN does use a generalized rule that would make future assignments quick on the contrary. It must memorize all the points for the algorithm to work. K-NN cannot delete the points until it is complete. It is true that the algorithm is simple but not efficient. Matter and fact, as the number of feature dimensions increases, this causes the complexity (also known as Big O) to rise. The complexity of K-NN is <span class="math inline">\(O\)</span>(K-NN) <span class="math inline">\(\propto nkd\)</span>.</p>
+<p>Where <span class="math inline">\(n\)</span> is the number of observations, <span class="math inline">\(k\)</span> is the number of nearest neighbors it must check, and d is the number of dimensions.<a href="#fn16" class="footnote-ref" id="fnref16"><sup>16</sup></a></p>
+<p>Given that K-NN tends to ‘memorize’ its data to complete its task, it is considered a lazy and shallow learner. Lazy indicates that the decision is left to the moment a new point is learned of predicted. If we were to use a more generalized rule, such as {Blue for (<span class="math inline">\(x \leq 5\)</span>)} this would be a more dynamic and more in-depth approach by comparison.</p>
+</div>
+</div>
+<div id="unsupervised-learning" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Unsupervised Learning</h3>
+<p>In contrast to the supervised learning system, unsupervised learning does not require or use a <strong>label</strong> or <strong>dependent variable</strong>.</p>
+<p><strong>Data set</strong>:</p>
+<ul>
+<li><p><span class="math inline">\((X_1), (X_2), ~. . ., ~(X_N)\)</span></p></li>
+<li><p><strong>No Y</strong></p></li>
+</ul>
+<p>where <span class="math inline">\(X\)</span> may represent a matrix of <span class="math inline">\(m\)</span> observations by <span class="math inline">\(n\)</span> features with <span class="math inline">\(\Re\)</span> values.</p>
+<p>Principal Component Analysis is an example of unsupervised learning, which we discuss in more detail in chapter 3. The data, despite or without its labels, are transformed to provide maximization of the variances in the dataset. Yet another objective of Unsupervised learning is to discover “interesting structures” in the data.<a href="#fn17" class="footnote-ref" id="fnref17"><sup>17</sup></a> There are several methods that show structure. These include clustering, knowledge discovery of latent variables, or discovering graph structure. In many instances and as a subheading to the aforementioned points, unsupervised learning can be used for dimension reduction or feature selection.</p>
+<p>Among the simplest unsupervised learning algorithms is K-means. K-means does not rely on the class labels of the dataset at all. K-means may be used to determine any number of classes despite any predetermined values. K-means can discover clusters later used in classification or hierarchical feature representation. K-means has several alternative methods but, in general, calculates the distance (or conversely the similarity) of observations to a mean value of the <span class="math inline">\(K\)</span>th grouping. The mean value is called the center of mass, the Physics term that provides an excellent analogy since the center of mass is a weighted average. By choosing a different number of groupings (values of <span class="math inline">\(K\)</span>, much like the K-NN), then comparing the grouping by a measure of accuracy, one example being, mean square error.</p>
+<div class="figure">
+<img src="00-data/10-images/k-means-2.50.png" alt="Example of K-Means" />
+<p class="caption">Example of K-Means</p>
+</div>
+<p><a href="#fn18" class="footnote-ref" id="fnref18"><sup>18</sup></a></p>
+</div>
+<div id="five-challenges-in-predictive-modeling" class="section level3">
+<h3><span class="header-section-number">2.1.4</span> Five Challenges In Predictive Modeling</h3>
+<p>To many predictive modeling is a panacea for all sorts of issues. Although it does show promise, some hurdles need research. Martin Jaggi<a href="#fn19" class="footnote-ref" id="fnref19"><sup>19</sup></a> has summarized four points that elucidate current problems in the field that need research. To this list, I have added one more point, which is commonly called the <em>Vaiance-Bias Tradeoff</em>.</p>
+<p><strong>Problem 1:</strong> The vast majority of information in the world is unlabeled, so it would be advantageous to have a good Unsupervised machine learning algorithms to use,</p>
+<p><strong>Problem 2:</strong> Algorithms are very specialized, too specific,</p>
+<p><strong>Problem 3:</strong> Transfer learning to new environments,</p>
+<p><strong>Problem 4:</strong> Scale, the scale of information is vast in reality, and we have computers that work in gigabytes, not the Exabytes that humans may have available to them. The scale of distributed Big Data,</p>
+<p>The specific predictive models which are executed in this report are discussed in further detail in their own sections.</p>
+<p><strong>Problem 5:</strong> Bias-Variance Trade-Off.</p>
+<p>The ability to generalize is a key idea in predictive modeling. This idea harkens back to freshman classes where one studied Student’s t-test and analysis of variance.</p>
+<p><span class="math display">\[\begin{equation}
+E \left[ \left( y_0 - \hat f(x_0) \right )^2 \right ] = Var ( \hat f(x_0)) + \left [Bias (\hat f(x_0)) \right]^2 + Var(\epsilon)
+\end{equation}\]</span></p>
+<hr />
+<div class="figure">
+<img src="00-data/10-images/bias-variance-tradeoff.50.png" alt="Bias-Variance Tradeoff" />
+<p class="caption">Bias-Variance Tradeoff</p>
+</div>
+<p>The bias-variance dilemma can be stated as follows.<a href="#fn20" class="footnote-ref" id="fnref20"><sup>20</sup></a></p>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li><p>Models with too few parameters are inaccurate because of a large bias: they lack flexibility.</p></li>
+<li><p>Models with too many parameters are inaccurate because of a large variance: they are too sensitive to the sample details (changes in the details will produce huge variations).</p></li>
+<li><p>Identifying the best model requires controlling the “model complexity”, i.e., the proper architecture and number of parameters, to reach an appropriate compromise between bias and variance.</p></li>
+</ol>
+</blockquote>
+<p>One very good example is seen in figure 2.4, <em>Bias-Variance Tradeoff</em>. By considering the yellow-orange line we find a simple slope intercept model (<span class="math inline">\(y \propto k \cdot x\)</span>) where the variance is high but the bias low and is not flexible enough. This is called underfitting. Looking at the green-blue line we see it follows the data set much more closely, e.g. (<span class="math inline">\(y \propto k \cdot x^8\)</span>). Here the variance is very low but common sense tells us that the line is overfit and would not generalize well in a real world setting. Finally leaving us with the black line which does not appear to have too many parameters, (<span class="math inline">\(y \propto k \cdot x^3\)</span>).</p>
+</div>
+</div>
+<div id="research-description" class="section level2">
+<h2><span class="header-section-number">2.2</span> Research Description</h2>
+<p>Is there a correlation between the data points, which are outliers from principal component analysis (PCA), and six types of predictive modeling?</p>
+<p>This experiment is interested in determining if PCA would provide information on the false-positives and false-negatives that were an inevitable part of model building and optimization. The six predictive models that have chosen for this work are Logistic Regression, Support Vector Machines (SVM) linear, polynomial kernel, and radial basis function kernel, and a Neural Network.</p>
+<p>I have studied six different M.L. algorithms using protein amino acid percent composition data from two classes. Class number 1 is my positive control which is a set of Myoglobin proteins, while the second class is a control group of human proteins that do not have Fe binding centers.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Group</th>
+<th align="right">Class</th>
+<th align="right">Number of Class</th>
+<th align="right">Range of Groups</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Controls</td>
+<td align="right">0 or (-)</td>
+<td align="right">1216</td>
+<td align="right">1, …, 1216</td>
+</tr>
+<tr class="even">
+<td align="left">Myoglobin</td>
+<td align="right">1 or (+)</td>
+<td align="right">1124</td>
+<td align="right">1217, …, 2340</td>
+</tr>
+</tbody>
+</table>
+<p>It is common for Data Scientists to test their data sets for feature importance and feature selection. One test that has interested this researcher is Principal component analysis. It can be a useful tool. PCA is an unsupervised machine learning technique which “reduces data by geometrically projecting them onto lower dimensions called principal components (PCs), with the goal of finding the best summary of the data using a limited number of PCs.” <a href="#fn21" class="footnote-ref" id="fnref21"><sup>21</sup></a> However, the results that it provides may not be immediately intuitive to the layperson.</p>
+<p>How do the advantages and disadvantages of using PCA compare with other machine learning techniques? The advantages are numerable. They include dimensionality reduction and filtering out noise inherent in the data, and it may preserve the global structure of the data. Does the global and graphical structure of the data produced by the first two principal components provide any insights into how the predictive models of Logistic Regression, Neural Networks utilizing auto-encoders, Support Vector Machines, and Random Forest? In essence, is PCA sufficiently similar to any of the applied mathematics tools of more advanced approaches? Also, this work is to teach me machine learning or predictive modeling techniques.</p>
+<p>The data for this study is from the Uniprot database. From the Uniprot database was queried for two protein groups. The first group was Myoglobin, and the second was a control group comprised of human proteins not related to Hemoglobin or Myoglobin. See Figure 1.5, <em>Percent Amino Acid Composition</em>. There have been a group of papers that are striving to classify types of proteins by their amino acid structure alone. The most straightforward classification procedures involve using the percent amino acid composition (AAC). The AAC is calculated by using the count of an amino acid over the total number in that protein.</p>
+<ul>
+<li>Percent Amino Acid Composition:</li>
+</ul>
+<p><span class="math display">\[\begin{equation} 
+\%AAC_X ~=~ \frac{N_{Amino~Acid~X}}{Total ~ N ~ of ~ AA}
+\end{equation}\]</span></p>
+<p>The Exploratory Data Analysis determines if features were skewed and needed must be transformed. In a random system where amino acids were chosen at random, one would expect the percent amino acid composition to be close to 5%. However, this is far from the case for the Myoglobin proteins or the control protein samples. On top of this the differences between the myoglobin and control proteins can be as high as approximately 5% with the amino acid Lysine, K.</p>
+<div class="figure">
+<img src="00-data/10-images/c_m_Mean_AAC.png" alt="Mean Percent Amino Acid Compositions For Control And Myoglobin" />
+<p class="caption">Mean Percent Amino Acid Compositions For Control And Myoglobin</p>
+</div>
+<div id="exploratory-data-analysis-eda" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> Exploratory Data Analysis (EDA)</h3>
+<p>During EDA, the data is checked for irregularities, such as missing data, outliers among features, skewness, and visually for normality using QQ-plots. The only irregularity that posed a significant issue was the skewness of the amino acid features. Many of 20 amino acid features had a significant number of outliers, as seen by Boxplot analysis. However, only three features had skew, which might have presented a problem. Dealing with the skew of the AA was necessary since Principal Component Analysis was a significant aspect of this experiment.</p>
+<p>Testing determined earlier that three amino acids (C, F, I) from the single amino acid percent composition needs transformation by using the square root function. The choice of transformations was natural log, log base 10, squaring (<span class="math inline">\(x^2\)</span>), and using the reciprocal (<span class="math inline">\(1 / x\)</span>) of the values. The square root transformation lowered the skewness to values of less than 1.0 from high points of greater than 2 in all three cases to {-0.102739 <span class="math inline">\(\leq\)</span> skew after transformation <span class="math inline">\(\leq\)</span> 0.3478132}.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Amino Acid</th>
+<th align="center">Initial skewness</th>
+<th align="center">Skew after square root transform</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">C, Cysteine</td>
+<td align="center">2.538162</td>
+<td align="center">0.347813248</td>
+</tr>
+<tr class="even">
+<td align="left">F, Phenolalanine</td>
+<td align="center">2.128118</td>
+<td align="center">-0.102739748</td>
+</tr>
+<tr class="odd">
+<td align="left">I, Isoleucine</td>
+<td align="center">2.192145</td>
+<td align="center">0.293474879</td>
+</tr>
+</tbody>
+</table>
+<p>Three transformations take place for this dataset.</p>
+<p><code>~/00-data/02-aac_dpc_values/c_m_TRANSFORMED.csv</code> and used throughout the rest of the analysis.</p>
+<p>All work uses R<a href="#fn22" class="footnote-ref" id="fnref22"><sup>22</sup></a>, RStudio<a href="#fn23" class="footnote-ref" id="fnref23"><sup>23</sup></a> and a machine learning library/framework <code>caret</code>.<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a></p>
+</div>
+<div id="caret-library-for-r" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Caret library for R</h3>
+<p>The R/caret library is attractive to use for many reasons. It currently allows 238 machine learning models that use different options and data structures.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> The utility of caret is that it organizes the input and output into a standard format making the need for learning only one grammar and syntax. Caret also harmonizes the use of hyper-parameters. Work becomes reproducible. Setting up the training section for caret, for this experiment, can be broken into three parts.</p>
+</div>
+<div id="tuning-hyper-parameters" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Tuning Hyper-parameters</h3>
+<p>The <code>tune.grid</code> command set allows a researcher to experiment by varying the hyper-parameters of the given model to investigate optimum values. Currently, there are no algorithms that allow for the quick and robust tuning of parameters. Instead of searching, a sizable experimental space test searches an n-dimensional grid in a full factorial design if desired.</p>
+<p>Although some models have many parameters, the most common one is to search along a cost hyper-parameter.</p>
+<blockquote>
+<p>“The function we want to minimize or maximize is called the objective function or criterion. When we are minimizing it, we may also call it the cost function, loss function, or error function.”<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a></p>
+</blockquote>
+<p>The cost function (a term derived from business modeling, i.e., optimizing the cost) is an estimate as to how well models predicted value fits from the actual value. A typical cost function is the squared error function.</p>
+<p>Example Cost Function: <a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a>
+<span class="math display">\[\begin{equation} 
+Cost ~=~ \left ( y_i - \hat f(x_i) \right )^2
+\end{equation}\]</span></p>
+<p>It may be important to search the literature to determine if other researchers have used a specific range of optimum value, which may speed a search. For example, C.W. Hsu et al. suggest using a broad range of 20 orders of magnitude of powers of 2,</p>
+<div style="page-break-after: always;"></div>
+<p><strong>R Code:</strong> Using TuneGrid command to test sequences of number such that the optimal cost function can be sought.</p>
+<pre><code># tuneGrid = svmLinearGrid
+svmLinearGrid &lt;- expand.grid(C = c(2^(seq(-5, 15, 2))))</code></pre>
+<p><code>expand.grid</code> will produce a sequence of numbers (in our case) from <span class="math inline">\(2^{-5}, 2^{-3} ~to~ 2^{15}\)</span> to be tested as values for the cost function.</p>
+<p>Then switch to 4 or 5 orders of magnitude with 1/4 log steps,<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a></p>
+<p>e.g. cost = <code>expand.grid(c(2^(seq(1, 5, 0.25))))</code></p>
+<p>for a finer search gird.</p>
+</div>
+<div id="k-fold-cross-validation-of-results" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> K-Fold Cross validation of results</h3>
+<p>Another valuable option that caret has is the ability to cross-validate results.</p>
+<p>Cross-validation is a statistical method used to estimate the skill of machine learning models.<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
+<blockquote>
+<p>“The samples are randomly partitioned into k sets of roughly equal size. A model is fit using all samples except the first subset (called the first fold). The held-out samples are used for prediction by the recent model. The performance estimate measures the accuracy of the <em>out of bag</em> or <em>held out</em> samples. The first subset is returned to the training set, and the procedure repeats with the second subset held out, and so on. The k resampled estimates of performance are summarized (usually with the mean and standard error) and used to understand the relationship between the tuning parameter(s) and model utility.”<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a></p>
+</blockquote>
+<p>Cross-validation has the advantage of using the entire dataset for training and testing, increasing the opportunity that more training samples produce a better model.</p>
+<p><strong>R Code:</strong> 10 Fold cross-validation repeated 5 times</p>
+<pre><code>fitControl &lt;- trainControl(method = &quot;repeatedcv&quot;,     # Type of Cross-Validation
+                           number = 10,               # Number of splits
+                           repeats = 5,               # Produce 5 replicates
+                           savePredictions = &quot;final&quot;) # Save FP/FN predictions</code></pre>
+</div>
+<div id="train-command" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Train command</h3>
+<p>The training command produces an object of the model. The first line should point out the “formula,” which is modeled. The dependent variable is first. The <code>~</code> (Tilda sign) indicates a model is called. Then the desired features can be listed or abbreviated with the all (.) sign.</p>
+<p><strong>R Code:</strong> Train command</p>
+<pre><code>model_object &lt;- train(Class ~ .,              # READ: Class is modeled by all features.
+                      data = training_set,    # Data used
+                      trControl = fitControl, # Cross Validation setup
+                      method = &quot;svmLinear&quot;,   # Use caret ML method
+                      tune.Grid = Grid)       # Hyperparameter grid exploration</code></pre>
+</div>
+<div id="analysis-of-results" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Analysis of results</h3>
+<p>In binary classification, a two by two contingency table describes predicted versus actual value classifications. This table is also known as a confusion matrix for machine learning students. It is also known as a two by two contingency table in statistics.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">2 x 2 Confusion Matrix</th>
+<th align="center">Actual = 0</th>
+<th align="center">Actual = 1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center">Predicted = 0</td>
+<td align="center">True-Negatives</td>
+<td align="center">False-Negatives</td>
+</tr>
+<tr class="even">
+<td align="center">Predicted = 1</td>
+<td align="center">False-Positives</td>
+<td align="center">True-Positives</td>
+</tr>
+</tbody>
+</table>
+<p>There are many ways to describe the results further using this confusion matrix. However, Accuracy is used for all comparisons.</p>
+<p><span class="math display">\[\begin{equation} 
+Accuracy ~=~ \frac{TP + TN}{N_{Total}}
+\end{equation}\]</span></p>
+<p>The second goal of this experiment is to produce the False Positives and False-Negatives and evaluating these by comparing them to the Principal Component Analysis Biplot of the first two Principal Components.</p>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><a href="https://www.acs.org/content/acs/en/careers/college-to-career/chemistry-careers/cheminformatics.html" class="uri">https://www.acs.org/content/acs/en/careers/college-to-career/chemistry-careers/cheminformatics.html</a><a href="introduction-what-is-machine-learning.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://jcheminf.biomedcentral.com/" class="uri">https://jcheminf.biomedcentral.com/</a><a href="introduction-what-is-machine-learning.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><a href="https://www.usnews.com/education/best-graduate-schools/articles/2014/03/26/consider-pursuing-a-career-in-health-informatics" class="uri">https://www.usnews.com/education/best-graduate-schools/articles/2014/03/26/consider-pursuing-a-career-in-health-informatics</a><a href="introduction-what-is-machine-learning.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p><a href="http://omgenomics.com/what-is-bioinformatics/" class="uri">http://omgenomics.com/what-is-bioinformatics/</a><a href="introduction-what-is-machine-learning.html#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p>What is Next-Generation DNA Sequencing?, <a href="https://www.ebi.ac.uk/training/online/course/ebi-next-generation-sequencing-practical-course/what-you-will-learn/what-next-generation-dna-" class="uri">https://www.ebi.ac.uk/training/online/course/ebi-next-generation-sequencing-practical-course/what-you-will-learn/what-next-generation-dna-</a><a href="introduction-what-is-machine-learning.html#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p><a href="http://www.genome.ucsc.edu/" class="uri">http://www.genome.ucsc.edu/</a><a href="introduction-what-is-machine-learning.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p><a href="https://arxiv.org/" class="uri">https://arxiv.org/</a><a href="introduction-what-is-machine-learning.html#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p><a href="https://www.ebi.ac.uk/training/online/course/proteomics-introduction-ebi-resources/what-proteomics" class="uri">https://www.ebi.ac.uk/training/online/course/proteomics-introduction-ebi-resources/what-proteomics</a><a href="introduction-what-is-machine-learning.html#fnref8" class="footnote-back">↩</a></p></li>
+<li id="fn9"><p>Roger Peng, The Real Reason Reproducible Research is Important, <a href="https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/" class="uri">https://simplystatistics.org/2014/06/06/the-real-reason-reproducible-research-is-important/</a><a href="introduction-what-is-machine-learning.html#fnref9" class="footnote-back">↩</a></p></li>
+<li id="fn10"><p><a href="https://www.chronicle.com/article/UMass-Graduate-Student-Talks/138763" class="uri">https://www.chronicle.com/article/UMass-Graduate-Student-Talks/138763</a><a href="introduction-what-is-machine-learning.html#fnref10" class="footnote-back">↩</a></p></li>
+<li id="fn11"><p>Ian Goodfellow, Yoshua Bengio, Aaron Courville, ‘Deep Learning’, MIT Press, 2016, <a href="http://www.deeplearningbook.org" class="uri">http://www.deeplearningbook.org</a><a href="introduction-what-is-machine-learning.html#fnref11" class="footnote-back">↩</a></p></li>
+<li id="fn12"><p>Max Kuhn, Kjell Johnson, Applied Predictive Modeling, Springer, <a href="ISBN:978-1-4614-6848-6" class="uri">ISBN:978-1-4614-6848-6</a>, 2013<a href="introduction-what-is-machine-learning.html#fnref12" class="footnote-back">↩</a></p></li>
+<li id="fn13"><p>Jeff Leek, The Elements of Data Analytic Style, A guide for people who want to analyze data., Leanpub Books, <a href="http://leanpub.com/datastyle" class="uri">http://leanpub.com/datastyle</a>, 2015<a href="introduction-what-is-machine-learning.html#fnref13" class="footnote-back">↩</a></p></li>
+<li id="fn14"><p>Roger D. Peng and Elizabeth Matsui, The Art of Data Science, A Guide for Anyone Who Works with Data, Leanpub Books, <a href="http://leanpub.com/artofdatascience" class="uri">http://leanpub.com/artofdatascience</a>, 2015<a href="introduction-what-is-machine-learning.html#fnref14" class="footnote-back">↩</a></p></li>
+<li id="fn15"><p><a href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm" class="uri">https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm</a><a href="introduction-what-is-machine-learning.html#fnref15" class="footnote-back">↩</a></p></li>
+<li id="fn16"><p>Olga Veksler, Machine Learning in Computer Vision, <a href="http://www.csd.uwo.ca/courses/CS9840a/Lecture2_knn.pdf" class="uri">http://www.csd.uwo.ca/courses/CS9840a/Lecture2_knn.pdf</a><a href="introduction-what-is-machine-learning.html#fnref16" class="footnote-back">↩</a></p></li>
+<li id="fn17"><p>Kevin Murphy, Machine learning a probabilistic perspective, 2012, ISBN 978-0-262-01802-9<a href="introduction-what-is-machine-learning.html#fnref17" class="footnote-back">↩</a></p></li>
+<li id="fn18"><p><a href="https://www.slideshare.net/teofili/machine-learning-with-apache-hama/20-KMeans_clustering_20" class="uri">https://www.slideshare.net/teofili/machine-learning-with-apache-hama/20-KMeans_clustering_20</a><a href="introduction-what-is-machine-learning.html#fnref18" class="footnote-back">↩</a></p></li>
+<li id="fn19"><p><a href="https://www.machinelearning.ai/machine-learning/4-big-challenges-in-machine-learning-ft-martin-jaggi-2/" class="uri">https://www.machinelearning.ai/machine-learning/4-big-challenges-in-machine-learning-ft-martin-jaggi-2/</a><a href="introduction-what-is-machine-learning.html#fnref19" class="footnote-back">↩</a></p></li>
+<li id="fn20"><p>Trevor Hastie, Robert Tibshirani, Jerome Friedman, The Elements of Statistical Learning; Data Mining, Inference, and Prediction, <a href="https://web.stanford.edu/~hastie/ElemStatLearn/" class="uri">https://web.stanford.edu/~hastie/ElemStatLearn/</a>, 2017<a href="introduction-what-is-machine-learning.html#fnref20" class="footnote-back">↩</a></p></li>
+<li id="fn21"><p>Jake Lever, Martin Krzywinski, Naomi Altman, Principal component analysis, Nature Methods, Vol.14 No.7, July 2017, 641-2<a href="introduction-what-is-machine-learning.html#fnref21" class="footnote-back">↩</a></p></li>
+<li id="fn22"><p><a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a><a href="introduction-what-is-machine-learning.html#fnref22" class="footnote-back">↩</a></p></li>
+<li id="fn23"><p><a href="https://rstudio.com/" class="uri">https://rstudio.com/</a><a href="introduction-what-is-machine-learning.html#fnref23" class="footnote-back">↩</a></p></li>
+<li id="fn24"><p><a href="http://topepo.github.io/caret/index.html" class="uri">http://topepo.github.io/caret/index.html</a><a href="introduction-what-is-machine-learning.html#fnref24" class="footnote-back">↩</a></p></li>
+<li id="fn25"><p><a href="http://topepo.github.io/caret/available-models.html" class="uri">http://topepo.github.io/caret/available-models.html</a><a href="introduction-what-is-machine-learning.html#fnref25" class="footnote-back">↩</a></p></li>
+<li id="fn26"><p>Ian Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, <a href="http://www.deeplearningbook.org" class="uri">http://www.deeplearningbook.org</a>, 2016<a href="introduction-what-is-machine-learning.html#fnref26" class="footnote-back">↩</a></p></li>
+<li id="fn27"><p>Roberto Battiti and Mauro Brunato, The LION way. Machine Learning-Intelligent Optimization, LIONlab, University of Trento, Italy“, 2017”, <a href="http://intelligent-optimization.org/LIONbook" class="uri">http://intelligent-optimization.org/LIONbook</a><a href="introduction-what-is-machine-learning.html#fnref27" class="footnote-back">↩</a></p></li>
+<li id="fn28"><p>Chih-Wei Hsu, et al., A Practical Guide to Support Vector Classification, 2016, <a href="http://www.csie.ntu.edu.tw/~cjlin" class="uri">http://www.csie.ntu.edu.tw/~cjlin</a><a href="introduction-what-is-machine-learning.html#fnref28" class="footnote-back">↩</a></p></li>
+<li id="fn29"><p><a href="https://machinelearningmastery.com/k-fold-cross-validation/" class="uri">https://machinelearningmastery.com/k-fold-cross-validation/</a><a href="introduction-what-is-machine-learning.html#fnref29" class="footnote-back">↩</a></p></li>
+<li id="fn30"><p>Max Kuhn, Kjell Johnson, Applied Predictive Modeling, 2013, ISBN 978-1-4614-6848-6<a href="introduction-what-is-machine-learning.html#fnref30" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+<p>&lt;/html&gt;</p>
+
+:ET

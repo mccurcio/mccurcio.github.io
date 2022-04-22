@@ -1,0 +1,30 @@
+I"Å<hr />
+
+<p>Try this <code class="language-plaintext highlighter-rouge">for-else</code> tip</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>needle = 'd'
+haystack = ['a', 'b', 'c']
+
+#Bad example
+
+found = False
+for letter in haystack:
+    if needle == letter:
+        print('Found')
+        found = True
+        break
+if not found:
+    print('Not found')
+
+#### Better example
+
+for letter in haystack:
+    if needle == letter:
+        print('Found')
+        break
+else: # if no break found:
+    print('Not found')
+</code></pre></div></div>
+
+<h3 id="manpage"><a href="">manpage</a></h3>
+:ET

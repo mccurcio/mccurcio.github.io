@@ -1,0 +1,24 @@
+I"½<hr />
+
+<p>Generate random texts w/ awk+sed</p>
+
+<p>mcc29th November 2021 at 8:56pm</p>
+
+<ul>
+  <li>
+    <p>Generates random texts - VERY COOL</p>
+  </li>
+  <li>
+    <p>Unix - tr - transliterate</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr -dc a-z1-4 &lt;/dev/urandom | tr 1-2 ' \n' | awk 'length==0 || length&gt;50' | tr 3-4 ' ' | sed 's/^ *//' | cat -s | fmt &gt; random.txt
+</code></pre></div></div>
+
+<p>One problem is it does not stop or shunt to file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat *.txt &gt; /tmp/output.txt
+</code></pre></div></div>
+
+:ET

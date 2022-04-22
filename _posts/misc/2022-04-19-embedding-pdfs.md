@@ -1,6 +1,6 @@
 ---
-title: "Embedding PDF in Jekyll"
-tags: HTML 
+title: "Embedding PDFs in Jekyll"
+tags: PDF 
 ---
 
 <hr>

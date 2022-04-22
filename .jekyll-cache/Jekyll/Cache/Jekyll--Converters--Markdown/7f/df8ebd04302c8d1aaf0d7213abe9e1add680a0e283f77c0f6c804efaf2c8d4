@@ -1,0 +1,31 @@
+I"—<hr />
+
+<p>How to Embed a PDF in Jekyll</p>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">[download pdf](https://belovanna.github.io/assets/mydoc.pdf)</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;embed src="https://username.github.io/mydoc.pdf" type="application/pdf"/&gt;</code></p>
+  </li>
+  <li>
+    <p>This looks cool!</p>
+  </li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="pdf-container"&gt;
+    &lt;iframe src="/assets/pdf/new.pdf" height="315" width="560" allowfullscreen="" frameborder="10"&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<hr />
+
+<p>Example:</p>
+
+<div class="pdf-container">
+    <iframe src="/assets/docs/NeuralNetworkThatComputesSquareRoot.pdf" height="315" width="560" allowfullscreen="" frameborder="10">
+    </iframe>
+</div>
+:ET

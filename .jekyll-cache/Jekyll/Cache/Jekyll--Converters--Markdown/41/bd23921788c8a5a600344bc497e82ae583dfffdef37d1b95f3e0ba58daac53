@@ -1,0 +1,12 @@
+I"®<hr />
+
+<p>Jump to a directory, execute a command (ls), &amp; jump back</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(cd /tmp &amp;&amp; ls)
+</code></pre></div></div>
+
+<p>Count the number of files in a directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd dir; ls -1 | wc -l
+</code></pre></div></div>
+:ET

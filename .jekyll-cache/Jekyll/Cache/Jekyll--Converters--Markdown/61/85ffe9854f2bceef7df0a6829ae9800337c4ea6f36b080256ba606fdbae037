@@ -1,0 +1,16 @@
+I"4<hr />
+
+<p>Converting string to int</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print('3252')
+try:
+    print(int('x'))
+except:
+    print('Conversion Failed')
+else:
+    print('Conversion scuccessful')
+print('Done')   
+
+</code></pre></div></div>
+
+:ET

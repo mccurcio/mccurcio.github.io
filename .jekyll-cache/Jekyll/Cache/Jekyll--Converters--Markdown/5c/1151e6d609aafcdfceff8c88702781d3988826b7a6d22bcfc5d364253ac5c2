@@ -1,0 +1,7 @@
+I"><h3 id="r---significant-figures">R - Significant Figures</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>result &lt;- c(9.50863385275955e-05, 4.05702267762077, pi, sqrt(2))
+
+signif (result, digits = 4) # Significant Figures command
+</code></pre></div></div>
+:ET

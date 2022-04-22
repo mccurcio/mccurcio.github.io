@@ -1,0 +1,47 @@
+I"'<hr />
+
+<p>xargs</p>
+
+<ol>
+  <li>delete all .txt files from a directory</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -name "*.txt" | xargs rm
+</code></pre></div></div>
+
+<ol>
+  <li>package all *.pl files in a directory:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -name "*.pl" | xargs tar -zcf pl.tar.gz
+</code></pre></div></div>
+
+<ol>
+  <li>kill all processes that match “something”:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ps -u `whoami` | awk '/something/{print $1}' | xargs kill
+</code></pre></div></div>
+
+<ol>
+  <li>rename all *.txt as *.bak:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>find . -name "*.txt" | sed "s/\.txt$//" | xargs -i echo mv {}.txt {}.bak | sh
+</code></pre></div></div>
+
+<ol>
+  <li>run the same command for 100 times (in case of bootstraing, for example):</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>perl -e 'print "$_\n"for(1..100)' | xargs -i bsub echo bsub -o {}.out -e {}.err some_cmd | sh
+</code></pre></div></div>
+
+<ol>
+  <li>submit all commands in a command file (one command per line):</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat my_cmds.sh | xargs -i echo bsub {} | sh
+</code></pre></div></div>
+
+:ET

@@ -1,0 +1,39 @@
+I"�<h1 id="mcs-data-science-study-site">MC’s Data Science Study Site</h1>
+
+<p><strong>Goals for this site</strong>:</p>
+
+<ol>
+  <li>Share my learning journey via
+    <ul>
+      <li><a href="docs">Articles</a></li>
+      <li><a href="docs/resources/mcc-presentations">Presentations</a></li>
+      <li><a href="archive">Posts by title</a></li>
+    </ul>
+  </li>
+  <li>Share my code snippets my own coding notes
+    <ul>
+      <li>I got inspiration from Chris Albon’s <a href="https://chrisalbon.com">website</a>, Thanks Chris 👏</li>
+    </ul>
+  </li>
+  <li>Spur discussion and interactivity
+    <ul>
+      <li>Thanks to <a href="https://vsoch.github.io/docsy-jekyll/">VSoch</a> for designing the Docsy-Jekyll theme 👏</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<p>I am in the process of migrating and rewriting my material.</p>
+
+<p><em>My writing is a little formal (like myself at times), <br />
+BUT I am striving to make it appealing</em>. 😉</p>
+
+<h2 id="have-a-question">Have a Question?</h2>
+
+<ul>
+  <li><a href="mailto:matt.curcio.ri@gmail.com?subject=A question from the web">Send An Email</a>, Or interact via GitHub issues, on the right.</li>
+</ul>
+
+<p><em>I look foward to meeting</em>.</p>
+:ET

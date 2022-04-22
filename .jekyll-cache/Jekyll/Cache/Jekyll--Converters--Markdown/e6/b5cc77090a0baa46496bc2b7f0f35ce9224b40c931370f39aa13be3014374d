@@ -1,0 +1,14 @@
+I"Ó<hr />
+
+<p>Run command on multiple files at once</p>
+
+<p>For example: all files in a directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for FILE in $(ls *); do command $FILE; done
+</code></pre></div></div>
+
+<p>Warning: this assumes there are no spaces in the lines in your file. If they do # contain spaces, you need to add proper escaping using quotes.</p>
+
+<p><strong>Describe Better</strong></p>
+
+:ET

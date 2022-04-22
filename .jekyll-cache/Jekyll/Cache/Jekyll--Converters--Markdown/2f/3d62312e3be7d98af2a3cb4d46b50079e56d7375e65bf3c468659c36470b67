@@ -1,0 +1,362 @@
+I"�><!--
+  <a href=" https://github.com/mccurcio/">
+    <img src="./assets/ds-venn-diagram.png" alt="Your Road Map" />
+-->
+
+<h2 id="data-science-practitioners-reading-list">Data Science Practitioner’s Reading List</h2>
+
+<p><strong>Greetings</strong>, <br />
+This list includes material that I have <em>used and would recommend</em>. <br />
+Whenever possible, I prefer to list <strong>FREE</strong> material.   <br />
+Enjoy</p>
+
+<p><em>Matt</em></p>
+
+<hr />
+
+<h3 id="great-intro-materials">Great Intro Materials</h3>
+
+<ul>
+  <li><a href="https://www.freecodecamp.org/news/about/">freeCodeCamp</a>, True to its name.</li>
+</ul>
+
+<h3 id="learn-git">Learn Git!</h3>
+
+<ul>
+  <li>Git and what you put on your GitHub account <strong>IS</strong> your new business card.</li>
+  <li><a href="https://github.com/">GitHub.com</a> is a common storage version control system. <em>FREE</em></li>
+  <li>Want to try <a href="https://guides.github.com/activities/hello-world/">Github’s</a> tutorial.</li>
+  <li>
+    <p>You may also try <a href="https://about.gitlab.com/">Gitlab</a> and <a href="https://bitbucket.org/">Bitbucket</a> (Both have <em>FREE</em> options).</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://bookdown.org/rdpeng/rprogdatascience/">R Programming for Data Science</a> - A GREAT Starter book for easing one into R &amp; Data Science. <em>FREE Book Online</em> 📗</p>
+  </li>
+  <li>:star: <a href="http://leanpub.com/exdata">Exploratory Data Analysis with R</a> - Roger Peng has some great material too!</li>
+</ul>
+
+<h3 id="books">Books</h3>
+
+<h3 id="general-statistics">General Statistics</h3>
+
+<ul>
+  <li>:star: <a href="https://www.amazon.com/Using-Management-Statistical-Analysis-Graphics/dp/1439827559">Using R for Data Management, Statistical Analysis, and Graphics</a>, by N. Horton, et al</li>
+</ul>
+
+<h3 id="advanced-applied-math">Advanced Applied Math</h3>
+
+<ul>
+  <li>
+    <p>:star: <a href="https://web.stanford.edu/~hastie/ElemStatLearn/">Elements of Statistical Learning: Data Mining, Inference, and Prediction</a>, Hastie, Tibshirani, Friedman, 2017 <em>FREE</em></p>
+  </li>
+  <li>
+    <p>:star: <a href="https://faculty.marshall.usc.edu/gareth-james/ISL/">Introduction to Statistical Learning with Applications in R</a>, <em>FREE</em></p>
+  </li>
+  <li>
+    <p><a href="https://bookdown.org/roback/bookdown-BeyondMLR/">Applied Generalized Linear Models and Multilevel Models in R</a>, <em>FREE Book Online</em> 📗</p>
+  </li>
+</ul>
+
+<h3 id="linear-algebra">Linear Algebra</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.math.ucdavis.edu/~anne/linear_algebra/mat67_course_notes.pdf">Linear Algebra
+As an Introduction to Abstract Mathematics</a>, <em>FREE</em></p>
+  </li>
+  <li>
+    <p><a href="http://linear.ups.edu/download/fcla-3.40-tablet.pdf">A First Course in Linear Algebra, Robert A. Beezer</a>, <em>FREE</em></p>
+  </li>
+  <li>
+    <p><a href="https://open.umn.edu/opentextbooks/textbooks/24">Linear Algebra, Jim Hefferon</a>, <em>FREE</em></p>
+  </li>
+</ul>
+
+<h3 id="programming-help-floppy_disk">Programming Help :floppy_disk:</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.freecodecamp.org/news/about/">Free Code Camp</a>, <em>FREE</em></p>
+  </li>
+  <li><a href="https://goalkicker.com/">GoalKicker.com</a> FREE - Programming Books
+    <ul>
+      <li><strong>BASH, Python, MySQL, GIT, Linux</strong>, …</li>
+      <li><strong>Love these</strong>; they are more like terse notes for a quick reference.</li>
+    </ul>
+  </li>
+  <li><a href="https://www.syncfusion.com/ebooks">Syncfusion Ebooks</a>, The Succinctly Series, <em>FREE</em>
+    <ul>
+      <li>The <strong>Succinctly Series</strong> has great topics and different languages!</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="data-visualization">Data Visualization</h3>
+
+<ul>
+  <li>
+    <p>Slack Group and Website: <a href="https://www.datavisualizationsociety.com/">Data Visualization Society</a></p>
+  </li>
+  <li>
+    <p><a href="https://mastering-shiny.org/">Mastering Shiny</a> - is an online book on using R to produce an interactive graphic or dashboard.  <em>FREE</em> Book Online 📗</p>
+  </li>
+</ul>
+
+<h3 id="r-cran">R-cran</h3>
+
+<ul>
+  <li>
+    <p>:star: <a href="https://topepo.github.io/caret/index.html">The caret Package by Max Kuhn</a>, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>
+    <p><a href="https://www.syncfusion.com/succinctly-free-ebooks/rsuccinctly/getting-started-with-r">R Succinctly</a> by Syncfusion, Basics for Beginners, <em>FREE</em></p>
+  </li>
+  <li>
+    <p><a href="https://adv-r.hadley.nz/index.html">Advanced R</a>, by H. Wickham, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li><a href="https://bookdown.org/">blogdown: Creating Websites with R Markdown</a>, by Yihui Xie, et al, <em>FREE</em> Book Online 📗
+    <ul>
+      <li>If you use R alot and want an easy way to demo your work this is great.</li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://bookdown.org/">bookdown: Authoring Books and Technical Documents with R Markdown</a>, by Yihui Xie, et al, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>
+    <p><a href="https://r-graphics.org/">R Graphics Cookbook, 2nd edition</a>, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>
+    <p><a href="https://moderndive.com/">A ModernDive into R and the Tidyverse</a>, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>
+    <p><a href="https://www.tidytextmining.com/">Text Mining with R</a>, <em>FREE</em> Book Online* 📗</p>
+  </li>
+  <li>
+    <p><a href="https://www.computerworld.com/article/2497464/top-r-language-resources-to-improve-your-data-skills.html">Improving your R Skills</a></p>
+  </li>
+  <li>Swirl is an excellent beginner tool for learning R: (https://swirlstats.com/)</li>
+</ul>
+
+<h3 id="python-snake">Python :snake:</h3>
+
+<ul>
+  <li>
+    <p>:star: I enjoy Dr. Chuck’s youtube lectures <a href="https://www.coursera.org/specializations/python">Coursera Python for Everybody</a> 5 course series provided by <a href="http://www.dr-chuck.com/">Dr Charles Severance</a>, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook</a>, by Jake VanderPlas</p>
+  </li>
+  <li>
+    <p>However there are so many alternatives</p>
+  </li>
+  <li>
+    <p><a href="https://learnxinyminutes.com/docs/python/">Learn X in Y minutes, X = Python</a></p>
+  </li>
+  <li>
+    <p><a href="http://sthurlow.com/python/lesson01/">Sthurlow.com</a></p>
+  </li>
+  <li>
+    <p><a href="https://ipython.org/books.html">IPython Interactive Computing</a></p>
+  </li>
+  <li>
+    <p><a href="https://book.pythontips.com/en/latest/args_and_kwargs.html">Intermediate Python</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.cosmicpython.com/#buy_the_book">Cosmicpython</a></p>
+  </li>
+  <li>
+    <p>https://jupyter4edu.github.io/jupyter-edu-book/  <em>FREE</em> Book Online 📗</p>
+  </li>
+</ul>
+
+<h3 id="bash-goat">Bash :goat:</h3>
+
+<ul>
+  <li>:star: <a href="https://datascienceatthecommandline.com/2e/">Data Science at the Command Line</a>, by Jeroen Janssens, <em>FREE</em> Book Online 📗</li>
+</ul>
+
+<h3 id="sql---under-construction">SQL - Under Construction</h3>
+
+<ul>
+  <li>
+    <p><a href="https://goalkicker.com/">PostgreSQL Notes for Professionals</a> :Free: Goalkicker has many books. Although I would call them reference type material.</p>
+  </li>
+  <li>
+    <p>SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)</p>
+  </li>
+</ul>
+
+<h3 id="markdown-arrow_down_small">Markdown :arrow_down_small:</h3>
+
+<ul>
+  <li>
+    <p>:star: <a href="https://bookdown.org/">R Markdown: The Definitive Guide</a>, by Yihui Xie, et al, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>:star: <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a> Needed if you are going to use .RMD notebooks and docs. <em>FREE</em>  Book Online 📗</li>
+  <li></li>
+  <li>For a full list of available Github markdown emoji and codes, check out <a href="https://www.webfx.com/tools/emoji-cheat-sheet/">emoji-cheat-sheet</a>.</li>
+</ul>
+
+<h3 id="linux-penguin">Linux :penguin:</h3>
+
+<ul>
+  <li>:star: <a href="https://leanpub.com/jelinux">Just Enough Linux, Malcolm Maclean</a>, <em>FREE</em></li>
+</ul>
+
+<h3 id="machine-learning-tractor">Machine Learning :tractor:</h3>
+
+<ul>
+  <li>
+    <p>:star: <a href="http://appliedpredictivemodeling.com/">Applied Predictive Modeling by Max Kuhn, K Johnson</a>, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li>
+    <p><a href="https://bradleyboehmke.github.io/HOML/">Hands-On Machine Learning with R by Bradley Boehmke, et al</a>, <em>FREE</em></p>
+  </li>
+  <li>
+    <p><a href="https://rafalab.github.io/dsbook/">Introduction to Data Science: Data Analysis and Prediction Algorithms with R by Rafael Irizarry</a>, <em>FREE</em></p>
+  </li>
+  <li>
+    <p>:star: A <a href="http://ciml.info/dl/v0_9/ciml-v0_9-all.pdf">Course in Machine Learning</a> by <a href="https://users.umiacs.umd.edu/~hal/">Hal Daumé III</a> This is a <strong>great illustrative book</strong> for beginners.  <em>FREE</em></p>
+  </li>
+  <li>
+    <p>Interpretable Machine Learning: A Guide for Making Black Box Models Explainable: (https://christophm.github.io/interpretable-ml-book/) <em>FREE</em></p>
+  </li>
+  <li>
+    <p>:star: Machine Learning, Tom M. Mitchell, ISBN: 0070428077, Very Good</p>
+  </li>
+  <li>
+    <p><a href="http://gael-varoquaux.info/scikit-learn-tutorial/">SciKit Learn Tutorial</a></p>
+  </li>
+  <li>
+    <p><a href="http://totoharyanto.staff.ipb.ac.id/files/2012/10/Building-Machine-Learning-Systems-with-Python-Richert-Coelho.pdf">Building Machine Learning Systems with Python</a>, by Richert Coelho &amp; Willi Richert,  <em>FREE</em></p>
+  </li>
+  <li>
+    <p>:star: <a href="https://leanpub.com/exdata">Exploratory Data Analysis with R by Roger Peng</a>, <em>FREE</em> Book Online 📗</p>
+  </li>
+  <li><a href="https://www.syncfusion.com/ebooks">Syncfusion Ebooks</a>, GREAT resource! :free:
+    <ul>
+      <li><a href="https://www.syncfusion.com/ebooks/keras-succinctly">Keras</a>, by James McCaffrey, <em>FREE</em></li>
+    </ul>
+  </li>
+  <li>
+    <p><a href="https://www.svm-tutorial.com/">SVM Tutorial</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Pattern Recognition and Machine Learning</a>, by Christopher Bishop, 2006, ISBN-13: 978-0387-31073-2, <em>FREE</em></p>
+  </li>
+  <li>
+    <p>Artificial Intelligence: A Modern Approach, Stuart Russell &amp; Peter Norvig, ISBN-13: 978-0-13-604259-4</p>
+  </li>
+  <li>
+    <p><a href="https://cs.nyu.edu/~mohri/mlbook/">Foundations of Machine Learning - Ed.2018</a>, by Mehryar Mohri, et al, <em>FREE</em></p>
+  </li>
+  <li>
+    <p><a href="https://www.cs.uoi.gr/~arly/courses/ml/tmp/Bishop_book.pdf">Pattern Recognition &amp; Machine Learning</a>, by Christopher Bishop : <strong>Heavy on the math</strong>, <em>FREE</em></p>
+  </li>
+  <li><a href="https://www.nltk.org/book/">Natural Language Processing with Python</a> Analyzing Text with the Natural Language Toolkit. by Steven Bird, Ewan Klein, and Edward Loper, <strong>Very Hands-on guide book</strong> , <em>FREE</em></li>
+</ul>
+
+<h3 id="information-theory">Information Theory</h3>
+
+<ul>
+  <li><a href="http://www.inference.org.uk/itprnn/book.pdf">Information Theory, Inference, and Learning Algorithms</a>, by David MacKay <em>I’m interested in reading the section on Hash codes, p.193</em>   <em>FREE</em></li>
+</ul>
+
+<h3 id="supervised-label">Supervised :label:</h3>
+
+<ul>
+  <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2701298/">What are decision trees?</a>, by Carl Kingsford and Steven L Salzberg</li>
+</ul>
+
+<h3 id="unsupervised">Unsupervised</h3>
+
+<ul>
+  <li><a href="https://bookdown.org/mpfoley1973/unsupervised-ml/">Unsupervised Machine Learning</a>, by Michael Foley, <em>FREE</em> Book Online 📗</li>
+</ul>
+
+<h3 id="semi-supervised">Semi-supervised</h3>
+
+<h3 id="reinforcement-learning">Reinforcement Learning</h3>
+
+<h3 id="articles">Articles</h3>
+
+<ul>
+  <li>:star: <a href="https://www.cs.umd.edu/~samir/498/10Algorithms-08.pdf">Top 10 algorithms in data mining</a>,  by Xindong Wu et al
+  I found this 2007 paper really interesting as it was my starting point. The written explanations of the ML tools are not written for beginners in mind, however I feel that it provides a look into which tools are commonly used (as of 2007) and still important overall. I might suggest pulling out the Algos and investigating them in conjunction with other literature.</li>
+</ul>
+
+<h3 id="people">People</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.andrewng.org/">Andrew Ng</a> - Dr Ng is one of the creators of Coursera, but he also has additional <a href="https://www.deeplearning.ai/">machine learning content</a></p>
+  </li>
+  <li><a href="https://www.cs.toronto.edu/~hinton/">Geoffrey Hinton</a>
+    <ul>
+      <li>:star:<a href="https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf">Learning representations by back-propagating errors</a></li>
+    </ul>
+  </li>
+  <li><a href="http://jtleek.com/index.html">Jeff Leek</a>
+    <ul>
+      <li><a href="https://leanpub.com/universities/courses/jhu/cbds-intro">Introduction to Cloud-Based Data Science</a>, by Jeffrey Leek</li>
+    </ul>
+  </li>
+  <li><a href="https://leanpub.com/u/rdpeng">Roger Peng</a></li>
+</ul>
+
+<h3 id="videos">Videos</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.freecodecamp.org/">FreeCodeCamp</a> <strong>FCC</strong> has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://www.youtube.com/channel/UCs7alOMRnxhzfKAJ4JjZ7Wg">Victor Lavrenko</a> High quality videos from his lectures. One of my Favorites.</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/">Artifical Intelligences, MIT 6.034, w/ Patrick Winston</a>,  One of my Favorites.</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/featured">3Blue1Brown</a> is produced by Grant Sanderson and has GREAT animations.</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://www.youtube.com/channel/UCuWECsa_za4gm7B3TLgeV_A">Dr. Bharatendra Rai</a> from Umass, Dartmouth. His videos are very professsional and filled with highly relevant code. Dr Rai’s videos are very clear and methodical.</p>
+  </li>
+  <li>
+    <p>:star: <a href="https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw">StatQuest with Josh Starmer</a> Dr Starmer now teaches at NC state.  Josh has recently been broadcasting LIVE to boot. <strong>BAM!</strong></p>
+  </li>
+  <li>
+    <p>The <a href="https://www.youtube.com/channel/UCcAtD_VYwcYwVbTdvArsm7w">MathematicalMonk</a></p>
+  </li>
+</ul>
+
+<h3 id="miscellaneous">Miscellaneous</h3>
+
+<ul>
+  <li>
+    <p>:star: <a href="https://calibre-ebook.com/">Calibre</a> This program is Excellent for organizing PDF’s, Epubs and mobi book and article formats. My <strong>favorite book and pdf cataloging software</strong> <em>FREE</em></p>
+  </li>
+  <li>
+    <p>:star: <a href="https://leanpub.com/">LeanPub</a> is a great resource for computer related books. Many books are pay what you want. They have books by Roger Peng and Jeff Leek who have written books on D.S.</p>
+  </li>
+</ul>
+
+<p><a href="#data-Science-Practitioner's-Reading-List">Back to top ↑</a></p>
+
+<hr />
+
+<h3 id="online-courses">Online Courses:</h3>
+
+<ul>
+  <li>:star: <a href="https://www.freecodecamp.org/">Python for Everybody, ‘Py4E’</a> I enjoy Dr. Chuck’s youtube lectures. This is a 5 course series provided by <a href="http://www.dr-chuck.com/">Dr Charles Severance</a>, FREE Course follows his FREE Book Online 📗</li>
+</ul>
+
+<!-- Superflous links, books, etc -->
+
+<!--
+
+[Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
+
+-->
+
+:ET

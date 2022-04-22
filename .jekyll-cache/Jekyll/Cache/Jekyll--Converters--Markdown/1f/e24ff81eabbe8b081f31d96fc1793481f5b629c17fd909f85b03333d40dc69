@@ -1,0 +1,12 @@
+I"3<hr />
+
+<p>How to list ALL <code class="language-plaintext highlighter-rouge">conda</code> or <code class="language-plaintext highlighter-rouge">pip</code> packages</p>
+
+<p>``
+conda list | sort &gt; ~/Desktop/conda_list.txt</p>
+
+<h1 id="or">OR</h1>
+
+<p>pip list | sort &gt; ~/Desktop/conda_list.txt
+```</p>
+:ET

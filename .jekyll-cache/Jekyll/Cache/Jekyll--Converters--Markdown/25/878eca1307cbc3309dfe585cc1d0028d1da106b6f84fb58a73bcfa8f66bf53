@@ -1,0 +1,35 @@
+I"�<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">R Code</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">cor.test()</td>
+      <td style="text-align: left">Tests for association between paired samples, using either  <strong>Pearson’s</strong> product moment correlation coefficient, or  <strong>Kendall’s</strong> tau,  <strong>Spearman’s</strong> rho</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">aov(), anova(), lm(), glm()</td>
+      <td style="text-align: left">Linear &amp; non-linear models</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">t.test ()</td>
+      <td style="text-align: left">t-test, Student’s t Distribution, 1 &amp; 2 Sample t-tests</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">prop.test(), binom.test ( )</td>
+      <td style="text-align: left">Sign test</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">chisq.test ()</td>
+      <td style="text-align: left">Chi-square test on matrix X</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fisher.test ()</td>
+      <td style="text-align: left">Fisher exact test</td>
+    </tr>
+  </tbody>
+</table>
+:ET

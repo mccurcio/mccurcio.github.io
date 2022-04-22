@@ -1,0 +1,838 @@
+I"Ed<h1 id="posts">Posts</h1>
+
+<p>Subscribe with <a href="/feed.xml">RSS</a> to keep up with the latest news.</p>
+<p><br /></p>
+
+<div class="post-preview">
+   <h3><a href="/2022/embedding-pdfs/">Embedding PDF in Jekyll</a></h3>
+   <span class="post-date">April 19, 2022</span><br />
+   
+   <hr />
+
+<p>How to Embed a PDF in Jekyll</p>
+
+<ol>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">[download pdf](https://belovanna.github.io/assets/mydoc.pdf)</code></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">&lt;embed src="https://username.github.io/mydoc.pdf" type="application/pdf"/&gt;</code></p>
+  </li>
+  <li>
+    <p>This looks cool!</p>
+  </li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;div class="pdf-container"&gt;
+    &lt;iframe src="/assets/pdf/new.pdf" height="315" width="560" allowfullscreen="" frameborder="10"&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre></div></div>
+
+<hr />
+
+<p>Example:</p>
+
+<div class="pdf-container">
+    <iframe src="/assets/docs/NeuralNetworkThatComputesSquareRoot.pdf" height="315" width="560" allowfullscreen="" frameborder="10">
+    </iframe>
+</div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2022/horizontal-line-css/">How to horizontal line in CSS</a></h3>
+   <span class="post-date">April 15, 2022</span><br />
+   
+   <hr />
+
+<p>How to horizontal line in main.css then change <code class="language-plaintext highlighter-rouge">&lt;hr&gt;</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, .1) /* Change: 2-3 px AND/OR alpha=.2 or .3
+}
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2022/tiddlywiki/">GettingStarted with Tiddywiki</a></h3>
+   <span class="post-date">March 15, 2022</span><br />
+   
+   <h2 id="a-tiddlywiki-what">A Tiddlywiki, What?</h2>
+
+<blockquote>
+  <p>A non-linear web notebook for capturing, organising and sharing complex information.</p>
+
+  <p><a href="https://tiddlywiki.com/">Tiddlywiki.com</a></p>
+</blockquote>
+
+<p>Briefly–</p>
+
+<p><abbr title="Tiddlywiki">TW</abbr>  is a:</p>
+
+<ol>
+  <li>Note taking,</li>
+  <li>Picture storing,</li>
+  <li>Document storing,</li>
+  <li>Journaling,</li>
+  <li>Search enabled,</li>
+  <li>Tag managed,</li>
+</ol>
+
+<p>and an <em>information-storage-software</em> written in Javascript used with your web browser.</p>
+
+<ul>
+  <li>It’s a free, and open-source.</li>
+  <li>It runs locally on a network.</li>
+  <li>It can be made private.</li>
+</ul>
+
+<p>I love it because it can be stored on a thumb drive or ON Google Drive and keeps everything together in one place not multiple markdown (*.md) files.</p>
+
+<p><strong>It is my favorite note taking platform.</strong></p>
+
+<p>I will admit that this software has not cured me of keeping notes, pictures, etc, in every hiding place possible, but I am one step closer to storing it in one place.</p>
+
+<h2 id="step-1---download-a-tw">Step 1 - Download a <abbr title="Tiddlywiki">TW</abbr></h2>
+
+<ul>
+  <li>Download your own <em>Tiddlywiki</em> .html ‘doc’: <a href="https://tiddlywiki.com/">Tiddlywiki.com</a></li>
+</ul>
+
+<p><img src="/assets/img/tw-page.png" alt="" /></p>
+
+<p><br /></p>
+
+<ul>
+  <li>Scroll down and to the <strong>GettingStarted</strong> box
+    <ol>
+      <li>Find your operating system</li>
+      <li>Find your browser type</li>
+      <li>Download an empty version.</li>
+    </ol>
+  </li>
+</ul>
+
+<p><em>NOTE: Each browser is different and this will ensure the little things work correctly.</em></p>
+
+<p><img src="/assets/img/empty.tw.png" alt="" /></p>
+
+<h2 id="step-2---open-your-tw">Step 2 - Open your <abbr title="Tiddlywiki">TW</abbr></h2>
+
+<p>Once downloaded,</p>
+
+<ul>
+  <li>
+    <p>Click the <strong>empty.html</strong> file to open it in your browser.</p>
+  </li>
+  <li>
+    <p><strong>‘GettingStarted’</strong> is the <em>Title configuration page</em></p>
+  </li>
+</ul>
+
+<p><img src="/assets/img/GettingStarted-titles.png" alt="" /></p>
+
+<ul>
+  <li>Add your <strong>Title</strong> &amp; <strong>Subtitle</strong>.
+    <ul>
+      <li>Both show on the top-right-hand side.
+&lt;/br&gt;</li>
+    </ul>
+  </li>
+  <li>Close the tiddler by using the <strong>X</strong>.</li>
+  <li>Then <strong>Save</strong> By pressing the RED circled-checkmark.</li>
+</ul>
+
+<h2 id="step-3---write-a-note">Step #3 - Write a Note</h2>
+
+<p>Change the titles and you can <em>start writing immediately</em>.</p>
+
+<ul>
+  <li>Press the <strong>Grey Plus Sign</strong> below your titles, to OPEN your first note (<a href="https://tiddlywiki.com/static/Tiddlers.html">Tiddler</a>).</li>
+</ul>
+
+<blockquote>
+  <p>A Tiddler is the fundamental unit of information in a TiddlyWiki.</p>
+
+  <p><a href="https://tiddlywiki.com/static/Tiddlers.html">Tiddlers</a></p>
+</blockquote>
+
+<p><img src="/assets/img/first-tiddler-note-page.png" alt="" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">New Tiddler</code> window has 4 areas that are the most useful:</p>
+
+<ol>
+  <li>The Title,</li>
+  <li>The Tag Name,</li>
+  <li>The Text Editor,</li>
+  <li>The Control Buttons (trash-can, x and the chekmark)</li>
+</ol>
+
+<p><img src="/assets/img/making-tw.png" alt="" /></p>
+
+<blockquote>
+  <p>CAUTION: Tiddlywiki uses its own variation of Markdown so try the Editor tools to help you get used to the changes.</p>
+</blockquote>
+
+<p>Add you title, note, and choose a good tag name and you are all set.</p>
+
+<ul>
+  <li>
+    <p>Click the Grey Checkmark to accept your note.</p>
+  </li>
+  <li>
+    <p>Click RED checkmark on the far-right and save your work.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>But if you make a mistake, use the trash-can to delete.</p>
+</blockquote>
+
+<p><strong>Those are the basics</strong>.</p>
+
+<p>Now you are ready to dive in.</p>
+
+<p>Next time <strong>Part #2</strong></p>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2022/productivity-template/">Weekly Productivity Template</a></h3>
+   <span class="post-date">January 01, 2022</span><br />
+   
+   <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>**Weekly Productivity Plan**
+
+Date:_________________________________________________
+
+
+**Follow Up On:**
+1.__________________________6.__________________________
+2.__________________________7.__________________________
+3.__________________________8.__________________________
+4.__________________________9.__________________________
+5.__________________________10._________________________
+
+**Calls to Make:**
+1.____________________________________________________
+2.____________________________________________________
+3.____________________________________________________
+4.____________________________________________________
+5.____________________________________________________
+
+**Meetings:**
+1.____________________________________________________
+2.____________________________________________________
+3.____________________________________________________
+
+**To Do:**
+1.__________________________6.__________________________
+2.__________________________7.__________________________
+3.__________________________8.__________________________
+4.__________________________9.__________________________
+5.__________________________10._________________________
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-cut/">Bash - cut</a></h3>
+   <span class="post-date">December 18, 2021</span><br />
+   
+   <hr />
+
+<p>Cut the columns/fields 1-3, 5, 7</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cut -f1-3,5,7 input.txt &gt; ouput.txt
+</code></pre></div></div>
+
+<p>Cut column/field 3 separated by a comma</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cut -d"," -f 3 input.txt &gt; output.txt
+</code></pre></div></div>
+
+<p><a href="https://www.man7.org/linux/man-pages/man1/cut.1.html">Cut Man Page</a></p>
+
+<ul>
+  <li>Print selected parts of lines from each FILE to standard output.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-c, --characters=LIST   
+select only these characters
+
+-d, --delimiter=DELIM   
+use DELIM instead of TAB for field delimiter
+
+-f, --fields=LIST
+select only these fields;  
+also print any line that contains no delimiter character, unless the -s option is specified
+
+-s, --only-delimited
+do not print lines not containing delimiters
+
+--output-delimiter=STRING
+use STRING as the output delimiter the default is to use the input delimiter
+</code></pre></div></div>
+
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/r-probability/">R - Probability Functions</a></h3>
+   <span class="post-date">December 17, 2021</span><br />
+   
+   <table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Prefix</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>d</strong> : Computes quantiles</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>p</strong> : Computes cumlative</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>q</strong> : Computes percentiles</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>r</strong> : Generates random #’s</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Distribution</th>
+      <th style="text-align: left">R Command</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/BinomialDistribution.html">Binomial</a></td>
+      <td style="text-align: left"><strong>binom</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/NormalDistribution.html">Guassian / normal </a></td>
+      <td style="text-align: left"><strong>norm</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/Chi-SquaredDistribution.html">Chi-Squared</a></td>
+      <td style="text-align: left"><strong>chisq</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/Studentst-Distribution.html">Student’s</a></td>
+      <td style="text-align: left"><strong>t</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/F-Distribution.html">F-Distribution</a></td>
+      <td style="text-align: left"><strong>f</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/PoissonDistribution.html">Poisson</a></td>
+      <td style="text-align: left"><strong>pois</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://mathworld.wolfram.com/UniformDistribution.html">Uniform</a></td>
+      <td style="text-align: left"><strong>unif</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.statstest.com/wilcoxon-signed-rank-test">Signed Rank Test</a><br />or<br />Wilcoxon T-test</td>
+      <td style="text-align: left"><strong>signrank</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">geometric</td>
+      <td style="text-align: left"><strong>geom</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">log-normal</td>
+      <td style="text-align: left"><strong>lnorm</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.ibm.com/topics/logistic-regression">Logistic</a></td>
+      <td style="text-align: left"><strong>logis</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">exponential</td>
+      <td style="text-align: left"><strong>exp</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/python-strings/">Python - Strings</a></h3>
+   <span class="post-date">December 17, 2021</span><br />
+   
+   <hr />
+
+<p>Convert repeated spaces to one space:</p>
+
+<ul>
+  <li>
+    <p>Using Regex</p>
+  </li>
+  <li>
+    <p>The snippet below clears out the repeated spaces in a text and replaces it with single space.</p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">re</code> is a regular expression module to find more than one occurrences of space with ‘[ ]+’.</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import re
+re.sub(r"[ ]+", ' ', 'this    sentence          has              non-uniform      spaces')
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/python-enumerate/">Python - enumerate</a></h3>
+   <span class="post-date">December 17, 2021</span><br />
+   
+   <h3 id="enumerate-tips"><a href="https://book.pythontips.com/en/latest/enumerate.html">Enumerate Tips</a></h3>
+
+<p>Instead of doing:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>list = ["a", "b", "c"]
+i = 0 
+for item in list: 
+    print i, item 
+    i += 1
+</code></pre></div></div>
+
+<p><strong>Do This:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i, item in enumerate(list):
+    print i, item
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/quotes-ch/">Hitchens Quotes</a></h3>
+   <span class="post-date">December 12, 2021</span><br />
+   
+   <hr />
+
+<p>Burden of Proof</p>
+
+<blockquote>
+  <p>That which can be asserted with out evidence can be dismissed without evidence.<br />
+The burden of proof is on the claimant.<br />
+If the claimant makes a claim it is up to that person to prove it.</p>
+
+  <p>Christopher Hitchens, 13 April 1949 – 15 December 2011</p>
+</blockquote>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-awk/">Bash - awk</a></h3>
+   <span class="post-date">December 10, 2021</span><br />
+   
+   <hr />
+
+<p><a href="https://www.gnu.org/software/gawk/manual/gawk.pdf">gawk Documentation</a></p>
+
+<h3 id="1-check-number-of-columns--f--specifies-field-separator-as-comma">1. Check number of columns: -F “,” specifies field separator as comma</h3>
+
+<pre><code class="language-{bash}">awk -F "," '{print NF}' uniqMovie.csv | head -1
+</code></pre>
+
+<h3 id="2-filter-the-data-to-get-only-1st-2nd-6th-and-last-column">2. Filter the data to get only 1st, 2nd, 6th and last column</h3>
+
+<pre><code class="language-{bash}">awk 'BEGIN{FS=",";OFS=",";}{print $1,$2,$6,$NF}' uniqMovie.csv &gt; newMovie.csv`
+</code></pre>
+
+<h3 id="3-use-awk-to-rearrange-columns">3. Use awk to rearrange columns</h3>
+
+<pre><code class="language-{bash}">awk '{print $2 " " $1}' file.txt
+</code></pre>
+
+<h3 id="4-sum-column-one-from-a-file">4. Sum column one from a file</h3>
+
+<pre><code class="language-{bash}">awk '{s+=$1} END {print s}' mydatafile
+</code></pre>
+
+<h3 id="5-one-of-my-awk-aliases-is-the-mean-and-sd-of-column-1">5. One of my awk aliases is the mean and sd of column 1</h3>
+
+<pre><code class="language-{bash}">awk '{s+=$1;s2+=($1$1)} END {print s/NR,sqrt((NRs2-ss)/(NR(NR-1)))}'
+</code></pre>
+
+<h3 id="6-a-handy-alias-for-summing-up-a-column-of-numbers-from-the-command-line">6. A handy alias for summing up a column of numbers from the command line:</h3>
+
+<pre><code class="language-{bash}">sumcol='awk '\''{ SUM += $1} END { print SUM}'\' 
+</code></pre>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-cd/">Bash - cd</a></h3>
+   <span class="post-date">December 01, 2021</span><br />
+   
+   <hr />
+
+<p>Jump to a directory, execute a command (ls), &amp; jump back</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(cd /tmp &amp;&amp; ls)
+</code></pre></div></div>
+
+<p>Count the number of files in a directory:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd dir; ls -1 | wc -l
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-trim/">Bash - Trim string of white spaces</a></h3>
+   <span class="post-date">November 01, 2021</span><br />
+   
+   <hr />
+
+<p>A Bash One-liner Function: Trim White Spaces</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>trim &lt;- function(s) gsub("^[[:space:]]+|[[:space:]]+$","",s)
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-tr/">Bash - tr(anslate)</a></h3>
+   <span class="post-date">November 01, 2021</span><br />
+   
+   <hr />
+
+<p>tr(anslate) / Change caps to lower case</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat sample.txt | tr [:upper:] [:lower:] &gt; output.txt
+</code></pre></div></div>
+
+<h3 id="delete-is">delete ‘is’</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat sample.txt | tr -d ‘is’ &gt; out.txt
+</code></pre></div></div>
+
+<h3 id="remove-all-the-non-digit-characters">Remove all the non-digit characters</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo “Phone number is 123-456-789” | tr -cd [:digit:] &gt; output.txt
+</code></pre></div></div>
+
+<h3 id="tr-man-page"><a href="https://man7.org/linux/man-pages/man1/tr.1.html">tr Man Page</a></h3>
+
+<ul>
+  <li>tr - Translate, squeeze, and/or delete characters from standard input</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-c, -C, --complement
+use the complement of SET1
+
+-d, --delete
+delete characters in SET1, do not translate
+
+-s, --squeeze-repeats
+replace each sequence of a repeated character that is listed in the last specified SET, with a single occurrence of that character
+
+-t, --truncate-set1
+first truncate SET1 to length of SET2
+
+SETs are specified as strings of characters.  Most represent themselves.  
+
+Interpreted sequences are:
+
+       \NNN   character with octal value NNN (1 to 3 octal digits)
+
+       \\     backslash
+
+       \a     audible BEL
+
+       \b     backspace
+
+       \f     form feed
+
+       \n     new line
+
+       \r     return
+
+       \t     horizontal tab
+
+       \v     vertical tab
+
+       CHAR1-CHAR2
+              all characters from CHAR1 to CHAR2 in ascending order
+
+       [CHAR*]
+              in SET2, copies of CHAR until length of SET1
+
+       [CHAR*REPEAT]
+              REPEAT copies of CHAR, REPEAT octal if starting with 0
+
+       [:alnum:]
+              all letters and digits
+
+       [:alpha:]
+              all letters
+
+       [:blank:]
+              all horizontal whitespace
+
+       [:cntrl:]
+              all control characters
+
+       [:digit:]
+              all digits
+
+       [:graph:]
+              all printable characters, not including space
+
+       [:lower:]
+              all lower case letters
+
+       [:print:]
+              all printable characters, including space
+
+       [:punct:]
+              all punctuation characters
+
+       [:space:]
+              all horizontal or vertical whitespace
+
+       [:upper:]
+              all upper case letters
+
+       [:xdigit:]
+              all hexadecimal digits
+
+       [=CHAR=]
+              all characters which are equivalent to CHAR
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-tar/">Bash - tar</a></h3>
+   <span class="post-date">November 01, 2021</span><br />
+   
+   <hr />
+
+<p>tar - Extract a tarball to a specific dir</p>
+
+<p>Most basic</p>
+
+<p>-x - Extract  <br />
+-c - Compress/Create</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tar -xf ball.tar -C /path/to/
+</code></pre></div></div>
+
+<h3 id="tar-man-page"><a href="https://man7.org/linux/man-pages/man1/tar.1.html">tar Man Page</a></h3>
+
+<p>-d, –diff, –compare
+Find differences between archive and file system.<br />
+The arguments are optional and specify archive members to compare.<br />
+If not given, the current working directory is assumed.</p>
+
+<p>–delete
+Delete from the archive.<br />
+The arguments supply names of the archive members to be removed.  At least one argument must be given.</p>
+
+<p>This option does not operate on compressed archives. There is no short option equivalent.</p>
+
+<p>-r, –append
+Append files to the end of an archive. Arguments have the same meaning as for -c (–create).</p>
+
+<p>-t, –list
+List the contents of an archive.  Arguments are optional.</p>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-find-file-w-grep/">Bash - Grep - Find file name in sub directories</a></h3>
+   <span class="post-date">November 01, 2021</span><br />
+   
+   <hr />
+
+<p>Find a specific file name in large directories</p>
+
+<p>Find text inside a list of files and output the filename when a match occurs. Recurse and case-insensitive:
+-i - Ignore case distinctions
+-r - Recursive
+-l - Suppress normal output; instead print the name of each input file from which output would normally have been printed. The scanning will stop on the first match.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep Documentation
+
+grep -irl foo*
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-awk-sed/">Generate random texts w/ awk + sed</a></h3>
+   <span class="post-date">November 01, 2021</span><br />
+   
+   <hr />
+
+<p>Generate random texts w/ awk+sed</p>
+
+<p>mcc29th November 2021 at 8:56pm</p>
+
+<ul>
+  <li>
+    <p>Generates random texts - VERY COOL</p>
+  </li>
+  <li>
+    <p>Unix - tr - transliterate</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tr -dc a-z1-4 &lt;/dev/urandom | tr 1-2 ' \n' | awk 'length==0 || length&gt;50' | tr 3-4 ' ' | sed 's/^ *//' | cat -s | fmt &gt; random.txt
+</code></pre></div></div>
+
+<p>One problem is it does not stop or shunt to file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat *.txt &gt; /tmp/output.txt
+</code></pre></div></div>
+
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/variability/">Source of Variability</a></h3>
+   <span class="post-date">January 01, 2021</span><br />
+   
+   <hr />
+
+<p>Does this work??</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: right">Source of Variability</th>
+      <th style="text-align: right">Sum of Squares</th>
+      <th style="text-align: right">Degrees of Freedom</th>
+      <th style="text-align: right">Mean Squares</th>
+      <th style="text-align: right">F-value</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: right">Treatment Variability</td>
+      <td style="text-align: right">SSB<br />Sum of Squares Between Columns</td>
+      <td style="text-align: right">Columns - 1</td>
+      <td style="text-align: right">MSB<br />Sum of Squares Within Columns</td>
+      <td style="text-align: right">[[F-Critical Value</td>
+      <td>http://mathworld.wolfram.com/F-Distribution.html]]</td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Variability Due To Error</td>
+      <td style="text-align: right">SSW<br /> S.S. Within Treatment<br />{SSE-Sum of Squares of Error}</td>
+      <td style="text-align: right">__(R-1)<em>C__<br />(Rows-1)</em>Columns</td>
+      <td style="text-align: right">MSW<br />MSW = Variance = s^^2^^</td>
+      <td style="text-align: right"> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td style="text-align: right">Total</td>
+      <td style="text-align: right">TSS<br />Total Sum of Squares<br />TSS = SSB + SSE</td>
+      <td style="text-align: right">__(R<em>C)-1__<br />Rows</em>Columns - 1</td>
+      <td style="text-align: right"> </td>
+      <td style="text-align: right"> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/six-sigma-methods/">Six-Sigma methods</a></h3>
+   <span class="post-date">January 01, 2021</span><br />
+   
+   <p><img src="/assets/img/six-sigma.png" alt="" /></p>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-zip/">Bash - zip compress</a></h3>
+   <span class="post-date">January 01, 2021</span><br />
+   
+   <hr />
+
+<p>Compress files in folder using zip</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for DIR in `ls -d */ | sed 's#/##' ` ; do ZIP=$DIR.zip ; zip -r $ZIP $DIR/ ; done
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<div class="post-preview">
+   <h3><a href="/2021/bash-tac/">Bash - tac</a></h3>
+   <span class="post-date">January 01, 2021</span><br />
+   
+   <hr />
+
+<p>Print the file in reverse order e.g; last line first, first line last.</p>
+
+<ul>
+  <li>tac is the OPPOSITE of cat</li>
+</ul>
+
+<p><a href="https://ss64.com/bash/tac.html">tac manual</a></p>
+
+<p>See also: <code class="language-plaintext highlighter-rouge">cat</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tac a.txt &gt; b.txt
+</code></pre></div></div>
+
+   
+   </div>
+<hr />
+
+<p>Want to see more? See the <a href="/archive/">Posts Archive</a>.</p>
+:ET

@@ -1,0 +1,26 @@
+I"0<h3 id="free-r-books--material">Free R Books &amp; Material</h3>
+
+<ul>
+  <li><a href="https://r4ds.had.co.nz/">R4ds by H. Wickham</a></li>
+  <li><a href="https://adv-r.hadley.nz/">Advanced_r by H. Wickham</a></li>
+  <li><a href="https://datascienceineducation.com/">DS_In_Education_Using_r</a></li>
+  <li><a href="https://rstudio4edu.github.io/rstudio4edu-book/">RStudio For Education</a></li>
+  <li><a href="https://engineering-shiny.org/">epgs</a></li>
+  <li><a href="https://ggplot2-book.org/index.html">GGplot2</a></li>
+  <li><a href="https://mastering-shiny.org/">Mastering Shiny</a></li>
+  <li><a href="https://moderndive.com/">Modern Dive, Statistical Inference via Data Science</a></li>
+  <li><a href="https://r-pkgs.org/">R_packages</a></li>
+  <li><a href="https://avehtari.github.io/ROS-Examples/">Regression and Other Stories</a></li>
+  <li><a href="https://tmwr.org">tmwr</a></li>
+  <li><a href="https://www.tidytextmining.com/">tidytext</a></li>
+  <li><a href="https://bookdown.org">Bookdown, blogdown, Rmarkdown</a></li>
+  <li><a href="https://geocompr.robinlovelace.net/">Geocomputation with R</a></li>
+  <li><a href="http://www.gastonsanchez.com/r4strings/">Handling Strings With R</a></li>
+</ul>
+
+<p>Misc.</p>
+
+<ul>
+  <li>Swirl is an excellent beginner tool for learning R: (https://swirlstats.com/)</li>
+</ul>
+:ET

@@ -1,0 +1,19 @@
+I"�<hr />
+
+<p>sed - stream editor</p>
+
+<p>A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).</p>
+
+<p>To replace text in a file:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed 's/\t//g' 1.txt &gt; 2.txt
+</code></pre></div></div>
+
+<p>Above is replacing every tab “\t” on the line because we use the “g” for global, with nothing so deleting the tabs in the file.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sed 's/\t/A/' 1.txt &gt; 2.txt
+</code></pre></div></div>
+
+<p>Above replaces only the first tab on the line with a “A”.</p>
+
+:ET

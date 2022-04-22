@@ -1,0 +1,16 @@
+I"�<hr />
+
+<p><a href="https://man7.org/linux/man-pages/man1/grep.1.html">Grep Man Page</a></p>
+
+<p>Subtract a small file from a bigger file</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>grep -vf small_file.txt big_file.txt
+</code></pre></div></div>
+
+<h4 id="matching-control">Matching Control</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">-f</code> FILE, –file=FILE: Obtain patterns from FILE, one per line.  If this option is used multiple times or is combined with the</li>
+  <li><code class="language-plaintext highlighter-rouge">-v</code> –invert-match: Invert the sense of match</li>
+</ul>
+:ET
