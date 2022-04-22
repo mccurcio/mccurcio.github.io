@@ -3,5 +3,5 @@ title: "Learning Neural Networks"
 tags: Data_Science
 ---
 
-{% include neural-networks-for-binary-classification.html %}
+{% include_relative neural-networks-1.html %}
 
