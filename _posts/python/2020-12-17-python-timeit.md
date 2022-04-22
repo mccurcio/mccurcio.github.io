@@ -4,7 +4,8 @@ tags: Python
 ---
 
 
-### Measure the execution time of small bits of Python code with the "timeit"
+<hr>
+Measure the execution time of small bits of Python code with the "timeit"
 
 
 The "timeit" module lets you measure the execution time of small bits of Python code

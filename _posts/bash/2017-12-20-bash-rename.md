@@ -3,7 +3,10 @@ title: "Bash - Rename files names to lowercase"
 tags: Bash 
 ---
 
-Rename All files in directory to Lowercase - Scripting
+<hr>
+Scripting
+
+Rename All files in directory to Lowercase
 
 An elegant way to rename all files in a directory to lowercase
 

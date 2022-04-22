@@ -4,7 +4,8 @@ tags: Bash ForElse
 ---
 
 
-### Try this `for-else` tip
+<hr>
+Try this `for-else` tip
 
 ```
 needle = 'd'

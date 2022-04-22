@@ -3,7 +3,8 @@ title: "Embedding PDF in Jekyll"
 tags: HTML 
 ---
 
-### How to Embed a PDF in Jekyll
+<hr>
+How to Embed a PDF in Jekyll
 
 1. `[download pdf](https://belovanna.github.io/assets/mydoc.pdf)`
 
@@ -18,7 +19,8 @@ tags: HTML
 </div>
 ```
 
-#### Example:
+<hr>
+Example:
 
 <div class="pdf-container">
     <iframe src="{{ site.baseurl }}/assets/docs/NeuralNetworkThatComputesSquareRoot.pdf" height="315" width="560" allowfullscreen="" frameborder="10">

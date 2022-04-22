@@ -3,9 +3,8 @@ title: "Bash - Grep - Find file name in sub directories"
 tags: Bash Grep
 ---
 
+<hr>
 Find a specific file name in large directories
-
-mcc29th November 2021 at 8:37pm
 
 Find text inside a list of files and output the filename when a match occurs. Recurse and case-insensitive:
 -i - Ignore case distinctions

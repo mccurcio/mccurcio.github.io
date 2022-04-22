@@ -9,7 +9,7 @@ tags: Data_Science
     <img src="./assets/ds-venn-diagram.png" alt="Your Road Map" />
 -->
 
-### Data Science Practitioner's Reading List
+## Data Science Practitioner's Reading List
 
 **Greetings**,   
 This list includes material that I have *used and would recommend*.   
@@ -20,11 +20,11 @@ Enjoy
 
 ---
 
-## Great Intro Materials
+### Great Intro Materials
 
 - [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
 
-## Learn Git!
+### Learn Git!
 
 - Git and what you put on your GitHub account **IS** your new business card.
 - [GitHub.com](https://github.com/) is a common storage version control system. *FREE*
@@ -35,16 +35,16 @@ Enjoy
 
 - :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too!
 
-## Books
+### Books
 
 
-## General Statistics
+### General Statistics
 
 - :star: [Using R for Data Management, Statistical Analysis, and Graphics](https://www.amazon.com/Using-Management-Statistical-Analysis-Graphics/dp/1439827559), by N. Horton, et al
 
 
 
-## Advanced Applied Math
+### Advanced Applied Math
 
 - :star: [Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://web.stanford.edu/~hastie/ElemStatLearn/), Hastie, Tibshirani, Friedman, 2017 *FREE*
 
@@ -52,7 +52,7 @@ Enjoy
 
 - [Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/), *FREE Book Online* 📗
 
-## Linear Algebra
+### Linear Algebra
 
 - [Linear Algebra
 As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/linear_algebra/mat67_course_notes.pdf), *FREE*
@@ -61,7 +61,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Linear Algebra, Jim Hefferon](https://open.umn.edu/opentextbooks/textbooks/24), *FREE*
 
-## Programming Help :floppy_disk:
+### Programming Help :floppy_disk:
 
 - [Free Code Camp](https://www.freecodecamp.org/news/about/), *FREE*
 
@@ -72,13 +72,13 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - [Syncfusion Ebooks](https://www.syncfusion.com/ebooks), The Succinctly Series, *FREE*
    - The **Succinctly Series** has great topics and different languages!
 
-## Data Visualization
+### Data Visualization
 
 - Slack Group and Website: [Data Visualization Society](https://www.datavisualizationsociety.com/)
 
 - [Mastering Shiny](https://mastering-shiny.org/) - is an online book on using R to produce an interactive graphic or dashboard.  *FREE* Book Online 📗
 
-## R-cran
+### R-cran
 
 - :star: [The caret Package by Max Kuhn](https://topepo.github.io/caret/index.html), *FREE* Book Online 📗
   
@@ -102,7 +102,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - Swirl is an excellent beginner tool for learning R: (https://swirlstats.com/)
 
 
-## Python :snake:
+### Python :snake:
   
 - :star: I enjoy Dr. Chuck's youtube lectures [Coursera Python for Everybody](https://www.coursera.org/specializations/python) 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), *FREE* Book Online 📗
 
@@ -122,18 +122,18 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - https://jupyter4edu.github.io/jupyter-edu-book/  *FREE* Book Online 📗
 
-## Bash :goat:
+### Bash :goat:
 
 - :star: [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
   
-## SQL - Under Construction
+### SQL - Under Construction
 
 - [PostgreSQL Notes for Professionals](https://goalkicker.com/) :Free: Goalkicker has many books. Although I would call them reference type material.
 
 - SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
 
   
-## Markdown :arrow_down_small:
+### Markdown :arrow_down_small:
 
 - :star: [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
@@ -141,11 +141,11 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - 
 - For a full list of available Github markdown emoji and codes, check out [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/).
    
-## Linux :penguin:
+### Linux :penguin:
 
 - :star: [Just Enough Linux, Malcolm Maclean](https://leanpub.com/jelinux), *FREE* 
 
-## Machine Learning :tractor:
+### Machine Learning :tractor:
 
 - :star: [Applied Predictive Modeling by Max Kuhn, K Johnson](http://appliedpredictivemodeling.com/), *FREE* Book Online 📗
 
@@ -201,7 +201,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - :star: [Top 10 algorithms in data mining](https://www.cs.umd.edu/~samir/498/10Algorithms-08.pdf),  by Xindong Wu et al
     I found this 2007 paper really interesting as it was my starting point. The written explanations of the ML tools are not written for beginners in mind, however I feel that it provides a look into which tools are commonly used (as of 2007) and still important overall. I might suggest pulling out the Algos and investigating them in conjunction with other literature.
 
-## People 
+### People 
   
 - [Andrew Ng](https://www.andrewng.org/) - Dr Ng is one of the creators of Coursera, but he also has additional [machine learning content](https://www.deeplearning.ai/)
 
@@ -213,7 +213,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Roger Peng](https://leanpub.com/u/rdpeng)
 
-## Videos 
+### Videos 
 
 - [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
 
@@ -229,7 +229,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - The [MathematicalMonk](https://www.youtube.com/channel/UCcAtD_VYwcYwVbTdvArsm7w)
 
-## Miscellaneous
+### Miscellaneous
 
 - :star: [Calibre](https://calibre-ebook.com/) This program is Excellent for organizing PDF's, Epubs and mobi book and article formats. My **favorite book and pdf cataloging software** *FREE*
 
@@ -239,7 +239,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
    
 ---
   
-## Online Courses:
+### Online Courses:
 
 - :star: [Python for Everybody, 'Py4E'](https://www.freecodecamp.org/) I enjoy Dr. Chuck's youtube lectures. This is a 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), FREE Course follows his FREE Book Online 📗
 
@@ -253,15 +253,5 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 [Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
 
-
-
-
-
-
 -->
-
-
-
-
-
 

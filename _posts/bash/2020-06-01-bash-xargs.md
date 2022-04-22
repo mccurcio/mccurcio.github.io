@@ -3,9 +3,8 @@ title: "Bash - xargs"
 tags: Bash
 ---
 
-
-Xargs Linux Commands
-
+<hr>
+xargs
 
 1. delete all .txt files from a directory
 

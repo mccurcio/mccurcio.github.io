@@ -3,9 +3,11 @@ title:  "Matt's Bash Aliases"
 tags: Bash
 ---
 
-```
-## Misc aliases
+<hr>
+Matt's Aliases
 
+```
+## Bash aliases
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'

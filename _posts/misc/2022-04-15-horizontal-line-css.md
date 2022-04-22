@@ -3,7 +3,8 @@ title: "How to horizontal line in CSS"
 tags: CSS
 ---
 
-## How to horizontal line in main.css then change hr
+<hr>
+How to horizontal line in main.css then change `<hr>`
 
 ```
 hr {

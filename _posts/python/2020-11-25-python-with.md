@@ -4,11 +4,8 @@ date:  2020-11-25
 tags: Bash
 ---
 
-25th November 2018 at 5:45pm
-
-
-
-###  Tip for Reading Files using `with`
+<hr>
+Tip for Reading Files using `with`
 
 ```
 # Bad example

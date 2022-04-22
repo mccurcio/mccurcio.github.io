@@ -3,6 +3,8 @@ title: "Make a doc of words into a list of words?"
 tags: Bash
 ---
 
+<hr>
+Make an index
 
 * https://unix.stackexchange.com/questions/62056/whats-the-easiest-way-to-make-a-list-of-most-common-words-in-a-list
 

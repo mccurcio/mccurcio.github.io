@@ -3,7 +3,8 @@ title: "Source of Variability"
 tags: Statistics
 ---
 
-### Does this work??
+<hr>
+Does this work??
 
 | Source of Variability | Sum of Squares | Degrees of Freedom | Mean Squares | F-value |
 |--:|--:|--:|--:|--:|

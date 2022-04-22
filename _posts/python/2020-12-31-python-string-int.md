@@ -4,7 +4,8 @@ tags: Python
 ---
 
 
-### Converting string to int
+<hr>
+Converting string to int
 
 ```
 print('3252')

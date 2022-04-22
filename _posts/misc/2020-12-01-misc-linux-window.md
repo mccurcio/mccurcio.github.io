@@ -3,7 +3,8 @@ title: "Find Window Position in Linux"
 tags: Linux Bash Window
 ---
 
-## Find Window Position in Linux
+<hr>
+Find Window Position in Linux
 
 In Bash, the `xwininfo` allows you to get a position of a window on screen.  This great when you want to set your terminal or program window in a specific place.
 

@@ -4,9 +4,10 @@ date:  2021-12-17 21:00:00
 tags: Python 
 ---
 
-### Convert repeated spaces to one space: 
+<hr>
+Convert repeated spaces to one space: 
 
-#### Regex
+- Using Regex
 
 - The snippet below clears out the repeated spaces in a text and replaces it with single space. 
 
