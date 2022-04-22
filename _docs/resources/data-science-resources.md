@@ -1,6 +1,5 @@
 ---
 title:  "Data Science Resources"
-date:   2022-03-10 17:30:00
 tags: Data_Science
 ---
 
@@ -10,16 +9,14 @@ tags: Data_Science
     <img src="./assets/ds-venn-diagram.png" alt="Your Road Map" />
 -->
 
-<p align="center">
-  <h3 align="center">Data Science Practitioner's Reading List</h3>
-</p>
+### Data Science Practitioner's Reading List
 
 **Greetings**,   
 This list includes material that I have *used and would recommend*.   
 Whenever possible, I prefer to list **FREE** material.     
 Enjoy
 
-*Matthew Curcio*
+*Matt*
 
 ---
 

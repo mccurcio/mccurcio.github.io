@@ -1,6 +1,5 @@
 ---
 title: "How to horizontal line in CSS"
-date: 2022-04-15
 tags: CSS
 ---
 

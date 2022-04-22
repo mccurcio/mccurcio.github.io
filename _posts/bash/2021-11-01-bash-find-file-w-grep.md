@@ -1,6 +1,5 @@
 ---
 title: "Bash - Grep - Find file name in sub directories"
-date: 2019-01-31
 tags: Bash Grep
 ---
 

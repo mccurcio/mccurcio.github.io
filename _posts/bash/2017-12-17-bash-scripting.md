@@ -1,6 +1,5 @@
 ---
 title: "Bash - Scripting"
-date: 2019-01-31
 tags: Bash
 ---
 

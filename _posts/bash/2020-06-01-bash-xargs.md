@@ -1,6 +1,5 @@
 ---
 title: "Bash - xargs"
-date: 2019-01-31
 tags: Bash
 ---
 

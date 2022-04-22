@@ -1,3 +1,9 @@
+
+- title: "Posts by date & title"
+  url: "archive"
+- title: "Posts by tags"
+  url: "tags"
+
 - title: Docs
   url: docs
   links:
@@ -27,8 +33,3 @@
 
     - title: "&#8226; Possible Paper Topics"
       url: "docs/resources/research-topics"
-
-- title: "Posts by date & title"
-  url: "archive"
-- title: "Posts by tags"
-  url: "tags"

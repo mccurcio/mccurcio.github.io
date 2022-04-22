@@ -6,23 +6,24 @@ permalink: /
 
 # MC's Data Science Study Site 
 
-**Goals for this site are to**:
+**Goals for this site**:
 
 1. Share my learning journey via 
    - [Articles](docs)
    - [Presentations](docs/resources/mcc-presentations)
    - [Posts by title](archive)
 
-2. Share my code snippets my own coding notes.
+2. Share my code snippets my own coding notes 
    - I got inspiration from Chris Albon's [website](https://chrisalbon.com), Thanks Chris 👏
-3. Spur discussion and interactivity. 
+
+3. Spur discussion and interactivity  
    - Thanks to [VSoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme 👏
 
 ---
 
 I am in the process of migrating and rewriting my material.  
 
-*Oddly, I used writing to teach myself. However, my writing is a little formal (like myself at times),   
+*My writing is a little formal (like myself at times),   
 BUT I am striving to make it appealing*. 😉
 
 

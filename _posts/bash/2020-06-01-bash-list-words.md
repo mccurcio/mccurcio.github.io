@@ -1,6 +1,5 @@
 ---
 title: "Make a doc of words into a list of words?"
-date: 2021-01-01
 tags: Bash
 ---
 

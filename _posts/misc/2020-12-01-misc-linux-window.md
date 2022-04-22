@@ -1,22 +1,16 @@
 ---
 title: "Find Window Position in Linux"
-date: 2019-01-31
-tags: Linux Bash
-----
+tags: Linux Bash Window
+---
 
-Find Window Position in Linux
+## Find Window Position in Linux
 
-mcc29th November 2021 at 9:09pm
+In Bash, the `xwininfo` allows you to get a position of a window on screen.  This great when you want to set your terminal or program window in a specific place.
 
-In Bash
 
 ```
-xwininfo
-```
+$ xwininfo: Please select the window about which you would like information by clicking the mouse in that window.
 
-xwininfo: Please select the window about which you would like information by clicking the mouse in that window.
-
-```
 xwininfo: Window id: 0x120d008 "mcc"
 
   Absolute upper-left X:  954
@@ -40,7 +34,8 @@ xwininfo: Window id: 0x120d008 "mcc"
   Corners:  +954+143  -34+143  -34-14  +954-14
   -geometry 612x743-31-11
 ```
-In Command line Use:
+
+## In Command line Use:
 
 ```
 caja --no-desktop /home/mcc/ --geometry 612x743-31-11

@@ -1,6 +1,5 @@
 ---
 title: "Generate random texts w/ awk + sed"
-date: 2019-01-31
 tags: Bash Awk Sed
 ---
 

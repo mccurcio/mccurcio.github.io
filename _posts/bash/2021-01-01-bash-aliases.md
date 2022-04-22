@@ -1,6 +1,5 @@
 ---
 title:  "Matt's Bash Aliases"
-date:   2021-01-01
 tags: Bash
 ---
 
@@ -28,6 +27,7 @@ alias gits="git status"
 alias gita="git add ."
 alias gitcm="git commit -m"
 alias gpush="git push"
+alias gpull="git pull"
 
 ## User Specific aliases ##
 alias home='cd /home/mcc/'
