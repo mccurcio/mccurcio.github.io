@@ -28,17 +28,7 @@ tags: Python Logit Pseudo-Code FlowCharts PCA Anaconda
 - Boston Python Users Meetup, Nov. 2021
 - [PDF](https://github.com/mccurcio/mcc-ds-material/blob/master/assets/Boston_Python_Users_Study_Group_11_17_2021.pdf)
 
-
-<div class="pdf-container">
-    <iframe src="https://github.com/mccurcio/mcc-ds-material/blob/master/assets/Boston_Python_Users_Study_Group_11_17_2021.pdf" height="315" width="560" allowfullscreen="" frameborder="10">
-    </iframe>
-</div>
-
 ### &#8226; Pseudo-Code
 - RI-Career-Devs Meetup, Nov. 2017
-- [PDF](https://github.com/mccurcio/pseudocode-flowchart-pdf)
+- [PDF](https://github.com/mccurcio/pseudocode-flowchart.pdf)
 
-<div class="pdf-container">
-    <iframe src="https://github.com/mccurcio/pseudocode-flowchart-pdf" height="315" width="560" allowfullscreen="" frameborder="10">
-    </iframe>
-</div>
