@@ -1,11 +1,8 @@
 ---
 title: "Python: Count Lines in file"
-date: '2021-12-17'
-slug: Countlines
 tags:
 - "one liners"
 - "count lines"
-categories: python
 ---
 
 Returns the number of lines in a text file, 

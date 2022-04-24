@@ -1,10 +1,7 @@
 ---
 title: "Python: Check if a number is a prime"
-date: '2021-12-17'
-slug: primeNumbers
 tags:
 - "prime numbers"
-categories: python
 ---
 
 

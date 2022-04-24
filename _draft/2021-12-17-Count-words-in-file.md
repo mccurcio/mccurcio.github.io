@@ -1,11 +1,8 @@
 ---
 title: "Python: Count words in file"
-date: '2021-12-17'
-slug: Count
 tags:
 - "one liners"
 - "count words"
-categories: python
 ---
 
 ### Count words in file

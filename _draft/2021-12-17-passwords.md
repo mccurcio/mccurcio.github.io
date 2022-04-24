@@ -1,17 +1,19 @@
 ---
 title: "Python: Pronounceable passwords"
-date: '2021-12-17'
-slug: passwords
-tags:
-- "passwords"
-categories: python
+tags: Password Python
 ---
 
-Creates a random ‘-‘ separated 4 word password from the given input text file to be used as a password
+This Python code produces a randomly chosen word password of any given length.
+
+
+- Linux Mint dictionaries are commonly placed `/usr/share/dict`. You may need yo insert your own dictionary location.
+
+I like 3 words in length with numbers inserted.
 
 ```
 import random
 
+
 words = open('/usr/share/dict/words').read().split()
-"-".join([random.choice(words) for _ in range(4)])
+"-".join([random.choice(words) for _ in range(3)])
 ```

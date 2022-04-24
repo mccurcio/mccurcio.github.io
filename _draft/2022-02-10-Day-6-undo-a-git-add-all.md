@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Day 6: How To Undo a Git Add All"
-date:   2022-02-10 21:45:31 -0500
 categories: 100DaysOfDS
 ---
 

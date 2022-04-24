@@ -1,13 +1,10 @@
 ---
 title: "Investigating Always AI"
 author: "Matt Curcio"
-date: '2021-12-11'
-slug: Company
 tags:
 - Company Notes
 - AlwaysAI
 - YOLO
-categories: Company
 ---
 
 ### Company Notes: Investigating alwaysAI

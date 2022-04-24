@@ -347,16 +347,13 @@
 ## [73] 1697 1734 1771 1773 1780 1789 1831 1833 1873</code></pre>
 <div class="sourceCode" id="cb96"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb96-1" data-line-number="1"><span class="kw">write_csv</span>(<span class="dt">x =</span> <span class="kw">as.data.frame</span>(NN_fp_fn_nums), </a>
 <a class="sourceLine" id="cb96-2" data-line-number="2">          <span class="dt">path =</span> <span class="st">&quot;./00-data/04-sort_unique_outliers/NN_nums.csv&quot;</span>)</a></code></pre></div>
-</div>
-</div>
+
 <div id="neural-network-conclusion" class="section level2">
 <h2><span class="header-section-number">6.3</span> Neural Network Conclusion</h2>
 <p>The Neural Network set included a total of 79 unique observations containing both FP and FN.</p>
 <p>Accuracy was the primary criteria used to select the optimal model. There were 20 models tested. The neural network was configured with 20 inputs (one for each amino acid), one hidden layer and one output. The hidden layer was tested with either 10, 12, 14, 16, 18, 20 neurons and a array of different decays (1, 0.1, 0.01, 0.001). The caret software has a tuning parameter named <code>tuneGrid</code> that allows users to <code>expand</code> a set of arrays to a matrix of combinations to be tested. Therefore 20 models were tested with the training data set and the best values were size = 20 and decay = 0.1.</p>
 <p>At this time, the author is not aware of any heuristic that gives the proper number of hidden layers and the proper number of neurons in each layer therefore one must search the experimental space for an optimized configuration. If a more thorough search of the experiemntal space was carried out using two or three hidden layers would be investigated. The poor showing of the Neural Network suggests that the data may have some additional decision boundary that is not yet represented by only 20 neurons.</p>
 
-</div>
-</div>
 <div class="footnotes">
 <hr />
 <ol start="60">
@@ -372,12 +369,6 @@
 <li id="fn69"><p>David Rumelhart, Geoffrey Hinton, &amp; Ronald Williams, Learning Representations By Back-Propagating Errors, Nature, 323, 533-536, Oct. 9, 1986<a href="neural-networks-for-binary-classification.html#fnref69" class="footnote-back">↩</a></p></li>
 <li id="fn70"><p>Ivan N. da Silva, Danilo H. Spatti, Rogerio A. Flauzino, Luisa H. B. Liboni, Silas F. dos Reis Alves, Artificial Neural Networks: A Practical Course, DOI 10.1007/978-3-319-43162-8, 2017<a href="neural-networks-for-binary-classification.html#fnref70" class="footnote-back">↩</a></p></li>
 </ol>
-</div>
-            </section>
-
-          </div>
-        </div>
-      </div>
 
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
@@ -394,8 +385,4 @@
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
 </script>
-
-
-</html>
-
 

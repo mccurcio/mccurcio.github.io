@@ -1,6 +1,5 @@
 ---
 title: "Bash - Rename files names to lowercase"
-date: 2019-01-31
 tags: Bash Scripting
 ---
 

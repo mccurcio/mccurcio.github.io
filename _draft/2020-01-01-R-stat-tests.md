@@ -1,6 +1,5 @@
 ---
 title: "R - Statistical Tests"
-date:  2020-01-01 21:00:00
 tags: R Statistical Tests
 ---
 

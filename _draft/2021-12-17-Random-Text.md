@@ -1,11 +1,8 @@
 ---
 title: "Python: Produce Random Text"
-date: '2021-12-17'
-slug: Random
 tags:
 - "one liners"
 - "random text"
-categories: python
 ---
 
 Produce Random Text Of Any Length
