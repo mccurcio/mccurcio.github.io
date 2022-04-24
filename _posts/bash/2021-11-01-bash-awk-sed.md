@@ -1,6 +1,6 @@
 ---
 title: "Generate random texts w/ awk + sed"
-tags: Bash Awk Sed
+tags: Bash Awk Sed InProgress
 ---
 
 <hr>

@@ -1,6 +1,6 @@
 ---
 title: "Python for-else"
-tags: Bash ForElse
+tags: Python ForElse
 ---
 
 

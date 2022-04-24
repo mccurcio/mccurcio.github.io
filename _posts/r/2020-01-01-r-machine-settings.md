@@ -1,6 +1,5 @@
 ---
 title: "How To Find R And Machine Settings"
-date: 2020-01-11
 tags: R
 ---
 

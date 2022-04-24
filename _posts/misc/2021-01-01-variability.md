@@ -1,10 +1,10 @@
 ---
 title: "Source of Variability"
-tags: Statistics
+tags: Statistics InProgess
 ---
 
 <hr>
-Does this work??
+Does this look good??
 
 | Source of Variability | Sum of Squares | Degrees of Freedom | Mean Squares | F-value |
 |--:|--:|--:|--:|--:|

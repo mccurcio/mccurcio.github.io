@@ -3,7 +3,6 @@ title: "Python - Anagrams"
 tags: Python Anagrams Collections Counter
 ---
 
-
 <hr>
 Check For Anagrams
 

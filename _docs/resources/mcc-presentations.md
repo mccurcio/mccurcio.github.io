@@ -5,30 +5,30 @@ tags: Python Logit Pseudo-Code FlowCharts PCA Anaconda
 
 ## Matt's Presentations
 
-**Getting Started with Anaconda Python**
-- Women Who Code Philadelphia Meetup, Dec. 2021:
-- [Youtube, ~10 min.](https://youtu.be/ZbwRktS7iz8?t=4446) 
+1. *Getting Started with Anaconda Python*
+   - [Youtube, 10 min.](https://youtu.be/ZbwRktS7iz8?t=4446)
+   - [Women Who Code Philadelphia](https://www.meetup.com/Women-Who-Code-Philly/)
+<br>
+<br>
+2. *Principal Component Anaylsis Is Your Friend* 
+   - [Zoom](https://rstudio.zoom.us/rec/share/3HsUbbl0M4yqGLu-6LbaIL7hnHX_lchmI218se9SpDPQ5jmOb3pO3rYHK0X44rk.NdS7j5boVtNEpT_w), @ **32:13**, Passcode: **BostonuseR2022!**
+   - [Boston useR Meetup](https://www.meetup.com/Boston-useR/)
+   - [Code & Slides](https://bit.ly/3uFat9u)
+<br>
+<br>
+3. *Logistic Regression* 
+   - [Boston useR Meetup](https://www.meetup.com/Boston-useR/)
+   - AT Goto **14:38**, Passcode: **2VP9MN.Q**
+   - [Code & Slides](https://bit.ly/3fZb0uN)
+<br>
+<br>
 
-**Principal Component Anaylsis is your friend**
-- Boston useR Meetup: April, 2022: 
-- Find me at **32:13**, length = 10 min
-- Passcode: **BostonuseR2022!**
-- [RStudio Zoom](https://rstudio.zoom.us/rec/share/3HsUbbl0M4yqGLu-6LbaIL7hnHX_lchmI218se9SpDPQ5jmOb3pO3rYHK0X44rk.NdS7j5boVtNEpT_w)
-- [Code & Slides](https://bit.ly/3uFat9u)
-
-**Logistic Regression**
-- Boston useR Meetup: Jan, 2022: 
-- Find me at **14:38**, length = 10 min
-- Passcode: **2VP9MN.Q**
-- [RStudio Zoom](https://rstudio.zoom.us/rec/share/ZfvzjCLszRd5wTbUeYQOMPcJwGoiLh3UiHmpI-wwI6S8ICnfyrK66qQ21vxnq-bE.2I7NcgW8bTpbAi8I)
-- [Code & Slides](https://bit.ly/3fZb0uN)
-
-
-**How to Install Anaconda Python**
-- Boston Python Users Meetup, Nov. 2021
-- [PDF](https://github.com/mccurcio/mcc-ds-material/blob/master/assets/Boston_Python_Users_Study_Group_11_17_2021.pdf)
-
-**Pseudo-Code**
-- RI-Career-Devs Meetup, Nov. 2017
-- [PDF](https://github.com/mccurcio/pseudocode-flowchart.pdf)
+4. How to Install Anaconda Python  
+   - [PDF](https://github.com/mccurcio/mcc-ds-material/blob/master/assets/Boston_Python_Users_Study_Group_11_17_2021.pdf)
+   - [Boston Python User Group]()
+<br>
+<br>
+5. Using Pseudo-Code & Flowcharts
+   - [PDF](https://github.com/mccurcio/pseudocode-flowchart.pdf)
+   - RI-Career-Devs Meetup, Nov. 2017
 

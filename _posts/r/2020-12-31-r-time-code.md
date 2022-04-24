@@ -1,10 +1,9 @@
 ---
-title: "Template For Posts"
-tags: Bash Some
+title: "Time Your R Code"
+tags: R InProgress
 ---
 
 
-### Time Your R Code
 
 ```
 start <- proc.time()

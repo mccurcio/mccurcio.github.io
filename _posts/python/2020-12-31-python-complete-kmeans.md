@@ -5,7 +5,6 @@ tags: Python Kmeans
 
 
 <hr>
-The Complete Code for K-means
 
 ```{r}
 require (ggplot2)

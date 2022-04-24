@@ -1,6 +1,5 @@
 ---
 title: "Ask Statistics Guy - A Probability Puzzle"
-date: 2019-10-14
 tags: R 
 ---
 

@@ -8,8 +8,8 @@ How to horizontal line in main.css then change `<hr>`
 
 ```
 hr {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border: 0;
     border-top: 1px solid rgba(0, 0, 0, .1) /* Change: 2-3 px AND/OR alpha=.2 or .3
 }

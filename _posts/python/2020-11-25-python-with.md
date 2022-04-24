@@ -1,11 +1,13 @@
 ---
 title: "Python - with"
 date:  2020-11-25
-tags: Bash
+tags: Python
 ---
 
 <hr>
 Tip for Reading Files using `with`
+[with man page]()
+
 
 ```
 # Bad example

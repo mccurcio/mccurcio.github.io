@@ -1,9 +1,6 @@
 ---
 title: "Bash - Scripting"
-tags: Bash
-badges:
- - type: info-badge
-   tag: In-Progress
+tags: Bash InProgress
 ---
 
 <hr>
