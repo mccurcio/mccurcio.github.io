@@ -4,7 +4,7 @@ title: Matt's D.S. Study Site
 permalink: /
 ---
 
-# MC's Data Science Study Site 
+## MC's Data Science Study Site 
 
 **Goals for this site**:
 
