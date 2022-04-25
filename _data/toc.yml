@@ -10,12 +10,6 @@
     - title: "&#8226; Matt's Presentations"
       url: "docs/resources/mcc-presentations"
 
-    - title: "&#8226; What Is Machine-learning"
-      url: "docs/chapters/introduction-what-is-machine-learning"
-
-    - title: "&#8226; Learning EDA"
-      url: "docs/chapters/exploratory-data-analysis"
-
     - title: "&#8226; Learning Logit"
       url: "docs/chapters/logistic-regression-for-binary-classification"
 
@@ -27,6 +21,12 @@
 
     - title: "&#8226; Learning Neural Networks"
       url: "docs/chapters/neural-networks-for-binary-classification"
+
+    - title: "&#8226; What Is Machine-learning"
+      url: "docs/chapters/introduction-what-is-machine-learning"
+
+    - title: "&#8226; Learning EDA"
+      url: "docs/chapters/exploratory-data-analysis"
 
     - title: "&#8226; My Data Science Resources"
       url: "docs/resources/data-science-resources"
