@@ -1,16 +1,15 @@
 ---
-title: "Python: Check if a number is a prime"
-tags:
-- "prime numbers"
+title: "Primes in R"
+tags: Primes
 ---
 
 
-Creates a random ‘-‘ separated 4 word password from the given input text file to be used as a password
+Is this really the best algo????
 
 ```
 flag = 1
 n = int(input('Enter the number: '))
-for i in range(2, n):
+for i in range(2, sqrt(n)):
     if (n % i == 0):
         print('%d is not a prime number' % n)
         flag = 0

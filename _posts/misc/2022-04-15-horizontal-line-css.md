@@ -4,7 +4,7 @@ tags: CSS
 ---
 
 <hr>
-How to horizontal line in main.css then change `<hr>`
+How to change horizontal line in css `<hr>`
 
 ```
 hr {

@@ -17,7 +17,7 @@ ruby RUBY_VERSION
 
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.9"
+gem "jekyll", "~> 3"
 gem "kramdown-parser-gfm", "~> 1.1"
 
 #Both Method#1 & 2 work well with Ubuntu based systems.
