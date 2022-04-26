@@ -5,7 +5,7 @@ tags: Python
 ---
 
 <hr>
-Tip for Reading Files using `with`
+Tip for reading files using `with`
 [with man page]()
 
 

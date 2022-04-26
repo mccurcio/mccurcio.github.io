@@ -1,14 +1,15 @@
 ---
 title: "Python: Produce Random Text"
-tags:
-- "one liners"
-- "random text"
+tags: Python Random
 ---
 
-Produce Random Text Of Any Length
+---
+
+Produce random text of any length
 
 ```
 import random, string
+
 "".join(
   [random.choice(string.ascii_letters + string.digits)
   for i in range(20)]
