@@ -13,7 +13,7 @@ permalink: /
    - [Presentations](docs/resources/mcc-presentations)
    - [Posts by title](archive)
 
-2. Share my code snippets my own coding notes 
+2. Share my code snippets, and my own coding notes 
    - I got inspiration from Chris Albon's [website](https://chrisalbon.com), Thanks Chris 👏
 
 3. Spur discussion and interactivity  
