@@ -11,6 +11,7 @@ Very Cool ;)
    - `range(start, stop, step)`
    - It calls any number starting at 2*p up to N+1 **NOT a prime**, when it steps up by p.  
    {2p, 3p, 4p, ..., N+1} while N <= p^2.
+   
 ```
 n = int(input('Enter an integer: '))
 prime = [True for i in range(n + 1)]

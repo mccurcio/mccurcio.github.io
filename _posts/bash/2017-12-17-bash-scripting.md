@@ -6,8 +6,6 @@ tags: Bash InProgress
 <hr>
 Run command on multiple files at once
 
-For example: all files in a directory:
-
 ```
 for FILE in $(ls *); do command $FILE; done
 ```

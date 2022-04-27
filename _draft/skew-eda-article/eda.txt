@@ -1,0 +1,11 @@
+What is EDA?
+
+The Engineering Statisitcs Handbook describes Exploratory Data Analysis as as approach.
+
+The approach starts with a problem and and yields a conclusion.  The conlcusion may not be pro or con, good or bad, but a conclusion that should hlep guide you through the scientific method.
+
+It is too easy to forget that Statistics (commonly called Applied Math) is a young branch of math and sceince. Gaussain descirbes normal curves in 1800's. Work by the 'god-father' of Statistics, R. Fisher was driven by the 20th century drive by better beer and food prodcution and then the use of fertilizers. The conpect of EDA was only formalized by John Tukey in the 1970.
+
+The notion that numbers were meant to be studied beyond bankers and scientists and engineers was novel.
+
+

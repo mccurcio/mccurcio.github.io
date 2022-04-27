@@ -17,7 +17,7 @@ permalink: /
    - I got inspiration from Chris Albon's [website](https://chrisalbon.com), Thanks Chris 👏
 
 3. Spur discussion and interactivity  
-   - Thanks to [VSoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme 👏
+   - Thanks to [vsoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme 👏
 
 ---
 
