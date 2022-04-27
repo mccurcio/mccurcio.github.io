@@ -4,28 +4,28 @@ tags: R Kmeans InProgress
 ---
 
 
-### The Complete Code for K-means in R
+An Implementation of K-means in R
 
 
-K-Means algorithm from kmeans_mehdi.R
-
+NOTE: K-Means algorithm from kmeans_mehdi.R
 
 
 ```{r}
 library(ggplot2)
 
+# Data generation
 x <- round(rnorm(1000,100,15)) + rnorm(1000)*15
-
 dens.x   <- density(x)
 empir.df <- data.frame(type='empir', x=dens.x$x, density=dens.x$y)
 norm.df  <- data.frame(type='normal', x=50:150, density=dnorm (50:150,100,15))
 df       <- rbind(empir.df, norm.df)
 m        <- ggplot(data = df, aes(x,density))
 m + geom_line(aes(linetype=type, colour=type))
+```
 
+---
 
-
-
+```{r}
 k = 3            # the number of K's
 max = 5000       # the maximum number for generating random points
 n = 100          # the number of points
@@ -42,7 +42,7 @@ m = matrix(z, ncol=2)
 
 ks <- c(1, 2, 4, 8, 10, 15, 20)  # Different Ks
 for(k in ks) {
-   myKmeans(m, k, max)
+  myKmeans(m, k, max)
 }
 
 # Initialization for k means: the k-first points in the list
