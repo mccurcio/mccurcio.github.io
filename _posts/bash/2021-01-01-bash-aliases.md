@@ -3,7 +3,7 @@ title:  "Matt's Bash Aliases"
 tags: Bash
 ---
 
-<hr>
+
 Matt's Aliases
 
 ```

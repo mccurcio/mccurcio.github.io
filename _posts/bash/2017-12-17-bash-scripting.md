@@ -3,7 +3,7 @@ title: "Bash - Scripting"
 tags: Bash InProgress
 ---
 
-<hr>
+
 Run command on multiple files at once
 
 ```

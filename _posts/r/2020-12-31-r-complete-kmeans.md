@@ -1,10 +1,9 @@
 ---
 title: "The Complete Algorthym for K-means"
-tags: Python Kmeans
+tags: R Kmeans
 ---
 
 
-<hr>
 
 ```{r}
 require (ggplot2)

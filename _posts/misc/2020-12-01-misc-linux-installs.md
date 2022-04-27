@@ -4,7 +4,7 @@ date: 2019-01-31
 tags: Linux
 ---
 
-<hr>
+
 Matt's Linux Mint Install Script
 
 

@@ -3,7 +3,7 @@ title: "Python - Anagrams"
 tags: Python Anagrams Collections Counter
 ---
 
-<hr>
+
 Check For Anagrams
 
 This has to be the easiest way ever to check for anagram.

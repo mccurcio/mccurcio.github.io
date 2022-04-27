@@ -3,7 +3,7 @@ title: "Source of Variability"
 tags: Statistics InProgess
 ---
 
-<hr>
+
 Does this look good??
 
 | Source of Variability | Sum of Squares | Degrees of Freedom | Mean Squares | F-value |

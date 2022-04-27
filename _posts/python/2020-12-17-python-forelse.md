@@ -4,7 +4,6 @@ tags: Python ForElse
 ---
 
 
-<hr>
 Try this `for-else` tip
 
 ```

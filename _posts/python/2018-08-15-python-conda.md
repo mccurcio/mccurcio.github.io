@@ -4,7 +4,7 @@ date:  2018-08-15
 tags: Python Conda
 ---
 
-<hr>
+
 How to list ALL `conda` or `pip` packages
 
 ``

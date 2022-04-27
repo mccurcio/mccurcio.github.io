@@ -3,7 +3,7 @@ title: "Embedding PDFs in Jekyll"
 tags: PDF 
 ---
 
-<hr>
+
 How to Embed a PDF in Jekyll
 
 1. `[download pdf](https://belovanna.github.io/assets/mydoc.pdf)`

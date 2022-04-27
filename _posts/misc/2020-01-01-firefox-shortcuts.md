@@ -5,7 +5,6 @@ tags: Firefox
 ---
 
 
-<hr>
 | Command          | Shortcut |
 | :----------------| :--------|
 | Refresh Page     | [CTRL] + R |

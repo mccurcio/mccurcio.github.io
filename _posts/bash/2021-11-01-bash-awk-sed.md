@@ -3,7 +3,7 @@ title: "Generate random texts w/ awk + sed"
 tags: Bash Awk Sed InProgress
 ---
 
-<hr>
+
 Generate random texts w/ awk+sed
 
 mcc29th November 2021 at 8:56pm

@@ -3,7 +3,7 @@ title: "Bash - Using Sed to Replace"
 tags: Bash Sed InProgress
 ---
 
-<hr>
+
 sed - stream editor
 
 A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).

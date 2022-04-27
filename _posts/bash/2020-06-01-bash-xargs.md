@@ -3,7 +3,7 @@ title: "Bash - xargs"
 tags: Bash InProgress
 ---
 
-<hr>
+
 xargs
 
 1. delete all .txt files from a directory

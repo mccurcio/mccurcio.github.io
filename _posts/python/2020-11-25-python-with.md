@@ -4,7 +4,7 @@ date:  2020-11-25
 tags: Python
 ---
 
-<hr>
+
 Tip for reading files using `with`
 [with man page]()
 
