@@ -4,8 +4,9 @@ tags: R
 ---
 
 
-**[super] + [Shift] + [C] on Linux**
-**[Ctrl] + [Shift] + [C] on Windows**
+- **[super] + [Shift] + [C] on Linux**
+
+- **[Ctrl] + [Shift] + [C] on Windows**
 
 This shortcut can be used both for:
 
