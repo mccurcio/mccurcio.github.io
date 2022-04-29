@@ -4,8 +4,9 @@ tags: R
 ---
 
 
-Select columns in Dataframe by using **c()** by 
+Select columns in Dataframe using
 
+- **c()**   
 - Column Names   
 - Column Index Number   
 
