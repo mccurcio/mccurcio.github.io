@@ -1,5 +1,5 @@
 ---
-title: "Check for Primes"
+title: "Python - Check for Primes"
 tags: Python
 ---
 

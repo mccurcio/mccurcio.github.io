@@ -1,5 +1,5 @@
 ---
-title: "How to Insert Comments For .r & .rmd"
+title: "How to Insert Comments For .r & "".rmd"
 tags: R
 ---
 
