@@ -1,10 +1,13 @@
 ---
-title: "How to Select Specific Columns in R"
+title: "R - Select Columns in Dataframe"
 tags: R
 ---
 
 
-You can use the following syntax to select specific columns in a data frame in base R:
+Select columns in Dataframe by using **c()** by 
+
+- Column Names   
+- Column Index Number   
 
 ```{r}
 #select columns by name

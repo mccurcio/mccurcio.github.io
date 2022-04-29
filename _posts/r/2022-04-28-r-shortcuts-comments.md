@@ -1,10 +1,10 @@
 ---
-title: "How to Insert Comments For .r & "".rmd"
+title: "R - Insert Comments for .r & .rmd"
 tags: R
 ---
 
 
-- **[super] + [Shift] + [C] on Linux**
+- **[Super] + [Shift] + [C] on Linux**
 
 - **[Ctrl] + [Shift] + [C] on Windows**
 
@@ -15,4 +15,4 @@ This shortcut can be used both for:
 
 Note that if you want to comment more than one line, select all the lines you want to comment then use the shortcut. 
 
-If you want to uncomment a comment, apply the same shortcut.
+To uncomment:  apply **[Super] + [Shift] + [C]** Again!
