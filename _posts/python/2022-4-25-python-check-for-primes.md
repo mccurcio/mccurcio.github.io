@@ -1,6 +1,6 @@
 ---
 title: "Python - Check for Primes"
-tags: Python
+tags: Python Primes
 ---
 
 
