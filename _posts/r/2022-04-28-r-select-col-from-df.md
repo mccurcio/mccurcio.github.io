@@ -4,7 +4,7 @@ tags: R
 ---
 
 
-Select columns in Dataframe using
+Select columns in Dataframe using:
 
 - **c()**   
 - Column Names   
