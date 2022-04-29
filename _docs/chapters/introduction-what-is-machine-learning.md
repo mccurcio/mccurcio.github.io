@@ -1,5 +1,5 @@
 ---
-title: "What Is Machine Learning"   
+title: "R - Code for Logit"   
 tags: Data_Science
 ---
 
