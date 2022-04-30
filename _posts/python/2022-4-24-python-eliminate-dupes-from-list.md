@@ -3,9 +3,7 @@ title: "Eliminate Duplicates from a list in Python"
 tags: Python
 ---
 
-<br>
-
-### Method 1 - does not keep order
+**Method 1 - `set` does not keep order**
 
 ```python
 duplicate_list = [1, 2, 3, 5, 56, 78, 89, 1, 56, 4, 64, 2, 45, 3, 54, 1, 2]
@@ -17,16 +15,14 @@ cleaned_list
 
 [64, 1, 2, 3, 4, 5, 45, 78, 54, 56, 89]
 
-<br>
 
-### Method 2 - keeps order
+**Method 2 - `dict.fromkeys` keeps order
 
 ```python
 method_2 = dict.fromkeys(duplicate_list)
 
 method_2
 ```
-
     {1: None,
      2: None,
      3: None,
@@ -41,7 +37,6 @@ method_2
 
 ```python
 cleaned_2 = list(dict.fromkeys(duplicate_list))
-
 cleaned_2
 ```
 
