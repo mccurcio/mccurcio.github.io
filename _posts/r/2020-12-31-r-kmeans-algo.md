@@ -5,8 +5,6 @@ tags: R Kmeans InProgress
 
 
 An Implementation of K-means in R
-
-
 NOTE: K-Means algorithm from kmeans_mehdi.R
 
 

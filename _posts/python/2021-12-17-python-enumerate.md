@@ -4,7 +4,7 @@ date:  2021-12-17 21:00:00
 tags: Python Enumerate
 ---
 
-<hr>
+
 `enumerate(iterable, start=0)`  
 [Python3: numerate](
 https://docs.python.org/3/library/functions.html?highlight=enumerate#enumerate

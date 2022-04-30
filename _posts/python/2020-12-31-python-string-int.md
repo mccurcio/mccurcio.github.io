@@ -4,7 +4,6 @@ tags: Python
 ---
 
 
-<hr>
 Converting string to int
 
 ```

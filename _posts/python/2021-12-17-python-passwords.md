@@ -3,7 +3,6 @@ title: "Python - Pronounceable Passwords"
 tags: Python
 ---
 
----
 
 Produces a randomly chosen word password of any given length.
 
