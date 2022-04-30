@@ -4,7 +4,7 @@ tags: R Function
 ---
 
 
-### Plot & Save Histogram - `mcc_plot_1.png`
+Plot & Save Histogram - `mcc_plot_1.png`
 
 **Histogram of X vs frequency**
 
