@@ -46,7 +46,7 @@ feedback: true
 # Added 4/30/2022
 google-analytics: UA-161598868-2
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+#<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161598868-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
