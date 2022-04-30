@@ -1,11 +1,9 @@
 ---
-title: "How to horizontal line in CSS"
+title: "Horizontal lines in CSS/MD"
 tags: CSS
 ---
 
-
-
-How to change horizontal line in css `<hr>`
+Change horizontal line in css `<hr>`
 
 ```
 hr {
