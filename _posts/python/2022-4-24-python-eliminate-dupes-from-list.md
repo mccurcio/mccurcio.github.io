@@ -16,7 +16,7 @@ cleaned_list
 [64, 1, 2, 3, 4, 5, 45, 78, 54, 56, 89]
 
 
-**Method 2 - `dict.fromkeys` keeps order
+**Method 2 - `dict.fromkeys` keeps order**
 
 ```python
 method_2 = dict.fromkeys(duplicate_list)
