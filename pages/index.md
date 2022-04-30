@@ -29,6 +29,6 @@ BUT I am striving to make it appealing*. 😉
 
 ## Have a Question?
 
-- <a href="mailto:matt.curcio.ri@gmail.com?subject=A question from the web">Send An Email</a>, Or interact via GitHub issues, on the right.
+- <a href="mailto:matt.curcio.ri@gmail.com?subject=A question from the web">Send An Email</a>, or leave feedback below.
 
 *I look foward to meeting*.
