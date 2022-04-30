@@ -14,10 +14,10 @@ permalink: /
    - [Posts by title](archive)
 
 2. Share my code snippets, and my own coding notes 
-   - I got inspiration from Chris Albon's [website](https://chrisalbon.com), Thanks Chris 👏
+   - I was inspired by Chris Albon's [website](https://chrisalbon.com), Thanks Chris 👏
 
 3. Spur discussion and interactivity  
-   - Thanks to [vsoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme 👏
+   - *BIG Thanks* to [vsoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme 👏
 
 ---
 
