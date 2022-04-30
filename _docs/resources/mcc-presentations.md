@@ -5,7 +5,7 @@ tags: Python Logit Pseudo-Code FlowCharts PCA Anaconda
 
 ## Matt's Presentations
 
-1. Getting Started with Anaconda Python
+1. Getting Started with Anaconda Python 
    - [Youtube, 10 min](https://youtu.be/ZbwRktS7iz8?t=4446)
    - [Women Who Code Philadelphia](https://www.meetup.com/Women-Who-Code-Philly/)
 <br>
@@ -17,8 +17,8 @@ tags: Python Logit Pseudo-Code FlowCharts PCA Anaconda
 <br>
 <br>
 3. Logistic Regression
+   - [Zoom](https://rstudio.zoom.us/rec/share/ZfvzjCLszRd5wTbUeYQOMPcJwGoiLh3UiHmpI-wwI6S8ICnfyrK66qQ21vxnq-bE.2I7NcgW8bTpbAi8I) @ **14:38**, Passcode: **2VP9MN.Q**
    - [Boston useR Meetup](https://www.meetup.com/Boston-useR/)
-   - AT Goto **14:38**, Passcode: **2VP9MN.Q**
    - [Code & Slides](https://bit.ly/3fZb0uN)
 <br>
 <br>
