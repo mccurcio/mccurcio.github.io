@@ -1,5 +1,5 @@
 ---
-title: About Matt C
+title: About Matt
 permalink: /about/
 ---
 
@@ -15,4 +15,4 @@ My tools include Writing, Presentation, Statistics, Data Science, R, and Python 
 
 ## Have a Question?
 
-- <a href="mailto:matt.curcio.ri@gmail.com?subject=Greetings from a new friend">Send An Email</a>
+- <a href="mailto:matt.curcio.ri@gmail.com?subject=Greetings from a new friend">Send An Email</a>, or leave feedback below.
