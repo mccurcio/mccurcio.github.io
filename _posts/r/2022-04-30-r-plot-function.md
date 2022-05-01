@@ -4,9 +4,9 @@ tags: R Function
 ---
 
 
-Plot & Save Histogram - `mcc_plot_1.png`
+Plot & Save Histogram As .png
 
-**Histogram of X vs frequency**
+- Histogram of X vs frequency
 
 ```{r}
 plot_1 <- function(){

@@ -3,7 +3,8 @@
         <a class="navbar-brand" href="{{ site.baseurl }}/">
             <span class="navbar-logo"></span>{% include logo.svg %}<span class="text-uppercase font-weight-bold">{{ site.title }}</span>
 	</a>
-	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+
+    <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
 		<ul class="navbar-nav mt-2 mt-lg-0">{% if site.repo %}
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
                             <a class="nav-link" href="{{ site.repo }}" target="_blank"><span>GitHub</span></a>
@@ -13,10 +14,11 @@
 			</li>{% endfor %}
 		</ul>
 	</div>
-	<div class="navbar-nav d-none d-lg-block">
- <input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
-        </div>
 
+	<div class="navbar-nav d-none d-lg-block">
+    <input type="search" class="form-control td-search-input" placeholder="&#xf002 Search this site…" aria-label="Search this site…" autocomplete="off">
+  </div>
+	<!--
 	<div class="navbar-nav d-none d-lg-block">
           <a class="gh-source" data-gh-source="github" href="{{ site.repo }}" title="Go to repository" data-md-state="done">
           <div class="gh-source__repository">
@@ -25,7 +27,7 @@
           <ul class="gh-source__facts"><li class="gh-source__fact" id='stars'></li><li id="forks" class="gh-source__fact"></li></ul></div></a>
         </div>
       </div>
-
+   -->
 
 </nav>
 </header>
@@ -45,7 +47,7 @@ $(document).ready(function() {
      forks = r.items[0]['forks_count']
      $('#stars').text(stars + " Stars")
      $('#forks').text(forks + " Forks")
-     -->
+    
   });
 });
 </script>

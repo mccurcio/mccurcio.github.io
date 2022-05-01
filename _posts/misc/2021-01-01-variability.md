@@ -1,6 +1,6 @@
 ---
 title: "ANOVA - Source of Variability"
-tags: Statistics ANOVA InProgess
+tags: Statistics ANOVA
 publish: false
 ---
 

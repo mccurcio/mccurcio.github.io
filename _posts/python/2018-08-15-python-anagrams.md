@@ -1,6 +1,6 @@
 ---
 title: "Python - Anagrams"
-tags: Python Anagrams Collections Counter InProgress
+tags: Python Anagrams Collections Counter
 ---
 
 

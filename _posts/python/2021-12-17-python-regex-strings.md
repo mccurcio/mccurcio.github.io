@@ -1,7 +1,7 @@
 ---
 title: "Python - Regex for Strings"
-date:  2021-12-17 21:00:00
-tags: Python  InProgress
+date:  2021-12-17
+tags: Python
 ---
 
 Convert repeated spaces to one space: 

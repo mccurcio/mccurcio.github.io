@@ -1,6 +1,6 @@
 ---
 title: "Bash - Using Sed to Replace"
-tags: Bash Sed InProgress
+tags: Bash Sed 
 ---
 
 

@@ -3,8 +3,6 @@ title: "The Complete Algorthym for K-means"
 tags: R Kmeans
 ---
 
-
-
 ```{r}
 require (ggplot2)
 

@@ -1,6 +1,6 @@
 ---
 title: "Bash - Scripting"
-tags: Bash InProgress
+tags: Bash
 ---
 
 

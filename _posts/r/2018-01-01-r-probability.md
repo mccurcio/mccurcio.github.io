@@ -1,6 +1,6 @@
 ---
 title: "R - Probability Functions"
-tags: R Statistics InProgress
+tags: R Statistics
 ---
 
 | Distribution | R Command |

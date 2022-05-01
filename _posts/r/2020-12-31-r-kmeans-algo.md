@@ -1,6 +1,6 @@
 ---
 title: "The Complete Algorthym for K-means"
-tags: R Kmeans InProgress
+tags: R Kmeans 
 ---
 
 

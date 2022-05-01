@@ -1,6 +1,6 @@
 ---
 title: "Bash - xargs"
-tags: Bash InProgress
+tags: Bash 
 ---
 
 

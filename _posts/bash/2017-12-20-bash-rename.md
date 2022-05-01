@@ -1,6 +1,6 @@
 ---
 title: "Bash - Rename files names to lowercase"
-tags: Bash InProgress
+tags: Bash 
 ---
 
 
