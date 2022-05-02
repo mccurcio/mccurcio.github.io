@@ -8,7 +8,7 @@ tags: Data_Science
 
 <map name="image-map">
     <area alt="First Steps" href="{{site.baseurl}}/docs/data-science-resources.md" coords="532,112,423,63" shape="rect">
-    <area target="_blank" alt="github" title="github" href="github" coords="304,15,377,45" shape="rect">
+    <area target="_blank" alt="github" title="github" href="{{site.baseurl}}/docs/data-science-resources.md" coords="304,15,377,45" shape="rect">
     <area target="_blank" alt="stats" title="stats" href="stats" coords="391,370,524,424" shape="rect">
     <area target="_blank" alt="prog" title="prog" href="prog" coords="523,734,403,689" shape="rect">
     <area target="_blank" alt="dataviz" title="dataviz" href="dataviz" coords="1003,241,855,192" shape="rect">
