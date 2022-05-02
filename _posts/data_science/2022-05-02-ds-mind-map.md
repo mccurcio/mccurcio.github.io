@@ -7,7 +7,7 @@ tags: Data_Science
 <img src="/assets/img/beginning-data-science.png" alt="DS Knowledge Base" usemap="#image-map">
 
 <map name="image-map">
-    <area target="_blank" alt="First Steps" title="First Steps" href="1st-step" coords="532,112,423,63" shape="rect">
+    <area alt="First Steps" href="{{site.baseurl}}/docs/data-science-resources.md" coords="532,112,423,63" shape="rect">
     <area target="_blank" alt="github" title="github" href="github" coords="304,15,377,45" shape="rect">
     <area target="_blank" alt="stats" title="stats" href="stats" coords="391,370,524,424" shape="rect">
     <area target="_blank" alt="prog" title="prog" href="prog" coords="523,734,403,689" shape="rect">
