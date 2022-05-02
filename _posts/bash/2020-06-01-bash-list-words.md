@@ -11,13 +11,13 @@ Make an index
 
 * First get rid of Punctuation and Pipe '|'
 
-```
+```bash
 cat *.txt | tr '[:punct:]' ' ' | tr '|' ' ' | printf '%s\n' $(cat *.txt) | sort | uniq -c | sort -gr | less
 ```
 
 
 * Make a text document into a list of words
 
-```
+```bash
 cat *.txt | printf '%s\n' $(cat *.txt) | sort | uniq -c | sort -gr | less 
 ```

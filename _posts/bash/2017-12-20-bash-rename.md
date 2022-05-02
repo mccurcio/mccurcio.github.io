@@ -10,7 +10,7 @@ Rename All files in directory to Lowercase
 
 An elegant way to rename all files in a directory to lowercase
 
-```
+```bash
 for i in `ls -1`; do mv $i "${i,,}" ; done
 ```
 
