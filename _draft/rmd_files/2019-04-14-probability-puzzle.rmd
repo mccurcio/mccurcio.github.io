@@ -1,12 +1,8 @@
 ---
 title: "Ask Statistics Guy"
-author: "MCC"
-date: '2019-10-14'
-output: html_document
+output: github_document
 ---
 
-
-The puzzle: 
 
 Consider a normally distributed random variable with an expected value of 20 and standard deviation of 4. If you determine the value of this variable 8 times, then what is the chance that the 8 sample values yield an improved standard deviation between 4.9 and 5.3?
 
@@ -50,5 +46,5 @@ total = sum(counts)
 print((sum(counts)/obs))
 ```
 
-**The percent probability of this event occuring is 7.04%.**  
+**The percent probability of this event occurring is 7.04%.**  
 Small but not significant.

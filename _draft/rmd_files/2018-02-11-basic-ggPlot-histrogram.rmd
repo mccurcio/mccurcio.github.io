@@ -1,37 +1,24 @@
 ---
-title: "The Basic GGPlot Histrogram"
+title: "A Basic GGPlot Histrogram"
 subtitle: "& why-you-need-to-practice-it"
-author: "MCC"
-date: '2018-02-11'
-output: html_document
+output: github_document
 ---
 
+Create normally distributed data
 
 ```{r}
-library(ggplot2)
-```
-
-CREATE VARIABLE, NORMALLY DISTRIBUTED
-```{r}
-# set "seed" for random numbers
 set.seed(42)
 
-# create variable
 xvar_rand_norm <- rnorm(1000, mean = 1)
-
-# CREATE DATA FRAME FROM VARIABLE
 df.xvar <- data.frame(xvar_rand_norm)
-
-# CALCULATE MEAN
-#  we'll use this in an annotation
 xvar_mean <- mean(xvar_rand_norm)
 ```
 
-PLOT
-
-Here, we’re going to plot the histogram We’ll also add a line at the calculated mean and also add an annotation to specify the value of the calculated mean.
+This Histogram uses GGplot2, although I prefer base R for most simple graphics.
 
 ```{r message=FALSE, warning=FALSE}
+library(ggplot2)
+
 ggplot(data = df.xvar, aes(x = xvar_rand_norm)) +
        geom_histogram() +
        geom_vline(xintercept = xvar_mean, color = "dark red") +
