@@ -20,9 +20,9 @@ Enjoy
 
 ---
 
-### Great Intro Materials
+:star: - Represents Favorites ; 📗 - Represents Free Online Books
 
-- [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
+---
 
 ### Learn Git!
 
@@ -33,7 +33,7 @@ Enjoy
     
 - :star: [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) - A GREAT Starter book for easing one into R & Data Science. *FREE Book Online* 📗
 
-- :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too!
+- :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too! 📗
 
 ### Books
 
@@ -138,7 +138,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - :star: [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
 - :star: [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) Needed if you are going to use .RMD notebooks and docs. *FREE*  Book Online 📗
-- 
+
 - For a full list of available Github markdown emoji and codes, check out [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/).
    
 ### Linux :penguin:
