@@ -8,6 +8,7 @@ tags: Data_Science
 
 <map name="image-map">
     <area alt="First Steps" href="{{site.baseurl}}/docs/data-science-resources.md" coords="532,112,423,63" shape="rect">
+<<<<<<< HEAD
     <area alt="github" title="github" href="{{site.baseurl}}/docs/data-science-resources.md" coords="304,15,377,45" shape="rect">
     <area  alt="stats" title="stats" href="stats" coords="391,370,524,424" shape="rect">
     <area alt="prog" title="prog" href="prog" coords="523,734,403,689" shape="rect">
@@ -15,4 +16,13 @@ tags: Data_Science
     <area alt="vids" title="vids" href="vids" coords="855,371,920,416" shape="rect">
     <area alt="know" title="know" href="know" coords="855,519,981,562" shape="rect">
     <area alt="concepts" title="concepts" href="concepts" coords="849,672,943,712" shape="rect">
+=======
+    <area target="_blank" alt="github" title="github" href="{{site.baseurl}}/docs/data-science-resources.md" coords="304,15,377,45" shape="rect">
+    <area target="_blank" alt="stats" title="stats" href="stats" coords="391,370,524,424" shape="rect">
+    <area target="_blank" alt="prog" title="prog" href="prog" coords="523,734,403,689" shape="rect">
+    <area target="_blank" alt="dataviz" title="dataviz" href="dataviz" coords="1003,241,855,192" shape="rect">
+    <area target="_blank" alt="vids" title="vids" href="vids" coords="855,371,920,416" shape="rect">
+    <area target="_blank" alt="know" title="know" href="know" coords="855,519,981,562" shape="rect">
+    <area target="_blank" alt="concepts" title="concepts" href="concepts" coords="849,672,943,712" shape="rect">
+>>>>>>> d373a995a2676798a4bb0324acb771ba319ef78d
 </map>
