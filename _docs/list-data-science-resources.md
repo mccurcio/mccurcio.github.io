@@ -86,10 +86,10 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Advanced R](https://adv-r.hadley.nz/index.html), by H. Wickham, *FREE* Book Online 📗
 
-- [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- :star: [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
   - If you use R alot and want an easy way to demo your work this is great.
 
-- [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- :star: [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
 - [R Graphics Cookbook, 2nd edition](https://r-graphics.org/), *FREE* Book Online 📗
 
@@ -215,7 +215,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### Videos 
 
-- [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
+- :star: [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
 
 - :star: [Victor Lavrenko](https://www.youtube.com/channel/UCs7alOMRnxhzfKAJ4JjZ7Wg) High quality videos from his lectures. One of my Favorites.
 
