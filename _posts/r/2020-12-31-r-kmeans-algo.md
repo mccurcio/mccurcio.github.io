@@ -10,10 +10,12 @@ An Implementation of K-means in R
 NOTE: K-Means algorithm from kmeans_mehdi.R
 
 
+### Data generation 
+ 
 ```{r}
 library(ggplot2)
 
-# Data generation
+
 x <- round(rnorm(1000,100,15)) + rnorm(1000)*15
 dens.x   <- density(x)
 empir.df <- data.frame(type='empir', x=dens.x$x, density=dens.x$y)

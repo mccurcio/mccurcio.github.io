@@ -1,5 +1,5 @@
 ---
-title:  "Data Science Resources"
+title:  "Data Science Practitioner's Reading List"
 tags: Data_Science
 ---
 
@@ -8,8 +8,6 @@ tags: Data_Science
   <a href=" https://github.com/mccurcio/">
     <img src="./assets/ds-venn-diagram.png" alt="Your Road Map" />
 -->
-
-## Data Science Practitioner's Reading List
 
 **Greetings**,   
 This list includes material that I have *used and would recommend*.   
@@ -20,20 +18,45 @@ Enjoy
 
 ---
 
-### Great Intro Materials
+## Introdcution - First Step?
 
-- [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
+### A. Learn Git!
 
-### Learn Git!
+**Why?**
 
-- Git and what you put on your GitHub account **IS** your new business card.
-- [GitHub.com](https://github.com/) is a common storage version control system. *FREE*
+1. Git and what you put on your GitHub account **IS** your new business card.
+
+1. [GitHub.com](https://github.com/)is arguably the most common version control systems, so start there.   
+
+1. [GitHub](https://github.com), [Gitlab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/) ALL have *FREE* options.
+
+1. All allow you to host *FREE* 'basic' websites. IMPORTANT!   
+
+1. Treat Gihub or Gitlab like your new safe deposit box.  
+   - PUT ALL YOUR WORK ON IT!
+
 - Want to try [Github's](https://guides.github.com/activities/hello-world/) tutorial.
-- You may also try [Gitlab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/) (Both have *FREE* options).
-    
+- https://docs.github.com/en
+
+### B. Learn HTML!
+
+**Why?**
+
+1. The basis of the simplest websites use HTML. 
+
+2. HTML is simple. It is so simple that 10 year olds learn it in school and produce simple web pages with colors and pictures and links.
+
+3. Try [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
+
+4. A very simple called [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is based on HTML and is used all over the place now.
+
+
+
 - :star: [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) - A GREAT Starter book for easing one into R & Data Science. *FREE Book Online* 📗
 
 - :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too!
+
+
 
 ### Books
 
