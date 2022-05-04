@@ -1,8 +1,7 @@
 ---
-title: "How To Find R And Machine Settings"
-author: "MCC"
-date: '2020-01-11'
-output: html_document
+title: "R - Finding R And Machine Settings"
+tags: R 
+output: github_document
 ---
 
 A good practice is to add R and Linux machine settings for reproducible data manipulation.
