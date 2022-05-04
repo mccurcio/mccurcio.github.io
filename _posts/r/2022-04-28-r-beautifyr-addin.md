@@ -4,18 +4,17 @@ tags: R
 ---
 
 
-I have to remember to add this little **addin** to RStudio every time I install it!
+Add this Awesome **addin** to RStudio during installation!
 
-beautifyR has
-1. Beautify tables **Awesome**
+beautifyR has   
+- Beautify tables **Awesome**   
 
 See: [https://github.com/mwip/beautifyR](https://github.com/mwip/beautifyR`)
 
-Feel free to install it from my Github via the adddinslist or use
+To install it from Github use:
 
 ```{r}
 devtools::install_github('mwip/beautifyR')
 ```
-
 
 See also: [https://www.r-bloggers.com/2020/01/rstudio-addins-or-how-to-make-your-coding-life-easier/](https://www.r-bloggers.com/2020/01/rstudio-addins-or-how-to-make-your-coding-life-easier/)

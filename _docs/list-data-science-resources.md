@@ -18,6 +18,7 @@ Enjoy
 
 ---
 
+<<<<<<< HEAD:_docs/resources/data-science-resources.md
 ## Introdcution - First Step?
 
 ### A. Learn Git!
@@ -29,6 +30,11 @@ Enjoy
 1. [GitHub.com](https://github.com/)is arguably the most common version control systems, so start there.   
 
 1. [GitHub](https://github.com), [Gitlab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/) ALL have *FREE* options.
+=======
+:star: - Represents Favorites ; 📗 - Represents Free Online Books
+
+---
+>>>>>>> d6e4a367f2a15f87585f72e26331445ecfddeac8:_docs/list-data-science-resources.md
 
 1. All allow you to host *FREE* 'basic' websites. IMPORTANT!   
 
@@ -54,7 +60,7 @@ Enjoy
 
 - :star: [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) - A GREAT Starter book for easing one into R & Data Science. *FREE Book Online* 📗
 
-- :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too!
+- :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too! 📗
 
 
 
@@ -109,10 +115,10 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Advanced R](https://adv-r.hadley.nz/index.html), by H. Wickham, *FREE* Book Online 📗
 
-- [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- :star: [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
   - If you use R alot and want an easy way to demo your work this is great.
 
-- [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- :star: [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
 - [R Graphics Cookbook, 2nd edition](https://r-graphics.org/), *FREE* Book Online 📗
 
@@ -161,7 +167,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - :star: [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
 - :star: [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) Needed if you are going to use .RMD notebooks and docs. *FREE*  Book Online 📗
-- 
+
 - For a full list of available Github markdown emoji and codes, check out [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/).
    
 ### Linux :penguin:
@@ -238,7 +244,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### Videos 
 
-- [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
+- :star: [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
 
 - :star: [Victor Lavrenko](https://www.youtube.com/channel/UCs7alOMRnxhzfKAJ4JjZ7Wg) High quality videos from his lectures. One of my Favorites.
 

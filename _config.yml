@@ -17,8 +17,8 @@
 title: "Matthew Curcio"
 email: "matt.curcio.ri@gmail.com"
 author: "Homo-Habilis-Junior"
-description: > 
- "See one, Do one, Write one!"
+description: "See one, Do one, Write one!"
+
 
 # Add your baseurl here (your repository) but DO NOT CHANGE THE LINE NUMBER without editing .circleci/circle_urls.sh
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -43,7 +43,20 @@ feedback: true
 # Link to a privacy policy in footer, uncomment and define if wanted
 # privacy: https://domain.com/privacy
 
-# google-analytics: UA-XXXXXXXXXX
+# Added 4/30/2022
+google-analytics: UA-161598868-2
+
+#<!-- Global site tag (gtag.js) - Google Analytics -->
+#<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161598868-2"></script>
+#<script>
+#  window.dataLayer = window.dataLayer || [];
+#  function gtag(){dataLayer.push(arguments);}
+#  gtag('js', new Date());
+#
+#  gtag('config', 'UA-161598868-2');
+#</script>
+
+
 # Image and (square) dimension for logo (don't start with /)
 # If commented, will use material hat theme
 # logo: "assets/img/logo/SRCC-square-red.png"
@@ -51,6 +64,9 @@ logo_pixels: 34
 # color: "#30638e"
 color: "#8c1515" # primary color for header, buttons
 
+gems: 
+  - jemoji
+  
 # Build settings
 markdown: kramdown
 

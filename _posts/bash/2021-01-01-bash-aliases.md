@@ -6,9 +6,11 @@ tags: Bash
 
 Matt's Aliases
 
+- Add to `~/.bashrc`
+
 ```
 ## Bash aliases
-alias rm='rm -i'
+alias rm='rm -i' 
 alias cp='cp -i'
 alias mv='mv -i'
 

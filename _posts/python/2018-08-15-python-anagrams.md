@@ -6,7 +6,7 @@ tags: Python Anagrams Collections Counter
 
 Check For Anagrams
 
-This has to be the easiest way ever to check for anagram.
+- This has to be the easiest way ever to check for anagram.
 
 This ditti imports the `collections` library and uses sets.
 

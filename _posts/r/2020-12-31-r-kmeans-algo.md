@@ -1,12 +1,10 @@
 ---
 title: "The Complete Algorthym for K-means"
-tags: R Kmeans InProgress
+tags: R Kmeans 
 ---
 
 
 An Implementation of K-means in R
-
-
 NOTE: K-Means algorithm from kmeans_mehdi.R
 
 

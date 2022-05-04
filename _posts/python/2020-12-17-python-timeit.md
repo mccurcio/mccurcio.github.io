@@ -1,14 +1,11 @@
 ---
 title: "Python - timeit"
-tags: Python InProgress
+tags: Python
 ---
-
-
 
 Measure the execution time of small bits of Python code
 
 [timeit man page](https://docs.python.org/3.9/library/timeit.html)
-
 
 ```
 import timeit

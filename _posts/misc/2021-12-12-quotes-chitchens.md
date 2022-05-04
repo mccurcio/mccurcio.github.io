@@ -1,5 +1,5 @@
 ---
-title: "Hitchens Quotes"
+title: "C. Hitchens Quotes"
 tags: Quotes
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Time Your R Code"
-tags: R InProgress
+tags: R
 ---
 
 

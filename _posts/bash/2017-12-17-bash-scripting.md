@@ -1,12 +1,12 @@
 ---
 title: "Bash - Scripting"
-tags: Bash InProgress
+tags: Bash
 ---
 
 
 Run command on multiple files at once
 
-```
+```bash
 for FILE in $(ls *); do command $FILE; done
 ```
 

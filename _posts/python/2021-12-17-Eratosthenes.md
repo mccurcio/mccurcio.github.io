@@ -3,7 +3,7 @@ title: "Prime Numbers Using The Sieve of Eratosthenes"
 tags: Primes Eratosthenes Python
 ---
 
-<hr>
+
 The sieve of Eratosthenes is an ancient algorithm for finding all prime numbers less than N.   
 Very Cool ;)
 

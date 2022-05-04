@@ -22,28 +22,28 @@ tags: Ideas
 
 ---
 
-## Ideas
+**Ideas**
 
-- [Who, what, where, when, why and how] - Talking DS to a Journalist
+- **[Who, what, where, when, why and how] - Talking DS to a Journalist**
 - Python - Setting up your enviroment (versions for window, linux or that other OS)
   - working with Conda or 
   - venv
 - Documenting your work - the PEP-8 way
 - Exploring `<insert your favorite library>`
-- Git, github, and source control (how to make your repo look professional)
+- **Git, github, and source control (how to make your repo look professional)**
 - How to OOP with Python
-- Talking to databases
-- Exploratory Data Analysis Examples/ Reporting
-- How to compare/run multiple ML models.
-- Flask 
-- Dash
+- **Talking to databases**
+- **Exploratory Data Analysis Examples/ Reporting**
+- **How to compare/run multiple ML models.**
+- **Flask** 
+- **Dash**
 - Django
 - Automating Reports and reporting
-- R-library: [Usethis](https://usethis.r-lib.org/)
+- **R-library: [Usethis](https://usethis.r-lib.org/)**
 
 - How to open source contributions
 - How to work with OSS
-- Overview of data types in Python
+- Overview of data types in Python/R
 - Overview of an interesting algorythm
 - Approaches to logging
 - What is type hinting and should I be using it?
@@ -51,7 +51,7 @@ tags: Ideas
 - How I wrote a text adventure game in Python
 
 - Building a simple game (Hangman, tic-tac-toe, or something similar)
-- Debugging tales (lightning talks)
+- Debugging, For a lightning talk
 - Meet & greet (opportunity for all attendees to introduce themselves)
 - I'm teaching myself X, and it's really _______
 

@@ -1,6 +1,6 @@
 ---
 title: "R - Statistical Tests"
-tags: R Statistics InProgress
+tags: R Statistics
 ---
 
 | R Code     | Description |

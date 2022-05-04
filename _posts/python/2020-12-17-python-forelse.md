@@ -1,6 +1,6 @@
 ---
 title: "Python for-else"
-tags: Python ForElse
+tags: Python Loop
 ---
 
 
