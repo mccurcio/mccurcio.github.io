@@ -1,7 +1,7 @@
 ---
-title: "An investigation of the Framingham Heart Study"
+title: "An Investigation of the Framingham Heart Study"
 author: "By Matthew Curcio"
-output: html_document
+output: github_document
 ---
 
 
