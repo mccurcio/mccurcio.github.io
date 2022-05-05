@@ -10,8 +10,11 @@ Parameters:
 2. options(tinytex.verbose = FALSE) - When 'knitting' docs this will also give fewer messages. 
 
 
-```{r LoadData, message=FALSE, warning=FALSE, include=FALSE}
+```r LoadData, message=FALSE, warning=FALSE, include=FALSE
 
+# options {base}
+options() # Invoking 'options()' with no arguments returns a list with the current values of the options.
+opts_chunk$set(fig.align = 'center')
 options(tinytex.verbose = FALSE)
 options(digits = 5) 
 
@@ -20,14 +23,6 @@ Libraries <- c("knitr", "readr")
 for (p in Libraries) { 
     library(p, character.only = TRUE)
 }
+
 ```
-
-```r
-# options {base}
-options() # Invoking 'options()' with no arguments returns a list with the current values of the options.
-opts_chunk$set(fig.align = 'center')
-```
-
-
-
 
