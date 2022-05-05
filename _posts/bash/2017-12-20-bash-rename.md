@@ -1,18 +1,25 @@
 ---
-title: "Bash - Rename files names to lowercase"
-tags: Bash 
+title: "Bash - For Loop"
+tags: Bash "For Loop"
 ---
 
 
-Scripting
+- Basically, the simplest for loop syntax repeats the occurrence of a set of a variable. 
+
+```bash
+for VARIABLE in 1 2 3 4 5 .. N
+    command1
+    command2
+done
+```
+
+- Example
 
 Rename All files in directory to Lowercase
-
-An elegant way to rename all files in a directory to lowercase
 
 ```bash
 for i in `ls -1`; do mv $i "${i,,}" ; done
 ```
 
-Explanation: There is a lower/upper case modification build-in bash using for, for looping files through directory.
+Explanation: move file i in the list of files `ls -l` to lower case file i.
 
