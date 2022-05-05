@@ -1,6 +1,6 @@
 ---
 title: "R - Plotting as a Function"
-tags: R Function
+tags: R Function Plot
 ---
 
 

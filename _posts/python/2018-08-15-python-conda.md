@@ -1,5 +1,5 @@
 ---
-title: "Python - conda packages"
+title: "Python - List conda packages"
 tags: Python Conda
 ---
 

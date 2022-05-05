@@ -1,6 +1,6 @@
 ---
 title: "R - Plot 2x2, `par`, `mfrow`"
-tags: R plot
+tags: R Plot
 ---
 
 **2 x 2 Plots**

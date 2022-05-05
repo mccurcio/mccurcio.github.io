@@ -1,6 +1,6 @@
 ---
 title: "R - beautifyR; Favorite RStudio addon"
-tags: R 
+tags: R Addin
 ---
 
 

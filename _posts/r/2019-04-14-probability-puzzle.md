@@ -1,6 +1,6 @@
 ---
 title: "Ask Statistics Guy"
-tags: R Statistics
+tags: R Statistics Probability
 ---
 
 

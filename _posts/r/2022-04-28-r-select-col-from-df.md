@@ -1,6 +1,6 @@
 ---
 title: "R - Select Columns in Dataframe"
-tags: R
+tags: R Columns
 ---
 
 

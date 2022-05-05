@@ -1,6 +1,6 @@
 ---
 title: "R - Insert Comments for .r & .rmd"
-tags: R
+tags: R Comments
 ---
 
 

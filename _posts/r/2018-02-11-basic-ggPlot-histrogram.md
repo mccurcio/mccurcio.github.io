@@ -1,6 +1,6 @@
 ---
 title: "A Basic GGPlot Histogram"
-tags: R
+tags: R GGPlot Histogram
 ---
 
 Create normally distributed data

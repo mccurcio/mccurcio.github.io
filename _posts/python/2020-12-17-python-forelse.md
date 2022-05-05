@@ -1,5 +1,5 @@
 ---
-title: "Python for-else"
+title: "Python `for` Loop"
 tags: Python Loop
 ---
 

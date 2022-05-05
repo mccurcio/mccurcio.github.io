@@ -3,8 +3,6 @@ title: "C. Hitchens Quotes"
 tags: Quotes
 ---
 
-
-
 Burden of Proof
 
 >That which can be asserted with out evidence can be dismissed without evidence.  
