@@ -6,7 +6,7 @@ tags: R Plot
 **2 x 2 Plots**
 
 ```{r}
-plot_4 <- function(){
+plot_2x2 <- function(){
     par(mfrow = c(2, 2))
     plot_1()
     plot_2()
@@ -14,9 +14,9 @@ plot_4 <- function(){
     plot_4()
 }
 
-plot_4()
+plot_2x2()
 
-png(file = "mcc_plot_4.png")
-plot_4()
+png(file = "plot_2x2.png")
+plot_2x2()
 dev.off()
 ```
