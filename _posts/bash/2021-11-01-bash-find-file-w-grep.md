@@ -6,10 +6,20 @@ tags: Bash Grep
 
 Find a specific file name in large directories
 
-Find text inside a list of files and output the filename when a match occurs. Recurse and case-insensitive:
--i - Ignore case distinctions
--r - Recursive
--l - Suppress normal output; instead print the name of each input file from which output would normally have been printed. The scanning will stop on the first match.
+`grep -option search_pattern file-name`
+   
+- **i**	-	Case insensitive search    
+- **A n**	grep -A n pattern file	Show n lines after the match  
+- **B n**	grep -B n pattern file	Show n lines before the match  
+- **C n**	grep -C n pattern file	Show n lines before and after the match  
+- **v**	 - InVert lines, ie lines that **do not** match  
+- **c**	- Count number of matching lines  
+- **l**	- Display only the file names  
+- **w**	- Match the exact word  
+- **e**	grep -e regex file	Match the regex pattern  
+- **a**	grep -a pattern file	Search into binary files  
+- **r**	grep -r pattern dir	Recursive into directory  
+
 
 ```
 grep Documentation
