@@ -1,6 +1,6 @@
 ---
 title: "R - Make 1D Plots"
-tags: R
+tags: R 1D Plot
 ---
 
 

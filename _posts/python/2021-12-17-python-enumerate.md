@@ -1,6 +1,5 @@
 ---
 title: "Python - enumerate"
-date:  2021-12-17 21:00:00
 tags: Python Enumerate
 ---
 

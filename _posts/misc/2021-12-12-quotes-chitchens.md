@@ -1,9 +1,11 @@
 ---
+<<<<<<< HEAD
 title: "C. Hitchens' Quotes"
+=======
+title: "C. Hitchens Quote"
+>>>>>>> 93e7417c8a71306a5e0ce59b7e3a5e0b2d33ed81
 tags: Quotes
 ---
-
-
 
 Burden of Proof
 

@@ -1,6 +1,6 @@
 ---
-title: "Eliminate Duplicates from a list in Python"
-tags: Python
+title: "Eliminate Duplicates from a List in Python"
+tags: Python List
 ---
 
 **Method 1 - `set` does not keep order**

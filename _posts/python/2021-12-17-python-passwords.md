@@ -1,6 +1,6 @@
 ---
 title: "Python - Pronounceable Passwords"
-tags: Python
+tags: Python Passwords
 ---
 
 

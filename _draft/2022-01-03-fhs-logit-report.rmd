@@ -1,7 +1,7 @@
 ---
-title: "An investigation of the Framingham Heart Study"
+title: "An Investigation of the Framingham Heart Study"
 author: "By Matthew Curcio"
-output: html_document
+output: github_document
 ---
 
 
@@ -17,7 +17,7 @@ options(tinytex.verbose = FALSE)
 options(digits = 5) 
 
 #Load Libraries
-Libraries <- c("knitr", "readr", "aod")
+Libraries <- c("knitr", "readr")
 for (p in Libraries) { 
     library(p, character.only = TRUE)
 }

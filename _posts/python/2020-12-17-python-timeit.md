@@ -1,6 +1,6 @@
 ---
 title: "Python - timeit"
-tags: Python
+tags: Python Time
 ---
 
 Measure the execution time of small bits of Python code

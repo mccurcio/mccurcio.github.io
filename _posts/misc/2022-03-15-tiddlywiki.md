@@ -1,6 +1,6 @@
 ---
 title: "GettingStarted with Tiddywiki"
-tags: Note-Taking Tiddywiki
+tags: Notes Tiddywiki
 ---
 
 ## A Tiddlywiki, What?

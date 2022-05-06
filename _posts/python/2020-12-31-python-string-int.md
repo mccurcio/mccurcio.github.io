@@ -1,6 +1,6 @@
 ---
 title: "Python - Converting string to int"
-tags: Python
+tags: Python String
 ---
 
 

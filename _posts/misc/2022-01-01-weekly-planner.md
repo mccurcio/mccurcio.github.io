@@ -1,5 +1,5 @@
 ---
-title:  "Weekly Productivity Template"
+title:  "Weekly Planner Template"
 ---
 
 <div class="pdf-container">
