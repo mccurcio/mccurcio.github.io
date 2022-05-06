@@ -21,4 +21,4 @@ for i in `ls -1`; do mv $i "${i,,}" ; done
 
 Explanation: move file variable-i in the list of files `ls -l` to lower case file i. 
 
-SEE: https://devhints.io/bash
+SEE: [https://devhints.io/bash](https://devhints.io/bash)
