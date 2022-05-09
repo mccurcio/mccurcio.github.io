@@ -1,14 +1,9 @@
 ---
-title: "Bash: Scripting"
+title: "Bash - Scripting Cheat Sheet"
 tags: Bash Script
 ---
 
-
-1. Open text editor   
-2. Add: **#!/bin/bash**  
-   - AKA Crunch-Bang   
-3. Save text file: **name.sh**   
-4. Use: **chmod +x file-name**
-5. Run: **./file-name** 
-
-
+<div class="pdf-container">
+    <iframe src="/assets/docs/mcc-bash-cheat-sheet.pdf" height="315" width="560" allowfullscreen="" frameborder="10">
+    </iframe>
+</div>

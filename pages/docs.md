@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Articles
+title: "Articles & Resources"
 permalink: /docs/
 ---
 
-## Welcome to my Data Science Articles & Resources 
+## Welcome to Data Science Articles & Resources 
 
 <div class="section-index">
     <hr class="panel-line">
