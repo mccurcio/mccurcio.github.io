@@ -10,7 +10,7 @@ permalink: /
 
 1. Share my learning journey via 
    - [Articles](docs)
-   - [Presentations](docs/resources/mcc-presentations)
+   - [Presentations](docs/mcc-presentations)
    - [Posts by title](archive)
 
 2. Share my code snippets, and my own coding notes 
@@ -30,5 +30,3 @@ BUT I am striving to make it appealing*. 😉
 ## Have a Question?
 
 - <a href="mailto:matt.curcio.ri@gmail.com?subject=A question from the web">Send An Email</a>, or leave feedback below.
-
-*I look foward to meeting*.
