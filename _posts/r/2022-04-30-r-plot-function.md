@@ -1,6 +1,6 @@
 ---
-title: "R - Plotting as a Function"
-tags: R Function Plot
+title: "R - Histogram Function"
+tags: R Function Plot Histogram
 ---
 
 
@@ -13,15 +13,16 @@ plot_1 <- function(){
     hist(data$col-name, 
          main = "title",
          xlab = "X",
-         ylim = c(0, 1400), # Changed x & y limits to read values
-         xlim = c(0, 8),
+         ylab = "Y",
+         ylim = c(0, 100), # Changed x & y limits to read values
+         xlim = c(0, 100),
          col = "red")
          # Default for this graphic is width = 480, height = 480.
          # To change the size add the parameters width & height.
 }
 plot_1()
 
-png(file = "mcc_plot_1.png")
+png(file = "plot_1.png")
 plot_1()
 dev.off()
 ```

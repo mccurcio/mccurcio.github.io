@@ -18,7 +18,10 @@ Enjoy
 
 ---
 
-<<<<<<< HEAD:_docs/resources/data-science-resources.md
+:star: - Represents Favorites ; 📗 - Represents Free Online Books
+
+---
+
 ## Introdcution - First Step?
 
 ### A. Learn Git!
@@ -30,12 +33,6 @@ Enjoy
 1. [GitHub.com](https://github.com/)is arguably the most common version control systems, so start there.   
 
 1. [GitHub](https://github.com), [Gitlab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/) ALL have *FREE* options.
-=======
-:star: - Represents Favorites ; 📗 - Represents Free Online Books
-
----
->>>>>>> d6e4a367f2a15f87585f72e26331445ecfddeac8:_docs/list-data-science-resources.md
-
 1. All allow you to host *FREE* 'basic' websites. IMPORTANT!   
 
 1. Treat Gihub or Gitlab like your new safe deposit box.  

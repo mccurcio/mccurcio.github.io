@@ -24,4 +24,4 @@ text(y=0, x=0, labels='Strength of Correlation', pos=3, offset=5, font=2)
 
 ![](/assets/img/2022-04-30-r-make-1d-plots.png)
 
-See: (https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php)
+See: https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php
