@@ -9,6 +9,7 @@ tags: Books Resources Free R
 - [What They Forgot to Teach You About R](https://rstats.wtf/) by Jennifer Bryan & Jim Hester
 - [A Very Short Course on Time Series Analysis](https://bookdown.org/rdpeng/timeseriesbook/) by R. Peng
 - [Tabular data analysis with R and Tidyverse: Environmental Health](https://static-bcrf.biochem.wisc.edu/courses/Tabular-data-analysis-with-R-and-Tidyverse/book/) by Jean-Yves Sgro & Kristen Malecki
+- [R Cookbook](https://rc2e.com/) by JD Long, Paul Teetor
 - [R4ds](https://r4ds.had.co.nz/) by H. Wickham
 - [Advanced_r](https://adv-r.hadley.nz/) by H. Wickham
 - [DS_In_Education_Using_r](https://datascienceineducation.com/)
