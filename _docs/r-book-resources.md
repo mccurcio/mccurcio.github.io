@@ -7,13 +7,15 @@ tags: Books Resources Free R
 ## Free R Books & Material
 
 - [What They Forgot to Teach You About R](https://rstats.wtf/) by Jennifer Bryan, etal
+
 - [Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience) by R. Peng, etal
-- [A Very Short Course on Time Series Analysis](https://bookdown.org/rdpeng/timeseriesbook/) by R. Peng
+- [Intro. to Data Science: Data Analysis and Prediction Algorithms with R](https://rafalab.github.io/dsbook/) by R. Irizarry
 - [Tabular data analysis with R and Tidyverse: Environmental Health](https://static-bcrf.biochem.wisc.edu/courses/Tabular-data-analysis-with-R-and-Tidyverse/book/) by Jean-Yves Sgro, etal
 - [R Cookbook](https://rc2e.com/) by JD Long, etal
+- [Beyond Multiple Linear Regression: Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/) by Paul Roback
 - [R4ds](https://r4ds.had.co.nz/) by H. Wickham
 - [Advanced_r](https://adv-r.hadley.nz/) by H. Wickham
-- [DS_In_Education_Using_r](https://datascienceineducation.com/)
+- [DS In Education Using R](https://datascienceineducation.com/)
 - [RStudio For Education](https://rstudio4edu.github.io/rstudio4edu-book/)
 - [Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/)
 - [GGplot2](https://ggplot2-book.org/index.html)
