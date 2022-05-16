@@ -24,26 +24,25 @@ Enjoy
 
 ## Introdcution - First Step?
 
-### A. Learn Git!
-
-**Why?**
+### A. Why Learn Git!
 
 1. Git and what you put on your GitHub account **IS** your new business card.
 
-1. [GitHub.com](https://github.com/)is arguably the most common version control systems, so start there.   
+1. [GitHub.com](https://github.com/) is arguably the most common version control systems, so start there.   
 
-1. [GitHub](https://github.com), [Gitlab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/) ALL have *FREE* options.
-1. All allow you to host *FREE* 'basic' websites. IMPORTANT!   
+  - [GitHub](https://github.com)  
+  - [Gitlab](https://about.gitlab.com/)  
+  - [Bitbucket](https://bitbucket.org/)   
+  - **ALL have FREE options and All allow you to host FREE 'basic' websites. IMPORTANT!**   
 
-1. Treat Gihub or Gitlab like your new safe deposit box.  
+1. Treat Github or Gitlab like your new safe deposit box.  
    - PUT ALL YOUR WORK ON IT!
 
-- Want to try [Github's](https://guides.github.com/activities/hello-world/) tutorial.
-- https://docs.github.com/en
+1. Want to try [Github's](https://guides.github.com/activities/hello-world/) tutorial.   
 
-### B. Learn HTML!
+1. [GitHub Docs](https://docs.github.com/en)
 
-**Why?**
+### B. Why Learn HTML!
 
 1. The basis of the simplest websites use HTML. 
 
