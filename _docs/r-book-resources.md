@@ -1,12 +1,13 @@
 ---
 title:  "R Book Resources"
 date:   2022-04-09 18:30:00
-tags: Books Resources R
+tags: Books Resources Free R
 ---
 
 ## Free R Books & Material
 
 - [What They Forgot to Teach You About R](https://rstats.wtf/) by Jennifer Bryan & Jim Hester
+- [A Very Short Course on Time Series Analysis](https://bookdown.org/rdpeng/timeseriesbook/) by R. Peng
 - [R4ds](https://r4ds.had.co.nz/) by H. Wickham
 - [Advanced_r](https://adv-r.hadley.nz/) by H. Wickham
 - [DS_In_Education_Using_r](https://datascienceineducation.com/)
