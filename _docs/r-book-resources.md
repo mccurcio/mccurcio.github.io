@@ -4,9 +4,11 @@ date:   2022-04-09 18:30:00
 tags: Books Resources Free R
 ---
 
+:star: - Represents Favorites 
+
 Row | A | B
 -:|--------------|-----------
- 1 | [What They Forgot to Teach You About R](https://rstats.wtf/) | [Tidyverse Skills For DS in R](https://leanpub.com/tidyverseskillsdatascience)
+ 1 | :star: [What They Forgot to Teach You About R](https://rstats.wtf/) | [Tidyverse Skills For DS in R](https://leanpub.com/tidyverseskillsdatascience)
  2 |  [Tabular DA w/ R & Tidyverse: Environmental Health](https://static-bcrf.biochem.wisc.edu/courses/Tabular-data-analysis-with-R-&-Tidyverse/book/) | [GGplot2](https://ggplot2-book.org/index.html)
  3 |  [Modern Dive, Statistical Inference via DS](https://moderndive.com/) | [Regression & Other Stories](https://avehtari.github.io/ROS-Examples/)
  4 |  [Bookdown, Blogdown, Rmarkdown](https://bookdown.org) | [RStudio For Education](https://rstudio4edu.github.io/rstudio4edu-book/)
