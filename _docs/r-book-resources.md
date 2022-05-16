@@ -6,15 +6,15 @@ tags: Books Resources Free R
 
 ## Free R Book / Online Resources
 
-<table><table>
+<table>
 <tr>
-	<td>[What They Forgot to Teach You About R](https://rstats.wtf/)</td>
-	<td>[Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience)</td>
+ 	<td>[What They Forgot to Teach You About R](https://rstats.wtf/)</td>
+ 	<td>[Tidyverse Skills for Data Science in R](https://leanpub.com/tidyverseskillsdatascience)</td>
 </tr>
   
 <tr>
-	<td>[Tabular data analysis with R & Tidyverse: Environmental Health](https://static-bcrf.biochem.wisc.edu/courses/Tabular-data-analysis-with-R-and-Tidyverse/book/)</td>
-	<td>[GGplot2](https://ggplot2-book.org/index.html)</td>
+	 <td>[Tabular data analysis with R & Tidyverse: Environmental Health](https://static-bcrf.biochem.wisc.edu/courses/Tabular-data-analysis-with-R-and-Tidyverse/book/)</td>
+ 	<td>[GGplot2](https://ggplot2-book.org/index.html)</td>
 </tr>
   
 <tr>
@@ -47,24 +47,22 @@ tags: Books Resources Free R
 	<td>[Advanced_r](https://adv-r.hadley.nz/)</td>
 </tr>
   
-  <tr>
+ <tr>
 	<td>[Tidy Modeling with R](https://tmwr.org)</td>
-	<td>[Text Mining with R](https://www.tidytextmining.com/)
-</td>
-</tr>
+	<td>[Text Mining with R](https://www.tidytextmining.com/)</td>
+ </tr>
   
 <tr>
-	<td>[R_packages](https://r-pkgs.org/)
-</td>
+	<td>[R_packages](https://r-pkgs.org/)</td>
 	<td>[Geocomputation with R](https://geocompr.robinlovelace.net/)</td>
 </tr>
-  
-  <tr>
+
+<tr>
 	<td>[GGplot2](https://ggplot2-book.org/index.html)</td>
 	<td>[DS In Education Using R](https://datascienceineducation.com/)</td>
 </tr>
   
-</table></table>
+</table>
 
 
 - [Swirl](https://swirlstats.com/) is an excellent beginner tool for learning R  
