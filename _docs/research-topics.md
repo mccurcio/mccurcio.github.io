@@ -41,17 +41,26 @@ tags: Ideas
 - Automating Reports and reporting
 - **R-library: [Usethis](https://usethis.r-lib.org/)**
 
-- How to open source contributions
 - How to work with OSS
-- Overview of data types in Python/R
-- Overview of an interesting algorythm
-- Approaches to logging
-- What is type hinting and should I be using it?
-- Helpful `__dunder__` methods
-- How I wrote a text adventure game in Python
 
-- Building a simple game (Hangman, tic-tac-toe, or something similar)
+- Overview of data types in Python/R
+
+- Overview of an interesting algorithms
+
+- Approaches to logging
+
+- What is type hinting and should I be using it?
+
+- Helpful `__dunder__` methods
+
 - Debugging, For a lightning talk
-- Meet & greet (opportunity for all attendees to introduce themselves)
+
 - I'm teaching myself X, and it's really _______
 
+- Learn more about the Tidyverse list packages.
+  - Interesting to learn: googlesheets4, googledrive, josnlite, xml2, rvest, httr,
+  - Note: tidytext, gganimate, broom, infer tidymodels, Patchwork, ggrepel, kableextra, purr, janitor, 
+  - **It would nice to have a bullet point list of all the Tidyverse packages with a one line description**.
+  - See Roger Peng's book on [Tidyverse for D.S.](https://leanpub.com/tidyverseskillsdatascience)
+
+- To Do: Produce a one-pager on creating sequences in R using seq(length.out, etc.)
