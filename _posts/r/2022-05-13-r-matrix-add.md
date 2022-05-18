@@ -1,7 +1,9 @@
-Matrix Addition/Subtraction
-================
+---
+title: "Matrix Addition/Subtraction"
+tags: R Matrix
+---
 
-Matrix 1
+Ex. Matrix 1
 
 ``` r
 # Example vector
@@ -19,7 +21,7 @@ matrix1
     ## [3,]    3    7   11   15
     ## [4,]    4    8   12   16
 
-Matrix2
+Ex. Matrix2
 
 ``` r
 # Produce 4*4 matrix
