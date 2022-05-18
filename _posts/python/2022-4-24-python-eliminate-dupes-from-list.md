@@ -1,5 +1,5 @@
 ---
-title: "Eliminate Duplicates from a List in Python"
+title: "Python - Eliminate Duplicates from a List"
 tags: Python List
 ---
 

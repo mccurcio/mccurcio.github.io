@@ -1,6 +1,6 @@
 ---
-title: "Python `for` Loop"
-tags: Python Loop
+title: "Python For-Loops"
+tags: Python For-Loop
 ---
 
 

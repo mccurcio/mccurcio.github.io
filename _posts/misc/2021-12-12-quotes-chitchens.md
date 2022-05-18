@@ -9,4 +9,4 @@ Burden of Proof
 >The burden of proof is on the claimant.  
 >If the claimant makes a claim it is up to that person to prove it. 
 >
->Christopher Hitchens, 13 April 1949 – 15 December 2011
+>Christopher Hitchens, 1949 – 2011

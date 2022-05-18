@@ -1,6 +1,6 @@
 ---
 title: "Bash - For Loop"
-tags: Bash "For Loop"
+tags: Bash For-Loop
 ---
 
 
