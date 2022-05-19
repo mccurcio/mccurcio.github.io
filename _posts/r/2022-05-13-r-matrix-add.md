@@ -3,14 +3,15 @@ title: "R - Matrix Addition/Subtraction"
 tags: R Matrix
 ---
 
-Ex. Matrix 1
+**Example Matrix 1**
+
+- Example vector
+- Convert vector into matrix with 4*4
 
 ``` r
-# Example vector
-vector1= seq(1, 16, by=1)
- 
-# Convert vector into matrix with 4*4
-matrix1 <- matrix(vector1, nrow = 4, ncol = 4) 
+vector1 <- seq(1, 16, by=1)
+
+matrix1 <- matrix(vector1, nrow=4, ncol=4) 
 
 matrix1
 ```
@@ -21,11 +22,12 @@ matrix1
     ## [3,]    3    7   11   15
     ## [4,]    4    8   12   16
 
-Ex. Matrix2
+**Example Matrix 2**
+
+- Produce 4*4 matrix
 
 ``` r
-# Produce 4*4 matrix
-matrix2 <- matrix(16:1, nrow = 4, ncol = 4) 
+matrix2 <- matrix(16:1, nrow=4, ncol=4) 
  
 matrix2
 ```
@@ -36,10 +38,10 @@ matrix2
     ## [3,]   14   10    6    2
     ## [4,]   13    9    5    1
 
-Matrix Add/Subtraction
+**Matrix Add/Subtraction**
 
 ``` r
-print(matrix1-matrix2)
+print(matrix1 - matrix2)
 ```
 
     ##      [,1] [,2] [,3] [,4]
