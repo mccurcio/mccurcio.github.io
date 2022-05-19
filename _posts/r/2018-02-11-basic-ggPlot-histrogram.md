@@ -1,5 +1,5 @@
 ---
-title: "A Basic GGPlot Histogram"
+title: "R - Basic GGPlot Histogram"
 tags: R GGPlot Histogram
 ---
 

@@ -5,7 +5,7 @@ categories: R-Code
 ---
 
 
-You can use the following syntax to select (or seselect) specific columns in a data frame in base R:
+Use the following syntax to Select (*or Deselect*) specific columns in a data frame in base R:
 
 - **Select** columns by **Name**
 
