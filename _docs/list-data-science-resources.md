@@ -14,8 +14,6 @@ This list includes material that I have *used and would recommend*.
 Whenever possible, I prefer to list **FREE** material.     
 Enjoy
 
-*Matt*
-
 ---
 
 :star: - Represents Favorites ; 📗 - Represents Free Online Books
