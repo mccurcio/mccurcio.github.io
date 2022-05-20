@@ -1,10 +1,15 @@
-# 1: Drawing Multiple Boxplots Using Base R Graphics
+---
+title: 3 R Boxplots
+tags: R Boxplot
+---
+
+**1: Drawing Multiple Boxplots Using Base R Graphics**
 
 ```
 boxplot(data)     
 ```
 
-# 2: Drawing Multiple Boxplots Using ggplot2 Package
+**2: Drawing Multiple Boxplots Using ggplot2 Package**
 
 ```
 install.packages("reshape2")                                 # Install reshape2 package
@@ -22,7 +27,7 @@ ggplot(data_long, aes(x = variable, y = value)) +            # Applying ggplot f
   geom_boxplot()
 ```  
   
-# 3: Drawing Multiple Boxplots Using lattice Package
+**3: Drawing Multiple Boxplots Using lattice Package**
 
 ```
 library("lattice")                                           # Load lattice package
