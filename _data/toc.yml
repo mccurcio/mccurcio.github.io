@@ -1,35 +1,26 @@
-
-- title: "Posts by Title"
-  url: "archive"
-- title: "Posts by Tag"
-  url: "tags"
-
 - title: Articles
-  url: docs
   links:
-    - title: "&#8226; Matt's Presentations"
-      url: "docs/mcc-presentations"
-
     - title: "&#8226; Learning Logit"
       url: "docs/logistic-regression-for-binary-classification"
-
     - title: "&#8226; Learning Principle Component Analysis"
       url: "docs/principle-component-analysis-of-a-binary-classification-system"
-
     - title: "&#8226; Learning Support Vector Machines"
       url: "docs/support-vector-machines-for-binary-classification"
-
     - title: "&#8226; Learning Neural Networks"
       url: "docs/neural-networks-for-binary-classification"
-
     - title: "&#8226; What Is Machine-learning"
       url: "docs/introduction-what-is-machine-learning"
-
     - title: "&#8226; Learning EDA"
       url: "docs/exploratory-data-analysis"
-
     - title: "&#8226; My Data Science Resources"
       url: "docs/list-data-science-resources"
- 
-    - title: "&#8226; Bash - Cheat Sheet"
-      url: "2022/bash-scripting"
+
+- title: "&#8226; Posts by Title"
+  url: "archive"
+- title: "&#8226; Posts by Tag"
+  url: "tags"
+
+- title: "&#8226; Bash - Cheat Sheet"
+  url: "2022/bash-scripting"
+- title: "&#8226; Matt's Presentations"
+  url: "docs/mcc-presentations"
