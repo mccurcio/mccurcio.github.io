@@ -3,10 +3,11 @@ title: "Cleaning Data in R"
 tags: "Cleaning-Data"
 ---
 
-Wrokflow: 
+**Example Workflow:**
+
 - Access data -> Explore & Process -> Extract Insights -> Report
 
-1. Accessing data
+**1. Accessing data**
 
 - Glimpse
 
@@ -24,9 +25,7 @@ is.numeric(df$column)
 class(df$column) #returns class/type
 ```
 
-Common Problems
-
-- String / Factor to Numerics
+**2. String to Numerics**
 
 ```{r}
 # strings-commas in numbers, "54,567"
@@ -41,6 +40,7 @@ df %>% mutate(as.numeric(str_remove(col, ",")))
 mean(df)
 ```
 
+**3. Factors to Numerics**
 	
 ```{r}
 # Factors to numeric
