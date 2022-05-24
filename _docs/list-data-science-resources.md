@@ -16,7 +16,7 @@ Enjoy
 
 ---
 
-:star: - Represents Favorites ; 📗 - Represents Free Online Books
+&#127775; - Represents Favorites ; 📗 - Represents Free Online Books
 
 ---
 
@@ -52,9 +52,9 @@ Enjoy
 
 
 
-- :star: [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) - A GREAT Starter book for easing one into R & Data Science. *FREE Book Online* 📗
+- &#127775; [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) - A GREAT Starter book for easing one into R & Data Science. *FREE Book Online* 📗
 
-- :star: [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too! 📗
+- &#127775; [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too! 📗
 
 
 
@@ -63,15 +63,15 @@ Enjoy
 
 ### General Statistics
 
-- :star: [Using R for Data Management, Statistical Analysis, and Graphics](https://www.amazon.com/Using-Management-Statistical-Analysis-Graphics/dp/1439827559), by N. Horton, et al
+- &#127775; [Using R for Data Management, Statistical Analysis, and Graphics](https://www.amazon.com/Using-Management-Statistical-Analysis-Graphics/dp/1439827559), by N. Horton, et al
 
 
 
 ### Advanced Applied Math
 
-- :star: [Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://web.stanford.edu/~hastie/ElemStatLearn/), Hastie, Tibshirani, Friedman, 2017 *FREE*
+- &#127775; [Elements of Statistical Learning: Data Mining, Inference, and Prediction](https://web.stanford.edu/~hastie/ElemStatLearn/), Hastie, Tibshirani, Friedman, 2017 *FREE*
 
-- :star: [Introduction to Statistical Learning with Applications in R](https://faculty.marshall.usc.edu/gareth-james/ISL/), *FREE*
+- &#127775; [Introduction to Statistical Learning with Applications in R](https://faculty.marshall.usc.edu/gareth-james/ISL/), *FREE*
 
 - [Applied Generalized Linear Models and Multilevel Models in R](https://bookdown.org/roback/bookdown-BeyondMLR/), *FREE Book Online* 📗
 
@@ -103,16 +103,16 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### R-cran
 
-- :star: [The caret Package by Max Kuhn](https://topepo.github.io/caret/index.html), *FREE* Book Online 📗
+- &#127775; [The caret Package by Max Kuhn](https://topepo.github.io/caret/index.html), *FREE* Book Online 📗
   
 - [R Succinctly](https://www.syncfusion.com/succinctly-free-ebooks/rsuccinctly/getting-started-with-r) by Syncfusion, Basics for Beginners, *FREE* 
 
 - [Advanced R](https://adv-r.hadley.nz/index.html), by H. Wickham, *FREE* Book Online 📗
 
-- :star: [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- &#127775; [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
   - If you use R alot and want an easy way to demo your work this is great.
 
-- :star: [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- &#127775; [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
 - [R Graphics Cookbook, 2nd edition](https://r-graphics.org/), *FREE* Book Online 📗
 
@@ -127,9 +127,9 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### Python :snake:
   
-- :star: I enjoy Dr. Chuck's youtube lectures [Coursera Python for Everybody](https://www.coursera.org/specializations/python) 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), *FREE* Book Online 📗
+- &#127775; I enjoy Dr. Chuck's youtube lectures [Coursera Python for Everybody](https://www.coursera.org/specializations/python) 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), *FREE* Book Online 📗
 
-- :star: [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/), by Jake VanderPlas
+- &#127775; [Python Data Science Handbook](https://jakevdp.github.io/PythonDataScienceHandbook/), by Jake VanderPlas
 
 - However there are so many alternatives
 
@@ -147,7 +147,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### Bash :goat:
 
-- :star: [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
+- &#127775; [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
   
 ### SQL - Under Construction
 
@@ -158,35 +158,35 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
   
 ### Markdown :arrow_down_small:
 
-- :star: [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- &#127775; [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
-- :star: [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) Needed if you are going to use .RMD notebooks and docs. *FREE*  Book Online 📗
+- &#127775; [R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/) Needed if you are going to use .RMD notebooks and docs. *FREE*  Book Online 📗
 
 - For a full list of available Github markdown emoji and codes, check out [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/).
    
 ### Linux :penguin:
 
-- :star: [Just Enough Linux, Malcolm Maclean](https://leanpub.com/jelinux), *FREE* 
+- &#127775; [Just Enough Linux, Malcolm Maclean](https://leanpub.com/jelinux), *FREE* 
 
 ### Machine Learning :tractor:
 
-- :star: [Applied Predictive Modeling by Max Kuhn, K Johnson](http://appliedpredictivemodeling.com/), *FREE* Book Online 📗
+- &#127775; [Applied Predictive Modeling by Max Kuhn, K Johnson](http://appliedpredictivemodeling.com/), *FREE* Book Online 📗
 
 - [Hands-On Machine Learning with R by Bradley Boehmke, et al](https://bradleyboehmke.github.io/HOML/), *FREE*
 
 - [Introduction to Data Science: Data Analysis and Prediction Algorithms with R by Rafael Irizarry](https://rafalab.github.io/dsbook/), *FREE*
 
-- :star: A [Course in Machine Learning](http://ciml.info/dl/v0_9/ciml-v0_9-all.pdf) by [Hal Daumé III](https://users.umiacs.umd.edu/~hal/) This is a **great illustrative book** for beginners.  *FREE*
+- &#127775; A [Course in Machine Learning](http://ciml.info/dl/v0_9/ciml-v0_9-all.pdf) by [Hal Daumé III](https://users.umiacs.umd.edu/~hal/) This is a **great illustrative book** for beginners.  *FREE*
 
 - Interpretable Machine Learning: A Guide for Making Black Box Models Explainable: (https://christophm.github.io/interpretable-ml-book/) *FREE*
 
-- :star: Machine Learning, Tom M. Mitchell, ISBN: 0070428077, Very Good
+- &#127775; Machine Learning, Tom M. Mitchell, ISBN: 0070428077, Very Good
 
 - [SciKit Learn Tutorial](http://gael-varoquaux.info/scikit-learn-tutorial/)
 
 - [Building Machine Learning Systems with Python](http://totoharyanto.staff.ipb.ac.id/files/2012/10/Building-Machine-Learning-Systems-with-Python-Richert-Coelho.pdf), by Richert Coelho & Willi Richert,  *FREE*
 
-- :star: [Exploratory Data Analysis with R by Roger Peng](https://leanpub.com/exdata), *FREE* Book Online 📗
+- &#127775; [Exploratory Data Analysis with R by Roger Peng](https://leanpub.com/exdata), *FREE* Book Online 📗
 
 - [Syncfusion Ebooks](https://www.syncfusion.com/ebooks), GREAT resource! :free:
     - [Keras](https://www.syncfusion.com/ebooks/keras-succinctly), by James McCaffrey, *FREE*
@@ -221,7 +221,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### Articles 
 
-- :star: [Top 10 algorithms in data mining](https://www.cs.umd.edu/~samir/498/10Algorithms-08.pdf),  by Xindong Wu et al
+- &#127775; [Top 10 algorithms in data mining](https://www.cs.umd.edu/~samir/498/10Algorithms-08.pdf),  by Xindong Wu et al
     I found this 2007 paper really interesting as it was my starting point. The written explanations of the ML tools are not written for beginners in mind, however I feel that it provides a look into which tools are commonly used (as of 2007) and still important overall. I might suggest pulling out the Algos and investigating them in conjunction with other literature.
 
 ### People 
@@ -229,7 +229,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - [Andrew Ng](https://www.andrewng.org/) - Dr Ng is one of the creators of Coursera, but he also has additional [machine learning content](https://www.deeplearning.ai/)
 
 - [Geoffrey Hinton](https://www.cs.toronto.edu/~hinton/)
-    - :star:[Learning representations by back-propagating errors](https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf)
+    - &#127775;[Learning representations by back-propagating errors](https://www.cs.toronto.edu/~hinton/absps/naturebp.pdf)
 
 - [Jeff Leek](http://jtleek.com/index.html)
     - [Introduction to Cloud-Based Data Science](https://leanpub.com/universities/courses/jhu/cbds-intro), by Jeffrey Leek
@@ -238,25 +238,25 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 ### Videos 
 
-- :star: [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
+- &#127775; [FreeCodeCamp](https://www.freecodecamp.org/) **FCC** has a ton of video lectures on Youtube and which are available thru their own site. The community is welcoming, too.
 
-- :star: [Victor Lavrenko](https://www.youtube.com/channel/UCs7alOMRnxhzfKAJ4JjZ7Wg) High quality videos from his lectures. One of my Favorites.
+- &#127775; [Victor Lavrenko](https://www.youtube.com/channel/UCs7alOMRnxhzfKAJ4JjZ7Wg) High quality videos from his lectures. One of my Favorites.
 
-- :star: [Artifical Intelligences, MIT 6.034, w/ Patrick Winston](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/),  One of my Favorites.
+- &#127775; [Artifical Intelligences, MIT 6.034, w/ Patrick Winston](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-034-artificial-intelligence-fall-2010/lecture-videos/),  One of my Favorites.
 
-- :star: [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/featured) is produced by Grant Sanderson and has GREAT animations.
+- &#127775; [3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw/featured) is produced by Grant Sanderson and has GREAT animations.
 
-- :star: [Dr. Bharatendra Rai](https://www.youtube.com/channel/UCuWECsa_za4gm7B3TLgeV_A) from Umass, Dartmouth. His videos are very professsional and filled with highly relevant code. Dr Rai's videos are very clear and methodical.
+- &#127775; [Dr. Bharatendra Rai](https://www.youtube.com/channel/UCuWECsa_za4gm7B3TLgeV_A) from Umass, Dartmouth. His videos are very professsional and filled with highly relevant code. Dr Rai's videos are very clear and methodical.
 
-- :star: [StatQuest with Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) Dr Starmer now teaches at NC state.  Josh has recently been broadcasting LIVE to boot. **BAM!**
+- &#127775; [StatQuest with Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw) Dr Starmer now teaches at NC state.  Josh has recently been broadcasting LIVE to boot. **BAM!**
 
 - The [MathematicalMonk](https://www.youtube.com/channel/UCcAtD_VYwcYwVbTdvArsm7w)
 
 ### Miscellaneous
 
-- :star: [Calibre](https://calibre-ebook.com/) This program is Excellent for organizing PDF's, Epubs and mobi book and article formats. My **favorite book and pdf cataloging software** *FREE*
+- &#127775; [Calibre](https://calibre-ebook.com/) This program is Excellent for organizing PDF's, Epubs and mobi book and article formats. My **favorite book and pdf cataloging software** *FREE*
 
-- :star: [LeanPub](https://leanpub.com/) is a great resource for computer related books. Many books are pay what you want. They have books by Roger Peng and Jeff Leek who have written books on D.S.
+- &#127775; [LeanPub](https://leanpub.com/) is a great resource for computer related books. Many books are pay what you want. They have books by Roger Peng and Jeff Leek who have written books on D.S.
 
 [Back to top ↑](#data-Science-Practitioner's-Reading-List)
    
@@ -264,7 +264,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
   
 ### Online Courses:
 
-- :star: [Python for Everybody, 'Py4E'](https://www.freecodecamp.org/) I enjoy Dr. Chuck's youtube lectures. This is a 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), FREE Course follows his FREE Book Online 📗
+- &#127775; [Python for Everybody, 'Py4E'](https://www.freecodecamp.org/) I enjoy Dr. Chuck's youtube lectures. This is a 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), FREE Course follows his FREE Book Online 📗
 
 
 
