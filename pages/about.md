@@ -5,11 +5,11 @@ permalink: /about/
 
 # Welcome
 
-I am a Scientist, Sales-Specialist, Patient Educator, and a Data Scientist.   
+I am a Scientist, Sales-Specialist, Patient Educator, and a Data Scientist.
 
-Among my qualities are Dilgence, Inquistiveness and Resourcefulness.  
+Among my better qualities are Dilgence, Inquistiveness and Resourcefulness.  
 
-My tools include Writing, Presentation, Statistics, Data Science, R, and Python to impart ideas. 
+My tools include Writing, Presentation, Statistics, Data Science, R, and Python to impart ideas.
 
 *Matt*
 
