@@ -84,7 +84,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Linear Algebra, Jim Hefferon](https://open.umn.edu/opentextbooks/textbooks/24), *FREE*
 
-### Programming Help :floppy_disk:
+### Programming Help &#128190;
 
 - [Free Code Camp](https://www.freecodecamp.org/news/about/), *FREE*
 
@@ -125,7 +125,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - Swirl is an excellent beginner tool for learning R: (https://swirlstats.com/)
 
 
-### Python :snake:
+### Python
   
 - &#127775; I enjoy Dr. Chuck's youtube lectures [Coursera Python for Everybody](https://www.coursera.org/specializations/python) 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), *FREE* Book Online 📗
 
@@ -145,7 +145,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - https://jupyter4edu.github.io/jupyter-edu-book/  *FREE* Book Online 📗
 
-### Bash :goat:
+### Bash
 
 - &#127775; [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
   
@@ -156,7 +156,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
 
   
-### Markdown :arrow_down_small:
+### Markdown
 
 - &#127775; [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
 
@@ -164,11 +164,11 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - For a full list of available Github markdown emoji and codes, check out [emoji-cheat-sheet](https://www.webfx.com/tools/emoji-cheat-sheet/).
    
-### Linux :penguin:
+### Linux
 
 - &#127775; [Just Enough Linux, Malcolm Maclean](https://leanpub.com/jelinux), *FREE* 
 
-### Machine Learning :tractor:
+### Machine Learning
 
 - &#127775; [Applied Predictive Modeling by Max Kuhn, K Johnson](http://appliedpredictivemodeling.com/), *FREE* Book Online 📗
 
@@ -207,7 +207,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Information Theory, Inference, and Learning Algorithms](http://www.inference.org.uk/itprnn/book.pdf), by David MacKay *I'm interested in reading the section on Hash codes, p.193*   *FREE*
 
-### Supervised :label:
+### Supervised
 
 - [What are decision trees?](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2701298/), by Carl Kingsford and Steven L Salzberg
 
@@ -267,9 +267,6 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - &#127775; [Python for Everybody, 'Py4E'](https://www.freecodecamp.org/) I enjoy Dr. Chuck's youtube lectures. This is a 5 course series provided by [Dr Charles Severance](http://www.dr-chuck.com/), FREE Course follows his FREE Book Online 📗
 
 
-
-
-
 <!-- Superflous links, books, etc -->
 
 <!--
@@ -277,4 +274,3 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 [Introduction to Statistical Thought](https://people.math.umass.edu/~lavine/Book/book.pdf), by Michael Lavine *FREE*
 
 -->
-
