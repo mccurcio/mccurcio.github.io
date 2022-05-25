@@ -1,5 +1,5 @@
 ---
-title: "Python: Produce Random Text"
+title: "Python - Produce Random Text"
 tags: Python Random
 ---
 
