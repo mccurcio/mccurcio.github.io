@@ -17,8 +17,8 @@
 title: "Matthew Curcio"
 email: "matt.curcio.ri@gmail.com"
 author: "Homo-Habilis-Junior"
-description: > # this means to ignore newlines until "baseurl:"
-  See one, Do one, Write one!
+description: > See one, Do one, Write one!
+
 
 # Add your baseurl here (your repository) but DO NOT CHANGE THE LINE NUMBER without editing .circleci/circle_urls.sh
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -48,7 +48,11 @@ feedback: true
 # If commented, will use material hat theme
 # logo: "assets/img/logo/SRCC-square-red.png"
 logo_pixels: 34
+<<<<<<< HEAD
 color: "#30638e"
+=======
+color: "#aa0000"
+>>>>>>> beadf8dfd876fa38532cf9242457031bf452ad94
 # color: "#8c1515" # primary color for header, buttons
 
 # Build settings
