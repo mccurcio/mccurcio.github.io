@@ -6,5 +6,7 @@ categoies: datasci
 
 *~10 min.*
 
-{% include_relative logistic-regression-1.html %}
-
+<div class="pdf-container">
+    <iframe src="04-logit.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    </iframe>
+</div>

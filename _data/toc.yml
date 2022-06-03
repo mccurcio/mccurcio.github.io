@@ -4,12 +4,10 @@
 - title: "Posts by Tag"
   url: "tags"
 
+
 - title: Articles
   url: docs
   links:
-    - title: "&#8226; Matt's Presentations"
-      url: "docs/mcc-presentations"
-
     - title: "&#8226; Learning Logit"
       url: "docs/logistic-regression-for-binary-classification"
 
@@ -31,5 +29,3 @@
     - title: "&#8226; My Data Science Resources"
       url: "docs/list-data-science-resources"
  
-    - title: "&#8226; Bash - Cheat Sheet"
-      url: "2022/bash-scripting"

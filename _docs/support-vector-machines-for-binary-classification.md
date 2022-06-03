@@ -5,7 +5,7 @@ tags: SVM Data_Science
 categoies: datasci
 ---
 
-*~10 min.*
-
-{% include_relative /support-vector-machines-1.html %}
-
+<div class="pdf-container">
+    <iframe src="06-svm.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    </iframe>
+</div>

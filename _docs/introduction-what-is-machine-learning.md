@@ -4,7 +4,7 @@ tags: Data_Science
 categoies: datasci
 ---
 
-*~10 min.*
-
-{% include_relative what-is-ml.html %}
-
+<div class="pdf-container">
+    <iframe src="what-is-ml.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    </iframe>
+</div>

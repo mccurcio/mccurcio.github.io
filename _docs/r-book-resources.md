@@ -22,9 +22,6 @@ Row | A | B
 12 | [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/) | [Bayes Rules! An Introduction to Applied Bayesian Modeling](https://www.bayesrulesbook.com/)
 13 | [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) | [A Short Course on Nonparametric Curve Estimation](https://bookdown.org/egarpor/NP-EAFIT/)
 14 | [Introduction to Data Exploration and Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/) | [Data Science with R: A Resource Compendium](https://bookdown.org/martin_monkman/DataScienceResources_book/)
-
-
-
-- [Data Science at the Command Line](https://datascienceatthecommandline.com/)
+15 | [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) | [Data Science at the Command Line](https://datascienceatthecommandline.com/)
 
 - [Swirl](https://swirlstats.com/) is an excellent beginner tool for learning R  

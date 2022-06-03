@@ -4,5 +4,7 @@ tags: Data_Science
 categoies: datasci
 ---
 
-{% include_relative neural-networks-1.html %}
-
+<div class="pdf-container">
+    <iframe src="05-neural-network.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    </iframe>
+</div>
