@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-
 - title: "Posts by Title"
   url: "archive"
 - title: "Posts by Tag"
   url: "tags"
 
-
-=======
->>>>>>> 3c60f3f720237cf4bc023a59d4099a7c08071c5d
 - title: Articles
   links:
     - title: "&#8226; Learning Logit"
@@ -24,17 +19,8 @@
       url: "docs/exploratory-data-analysis"
     - title: "&#8226; My Data Science Resources"
       url: "docs/list-data-science-resources"
-<<<<<<< HEAD
- 
-=======
-
-- title: "&#8226; Posts by Title"
-  url: "archive"
-- title: "&#8226; Posts by Tag"
-  url: "tags"
 
 - title: "&#8226; Bash - Cheat Sheet"
   url: "2022/bash-scripting"
 - title: "&#8226; Matt's Presentations"
   url: "docs/mcc-presentations"
->>>>>>> 3c60f3f720237cf4bc023a59d4099a7c08071c5d
