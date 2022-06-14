@@ -23,5 +23,6 @@ Row | A | B
 13 | [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) | [A Short Course on Nonparametric Curve Estimation](https://bookdown.org/egarpor/NP-EAFIT/)
 14 | [Introduction to Data Exploration and Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/) | [Data Science with R: A Resource Compendium](https://bookdown.org/martin_monkman/DataScienceResources_book/)
 15 | [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) | [Data Science at the Command Line](https://datascienceatthecommandline.com/)
+16 | [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html) |
 
 - [Swirl](https://swirlstats.com/) is an excellent beginner tool for learning R  
