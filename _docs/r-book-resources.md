@@ -18,7 +18,7 @@ Row | A | B
  8 |  [Beyond Multiple Lin. Regression: Gen. Lin. Models & Multilevel Models](https://bookdown.org/roback/bookdown-BeyondMLR/) | [Advanced R](https://adv-r.hadley.nz/)
  9 |  [Tidy Modeling w/ R](https://tmwr.org) | [Text Mining w/ R](https://www.tidytextmining.com/)
 10 |  [DS In Education Using R](https://datascienceineducation.com/) | [Geocomputation w/ R](https://geocompr.robinlovelace.net/)
-11 | [Data Science Live Book(https://livebook.datascienceheroes.com/)] | [An Introduction to R](https://cran.r-project.org/doc/manuals/R-intro.pdf)
+11 | [Data Science Live Book](https://livebook.datascienceheroes.com/) | [An Introduction to R](https://cran.r-project.org/doc/manuals/R-intro.pdf)
 12 | [R for Health Data Science](https://argoshare.is.ed.ac.uk/healthyr_book/) | [Bayes Rules! An Introduction to Applied Bayesian Modeling](https://www.bayesrulesbook.com/)
 13 | [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) | [A Short Course on Nonparametric Curve Estimation](https://bookdown.org/egarpor/NP-EAFIT/)
 14 | [Introduction to Data Exploration and Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/) | [Data Science with R: A Resource Compendium](https://bookdown.org/martin_monkman/DataScienceResources_book/)
