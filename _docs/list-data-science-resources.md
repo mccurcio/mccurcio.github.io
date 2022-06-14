@@ -48,9 +48,9 @@ Enjoy
 
 3. Try [freeCodeCamp](https://www.freecodecamp.org/news/about/), True to its name.
 
-4. A very simple called [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is based on HTML and is used all over the place now.
+4. A very simple 'intermediate' langauge called [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is based on HTML and used *all over the place now*.
 
-
+5. Start Learning the basics of Data Science
 
 - &#127775; [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/) - A GREAT Starter book for easing one into R & Data Science. *FREE Book Online* 📗
 
