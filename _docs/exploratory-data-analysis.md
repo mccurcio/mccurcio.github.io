@@ -7,6 +7,6 @@ description:
 
 
 <div class="pdf-container">
-    <iframe src="/assets/docs/02-eda.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    <iframe src="/assets/docs/02-eda.pdf" height="400" width="712" allowfullscreen="" frameborder="10">
     </iframe>
 </div>
