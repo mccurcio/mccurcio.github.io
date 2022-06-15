@@ -4,6 +4,6 @@ tags: SVM Data_Science
 ---
 
 <div class="pdf-container">
-    <iframe src="/assets/docs/06-svm.pdf" height="400" width="712" allowfullscreen="" loading="lazy>
+    <iframe src="/assets/docs/06-svm.pdf" height="400" width="712" allowfullscreen="" frameborder="10">
     </iframe>
 </div>
