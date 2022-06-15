@@ -24,6 +24,6 @@ Row | A | B
 14 | [Introduction to Data Exploration and Analysis with R](https://bookdown.org/mikemahoney218/IDEAR/) | [Data Science with R: A Resource Compendium](https://bookdown.org/martin_monkman/DataScienceResources_book/)
 15 | [Forecasting: Principles and Practice, 3rd ed.](https://otexts.com/fpp3/) | [Data Science at the Command Line](https://datascienceatthecommandline.com/)
 16 | [Introduction to Econometrics with R](https://www.econometrics-with-r.org/index.html) | [Modern Data Science with R](https://mdsr-book.github.io/mdsr2e/)
-17 | |
+17 | [Engineering Production-Grade Shiny Apps](https://engineering-shiny.org/index.html) |
 
 - [Swirl](https://swirlstats.com/) is an excellent beginner tool for learning R  
