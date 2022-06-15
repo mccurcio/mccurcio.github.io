@@ -5,6 +5,6 @@ categoies: datasci
 ---
 
 <div class="pdf-container">
-    <iframe src="what-is-ml.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    <iframe src="/assets/docs/what-is-ml.pdf"  title="What is ML" height="400" width="712" allowfullscreen="false" frameborder="10">
     </iframe>
 </div>

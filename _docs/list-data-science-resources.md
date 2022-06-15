@@ -9,7 +9,7 @@ tags: Data_Science
     <img src="./assets/ds-venn-diagram.png" alt="Your Road Map" />
 -->
 
-**Greetings**,   
+**Greetings**,  
 This list includes material that I have *used and would recommend*.   
 Whenever possible, I prefer to list **FREE** material.     
 Enjoy

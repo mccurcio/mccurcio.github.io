@@ -5,6 +5,6 @@ categoies: datasci
 ---
 
 <div class="pdf-container">
-    <iframe src="05-neural-network.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    <iframe src="/assets/docs/05-neural-network.pdf" title="Neural Netowrks" height="400" width="712" allowfullscreen="false" frameborder="10">
     </iframe>
 </div>

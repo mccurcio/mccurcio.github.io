@@ -5,6 +5,6 @@ categoies: datasci
 ---
 
 <div class="pdf-container">
-    <iframe src="03-pcs.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    <iframe src="/assests/docs/03-pca.pdf" height="400" width="712" allowfullscreen="false" framborder="10" title="Principal Component Analysis">
     </iframe>
 </div>
