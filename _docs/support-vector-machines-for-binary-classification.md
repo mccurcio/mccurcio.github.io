@@ -6,6 +6,6 @@ categoies: datasci
 ---
 
 <div class="pdf-container">
-    <iframe src="06-svm.pdf" height="315" width="560" allowfullscreen="" loading="lazy>
+    <iframe src="/assets/docs/06-svm.pdf" height="400" width="712" allowfullscreen="" loading="lazy>
     </iframe>
 </div>
