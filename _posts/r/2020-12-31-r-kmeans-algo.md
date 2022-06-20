@@ -4,8 +4,8 @@ tags: R Kmeans Algorthym
 ---
 
 
-An Implementation of K-means in R
-NOTE: K-Means algorithm from kmeans_mehdi.R
+An Implementation of K-means in R  
+**NOTE: K-Means algorithm from kmeans_mehdi.R**
 
 
 ### Data generation 
