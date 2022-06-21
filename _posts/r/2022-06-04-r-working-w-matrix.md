@@ -1,4 +1,7 @@
-## Working With Matrices
+---
+title: "Working With Matrices"
+tags: R Matrix
+---
 
 
 Matrix Example 1
