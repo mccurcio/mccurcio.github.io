@@ -1,5 +1,5 @@
 ---
-title: 3 Types Of R Boxplots
+title: R - 3 Types Of Boxplots
 tags: R Boxplot
 ---
 
