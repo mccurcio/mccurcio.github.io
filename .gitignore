@@ -1,3 +1,9 @@
 vendor
 _site
 Gemfile.lock
+draft
+vendor
+.bundle
+.circleci
+.vscode
+.jekyll-cache

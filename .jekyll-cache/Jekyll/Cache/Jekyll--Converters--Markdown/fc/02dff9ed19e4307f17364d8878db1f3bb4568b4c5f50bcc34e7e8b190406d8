@@ -1,7 +1,0 @@
-I"<hr />
-
-<p>Compress files in folder using zip</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for DIR in `ls -d */ | sed 's#/##' ` ; do ZIP=$DIR.zip ; zip -r $ZIP $DIR/ ; done
-</code></pre></div></div>
-:ET

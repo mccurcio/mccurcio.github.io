@@ -1,7 +1,0 @@
-I"ý<hr />
-
-<p>A Bash One-liner Function: Trim White Spaces</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>trim &lt;- function(s) gsub("^[[:space:]]+|[[:space:]]+$","",s)
-</code></pre></div></div>
-:ET

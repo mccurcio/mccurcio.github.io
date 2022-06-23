@@ -1,9 +1,0 @@
-I"ý<hr />
-
-<p>Print all Codons</p>
-
-<p>Print all possible 3-mer DNA sequence combinations</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo {A,C,T,G}{A,C,T,G}{A,C,T,G}
-</code></pre></div></div>
-:ET
