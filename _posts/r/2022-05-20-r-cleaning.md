@@ -1,5 +1,5 @@
 ---
-title: "Cleaning Data in R"
+title: "R - Cleaning Data"
 tags: "Cleaning-Data"
 ---
 
