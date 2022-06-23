@@ -1,5 +1,5 @@
 ---
-Title: Using grep For Playing Wordle
+Title: "Bash - Using grep For Wordle"
 Tags: Bash Grep Wordle
 ---
 
