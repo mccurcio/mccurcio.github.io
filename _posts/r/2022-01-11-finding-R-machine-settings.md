@@ -1,5 +1,7 @@
-R - Finding R And Machine Settings
-================
+---
+title: "R - Finding Machine Settings"
+tags: R Settings
+---
 
 A good practice is to add R and Linux machine settings for reproducible
 data manipulation.
