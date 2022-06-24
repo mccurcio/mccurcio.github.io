@@ -20,7 +20,9 @@
     - title: "&#8226; My Data Science Resources"
       url: "docs/list-data-science-resources"
 
-- title: "&#8226; Bash - Cheat Sheet"
-  url: "2022/bash-scripting"
-- title: "&#8226; Matt's Presentations"
-  url: "docs/mcc-presentations"
+- title: Misc
+  links:
+    - title: "&#8226; Bash - Cheat Sheet"
+      url: "2022/bash-scripting"
+    - title: "&#8226; Matt's Presentations"
+      url: "docs/mcc-presentations"

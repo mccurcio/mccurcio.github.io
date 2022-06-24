@@ -4,7 +4,7 @@ title: "Articles & Resources"
 permalink: /docs/
 ---
 
-## Welcome to Data Science Articles & Resources 
+## Matt's to Data Science Articles & Resources 
 
 <div class="section-index">
     <hr class="panel-line">
