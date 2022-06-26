@@ -10,7 +10,9 @@ However, this would mean that I would need to reinstall R and RStudio and all th
 I experiment with new packages all the time. Some would break RStudio, so reinstalling it was helpful.
 
 ```{r}
-# R script to install many packages needed By Matt Curcio
+# R script to install many packages
+
+library(rlang)
 
 Libraries <- c("markdown", "rmarkdown", "doMC",
                "ggplot2", "bookdown", "blogdown",
@@ -20,14 +22,11 @@ Libraries <- c("markdown", "rmarkdown", "doMC",
                "png", "neuralnet", "openssl",
                "purr", "tidyverse", "xml2",
                "yaml", "seqinr", "rvest",
-               "beautifyR", "beepr", "rlang")
-
-library(rlang)
+               "beautifyR", "beepr")
 
 # Define load_install function
-
-load_or_install <- function(libaries) {
-  for (package in libraries) {
+load_or_install <- function(Libraries) {
+  for (package in Libraries) {
     if(!is_installed(package)) {
       install.packages(package,
                        repos = "http://lib.stat.cmu.edu/R/CRAN",
@@ -36,10 +35,9 @@ load_or_install <- function(libaries) {
     library(package,
             character.only = TRUE,
             quietly = TRUE,
-            verbose = TRUE)
-    print("OK")
+            verbose = FALSE)
     }
 }
 
-load_or_install(libaries)
+load_or_install(Libraries)
 ```
