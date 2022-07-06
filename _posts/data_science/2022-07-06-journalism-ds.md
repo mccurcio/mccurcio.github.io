@@ -1,13 +1,11 @@
 ---
-title: "What Can Journalism Teach a Data Scientist?"
+title: "What Can Journalism Teach A Data Scientist?"
 tags: Data_Science
 ---
 
-By Matt Curcio
-
-**Summary**: This article outlines steps and questions for a beginner Data Scientist to ask when putting a Exploratory Data Analysis together. The article highlights suggested areas of research that a new data scientist should be mindful of.
-
 ## The 5 W's Of Journalism
+
+>**Summary**: This article outlines steps and questions for a beginner Data Scientist to ask when putting a Exploratory Data Analysis together. The article highlights suggested areas of research that a new data scientist should be mindful of.
 
 I was talking to a journalist teaching herself Data Science. In our conversation, several questions came up:
 
@@ -150,12 +148,16 @@ If the Five W's can help Journalists, then I feel Data Scientists can rely on th
 
 ---
 
-### Resources: In the meant time try this FREE resources:
+### Resources: 
 
-- https://leanpub.com/os
+In the meant time try this FREE resources:
+
+- [Open Statistics](https://leanpub.com/os)
       
-- https://leanpub.com/imstat
+- [Introduction to Modern Statistics](https://leanpub.com/imstat)
       
-- https://leanpub.com/isrs
+- [Introductory Statistics with Randomization and Simulation](https://leanpub.com/isrs)
       
-- https://online.stat.psu.edu/stat503/
+- [Design of Experiments](https://online.stat.psu.edu/stat503/)
+
+---
