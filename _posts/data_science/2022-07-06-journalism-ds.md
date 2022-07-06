@@ -36,7 +36,7 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 
 **The Scientific Method**    
 Do you journalists use something analogous?  
-[Steps of the scientific method](\assets\img\scientific-method.png)
+![Steps of the scientific method](\assets\img\scientific-method.png)
 
 1. Ask a question
 2. Observe the data
