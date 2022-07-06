@@ -1,5 +1,5 @@
 ---
-title: "Newtons Square Roots"
+title: "Newton's Square Roots"
 tags: Math
 ---
 
