@@ -1,0 +1,161 @@
+---
+title: "What Can Journalism Teach a Data Scientist?"
+tags: Data_Science
+---
+
+By Matt Curcio
+
+**Summary**: This article outlines steps and questions for a beginner Data Scientist to ask when putting a Exploratory Data Analysis together. The article highlights suggested areas of research that a new data scientist should be mindful of.
+
+## The 5 W's Of Journalism
+
+I was talking to a journalist teaching herself Data Science. In our conversation, several questions came up:
+
+- Why is Exploratory Data Analysis (EDA) so important?
+- What should I be looking for?
+
+As I looked for commonalities between the two professions, the 5 W's of journalism popped into mind. Remember them?
+
+1. Who
+2. What
+3. When
+4. Where
+5. Why
+
+I asked myself if the 5 W's of journalism could be useful to a journalist and a data scientist?
+
+**YES**
+
+Scientists and journalists both observe the world and collect data.
+
+Both investigate a topic with skepticism hoping to tell a great story.
+
+Journalists may interrogate and scrutinize their eye-witness interviews. They may analyze crime scene photographs for clues. They double-check the facts to ensure that their information is correct and up-to-date. Journalists even digg for new angles to better understand the issues involved. Then when the investigation is complete, they write up their findings for editorial review by their peers.
+
+- Isn't this at its heart, the Scientific Method?
+
+**The Scientific Method**    
+Do you journalists use something analogous?  
+[Steps of the scientific method](\assets\img\scientific-method.png)
+
+1. Ask a question
+2. Observe the data
+3. Generate a hypothesis
+4. Query and experiment to test your theory/hypothesis
+5. Analyze the results
+6. State your conclusion(s)
+
+**Note**: Whether you are a Data Analyst, Data Engineer, or Data Scientist, you are now working in the field of Data Science; therefore, I call all three scientists.
+
+So, how can the 5 W's of journalism help us learn Data Science?
+
+## What?
+
+A clear and often simple question at the beginning can help steer your research.
+
+- *What* question(s) are you interested in answering?
+
+After your questions have been well-thought-out, two questions come to my mind when I sum up Exploratory Data Analysis:
+
+- *What* is wrong with your data?   
+AND
+- *What* is right with your data?
+
+**Ask yourself**:
+
+- Do you have missing values?
+- Do you have correct and consistent spelling, labels, and strings?
+- Does your data come from a reputable source?
+- Are the variables numbers, proportions, categories, or simply names?
+
+As a scientist, you need to skeptically examine the positive and negative attributes of your data and record your observations.
+
+## Who?
+
+Often Data Scientists obtain their data from someone else. Ask yourself?
+
+- *Who* prepared your data?
+
+While journalists may reflect on conflicts of interest, a Data Scientist needs to consider bias and its sources.
+
+**Consider investigating**:
+
+- Confirmation Bias
+- Sampling Bias,
+- Selection Bias OR Self-selection Bias
+- Omitted Variables Bias
+- Observer Bias
+- Funding Bias
+- Response Bias
+
+## When?
+
+Are your measurements a snap-shot in time, or are the measurements ongoing and collected periodically? This leads us to the question:
+
+- *When* was the data collected?
+
+Was the data collected conscientiously every Monday from 8-5, or was the timing erratic?
+
+If the data is not meant to cover vast periods but more of a snap-shot in time, **think about**:
+
+- Blocking
+- Nuisance Variables vs. Lurking Variables
+- Completely Randomized Study Design
+- Analysis of Variance (ANOVA)
+
+If you are collecting measurements at the same interval every time? Then you may want to investigate:
+
+- Moving averages to smooth your data
+- Seasonality
+- Root Mean Squared Error
+- Time Series Analysis
+- ARIMA (autoregressive integrated moving average)
+
+## Where?
+
+*Where* was your data collected?
+
+Where can be a common issue to overlook. In this writer's viewpoint, the classic discussion is to consider you are now working for a political polling organization. You are sent to the local supermarket to gather people's opinions on their political views.
+
+Where was your data collected? Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? This type of bias is amusing and called Convenience Bias. Did you visit the supermarket that was conveniently in your area?
+
+But do not forget the topic of Blocking. Let's say we are now looking at metal or plastic molding equipment. Is the equipment in one part of the country and other parts? Does the shift time matter?
+
+**Consider**:
+
+- Two Factor Design
+- Designing Experiments (Design Of Experiment)
+- Blocking
+- Categorical Data Analysis
+
+## Why?
+
+The last W of journalism can be the hardest to tackle. 
+
+*Why* is your work important? 
+
+For the Data Journalist, Claire Miller, there are a number of areas that might make a good data story:
+
+- Why?
+- Big, bigger, biggest (or small, smaller, smallest)
+- Fastest growing, stalling, or being left behind
+- Common vs. rare
+- Hotspots and how we compare
+- Correlations and connections
+- Fact checks and explainers
+
+## In conclusion
+
+If the Five W's can help Journalists, then I feel Data Scientists can rely on these same questions to write tough, valuable stories for our clients and organizations.
+
+---
+
+### Resources: In the meant time try this FREE resources:
+
+- https://leanpub.com/os
+      
+- https://leanpub.com/imstat
+      
+- https://leanpub.com/isrs
+      
+- https://online.stat.psu.edu/stat503/
