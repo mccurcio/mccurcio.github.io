@@ -116,7 +116,7 @@ If you are collecting measurements at the same interval every time? Then you may
 
 *Where* was your data collected?
 
-**"Where"** is often overlooked. The classic example of **where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
+The classic example of **Where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
 
 This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
