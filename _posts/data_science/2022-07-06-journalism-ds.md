@@ -32,9 +32,16 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 
 - Isn't this at its heart, the Scientific Method?
 
+<<<<<<< HEAD
 **The Scientific Method**    
 Do you journalists use something analogous?  
 ![Steps of the scientific method](\assets\img\scientific-method.png){:height="150px" width="200px"}
+=======
+## The Scientific Method    
+ 
+![Steps of the scientific method](\assets\img\scientific-method.png)
+Do journalists use something analogous? 
+>>>>>>> a79e8a611b21ccffea11c6d4ad5730e59b5a36dc
 
 1. Ask a question
 2. Observe the data
@@ -115,14 +122,15 @@ If you are collecting measurements at the same interval every time? Then you may
 
 *Where* was your data collected?
 
-Where can be a common issue to overlook. In this writer's viewpoint, the classic discussion is to consider you are now working for a political polling organization. You are sent to the local supermarket to gather people's opinions on their political views.
+**"Where"** is often overlooked. The classic example of **where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Where was your data collected? Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
 
-Where was your data collected? Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? This type of bias is amusing and called Convenience Bias. Did you visit the supermarket that was conveniently in your area?
+This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
-But do not forget the topic of Blocking. Let's say we are now looking at metal or plastic molding equipment. Is the equipment in one part of the country and other parts? Does the shift time matter?
+So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarkets in a variety of neughborhoods with differing socio-economic strata.
 
 **Consider Learning**:
 
+- Fisher's Exact Test
 - Two Factor Design
 - Designing Experiments (Design Of Experiment)
 - Blocking
@@ -130,7 +138,7 @@ But do not forget the topic of Blocking. Let's say we are now looking at metal o
 
 ## Why?
 
-The last W of journalism can be the hardest to tackle. 
+The last **W** of journalism can be the hardest to tackle. 
 
 *Why* is your work important? 
 
