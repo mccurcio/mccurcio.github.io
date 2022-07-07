@@ -122,7 +122,7 @@ If you are collecting measurements at the same interval every time? Then you may
 
 *Where* was your data collected?
 
-**"Where"** is often overlooked. The classic example of **where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Where was your data collected? Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
+**"Where"** is often overlooked. The classic example of **where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
 
 This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
@@ -130,6 +130,7 @@ So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarke
 
 **Consider Learning**:
 
+- Convenience Bias
 - Fisher's Exact Test
 - Two Factor Design
 - Designing Experiments (Design Of Experiment)
@@ -142,7 +143,7 @@ The last **W** of journalism can be the hardest to tackle.
 
 *Why* is your work important? 
 
-For the Data Journalist, Claire Miller, there are a number of areas that might make a good data story:
+For the Data Journalist, Claire Miller, there are a number of areas that can make a good data story:
 
 - Big, bigger, biggest (or small, smaller, smallest)
 - Fastest growing, stalling, or being left behind
