@@ -33,8 +33,8 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 - Isn't this at its heart, the Scientific Method?
 
 ## The Scientific Method    
- 
-![Steps of the scientific method](\assets\img\scientific-method.png)
+
+<img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="790" height="400"> 
 Do journalists use something analogous? 
 
 1. Ask a question
