@@ -34,7 +34,7 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 
 **The Scientific Method**    
 Do you journalists use something analogous?  
-![Steps of the scientific method](\assets\img\scientific-method.png)
+![Steps of the scientific method](\assets\img\scientific-method.png){:height="150px" width="200px"}
 
 1. Ask a question
 2. Observe the data
@@ -53,7 +53,9 @@ A clear and often simple question at the beginning can help steer your research.
 
 - *What* question(s) are you interested in answering?
 
-After your questions have been well-thought-out, two questions come to my mind when I sum up Exploratory Data Analysis:
+**Start Simple**. Remember, the journey of a thousand miles starts with one step.
+
+After your questions have been well-thought-out, two questions come to my mind when I sum up *Exploratory Data Analysis*:
 
 - *What* is wrong with your data?   
 AND
@@ -101,7 +103,7 @@ If the data is not meant to cover vast periods but more of a snap-shot in time, 
 - Completely Randomized Study Design
 - Analysis of Variance (ANOVA)
 
-If you are collecting measurements at the same interval every time? Then you may want to investigate:
+If you are collecting measurements at the same interval every time? Then you may want to **explore**:
 
 - Moving averages to smooth your data
 - Seasonality
@@ -119,7 +121,7 @@ Where was your data collected? Was the supermarket you work at in a poor, middle
 
 But do not forget the topic of Blocking. Let's say we are now looking at metal or plastic molding equipment. Is the equipment in one part of the country and other parts? Does the shift time matter?
 
-**Consider**:
+**Consider Learning**:
 
 - Two Factor Design
 - Designing Experiments (Design Of Experiment)
@@ -134,13 +136,13 @@ The last W of journalism can be the hardest to tackle.
 
 For the Data Journalist, Claire Miller, there are a number of areas that might make a good data story:
 
-- Why?
 - Big, bigger, biggest (or small, smaller, smallest)
 - Fastest growing, stalling, or being left behind
 - Common vs. rare
 - Hotspots and how we compare
 - Correlations and connections
 - Fact checks and explainers
+- **AND WHY?**
 
 ## In conclusion
 
@@ -152,7 +154,7 @@ If the Five W's can help Journalists, then I feel Data Scientists can rely on th
 
 In the meant time try this FREE resources:
 
-- [Open Statistics](https://leanpub.com/os)
+- [OpenIntro Statistics](https://leanpub.com/os)
       
 - [Introduction to Modern Statistics](https://leanpub.com/imstat)
       
