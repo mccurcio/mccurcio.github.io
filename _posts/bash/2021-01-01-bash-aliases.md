@@ -10,7 +10,7 @@ Matt's Aliases
 
 ```
 ## Bash aliases
-alias edit='gedit'
+alias edit='xed' # Use any text editor that suits your system
 
 alias up='cd ..'
 alias cd..='cd ..'
@@ -37,5 +37,8 @@ alias docs='cd /home/mcc/Documents/'
 alias jupy='jupyter notebook'
 alias condaup='conda update -y --prefix /home/mcc/anaconda3 anaconda'
 alias navi='conda update -y --prefix /home/mcc/anaconda3 anaconda && anaconda-navigator'
+
+## Jekyll
+alias bjs='bundle exec jekyll serve'
 
 ```
