@@ -7,7 +7,9 @@ tags: Data_Science
 
 >**Summary**: This article outlines steps and questions for a beginner Data Scientist to ask when putting a Exploratory Data Analysis together. The article highlights suggested areas of research that a new data scientist should be mindful of.
 
-I was talking to a journalist teaching herself Data Science. In our conversation, several questions came up:
+After having been a scientist and biochemist for 15 years, I felt the passion to learn and grow into the field of Data Sceince. My past use and love of statistics made the transition an easy and logical step. Growing mammalian cells and bacteria and producing proteins for vaccines and therapuetics gave me the desire to learn factorial analysis and Design of Experiments to name a few areas.
+
+Over the last several years, I have been using several on-line teaching sites to teach myself Data Science and increase my skills in Python, R, and SQL. Among the beneifts of a group of sites is having a community to tie into. I have found it helpful but I was talking to a journalist teaching herself Data Science. In our conversation, several questions came up:
 
 - Why is Exploratory Data Analysis (EDA) so important?
 - What should I be looking for?
@@ -35,7 +37,8 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 ## The Scientific Method    
 
 <img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="790" height="400">   
-Do journalists use something analogous? 
+
+*Do journalists use something analogous?*
 
 1. Ask a question
 2. Observe the data
@@ -54,7 +57,11 @@ A clear and often simple question at the beginning can help steer your research.
 
 - *What* question(s) are you interested in answering?
 
-**Start Simple**. Remember, the journey of a thousand miles starts with one step.
+**Start Simple**. Asking small questions with a limited scope will make the exploration go more smoothly. When your variable of interest rises does your response also rise? 
+
+At the exploratory stage, is it common to ask whether there are correlations between variables and your target-response variable.
+
+Remember, the journey of a thousand miles starts with one step.
 
 After your questions have been well-thought-out, two questions come to my mind when I sum up *Exploratory Data Analysis*:
 
