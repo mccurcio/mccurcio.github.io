@@ -32,16 +32,10 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 
 - Isn't this at its heart, the Scientific Method?
 
-<<<<<<< HEAD
-**The Scientific Method**    
-Do you journalists use something analogous?  
-![Steps of the scientific method](\assets\img\scientific-method.png){:height="150px" width="200px"}
-=======
 ## The Scientific Method    
  
-![Steps of the scientific method](\assets\img\scientific-method.png)
+![Steps of the scientific method](\assets\img\scientific-method.png)  
 Do journalists use something analogous? 
->>>>>>> a79e8a611b21ccffea11c6d4ad5730e59b5a36dc
 
 1. Ask a question
 2. Observe the data
