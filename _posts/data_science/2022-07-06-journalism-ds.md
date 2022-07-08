@@ -1,5 +1,5 @@
 ---
-title: "What Can Journalism Teach A Data Scientist?"
+title: "What Can Journalism Teach A Data Scientist? Part 1"
 tags: Data_Science
 ---
 
@@ -7,9 +7,13 @@ tags: Data_Science
 
 >**Summary**: This article outlines steps and questions for a beginner Data Scientist to ask when putting a Exploratory Data Analysis together. The article highlights suggested areas of research that a new data scientist should be mindful of.
 
-After having been a scientist and biochemist for 15 years, I felt the passion to learn and grow into the field of Data Sceince. My past use and love of statistics made the transition an easy and logical step. Growing mammalian cells and bacteria and producing proteins for vaccines and therapuetics gave me the desire to learn factorial analysis and Design of Experiments to name a few areas.
+After being a scientist and biochemist for 15 years, I felt the desire and passion for learning the field of Data Science. Growing mammalian cells, purifying proteins for vaccines and therapeutics, and working in biotech allowed me to learn statistical ideas such as factorial analysis and Design of Experiments, to name a few areas. My past use and love of statistics made the transition an easy and logical step. 
 
-Over the last several years, I have been using several on-line teaching sites to teach myself Data Science and increase my skills in Python, R, and SQL. Among the beneifts of a group of sites is having a community to tie into. I have found it helpful but I was talking to a journalist teaching herself Data Science. In our conversation, several questions came up:
+Over the last several years, I have been using several on-line teaching sites to teach myself Data Science and increase my skills in Python, R, and SQL. Among the benefits of several on-line groups is building community and networking. I have found it helpful.
+
+A journalist (who was teaching herself Data Science) I met on a learning platform started discussing the field. Her background was not statistics, so she asked several questions about Exploratory Data Analysis. The next several articles are offshoots from these conversations on Data Science.
+
+To start, several questions were:
 
 - Why is Exploratory Data Analysis (EDA) so important?
 - What should I be looking for?
