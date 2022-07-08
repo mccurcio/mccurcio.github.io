@@ -7,7 +7,7 @@ tags: Data_Science
 
 >**Summary**: This article outlines steps and questions for a beginner Data Scientist to ask when putting a Exploratory Data Analysis together. The article highlights suggested areas of research that a new data scientist should be mindful of.
 
-After being a scientist and biochemist for 15 years, I felt the desire and passion for learning the field of Data Science. Growing mammalian cells, purifying proteins for vaccines and therapeutics, and working in biotech allowed me to learn statistical ideas such as factorial analysis and Design of Experiments, to name a few areas. My past use and love of statistics made the transition an easy and logical step. 
+Being a scientist and biochemist for 15 years, I felt the desire to learn the field of Data Science. Growing mammalian cells, purifying proteins for vaccines and therapeutics, and working in biotech allowed me to learn statistical ideas such as factorial analysis and Design of Experiments, areas I enjoyed immensely. My past use and love of statistics made the transition an easy and logical step. 
 
 Over the last several years, I have been using several on-line teaching sites to teach myself Data Science and increase my skills in Python, R, and SQL. Among the benefits of several on-line groups is building community and networking. I have found it helpful.
 
@@ -20,11 +20,11 @@ To start, several questions were:
 
 As I looked for commonalities between the two professions, the 5 W's of journalism popped into mind. Remember them?
 
-1. Who
-2. What
-3. When
-4. Where
-5. Why
+1. [What](#what)
+2. [Who](#who) 
+3. [When](#when) 
+4. [Where](#where) 
+5. [Why](#why) 
 
 I asked myself if the 5 W's of journalism could be useful to a journalist and a data scientist?
 
