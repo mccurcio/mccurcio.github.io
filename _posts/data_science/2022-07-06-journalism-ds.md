@@ -173,7 +173,7 @@ Try these *FREE* resources:
 
 - &#127775;[Exploratory Data Analysis - IBM Cloud Learn Hub](https://www.ibm.com/cloud/learn/data-science)
 
-- [NIST Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm)
+- &#127775;[NIST Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm)
 
 - &#127775;[OpenIntro Statistics](https://leanpub.com/os)
       
