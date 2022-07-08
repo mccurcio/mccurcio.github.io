@@ -15,8 +15,8 @@ A journalist (who was teaching herself Data Science) I met on a learning platfor
 
 To start, several questions were:
 
-- Why is Exploratory Data Analysis (EDA) so important?
-- What should I be looking for?
+- Why is [Exploratory Data Analysis (EDA)](https://www.ibm.com/cloud/learn/exploratory-data-analysis) so important?
+- [What should I be looking for?](https://www.ibm.com/cloud/learn/exploratory-data-analysis#toc-ibm-and-ex-cS-WKOfm)
 
 As I looked for commonalities between the two professions, the 5 W's of journalism popped into mind. Remember them?
 
@@ -40,7 +40,7 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 
 ## The Scientific Method    
 
-<img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="790" height="400">   
+<img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="600" height="300">   
 
 *Do journalists use something analogous?*
 
@@ -166,9 +166,16 @@ If the Five W's can help Journalists, then I feel Data Scientists can rely on th
 
 ### Resources: 
 
-In the meant time try this FREE resources:
 
-- [OpenIntro Statistics](https://leanpub.com/os)
+&#127775; - Represents Favorites
+
+Try these *FREE* resources:
+
+- &#127775;[Exploratory Data Analysis - IBM Cloud Learn Hub](https://www.ibm.com/cloud/learn/data-science)
+
+- [NIST Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm)
+
+- &#127775;[OpenIntro Statistics](https://leanpub.com/os)
       
 - [Introduction to Modern Statistics](https://leanpub.com/imstat)
       
