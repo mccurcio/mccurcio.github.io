@@ -33,8 +33,8 @@ Journalists may interrogate and scrutinize their eye-witness interviews. They ma
 - Isn't this at its heart, the Scientific Method?
 
 ## The Scientific Method    
- 
-![Steps of the scientific method](\assets\img\scientific-method.png)  
+
+<img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="790" height="400">   
 Do journalists use something analogous? 
 
 1. Ask a question
@@ -116,7 +116,7 @@ If you are collecting measurements at the same interval every time? Then you may
 
 *Where* was your data collected?
 
-**"Where"** is often overlooked. The classic example of **where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
+The classic example of **Where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
 
 This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
