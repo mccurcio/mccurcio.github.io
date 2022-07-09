@@ -21,10 +21,10 @@ To start, several questions were:
 As I looked for commonalities between the two professions, the 5 W's of journalism popped into mind. Remember them?
 
 1. [What](#what)
-2. [Who](#who) 
-3. [When](#when) 
-4. [Where](#where) 
-5. [Why](#why) 
+2. [Who](#who)
+3. [When](#when)
+4. [Where](#where)
+5. [Why](#why)
 
 I asked myself if the 5 W's of journalism could be useful to a journalist and a data scientist?
 
@@ -34,13 +34,13 @@ Scientists and journalists both observe the world and collect data.
 
 Both investigate a topic with skepticism hoping to tell a great story.
 
-Journalists may interrogate and scrutinize their eye-witness interviews. They may analyze crime scene photographs for clues. They double-check the facts to ensure that their information is correct and up-to-date. Journalists even digg for new angles to better understand the issues involved. Then when the investigation is complete, they write up their findings for editorial review by their peers.
+Journalists may interrogate and scrutinize their eye-witness interviews. They may analyze crime scene photographs for clues. They double-check the facts to ensure that their information is correct and up-to-date. Journalists even dig for new angles to better understand the issues involved. Then when the investigation is complete, they write up their findings for editorial review by their peers.
 
 - Isn't this at its heart, the Scientific Method?
 
-## The Scientific Method    
+## The Scientific Method
 
-<img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="600" height="300">   
+<img src="\assets\img\scientific-method.png" alt="6 steps of the scientific method" width="600" height="300">
 
 *Do journalists use something analogous?*
 
@@ -61,7 +61,7 @@ A clear and often simple question at the beginning can help steer your research.
 
 - *What* question(s) are you interested in answering?
 
-**Start Simple**. Asking small questions with a limited scope will make the exploration go more smoothly. When your variable of interest rises does your response also rise? 
+**Start Simple**. Asking small questions with a limited scope will make the exploration go more smoothly. When your variable of interest rises does your response also rise?
 
 At the exploratory stage, is it common to ask whether there are correlations between variables and your target-response variable.
 
@@ -69,7 +69,7 @@ Remember, the journey of a thousand miles starts with one step.
 
 After your questions have been well-thought-out, two questions come to my mind when I sum up *Exploratory Data Analysis*:
 
-- *What* is wrong with your data?   
+- *What* is wrong with your data?
 AND
 - *What* is right with your data?
 
@@ -127,7 +127,7 @@ If you are collecting measurements at the same interval every time? Then you may
 
 *Where* was your data collected?
 
-The classic example of **Where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you work at in a poor, middle, or affluent neighborhood. Where were the interviews done with mostly men or women shoppers? 
+The classic example of **Where** being a problem is when you consider community polling. You are sent to the local supermarket to gather people's opinions on their political views. Was the supermarket you worked at in a poor, middle, or affluent neighborhood. Where were the interviews balanced, done with mostly men or women shoppers?
 
 This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
@@ -144,9 +144,9 @@ So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarke
 
 ## Why?
 
-The last **W** of journalism can be the hardest to tackle. 
+The last **W** of journalism can be the hardest to tackle.
 
-*Why* is your work important? 
+*Why* is your work important?
 
 For the Data Journalist, Claire Miller, there are a number of areas that can make a good data story:
 
@@ -164,8 +164,7 @@ If the Five W's can help Journalists, then I feel Data Scientists can rely on th
 
 ---
 
-### Resources: 
-
+### Resources:
 
 &#127775; - Represents Favorites
 
@@ -176,11 +175,11 @@ Try these *FREE* resources:
 - &#127775;[NIST Handbook of Statistical Methods](https://www.itl.nist.gov/div898/handbook/eda/section1/eda11.htm)
 
 - &#127775;[OpenIntro Statistics](https://leanpub.com/os)
-      
+
 - [Introduction to Modern Statistics](https://leanpub.com/imstat)
-      
+
 - [Introductory Statistics with Randomization and Simulation](https://leanpub.com/isrs)
-      
+
 - [Design of Experiments](https://online.stat.psu.edu/stat503/)
 
 ---
