@@ -63,14 +63,14 @@ A clear and often simple question at the beginning can help steer your research.
 
 **Start Simple**. Asking small questions with a limited scope will make the exploration go more smoothly. When your variable of interest rises does your response also rise?
 
-At the exploratory stage, is it common to ask whether there are correlations between variables and your target-response variable.
+At the exploratory stage, it is common to ask whether there are correlations between variables and your target-response variable.
 
 Remember, the journey of a thousand miles starts with one step.
 
 After your questions have been well-thought-out, two questions come to my mind when I sum up *Exploratory Data Analysis*:
 
-- *What* is wrong with your data?
-AND
+- *What* is wrong with your data? 
+AND 
 - *What* is right with your data?
 
 **Ask yourself**:
@@ -164,7 +164,7 @@ If the Five W's can help Journalists, then I feel Data Scientists can rely on th
 
 ---
 
-### Resources:
+### Resources
 
 &#127775; - Represents Favorites
 
