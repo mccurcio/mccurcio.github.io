@@ -34,7 +34,7 @@ Scientists and journalists both observe the world and collect data.
 
 Both investigate a topic with skepticism hoping to tell a great story.
 
-Journalists may interrogate and scrutinize their eye-witness interviews. They may analyze crime scene photographs for clues. They double-check the facts to ensure that their information is correct and up-to-date. Journalists even digg for new angles to better understand the issues involved. Then when the investigation is complete, they write up their findings for editorial review by their peers.
+Journalists may interrogate and scrutinize their eye-witness interviews. They may analyze crime scene photographs for clues. They double-check the facts to ensure that their information is correct and up-to-date. Journalists even dig for new angles to better understand the issues involved. Then when the investigation is complete, they write up their findings for editorial review by their peers.
 
 - Isn't this at its heart, the Scientific Method?
 
@@ -63,7 +63,7 @@ A clear and often simple question at the beginning can help steer your research.
 
 **Start Simple**. Asking small questions with a limited scope will make the exploration go more smoothly. When your variable of interest rises does your response also rise? 
 
-At the exploratory stage, is it common to ask whether there are correlations between variables and your target-response variable.
+At the exploratory stage, it is common to ask whether there are correlations between variables and your target-response variable.
 
 Remember, the journey of a thousand miles starts with one step.
 
@@ -131,7 +131,7 @@ The classic example of **Where** being a problem is when you consider community 
 
 This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
-So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarkets in a variety of neughborhoods with differing socio-economic strata.
+So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarkets in a variety of neighborhoods with differing socio-economic strata.
 
 **Consider Learning**:
 
