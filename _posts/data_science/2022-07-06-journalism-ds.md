@@ -18,6 +18,11 @@ To start, several questions were:
 - Why is [Exploratory Data Analysis (EDA)](https://www.ibm.com/cloud/learn/exploratory-data-analysis) so important?
 - [What should I be looking for?](https://www.ibm.com/cloud/learn/exploratory-data-analysis#toc-ibm-and-ex-cS-WKOfm)
 
+On the <abbr title="U.S. Environmental Protection Agency ">EPA</abbr> website they have a great explanation complete with graphics. Paraphrasing,  they state:
+
+>Exploratory Data Analysis (EDA) is an analysis approach that identifies general patterns in the data. These patterns include outliers and features of the data that might be unexpected.  
+>[EPA Website](https://www.epa.gov/caddis-vol4/exploratory-data-analysis)
+
 As I looked for commonalities between the two professions, the 5 W's of journalism popped into mind. Remember them?
 
 1. [What](#what)
