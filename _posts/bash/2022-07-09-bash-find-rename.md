@@ -1,5 +1,5 @@
 ---
-title: Bash - Find & Rename Spaces to Underscores"
+title: Bash - Find & Rename Spaces to Underscores
 tags: Find Rename Bash
 ---
 
