@@ -13,8 +13,9 @@ The goals for this site:
    - [Presentations](docs/mcc-presentations)
    - [Posts by title](archive)
 
-2. Answers the question 'What I have learned today?' This is my store house of notes/snippets. 
-   - It may seem like I do not learn something everyday. But that's not true. I may not remember it in time to write it down. 😉
+2. Answers the question "*What have I learned today?"*  
+   - My notes/snippets. 
+   - It may seem like I don't learn something everyday, but that's not true. I may not remember it in time to write it down. 😉
 
 ## Have a Question?
 
