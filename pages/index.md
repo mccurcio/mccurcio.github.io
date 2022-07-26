@@ -13,15 +13,8 @@ The goals for this site:
    - [Presentations](docs/mcc-presentations)
    - [Posts by title](archive)
 
-2. Save, compile, and organize my code snippets and notes
-
-3. Have a site I can constantly update and be interactive 
-  
----
-
-I am in the process of migrating and rewriting my material.  
-
-*I am striving to make it more appealing*. 😉
+2. Answers the question 'What I have learned today?' This is my store house of notes/snippets. 
+   - It may seem like I do not learn something everyday. But that's not true. I may not remember it in time to write it down. 😉
 
 ## Have a Question?
 
@@ -30,5 +23,5 @@ I am in the process of migrating and rewriting my material.
 ---
 
 Special Thanks To:  
-- *BIG Thanks* to [vsoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme. I love it. 👏  
-- I was inspired by Chris Albon's [website](https://chrisalbon.com), Thanks 👏 
+- [vsoch](https://vsoch.github.io/docsy-jekyll/) for designing the Docsy-Jekyll theme. I love it. 👏  
+- Chris Albon's [website](https://chrisalbon.com), I was inspired by his site. 👏 
