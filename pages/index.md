@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Matt's Info Site
+title: Matt's Coding Site
 permalink: /
 ---
 
-## Matt's Info Site
+## Matt's Coding Site
 
 The goals for this site:
 
-1. Share my learning journey via
+1. Share my learning journey via my
    - [Articles](docs)
    - [Presentations](docs/mcc-presentations)
    - [Posts by title](archive)
