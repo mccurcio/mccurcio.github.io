@@ -20,13 +20,13 @@ Enjoy
 
 ---
 
-## Introdcution - First Step?
+## Introduction - First Step?
 
 ### A. Why Learn Git!
 
-1. Git and what you put on your GitHub account **IS** your new business card.
+1. GitHub account **IS** your new business card.
 
-1. [GitHub.com](https://github.com/) is arguably the most common version control systems, so start there.   
+1. [GitHub.com](https://github.com/) is the most common version control systems, so start there.   
 
   - [GitHub](https://github.com)  
   - [Gitlab](https://about.gitlab.com/)  
