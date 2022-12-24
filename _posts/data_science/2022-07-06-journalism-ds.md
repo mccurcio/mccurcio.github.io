@@ -136,7 +136,7 @@ The classic example of **Where** being a problem is when you consider community 
 
 This type of bias is amusingly called *Convenience Bias*. Did you visit the supermarket that was conveniently in your area?
 
-So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarkets in a variety of neughborhoods with differing socio-economic strata.
+So do not forget the topic of Blocking. Wouldn't it be wise to choose supermarkets in a variety of neighborhoods with differing socio-economic strata.
 
 **Consider Learning**:
 
