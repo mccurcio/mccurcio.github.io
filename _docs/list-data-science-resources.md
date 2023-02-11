@@ -20,6 +20,7 @@ Enjoy
 
 ---
 
+<!--
 ## Introduction - First Step?
 
 ### A. Why Learn Git!
@@ -56,7 +57,7 @@ Enjoy
 
 - &#127775; [Exploratory Data Analysis with R](http://leanpub.com/exdata) - Roger Peng has some great material too! 📗
 
-
+-->
 
 ### Books
 
