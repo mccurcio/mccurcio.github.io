@@ -93,8 +93,8 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
     - **BASH, Python, MySQL, GIT, Linux**, ... 
     - **Love these**; they are more like terse notes for a quick reference.
 
-- [Syncfusion Ebooks](https://www.syncfusion.com/ebooks), The Succinctly Series, *FREE*
-   - The **Succinctly Series** has great topics and different languages!
+- [Syncfusion Ebooks](https://www.syncfusion.com/ebooks), The Succinctly series has some small guides but pretty good & *FREE*
+
 
 ### Data Visualization
 
@@ -110,10 +110,9 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - [Advanced R](https://adv-r.hadley.nz/index.html), by H. Wickham, *FREE* Book Online 📗
 
-- &#127775; [blogdown: Creating Websites with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
-  - If you use R alot and want an easy way to demo your work this is great.
+- &#127775; [blogdown: Creating Websites with R Markdown](https://bookdown.org/) If you use R alot and want an easy way to demo your work this is great, *FREE* Book Online 📗
 
-- &#127775; [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
+- &#127775; [bookdown: Authoring Books and Technical Documents with R Markdown](https://bookdown.org/), *FREE* Book Online 📗
 
 - [R Graphics Cookbook, 2nd edition](https://r-graphics.org/), *FREE* Book Online 📗
 
@@ -150,13 +149,13 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 
 - &#127775; [Data Science at the Command Line](https://datascienceatthecommandline.com/2e/), by Jeroen Janssens, *FREE* Book Online 📗
   
-### SQL - Under Construction
+### SQL
 
 - [PostgreSQL Notes for Professionals](https://goalkicker.com/) :Free: Goalkicker has many books. Although I would call them reference type material.
 
-- SQL Cheat Sheet: (https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
+- [SQL Cheat Sheet:](https://www.sqltutorial.org/sql-cheat-sheet/?hss_channel=tw-1318985240)
 
-  
+ 
 ### Markdown :arrow_down_small:
 
 - &#127775; [R Markdown: The Definitive Guide](https://bookdown.org/), by Yihui Xie, et al, *FREE* Book Online 📗
@@ -190,7 +189,7 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
 - &#127775; [Exploratory Data Analysis with R by Roger Peng](https://leanpub.com/exdata), *FREE* Book Online 📗
 
 - [Syncfusion Ebooks](https://www.syncfusion.com/ebooks), GREAT resource! :free:
-    - [Keras](https://www.syncfusion.com/ebooks/keras-succinctly), by James McCaffrey, *FREE*
+    - [Keras](https://www.syncfusion.com/ebooks/keras-succinctly), by James McCaffrey, *FREE*  📗
    
 - [SVM Tutorial](https://www.svm-tutorial.com/)
     
@@ -202,11 +201,11 @@ As an Introduction to Abstract Mathematics](https://www.math.ucdavis.edu/~anne/l
  
 - [Pattern Recognition & Machine Learning](https://www.cs.uoi.gr/~arly/courses/ml/tmp/Bishop_book.pdf), by Christopher Bishop : **Heavy on the math**, *FREE*
 
-- [Natural Language Processing with Python](https://www.nltk.org/book/) Analyzing Text with the Natural Language Toolkit. by Steven Bird, Ewan Klein, and Edward Loper, **Very Hands-on guide book** , *FREE*
+- [Natural Language Processing with Python](https://www.nltk.org/book/) Analyzing Text with the Natural Language Toolkit. by Steven Bird, Ewan Klein, and Edward Loper, **Very Hands-on guide book** , *FREE*  📗
 
 ### Information Theory
 
-- [Information Theory, Inference, and Learning Algorithms](http://www.inference.org.uk/itprnn/book.pdf), by David MacKay *I'm interested in reading the section on Hash codes, p.193*   *FREE*
+- [Information Theory, Inference, and Learning Algorithms](http://www.inference.org.uk/itprnn/book.pdf), by David MacKay *I'm interested in reading the section on Hash codes, p.193, FREE*  📗
 
 ### Supervised :label:
 
