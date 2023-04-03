@@ -1,6 +1,6 @@
 ---
 Title: "Bash - Using grep For Wordle"
-Tags: Bash Grep Wordle
+Tags: Bash Grep Wordle Trick
 ---
 
 
