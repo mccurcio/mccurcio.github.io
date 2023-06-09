@@ -5,7 +5,7 @@ permalink: /about/
 
 # Welcome
 
-I am a Scientist, Sales-Specialist, Patient Educator, and a Data Scientist.
+I am a Scientist, Sales-Person, Patient Educator, and a Data Scientist.
 
 Among my best qualities are Dilgence, Inquistiveness and Resourcefulness.  
 
