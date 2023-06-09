@@ -24,5 +24,6 @@
   links:
     - title: "&#8226; Bash - Cheat Sheet"
       url: "2022/bash-scripting"
+    - title: "&#8226; SQL - Cheat Sheet"
     - title: "&#8226; Matt's Presentations"
       url: "docs/mcc-presentations"
