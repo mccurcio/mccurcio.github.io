@@ -3,13 +3,18 @@ title: "Bash - Scripting"
 tags: Bash
 ---
 
-
-Run command on multiple files at once
-
-```bash
-for FILE in $(ls *); do command $FILE; done
 ```
+#!/bin/sh # 'Crunch-Bang-Bin-Bash' May help you remember?
 
-Warning: this assumes there are no spaces in the lines in your file. If they do # contain spaces, you need to add proper escaping using quotes.
+# This script renames .html files to .txt
+# Place this script in the directory and use
+# chmod +x test.sh
+# followed by ./test.sh
+
+for file in *.html
+do
+  mv "$file" "${file%.html}.txt"
+done
+```
 
 **See**: [Advanced Bash-Scripting Guide](http://tldp.org/LDP/abs/html/), **GOOD**!
